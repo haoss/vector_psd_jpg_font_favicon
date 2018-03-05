@@ -1,3 +1,267 @@
 /* header */
 .header
-  background-color: $color-gray
+  position: fixed
+  z-index: 1000
+  left: 0
+  top: 0
+  right: 0
+  &__top
+    background-color: $color-2
+    color: $color-white
+    font-family: $font-baron
+    font-size: rem(11)
+    // text-transform: uppercase
+    +clearfix
+    ul
+      margin: 0
+      padding: 0
+      li
+        list-style: none
+        margin: 0
+        float: left
+    a
+      color: $color-white
+      display: inline-block
+      height: 40px
+      line-height: 40px
+      &:hover, &:focus
+        text-decoration: none
+        color: $color-red
+    &-left
+      float: left
+      li
+        &+li
+          margin-left: 100px
+    &-right
+      float: right
+      li
+        &+li
+          margin-left: 28px
+  &__bottom
+    background: $color-1
+    color: $color-white
+    height: 80px
+    &-wrapper
+      display: flex
+      &>div
+        &+div
+          margin-left: 30px
+  &__catalog
+    margin-top: 15px
+    position: relative
+    &.is-active
+      .header__catalog-popup
+        opacity: 1
+        visibility: visible
+        transform: translateY(0)
+    &-btn
+      width: 165px
+      height: 50px
+      background: #961a26
+      color: $color-white
+      border-radius: 4px
+      border: 0
+      font-size: rem(16)
+      font-family: $font-baron
+      span
+        width: 14px
+        position: relative
+        height: 2px
+        background: $color-white
+        display: inline-block
+        margin-right: 8px
+        vertical-align: 5px
+        &::before, &::after
+          content: ''
+          position: absolute
+          width: 14px
+          height: 2px
+          left: 0
+          top: 0
+          background: $color-white
+        &::before
+          margin-top: -5px
+        &::after
+          margin-top: 5px
+    &-popup
+      // display: none
+      position: absolute
+      top: 46px
+      left: 0
+      z-index: 1500
+      width: 450px
+      background: $color-white
+      border-radius: 4px
+      // overflow: hidden
+      min-height: 190px
+      box-shadow: 2px 2px 10px rgba($color-2,.1)
+      transform: translateY(-10px)
+      transition: all 0.35s
+      visibility: hidden
+      opacity: 0
+      &::before
+        content: ''
+        position: absolute
+        width: 0
+        height: 0
+        border-left: 6px solid transparent
+        border-right: 6px solid transparent
+        border-top: 6px solid #fff
+        left: 41px
+        top: -4px
+        z-index: 5
+      &::after
+        content: ''
+        position: absolute
+        width: 0
+        height: 0
+        border-left: 9px solid transparent
+        border-right: 9px solid transparent
+        border-top: 9px solid #711d25
+        left: 38px
+        top: -5px
+        z-index: 3
+  &__logo
+    margin: 12px 0 0 10px
+  &-separator
+    height: 120px
+  &__shadow
+    position: fixed
+    top: 0
+    right: 0
+    bottom: 0
+    left: 0
+    background: rgba($color-2,.3)
+    z-index: 1200
+    display: none
+    cursor: pointer
+    &.is-active
+      display: block
+  &__search
+    border-radius: 4px
+    overflow: hidden
+    background: $color-white
+    height: 50px
+    width: 360px
+    margin-top: 15px
+    +clearfix
+    &-input
+      width: 100%
+      height: 50px
+      border: 0
+      background: none
+      padding: 0 50px 0 22px
+      font-family: $font-roboto-bold
+      font-size: rem(16)
+      text-transform: uppercase
+      color: $color-4
+    &-btn
+      width: 50px
+      height: 50px
+      background: none
+      // background: pink
+      border: 0
+      text-align: center
+      float: right
+      margin-top: -50px
+      position: relative
+      color: #bcbcbc
+      font-size: rem(20)
+      i
+        position: absolute
+        left: 50%
+        top: 50%
+        transform: translate(-50%,-50%)
+  &__links
+    margin: 0 0 0 -15px
+    padding: 0
+    display: flex
+    &-li
+      margin: 0
+      list-style: none
+      width: 97px
+      position: relative
+      &.is-active
+        .header__links-popup
+          opacity: 1
+          visibility: visible
+          transform: translateY(0)
+        .header__links-a
+          color: $color-white
+          text-decoration: none
+          background: #961a26
+    &-a
+      height: 80px
+      color: $color-white
+      font-size: rem(11)
+      font-family: $font-baron
+      text-align: center
+      display: block
+      padding-top: 16px
+      &:hover, &:focus
+        color: $color-white
+        text-decoration: none
+        background: #961a26
+      img, svg
+        width: 30px
+        height: 30px
+        margin: 0 auto 7px
+      span
+        display: block
+    &-popup
+      // display: none
+      position: absolute
+      top: 76px
+      right: 0
+      z-index: 1500
+      width: 375px
+      background: $color-white
+      border-radius: 4px
+      // overflow: hidden
+      min-height: 190px
+      box-shadow: 2px 2px 10px rgba($color-2,.1)
+      transform: translateY(-10px)
+      transition: all 0.35s
+      visibility: hidden
+      opacity: 0
+      &::before
+        content: ''
+        position: absolute
+        width: 0
+        height: 0
+        border-left: 6px solid transparent
+        border-right: 6px solid transparent
+        border-top: 6px solid #fff
+        right: 42px
+        top: -4px
+        z-index: 5
+      &::after
+        content: ''
+        position: absolute
+        width: 0
+        height: 0
+        border-left: 9px solid transparent
+        border-right: 9px solid transparent
+        border-top: 9px solid #711d25
+        right: 39px
+        top: -5px
+        z-index: 3
+      &--user
+        width: 210px
+        left: 0
+        right: inherit
+        &::before
+          left: 41px
+        &::after
+          left: 38px
+  &__cart
+    &-bottom
+      text-align: center
+      background: #f3f4f7
+      padding: 16px 0
+    &-title
+      font-size: rem(18)
+      font-family: $font-baron
+      color: $color-2
+      line-height: 1
+      margin: 20px 0 0 23px

@@ -3,8 +3,9 @@
 .btn
   display: inline-block
   padding: 0 15px
+  min-width: 166px
   margin-bottom: 0
-  font-size: rem(14)
+  font-size: rem(12)
   font-weight: 400
   text-align: center
   white-space: nowrap
@@ -14,18 +15,19 @@
   user-select: none
   background:
     image: none
-    color: $color-gray
-  border: 1px solid $color-white
+    color: $color-1
+  border: 1px solid $color-1
   border-radius: 3px
-  height: 40px
-  line-height: 40px
+  color: $color-white
+  height: 30px
+  line-height: 28px
+  font-family: $font-roboto
+  text-transform: uppercase
   text-decoration: none
   transition: color 0.35s, background 0.35s, border 0.35s
 
   &:hover, &:focus, &:active
     outline: none
-
-  &--default
-    color: #333
-    background-color: $color-white
-    border-color: $color-gray
+    background: $color-white
+    color: $color-1
+    text-decoration: none

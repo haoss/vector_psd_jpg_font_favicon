@@ -1,15 +1,68 @@
 // Header
 header.header
-  .container
-    
-    -var navigation = { 'Главная': '#', 'О нас': '#', 'Продукция': '#', 'Сотрудничество': '#', 'Наши магазины': '#', 'Контакты': '#'};
-    
-    nav.navigation(role="navigation")
-      ul
-        each val, key in navigation
-          if active === key
-            li.active
-              a(href=val, title=key)= key
-          else
-            li
-              a(href=val, title=key)= key
+
+  .header__shadow
+  
+  .header__top
+    .container
+      
+      ul.header__top-left
+        li: a(href="#!") Оптовый портал
+        li: a(href="#!") Адреса магазинов
+        
+      ul.header__top-right
+        li: a(href="#!") склады
+        li: a(href="#!") Офисы
+        li: a(href="#!") Запрос по vin
+        li: a(href="#!") помощь    
+      
+  .header__bottom
+    .container
+      
+      .header__bottom-wrapper
+        div
+          .header__logo
+            a(href="#!")
+              img(src="./img/header-logo.png", alt="")
+        div
+          .header__catalog
+            .header__catalog-popup 1
+            button(type="button").header__catalog-btn
+              span
+              | Каталог
+        div
+          .header__search
+            form(action="#")
+              input(type="text" placeholder="Поиск").header__search-input
+              button(type="button").header__search-btn
+                i.ion-android-search
+        div
+          ul.header__links
+            li.header__links-li
+              .header__links-popup.header__links-popup--user 1
+              a(href="#!").header__links-a.header__links-a--has-popup
+                img(src="./img/icon/header-icon-1.svg", alt="")
+                span войти
+            li.header__links-li
+              a(href="#!").header__links-a
+                img(src="./img/icon/header-icon-2.svg", alt="")
+                span заказы
+            li.header__links-li
+              a(href="#!").header__links-a
+                img(src="./img/icon/header-icon-3.svg", alt="")
+                span корзина
+            li.header__links-li
+              .header__links-popup.header__links-popup--cart
+                .header__cart
+                  .header__cart-title Ваш транспорт
+                  .header__cart-row 1
+                  .header__cart-bottom
+                    a(href="#!").btn Добавить в гараж
+                  
+                
+              a(href="#!").header__links-a.header__links-a--has-popup
+                img(src="./img/icon/header-icon-4.svg", alt="")
+                span гараж
+            
+        
+.header-separator

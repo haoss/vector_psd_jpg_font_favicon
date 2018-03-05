@@ -2,11 +2,12 @@
 <html lang="ru">
     <head>
         <meta charset="utf-8">
-        <title>Главная - siteName</title>
+        <title>Главная - Vector</title>
         <meta name="description" content="">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
         <link rel="stylesheet" href="./js/libs/magnific-popup/magnific-popup.css">
+        <link rel="stylesheet" href="./font/fontello/css/fontello.css">
         <link rel="stylesheet" href="./css/main.css">
     </head>
     <body>
@@ -16,20 +17,65 @@
         </div>
         <!-- Header-->
         <header class="header">
-            <div class="container">
-                <nav role="navigation" class="navigation">
-                    <ul>
-                        <li class="active"><a href="#" title="Главная">Главная</a></li>
-                        <li><a href="#" title="О нас">О нас</a></li>
-                        <li><a href="#" title="Продукция">Продукция</a></li>
-                        <li><a href="#" title="Сотрудничество">Сотрудничество</a></li>
-                        <li><a href="#" title="Наши магазины">Наши магазины</a></li>
-                        <li><a href="#" title="Контакты">Контакты</a></li>
+            <div class="header__shadow"></div>
+            <div class="header__top">
+                <div class="container">
+                    <ul class="header__top-left">
+                        <li><a href="#!">Оптовый портал</a></li>
+                        <li><a href="#!">Адреса магазинов</a></li>
                     </ul>
-                </nav>
+                    <ul class="header__top-right">
+                        <li><a href="#!">склады</a></li>
+                        <li><a href="#!">Офисы</a></li>
+                        <li><a href="#!">Запрос по vin</a></li>
+                        <li><a href="#!">помощь    </a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="header__bottom">
+                <div class="container">
+                    <div class="header__bottom-wrapper">
+                        <div>
+                            <div class="header__logo"><a href="#!"><img src="./img/header-logo.png" alt=""></a></div>
+                        </div>
+                        <div>
+                            <div class="header__catalog">
+                                <div class="header__catalog-popup">1</div>
+                                <button type="button" class="header__catalog-btn"><span></span>Каталог</button>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="header__search">
+                                <form action="#">
+                                    <input type="text" placeholder="Поиск" class="header__search-input">
+                                    <button type="button" class="header__search-btn"><i class="ion-android-search"></i></button>
+                                </form>
+                            </div>
+                        </div>
+                        <div>
+                            <ul class="header__links">
+                                <li class="header__links-li">
+                                    <div class="header__links-popup header__links-popup--user">1</div><a href="#!" class="header__links-a header__links-a--has-popup"><img src="./img/icon/header-icon-1.svg" alt=""><span>войти</span></a>
+                                </li>
+                                <li class="header__links-li"><a href="#!" class="header__links-a"><img src="./img/icon/header-icon-2.svg" alt=""><span>заказы</span></a></li>
+                                <li class="header__links-li"><a href="#!" class="header__links-a"><img src="./img/icon/header-icon-3.svg" alt=""><span>корзина</span></a></li>
+                                <li class="header__links-li">
+                                    <div class="header__links-popup header__links-popup--cart">
+                                        <div class="header__cart">
+                                            <div class="header__cart-title">Ваш транспорт</div>
+                                            <div class="header__cart-row">1</div>
+                                            <div class="header__cart-bottom"><a href="#!" class="btn">Добавить в гараж</a></div>
+                                        </div>
+                                    </div><a href="#!" class="header__links-a header__links-a--has-popup"><img src="./img/icon/header-icon-4.svg" alt=""><span>гараж</span></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
             </div>
         </header>
-        <div class="content">
+        <div class="header-separator"></div>
+        <div style="height: 1000px;" class="content">
             <div class="container">
                 <h1>Главная 2</h1>
                 <div class="row">
@@ -41,10 +87,69 @@
         <!-- Footer-->
         <footer class="footer">
             <div class="container">
-                <div>&copy; 2016</div>
+                <div class="footer__navigation">
+                    <div class="footer__navigation-block">
+                        <div class="footer__navigation-title">ПАРТНЕРСТВО</div>
+                        <nav class="footer__navigation-list">
+                            <ul>
+                                <li><a href="#!">Как стать партнером</a></li>
+                                <li><a href="#!">Таблица скидок</a></li>
+                                <li><a href="#!">Регионам</a></li>
+                                <li><a href="#!">Поставщикам</a></li>
+                                <li><a href="#!">Оптовикам</a></li>
+                                <li><a href="#!">Производителям</a></li>
+                                <li><a href="#!">Наши склады</a></li>
+                                <li><a href="#!">Партнерские программы</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="footer__navigation-block">
+                        <div class="footer__navigation-title">интернет магазин</div>
+                        <nav class="footer__navigation-list">
+                            <ul>
+                                <li><a href="#!">Доставка заказа</a></li>
+                                <li><a href="#!">Как оплатить заказ</a></li>
+                                <li><a href="#!">Условия возврата и гарантии</a></li>
+                                <li><a href="#!">Стать клиентом</a></li>
+                                <li><a href="#!">Восстановить пароль</a></li>
+                                <li><a href="#!">Помощь</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="footer__navigation-block">
+                        <div class="footer__navigation-title">каталог товаров</div>
+                        <nav class="footer__navigation-list">
+                            <ul>
+                                <li><a href="#!">Каталоги автозапчастей</a></li>
+                                <li><a href="#!">Все для автосервиса</a></li>
+                                <li><a href="#!">Шины, диски</a></li>
+                                <li><a href="#!">Масла и ГСМ</a></li>
+                                <li><a href="#!">Аккумуляторы</a></li>
+                                <li><a href="#!">Аксессуары</a></li>
+                                <li><a href="#!">Мотокаталоги</a></li>
+                                <li><a href="#!">Автолитература</a></li>
+                                <li><a href="#!">Автоэлектроника</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="footer__navigation-block">
+                        <div class="footer__navigation-title">о компании</div>
+                        <nav class="footer__navigation-list">
+                            <ul>
+                                <li><a href="#!">О компании</a></li>
+                                <li><a href="#!">Правовая информация</a></li>
+                                <li><a href="#!">Адреса офисов</a></li>
+                                <li><a href="#!">Мобильное приложение</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+                <div class="footer__bottom">
+                    <div class="footer__card"><img src="./img/footer-card.png" alt=""></div>
+                    <div class="footer__copyright">© Vector 1998—2018</div>
+                </div>
             </div>
         </footer>
-        <div style="height: 1000px; background-color: #000"></div>
         <!--[if gte IE 9]
         <script src='./js/libs/html5shiv/es5-shim.min.js'>
         <script src='./js/libs/html5shiv/html5shiv.min.js'>

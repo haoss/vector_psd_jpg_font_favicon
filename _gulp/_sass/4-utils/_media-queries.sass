@@ -17,7 +17,10 @@
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 991px)
-  /**/
+  .footer
+    &__navigation
+      &-title
+        font-size: rem(14)
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 767px)
@@ -27,9 +30,34 @@
     transform: none !important
     animation: none !important
 
+  .footer
+    &__navigation
+      margin: 0 auto
+      max-width: 345px
+      &-title
+        font-size: rem(18)
+        color: #eee
+      &-block
+        float: none
+        width: 100%
+        padding: 0
+        &.is-active
+          .footer__navigation-list
+            display: block
+      &-list
+        display: none
+        margin-bottom: 25px
+    &__card, &__copyright
+      text-align: center
+      float: none
+
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 479px)
-  /**/
+  .footer
+    &__navigation
+      max-width: 190px
+      &-title
+        font-size: rem(16)
 
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 319px)
