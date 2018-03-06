@@ -13,7 +13,19 @@
 
 /* Large Devices, Wide Screens */
 @media only screen and (max-width : 1199px)
-  /**/
+  .header
+    &__catalog
+      &-btn
+        font-size: 0
+        width: 97px
+        span
+          margin-right: 0
+          vertical-align: 2px
+    &__search
+      width: 294px
+    &__links
+      &-li
+        width: 81px
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 991px)
@@ -21,6 +33,23 @@
     &__navigation
       &-title
         font-size: rem(14)
+  .header
+    &__catalog
+      &-btn
+        font-size: 0
+        width: 50px
+    &__search
+      width: 220px
+    &__links
+      &-li
+        width: 62px
+      &-a
+        font-size: rem(9)
+    &__bottom
+      &-wrapper
+        &>div
+          &+div
+            margin-left: 22px
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 767px)
@@ -50,6 +79,62 @@
     &__card, &__copyright
       text-align: center
       float: none
+  .header
+    &__top
+      &-left, &-right
+        display: none
+    &__logo
+      position: absolute
+      top: 0
+      margin-top: 9px
+      margin-left: 60px
+      img
+        width: 100px
+        height: 24px
+        background-image: url('../img/header-logo-mobile.png')
+    &__links
+      position: absolute
+      right: 50px
+      margin: -40px 0 0 0
+      &-li
+        width: auto
+        margin-right: 24px
+        &:last-child
+          margin-right: 0
+        &.is-active
+          background: none
+          &>a
+            background: none !important
+      &-a
+        height: 40px
+        padding-top: 9px
+        background: none !important
+        svg, img
+          width: 22px
+          height: 22px
+        span
+          display: none
+      &-popup
+        top: 36px
+        &--user
+          left: inherit
+          right: 0
+          &::before
+            left: inherit
+            right: 41px
+          &::after
+            left: inherit
+            right: 38px
+    &__bottom
+      &-wrapper
+        &>div
+          &:nth-child(2), &:last-child
+            margin-left: 0
+          &:nth-child(3)
+            width: 100%
+            margin-left: 15px
+    &__search
+      width: 100%
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 479px)
@@ -58,6 +143,34 @@
       max-width: 190px
       &-title
         font-size: rem(16)
+  .header
+    &__logo
+      margin-left: 0
+    &__links
+      right: 15px
+  .header
+    &__links
+      &-popup
+        &-wrapper
+          width: 290px
+        &--user
+          right: -58px
+    &__catalog
+      &-img
+        display: none
+      &-info
+        display: none
+      &-popup
+        &-wrapper
+          width: 290px
+      &-body
+        width: 100%
+        box-shadow: none
+    &__cart
+      &-row
+        padding-left: 45px
+        &-img
+          display: none
 
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 319px)

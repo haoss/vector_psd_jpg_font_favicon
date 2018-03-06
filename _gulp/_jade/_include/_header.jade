@@ -23,10 +23,22 @@ header.header
         div
           .header__logo
             a(href="#!")
-              img(src="./img/header-logo.png", alt="")
+              img(src="./img/sp.gif", alt="")
         div
           .header__catalog
-            .header__catalog-popup 1
+            .header__catalog-popup
+              .header__catalog-popup-wrapper
+                img(src="./img/header-catalog-popup-img.png", alt="").header__catalog-img
+                .header__catalog-info в разделе 
+                  strong 10 995 325 
+                  span единиц товара
+                .header__catalog-body
+                  ul
+                    li: a(href="#!") каталог запчастей
+                    li: a(href="#!") запчасти для то
+                    li: a(href="#!") моторные масла
+                    li: a(href="#!") шины и диски
+                    li: a(href="#!") лампы
             button(type="button").header__catalog-btn
               span
               | Каталог
@@ -39,29 +51,63 @@ header.header
         div
           ul.header__links
             li.header__links-li
-              .header__links-popup.header__links-popup--user 1
+              .header__links-popup.header__links-popup--user
+                .header__links-popup-wrapper
+                  
+                  .header__profile
+                    .header__profile-title Иванов И.
+                    .header__profile-body
+                      ul
+                        li
+                          span.header__profile-counter 1
+                          a(href="#!")
+                            +headerIcon4
+                            | Гараж
+                        li: a(href="#!")
+                          +headerIcon2
+                          | Заказы
+                        li: a(href="#!")
+                          +headerIcon6
+                          | Баланс
+                        li: a(href="#!")
+                          +headerIcon7
+                          | Запросы
+                        li: a(href="#!")
+                          +headerIcon8
+                          | настройки
+                    .header__profile-bottom
+                      a(href="#!")
+                        +headerIcon5
+                        | Выход
+                  
               a(href="#!").header__links-a.header__links-a--has-popup
-                img(src="./img/icon/header-icon-1.svg", alt="")
+                +headerIcon1
                 span войти
             li.header__links-li
               a(href="#!").header__links-a
-                img(src="./img/icon/header-icon-2.svg", alt="")
+                +headerIcon2
                 span заказы
             li.header__links-li
               a(href="#!").header__links-a
-                img(src="./img/icon/header-icon-3.svg", alt="")
+                +headerIcon3
                 span корзина
             li.header__links-li
               .header__links-popup.header__links-popup--cart
-                .header__cart
-                  .header__cart-title Ваш транспорт
-                  .header__cart-row 1
-                  .header__cart-bottom
-                    a(href="#!").btn Добавить в гараж
+                .header__links-popup-wrapper
+                  .header__cart
+                    .header__cart-title Ваш транспорт
+                    .header__cart-row
+                      a(href="#!").header__cart-row-close
+                        i.ion-ios-close
+                      img(src="./img/header-cart-auto.png", alt="").header__cart-row-img
+                      a(href="#!").header__cart-row-title AUDI A4 (8W2, B9) 2.0 TDI
+                      .header__cart-row-year 2015
+                    .header__cart-bottom
+                      a(href="#!").btn Добавить в гараж
                   
                 
               a(href="#!").header__links-a.header__links-a--has-popup
-                img(src="./img/icon/header-icon-4.svg", alt="")
+                +headerIcon4
                 span гараж
             
         

@@ -14,14 +14,20 @@ html(lang="ru")
     
     include ./_include/_header
     
-    .content(style="height: 1000px;")
+    .content
       .container
         
-        h1 Главная 2
+        .main-catalog
+          a(href="#!").main-catalog__block 1
+          a(href="#!").main-catalog__block 2
+          a(href="#!").main-catalog__block 3
+          a(href="#!").main-catalog__block 4
+          a(href="#!").main-catalog__block 5
         
-        .row
-          .col-md-4 4 collumns
-          .col-md-8 8 collumns
+        .main-slider
+          .main-slider__block
+            a(href="#!")
+              img(src="./img/main-banner-1.jpg", alt="").img-responsive
 
     
     include ./_include/_footer
