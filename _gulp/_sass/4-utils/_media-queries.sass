@@ -26,6 +26,11 @@
     &__links
       &-li
         width: 81px
+  .main-catalog
+    &__block
+      &-img
+        &[src*='-2x']
+          right: -90px
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 991px)
@@ -50,6 +55,45 @@
         &>div
           &+div
             margin-left: 22px
+  .main-catalog
+    &__block
+      height: 180px
+      &-img
+        &[src*='-2x.png']
+          height: 153px
+          right: -66px
+        &[src*='-2.png']
+          height: 140px
+        &[src*='-3.png']
+          height: 128px
+        &[src*='-4.png']
+          height: 134px
+        &[src*='-5.png']
+          height: 160px
+      &-title
+        font-size: rem(20)
+        line-height: 25px
+        top: 20px
+        &::before
+          top: 3px
+      &-list
+        top: 100px
+        &>span
+          &:not(:last-child)
+            margin-bottom: 10px
+      svg
+        width: 174px
+        height: 186px
+        right: -38px
+  .main-tab
+    &__tab
+      font-size: rem(16)
+      &>li
+        &:not(:last-child)
+          margin-right: 40px
+        &>a
+          height: 40px
+          line-height: 40px
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 767px)
@@ -58,7 +102,6 @@
     transition-property: none !important
     transform: none !important
     animation: none !important
-
   .footer
     &__navigation
       margin: 0 auto
@@ -135,6 +178,51 @@
             margin-left: 15px
     &__search
       width: 100%
+  .content
+    padding: 30px 0
+  .main-catalog
+    margin: 0 auto
+    max-width: 357px
+    padding-bottom: 15px
+    &>div
+      padding: 0
+    &__block
+      height: 115px
+      margin-bottom: 15px
+      &-list
+        display: none
+      &-img
+        &[src*='-2x.png']
+          height: 95px
+          right: -90px
+        &[src*='-2.png']
+          height: 90px
+        &[src*='-3.png']
+          height: 82px
+        &[src*='-4.png']
+          height: 94px
+        &[src*='-5.png']
+          height: 95px
+      svg
+        width: 111px
+        height: 119px
+        right: -24px
+      &-title
+        font-size: rem(26)
+        line-height: 30px
+        top: 16px
+        &::before
+          top: 6px
+  .main-tab
+    &__tab
+      font-size: rem(15)
+      &>li
+        &:not(:last-child)
+          margin-right: 22px
+    &__block
+      max-width: 350px
+      margin-left: auto
+      margin-right: auto
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 479px)
@@ -148,8 +236,6 @@
       margin-left: 0
     &__links
       right: 15px
-  .header
-    &__links
       &-popup
         &-wrapper
           width: 290px
@@ -171,6 +257,23 @@
         padding-left: 45px
         &-img
           display: none
+  .main-catalog
+    &__block
+      &-title
+        font-size: rem(20)
+        line-height: 25px
+        &::before
+          top: 3px
+  .main-slider
+    margin-bottom: 55px
+    .slick-dots
+      bottom: -24px
+  .main-tab
+    &__tab
+      font-size: rem(10)
+      &>li
+        &:not(:last-child)
+          margin-right: 10px
 
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 319px)

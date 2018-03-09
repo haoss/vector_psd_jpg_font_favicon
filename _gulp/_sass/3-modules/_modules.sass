@@ -3,3 +3,173 @@
 .content
   padding-top: 55px
   padding-bottom: 55px
+
+.main-slider
+  box-shadow: 2px 2px 10px rgba($color-2,.1)
+  margin-bottom: 70px
+  .slick
+    &-dots
+      height: 12px
+      bottom: 14px
+      li
+        vertical-align: 10px
+        height: 11px
+        margin: 0 2px
+        width: 11px
+        button
+          width: 12px
+          height: 12px
+          background: $color-white
+          border-radius: 50%
+          box-shadow: 0 0 0 0 $color-white inset
+          font-size: 0
+          border: 1px solid #dbdbde
+          &::before
+            display: none
+        &.slick-active
+          button
+            background: $color-1
+            border-color: $color-1
+            box-shadow: 0 0 0 2px $color-white inset
+
+.main-catalog
+  &__block
+    background: $color-white
+    overflow: hidden
+    border-radius: 3px
+    height: 240px
+    display: block
+    margin-bottom: 30px
+    box-shadow: 2px 2px 10px rgba($color-2,.1)
+    transition: all 0.35s
+    text-decoration: none !important
+    position: relative
+    color: $color-2
+    +clearfix
+    &:hover
+      color: $color-2
+      box-shadow: 0px 0px 0px rgba($color-2,.1)
+      &>svg
+        .path--color
+          fill: $color-1
+    &>svg
+      display: block
+      width: 233px
+      height: 248px
+      position: absolute
+      top: -1px
+      right: -51px
+      z-index: 0
+      .path--color
+        transition: all 0.35s
+        fill: #dbdbde
+    &-img
+      position: absolute
+      right: 0
+      bottom: 0
+      z-index: 5
+    &-title
+      color: $color-2
+      font-family: $font-baron
+      position: absolute
+      left: 35px
+      top: 34px
+      font-size: rem(26)
+      line-height: 30px
+      &::before
+        position: absolute
+        width: 24px
+        height: 18px
+        top: 6px
+        background: $color-1
+        color: $color-white
+        content: "\f3d1"
+        font-family: $font-ionicons
+        font-size: rem(9)
+        text-align: center
+        line-height: 20px
+        left: -35px
+    &-list
+      position: absolute
+      font-size: rem(15)
+      left: 33px
+      top: 137px
+      &>span
+        display: block
+        position: relative
+        padding-left: 13px
+        line-height: 1
+        margin-bottom: 15px
+        &:last-child
+          margin-bottom: 0
+        &::before
+          position: absolute
+          content: "\f125"
+          font-family: $font-ionicons
+          left: 0
+          top: 2px
+          line-height: 1
+          color: $color-1
+          font-size: rem(10)
+
+.tab-content > .tab-pane, .pill-content > .pill-pane
+  display: block
+  /* undo display:none
+  height: 0
+  /* height:0 is also invisible
+  overflow: hidden
+  /* no-overflow
+
+.tab-content > .active, .pill-content > .active
+  height: auto
+
+.main-tab
+  &__tab
+    margin: 0 0 30px 0
+    padding: 0
+    border-bottom: 1px solid #dddddd
+    font-family: $font-roboto-bold
+    text-transform: uppercase
+    font-size: rem(20)
+    +clearfix
+    &>li
+      list-style: none
+      margin: 0 50px 0 0
+      float: left
+      &:last-child
+        margin-right: 0
+      &>a
+        position: relative
+        display: block
+        height: 43px
+        line-height: 43px
+        color: #747474
+        text-decoration: none
+        &::after
+          content: ''
+          left: 0
+          right: 0
+          bottom: -1px
+          height: 3px
+          background: transparent
+          position: absolute
+        &:hover
+          text-decoration: none
+          color: $color-1
+      &.active
+        &>a
+          color: $color-1
+          &::after
+            background: $color-1
+  &__block
+    font-size: rem(14)
+    margin-bottom: 30px
+    &-date
+      color: $color-1
+      text-transform: uppercase
+      font-size: rem(10)
+      font-family: $font-roboto-bold
+      margin-bottom: 3px
+    p
+      margin-bottom: 0
+      line-height: 22px
