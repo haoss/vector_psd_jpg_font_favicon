@@ -1,2 +1,516 @@
 .loader
   .loader__block
+
+#enter-popup.popup.mfp-hide
+  .popup__wrapper
+    i.ion-android-close.popup__close
+    .popup__title войти на сайт
+    form(action="#").form
+      .form-group.has-feedback
+        label.hidden Телефон
+        input.form-control(type='text', name='phone', placeholder='Телефон')
+        i.ion-alert-circled
+      .form-group.has-feedback.has-error
+        label.hidden Пароль
+        input.form-control(type='text', name='password', placeholder='Пароль')
+        i.ion-alert-circled
+      .form-group.form-group--checkbox.form-group--fl
+        label.hidden Запомнить меня
+        input#input1(type='checkbox', name='remember')
+        i.ion-android-checkbox-outline-blank
+        i.ion-android-checkbox
+        label.label(for='input1') Запомнить
+      a(href="#recovery-popup").link-remember.open-popup-link Забыли пароль?
+      .clear
+      button(type="submit").btn.btn--block войти на сайт
+    .popup__social
+      .popup__social-head
+        span Или войти через социальные сети
+      .popup__social-body
+        a(href="#!")
+          i.icon.icon--vk
+        a(href="#!")
+          i.icon.icon--facebook
+        a(href="#!")
+          i.icon.icon--google-plus
+    .popup__form-bottom
+      strong Еще не зарегистрированы? 
+      a(href="#register-popup").link.open-popup-link Регистрация
+
+#register-popup.popup.mfp-hide
+  .popup__wrapper
+    i.ion-android-close.popup__close
+    .popup__title регистрация на сайте
+    form(action="#").form
+      .form-group.form-group--radio.form-group--radio-medium
+        input#radio1(type='radio', name='radio1', checked='')
+        i.ion-android-radio-button-off
+        i.ion-android-radio-button-on
+        label.label(for='radio1') Частное лицо
+      .form-group.form-group--radio.form-group--radio-medium
+        input#radio2(type='radio', name='radio1')
+        i.ion-android-radio-button-off
+        i.ion-android-radio-button-on
+        label.label(for='radio2') Юридическое лицо
+      .clear12
+      .form-group
+        select.selectric
+          option(value="" disabled selected) Тип регистрации
+          option(value="Регистрация 1") Регистрация 1
+          option(value="Регистрация 2") Регистрация 2
+          option(value="Регистрация 3") Регистрация 3
+          option(value="Регистрация 4") Регистрация 4
+      .form-group.has-feedback
+        label.hidden Фамилия
+        input.form-control(type='text', name='last-name', placeholder='Фамилия')
+        i.ion-alert-circled
+      .form-group.has-feedback
+        label.hidden Имя
+        input.form-control(type='text', name='first-name', placeholder='Имя')
+        i.ion-alert-circled
+      .form-group.has-feedback
+        label.hidden Отчество
+        input.form-control(type='text', name='middle-name', placeholder='Отчество')
+        i.ion-alert-circled
+      .form-group.has-feedback
+        label.hidden Ваш email
+        input.form-control(type='email', name='email', placeholder='Ваш email' value="ivanov_ivan@mail.ru")
+        i.ion-alert-circled
+      .form-group.has-feedback.has-error
+        label.hidden Телефон
+        input.form-control(type='text', name='phone2', placeholder='Телефон' value="+7 495 987 65 43 21")
+        i.ion-alert-circled
+      .form-group.has-feedback
+        label.hidden Пароль
+        input.form-control(type='text', name='password2', placeholder='Придумайте пароль')
+        i.ion-alert-circled
+      .form-group.form-group--captcha
+        div
+          img(src="./img/form-captcha.png", alt="").img-responsive
+      .form-group.form-group--terms-info
+        small Нажав кнопку “Регистрация”, вы подтверждаете, что соглашаетесь с 
+          a(href="#!") пользовательским соглашением
+          | &nbsp;и принимаете его условия.
+      button(type="submit").btn.btn--block регистрация
+      .popup__form-bottom
+        strong Уже зарегистрированы? 
+        a(href="#enter-popup").link.open-popup-link войти на сайт
+
+#enter-popup-sms.popup.mfp-hide
+  .popup__wrapper
+    i.ion-android-close.popup__close
+    .popup__title войти на сайт
+    form(action="#").form
+      .form-group.has-feedback
+        label.hidden Телефон
+        input.form-control(type='text', name='phone', placeholder='Телефон')
+        i.ion-alert-circled
+      .form-group.has-feedback
+        label.hidden Пароль
+        input.form-control(type='text', name='password', placeholder='Пароль')
+        i.ion-alert-circled
+      .form-group.has-feedback
+        label.hidden Пароль с смс
+        input.form-control(type='text', name='password-sms', placeholder='Пароль с смс')
+        i.ion-alert-circled
+      .form-group.form-group--checkbox
+        label.hidden Запомнить меня
+        input#input1(type='checkbox', name='remember')
+        i.ion-android-checkbox-outline-blank
+        i.ion-android-checkbox
+        label.label(for='input1') Запомнить
+      .clear
+      button(type="submit").btn.btn--block войти на сайт
+    .popup__info
+      p Ожидайте sms с паролем для входа. 
+      p Проверьте, пожалуйста, Ваш почтовый ящик. Указанный email необходимо активировать.
+      p В случае, если вы не воспользуетесь этой регистрацией, она будет удалена.
+    .popup__form-bottom
+      strong Еще не зарегистрированы? 
+      a(href="#register-popup").link.open-popup-link Регистрация
+
+#recovery-popup.popup.mfp-hide
+  .popup__wrapper
+    i.ion-android-close.popup__close
+    .popup__title.popup__title--f16 восстановление пароля
+    form(action="#").form
+      .form-group.has-feedback
+        label.hidden Ваш email
+        input.form-control(type='email', name='email3', placeholder='Ваш email')
+        i.ion-alert-circled
+      .form-group.has-feedback
+        label.hidden Телефон
+        input.form-control(type='text', name='phone3', placeholder='Телефон')
+        i.ion-alert-circled
+      .popup__info
+        p В течении 5 минут, на вашу почту или телефон прийдет письмо с инструкцией. Следуйте написанным в инструкции пунктам, и вы восстановите доступ к своему аккаунту.
+      .clear10
+      button(type="submit").btn.btn--block выслать пароль
+      .popup__form-bottom
+        strong Вспомнили пароль? 
+        a(href="#enter-popup").link.open-popup-link войти на сайт
+
+#inaccurate-description.popup.popup--big.mfp-hide
+  .popup__wrapper
+    i.ion-android-close.popup__close
+    .popup__title сообщить о неточном описании
+      small.small NISSAN 11950-80W00
+    form(action="#").form
+      .form-group.has-feedback
+        label.hidden Текст сообщения
+        textarea.form-control(placeholder="Текст сообщения").autosize
+      .row
+        .col-xs-6.col-xxs-12
+          a(href="#!").btn.btn--border.btn--block.no--m Отменить
+          .visible-xxs
+            .clear20
+        .col-xs-6.col-xxs-12
+          button(type="submit").btn.btn--block.no--m Отправить
+        
+#inaccurate-description-text.popup.popup--big.mfp-hide
+  .popup__wrapper
+    i.ion-android-close.popup__close
+    .popup__title сообщить о неточном описании
+      small.small NISSAN 11950-80W00
+    form(action="#").form
+      .form-group.has-feedback
+        label.hidden Текст сообщения
+        textarea.form-control(placeholder="Текст сообщения").autosize Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Вдали от всех живут они в буквенных домах на берегу Семантика большого языкового океана. Маленький ручеек Даль журчит по всей стране и обеспечивает ее всеми необходимыми правилами. Эта парадигматическая страна, в которой жаренные предложения залетают прямо в рот. Даже всемогущая пунктуация не имеет власти над рыбными текстами, ведущими безорфографичный образ жизни. Однажды одна маленькая строчка рыбного текста по имени Lorem ipsum
+      .row
+        .col-xs-6.col-xxs-12
+          a(href="#!").btn.btn--border.btn--block.no--m Отменить
+          .visible-xxs
+            .clear20
+        .col-xs-6.col-xxs-12
+          button(type="submit").btn.btn--block.no--m Отправить
+
+#popup-notification.popup.mfp-hide
+  .popup__wrapper
+    i.ion-android-close.popup__close
+    .popup__title оповещения
+    .clear10
+    form(action="#").form
+      table.table-notification
+        thead
+          tr
+            th &nbsp;
+            th(width="15")
+              span смс
+            th(width="15")
+              span email
+        tbody
+          tr
+            td 
+              span.span Заказ оформлен
+            td(width="15")
+              label.form-group.form-group--checkbox.form-group--notification(for="checkbox111")
+                input#checkbox111(type='checkbox', name='checkbox111', checked='')
+                i.ion-android-checkbox-outline-blank
+                i.ion-android-checkbox
+            td(width="15")
+              label.form-group.form-group--checkbox.form-group--notification(for="checkbox211")
+                input#checkbox211(type='checkbox', name='checkbox211')
+                i.ion-android-checkbox-outline-blank
+                i.ion-android-checkbox
+          tr
+            td
+              span.span О зачислении средств
+            td(width="15")
+              label.form-group.form-group--checkbox.form-group--notification(for="checkbox122")
+                input#checkbox122(type='checkbox', name='checkbox122', checked='')
+                i.ion-android-checkbox-outline-blank
+                i.ion-android-checkbox
+            td(width="15")
+              label.form-group.form-group--checkbox.form-group--notification(for="checkbox222")
+                input#checkbox222(type='checkbox', name='checkbox222')
+                i.ion-android-checkbox-outline-blank
+                i.ion-android-checkbox
+          tr
+            td
+              span.span Информационные рассылки
+            td(width="15")
+              label.form-group.form-group--checkbox.form-group--notification(for="checkbox133")
+                input#checkbox133(type='checkbox', name='checkbox133', checked='')
+                i.ion-android-checkbox-outline-blank
+                i.ion-android-checkbox
+            td(width="15")
+              label.form-group.form-group--checkbox.form-group--notification(for="checkbox233")
+                input#checkbox233(type='checkbox', name='checkbox233')
+                i.ion-android-checkbox-outline-blank
+                i.ion-android-checkbox
+          tr
+            td
+              span.span Выдано (Отправлено)
+            td(width="15")
+              label.form-group.form-group--checkbox.form-group--notification(for="checkbox144")
+                input#checkbox144(type='checkbox', name='checkbox144', checked='')
+                i.ion-android-checkbox-outline-blank
+                i.ion-android-checkbox
+            td(width="15")
+              label.form-group.form-group--checkbox.form-group--notification(for="checkbox244")
+                input#checkbox244(type='checkbox', name='checkbox244')
+                i.ion-android-checkbox-outline-blank
+                i.ion-android-checkbox
+          tr
+            td
+              span.span Выкуплено
+            td(width="15")
+              label.form-group.form-group--checkbox.form-group--notification(for="checkbox155")
+                input#checkbox155(type='checkbox', name='checkbox155', checked='')
+                i.ion-android-checkbox-outline-blank
+                i.ion-android-checkbox
+            td(width="15")
+              label.form-group.form-group--checkbox.form-group--notification(for="checkbox255")
+                input#checkbox255(type='checkbox', name='checkbox255')
+                i.ion-android-checkbox-outline-blank
+                i.ion-android-checkbox
+          tr
+            td
+              span.span Оприходован офисом
+            td(width="15")
+              label.form-group.form-group--checkbox.form-group--notification(for="checkbox166")
+                input#checkbox166(type='checkbox', name='checkbox166', checked='')
+                i.ion-android-checkbox-outline-blank
+                i.ion-android-checkbox
+            td(width="15")
+              label.form-group.form-group--checkbox.form-group--notification(for="checkbox266")
+                input#checkbox266(type='checkbox', name='checkbox266')
+                i.ion-android-checkbox-outline-blank
+                i.ion-android-checkbox
+          tr
+            td
+              span.span Получено в заказ
+            td(width="15")
+              label.form-group.form-group--checkbox.form-group--notification(for="checkbox177")
+                input#checkbox177(type='checkbox', name='checkbox177', checked='')
+                i.ion-android-checkbox-outline-blank
+                i.ion-android-checkbox
+            td(width="15")
+              label.form-group.form-group--checkbox.form-group--notification(for="checkbox277")
+                input#checkbox277(type='checkbox', name='checkbox277')
+                i.ion-android-checkbox-outline-blank
+                i.ion-android-checkbox
+          tr
+            td
+              span.span Приостановлено
+            td(width="15")
+              label.form-group.form-group--checkbox.form-group--notification(for="checkbox188")
+                input#checkbox188(type='checkbox', name='checkbox188', checked='')
+                i.ion-android-checkbox-outline-blank
+                i.ion-android-checkbox
+            td(width="15")
+              label.form-group.form-group--checkbox.form-group--notification(for="checkbox288")
+                input#checkbox288(type='checkbox', name='checkbox288')
+                i.ion-android-checkbox-outline-blank
+                i.ion-android-checkbox
+          tr
+            td
+              span.span Пришло на склад
+            td(width="15")
+              label.form-group.form-group--checkbox.form-group--notification(for="checkbox199")
+                input#checkbox199(type='checkbox', name='checkbox199', checked='')
+                i.ion-android-checkbox-outline-blank
+                i.ion-android-checkbox
+            td(width="15")
+              label.form-group.form-group--checkbox.form-group--notification(for="checkbox299")
+                input#checkbox299(type='checkbox', name='checkbox299')
+                i.ion-android-checkbox-outline-blank
+                i.ion-android-checkbox
+          tr
+            td
+              span.span Снято
+            td(width="15")
+              label.form-group.form-group--checkbox.form-group--notification(for="checkbox1111")
+                input#checkbox1111(type='checkbox', name='checkbox1111', checked='')
+                i.ion-android-checkbox-outline-blank
+                i.ion-android-checkbox
+            td(width="15")
+              label.form-group.form-group--checkbox.form-group--notification(for="checkbox2111")
+                input#checkbox2111(type='checkbox', name='checkbox2111')
+                i.ion-android-checkbox-outline-blank
+                i.ion-android-checkbox
+          tr
+            td
+              span.span Согласовать срок поставки
+            td(width="15")
+              label.form-group.form-group--checkbox.form-group--notification(for="checkbox1222")
+                input#checkbox1222(type='checkbox', name='checkbox1222', checked='')
+                i.ion-android-checkbox-outline-blank
+                i.ion-android-checkbox
+            td(width="15")
+              label.form-group.form-group--checkbox.form-group--notification(for="checkbox2222")
+                input#checkbox2222(type='checkbox', name='checkbox2222')
+                i.ion-android-checkbox-outline-blank
+                i.ion-android-checkbox
+          tr
+            td
+              span.span Срок поставки не подтвержден
+            td(width="15")
+              label.form-group.form-group--checkbox.form-group--notification(for="checkbox1333")
+                input#checkbox1333(type='checkbox', name='checkbox1333', checked='')
+                i.ion-android-checkbox-outline-blank
+                i.ion-android-checkbox
+            td(width="15")
+              label.form-group.form-group--checkbox.form-group--notification(for="checkbox2333")
+                input#checkbox2333(type='checkbox', name='checkbox2333')
+                i.ion-android-checkbox-outline-blank
+                i.ion-android-checkbox
+          tr
+            td
+              span.span Срок поставки подтвержден
+            td(width="15")
+              label.form-group.form-group--checkbox.form-group--notification(for="checkbox1444")
+                input#checkbox1444(type='checkbox', name='checkbox1444', checked='')
+                i.ion-android-checkbox-outline-blank
+                i.ion-android-checkbox
+            td(width="15")
+              label.form-group.form-group--checkbox.form-group--notification(for="checkbox2444")
+                input#checkbox2444(type='checkbox', name='checkbox2444')
+                i.ion-android-checkbox-outline-blank
+                i.ion-android-checkbox
+          tr
+            td
+              span.span Утилизировано
+            td(width="15")
+              label.form-group.form-group--checkbox.form-group--notification(for="checkbox1555")
+                input#checkbox1555(type='checkbox', name='checkbox1555', checked='')
+                i.ion-android-checkbox-outline-blank
+                i.ion-android-checkbox
+            td(width="15")
+              label.form-group.form-group--checkbox.form-group--notification(for="checkbox2555")
+                input#checkbox2555(type='checkbox', name='checkbox2555')
+                i.ion-android-checkbox-outline-blank
+                i.ion-android-checkbox
+    
+      .form-group.form-group--terms-info
+        small Нажимая на кнопку «Сохранить», я даю 
+          a(href="#!") согласие на обработку персональных данных
+      button(type="submit").btn.btn--block.no--m сохранить
+    
+#popup-address.popup.mfp-hide
+  .popup__wrapper
+    i.ion-android-close.popup__close
+    .popup__title адрес доставки
+    form(action="#").form
+      .form-group.has-feedback
+        label.hidden Название адреса доставки
+        input.form-control(type='text', name='address', placeholder='Название адреса доставки')
+      .form-group.has-feedback
+        label.hidden Индекс
+        input.form-control(type='text', name='index', placeholder='Индекс')
+      .form-group
+        select.selectric
+          option(value="" disabled selected) страна
+          option(value="Россия") Россия
+          option(value="Украины") Украины
+          option(value="Белорусь") Белорусь
+          option(value="Казахстан") Казахстан
+      .form-group
+        select.selectric
+          option(value="" disabled selected) Регион
+          option(value="Регион 1") Регион 1
+          option(value="Регион 2") Регион 2
+          option(value="Регион 3") Регион 3
+          option(value="Регион 4") Регион 4
+      .form-group
+        select.selectric
+          option(value="" disabled selected) город
+          option(value="Москва") Москва
+          option(value="Уренгой") Уренгой
+          option(value="Бухарест") Бухарест
+          option(value="Караганда") Караганда
+      .form-group
+        select.selectric
+          option(value="" disabled selected) улица
+          option(value="Улица 1") Улица 1
+          option(value="Улица 2") Улица 2
+          option(value="Улица 3") Улица 3
+          option(value="Улица 4") Улица 4
+      .row
+        .col-xs-6
+          .form-group.has-feedback
+            label.hidden Номер
+            input.form-control(type='text', name='address-number', placeholder='Номер')
+        .col-xs-6
+          .form-group.has-feedback
+            label.hidden Квартира
+            input.form-control(type='text', name='address-room', placeholder='Квартира')
+      .form-group.has-feedback.has-error
+        label.hidden Телефон
+        input.form-control(type='text', name='phone2', placeholder='Телефон' value="+7 495 987 65 43 21")
+        i.ion-alert-circled
+      .form-group.has-feedback
+        label.hidden Комментарий
+        textarea.form-control(placeholder="Комментарий").autosize
+      .form-group.form-group--terms-info
+        small При изменении персональных данных, я даю 
+          a(href="#!") согласие на их обработку
+      button(type="submit").btn.btn--block.no--m добавить
+    
+#popup-product.popup.popup--big.mfp-hide
+  .popup__wrapper
+    i.ion-android-close.popup__close
+    .popup__title NISSAN 11950-80W00
+      small.small Ремкомплект, опора стойки амортизатора
+      
+#add-auto1.popup.mfp-hide
+  .popup__wrapper
+    i.ion-android-close.popup__close
+    .popup__title Добавление 
+      br
+      | транспортного средства
+    form(action="#").form
+      .form-group.has-feedback
+        label.hidden Введите VIN или номер кузова
+        input.form-control(type='text', name='vin', placeholder='Введите VIN или номер кузова')
+      button(type="submit").btn.btn--block искать
+    .popup__bottom
+      p VIN, (идентификационный номер автомобиля) можно найти в ПТС, в свидетельстве о регистрации ТС, а также на табличке под капотом автомобиля.
+      p По VIN можно идентифицировать автомобиль по каталогу производителя и правильно подобрать автозапчасти. В некоторых случаях могут понадобиться дополнительные данные, поэтому мы можем попросить вас сообщить дополнительные сведения о вашем автомобиле.
+      p 
+        strong.color--red Важно! 
+        | VIN автомобиля или кузов необходимо указать корректно, изменение даже единственного символа может привести к неверному подбору детали. 
+    
+#add-auto2.popup.mfp-hide
+  .popup__wrapper
+    i.ion-android-close.popup__close
+    .popup__title Добавление 
+      br
+      | транспортного средства
+    form(action="#").form
+      a(href="#!").btn.btn--border.btn--block уточнить параметры
+      .form-group.has-feedback
+        label.hidden Название
+        input.form-control(type='text', name='auto-name', placeholder='Название')
+      button(type="submit").btn.btn--block добавить в гараж
+    
+    
+#add-auto3.popup.mfp-hide
+  .popup__wrapper
+    i.ion-android-close.popup__close
+    .popup__title Добавление 
+      br
+      | транспортного средства
+    form(action="#").form
+      .form-group
+        select.selectric
+          option(value="" disabled selected) марка
+          option(value="марка 1") марка 1
+          option(value="марка 2") марка 2
+          option(value="марка 3") марка 3
+          option(value="марка 4") марка 4
+      .form-group
+        select.selectric
+          option(value="" disabled selected) модель
+          option(value="модель 1") модель 1
+          option(value="модель 2") модель 2
+          option(value="модель 3") модель 3
+          option(value="модель 4") модель 4
+      .form-group
+        select.selectric
+          option(value="" disabled selected) модификация
+          option(value="модификация 1") модификация 1
+          option(value="модификация 2") модификация 2
+          option(value="модификация 3") модификация 3
+          option(value="модификация 4") модификация 4
+      button(type="submit").btn.btn--block.no--m уточнить

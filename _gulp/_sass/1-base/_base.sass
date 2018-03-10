@@ -42,20 +42,20 @@ body
   font-weight: 400
   text-decoration: none
   margin: 0 0 15px 0
-  font-family: $font-roboto-medium
+  font-family: $font-roboto-bold
 
 .h1, h1
   font-size: rem(26)
   line-height: 1.05
   letter-spacing: -1px
   margin-bottom: 25px
-  font-family: $font-roboto
+  font-family: $font-baron
+  color: $color-1
 
 .h2, h2
   font-size: rem(24)
   line-height: 1.14
   margin-bottom: 20px
-  font-family: $font-roboto
 
 .h3, h3
   font-size: rem(22)
@@ -262,8 +262,12 @@ ul.list
 /* icons */
 .icon
   display: inline-block
-  // &--sprite
-  //   @include sprite($img-name)
+  &--vk
+    @include sprite($icon-social-vk)
+  &--facebook
+    @include sprite($icon-social-facebook)
+  &--google-plus
+    @include sprite($icon-social-google-plus)
 
 /* color */
 .color

@@ -1,14 +1,22 @@
 /* forms */
 
-input
+input, textarea
   &::-webkit-input-placeholder
     color: #bcbcbc
+    font-size: rem(12)
+    font-family: $font-roboto
   &::-moz-placeholder
     color: #bcbcbc
+    font-size: rem(12)
+    font-family: $font-roboto
   &:-ms-input-placeholder
     color: #bcbcbc
+    font-size: rem(12)
+    font-family: $font-roboto
   &:-moz-placeholder
     color: #bcbcbc
+    font-size: rem(12)
+    font-family: $font-roboto
 
 button, input, optgroup, select, textarea
   margin: 0
@@ -25,46 +33,162 @@ button, html input[type=button], input[type=reset], input[type=submit]
 
 .form
   &-group,  &__group
-    margin-bottom: 15px
-
+    margin-bottom: 20px
+    .ion-alert-circled
+      display: none
+    &.has-feedback
+      position: relative
+      .ion-alert-circled
+        position: absolute
+        right: 0
+        top: 9px
+        color: #1747a1
+        font-size: rem(14)
+        z-index: 10
+        line-height: 1
+        color: $color-1
+      &.has-error
+        .ion-alert-circled
+          display: block
+        .form
+          &-control, &__control
+            padding-right: 25px !important
+    &--checkbox, &--radio
+      position: relative
+      input[type="checkbox"], input[type="radio"]
+        display: none
+        &:checked
+          &~.ion-android-checkbox-outline-blank, &~.ion-android-radio-button-off
+            display: none
+          &~.ion-android-checkbox, &~.ion-android-radio-button-on
+            display: block
+      i[class*='ion-android']
+        position: absolute
+        left: 0
+        top: 0
+        color: #858585
+        font-size: rem(20)
+        line-height: 1
+        display: block
+      .label
+        cursor: pointer
+        padding-left: 23px
+        position: relative
+        z-index: 1
+        font-size: rem(11)
+        text-transform: uppercase
+        line-height: 1
+        margin: 0
+      i.ion-android-checkbox, i.ion-android-radio-button-on
+        display: none
+        color: $color-1
+    &--radio
+      margin-bottom: 9px
+      &-medium
+        i[class*='ion-android']
+          top: -1px
+        .label
+          font-size: rem(14)
+      input[type="radio"]
+        &:checked
+          &~.label
+            font-family: $font-roboto-bold
+    &--fl
+      float: left
+    &--terms-info
+      text-align: center
+      small
+        font-size: rem(10)
+        line-height: 13px
+        display: block
+    &--notification
+      width: 11px
+      height: 12px
+      cursor: pointer
+      margin: 0
+      i[class*='ion-android']
+        font-size: rem(14)
   &-control, &__control
     display: block
     width: 100%
-    height: 34px
-    padding: 6px 12px
+    height: 30px
+    padding: 0 !important
     font-size: rem(14)
     line-height: 1.42857143
-    color: #555
+    color: #444444
     background-color: $color-white
     background-image: none
-    border: 1px solid $color-gray
-    border-radius: 4px
-    box-shadow: inset 0 1px 1px rgba(0,0,0,.075)
-    transition: border all .35s, box-shadow all .35s
+    border: 0
+    border-bottom: 1px solid #bebebe
+    border-radius: 0px
+    box-shadow: none
+    font-family: $font-roboto-bold
+    transition: all .35s
+    &::-webkit-input-placeholder
+      color: #858585
+      font-size: rem(12)
+    &::-moz-placeholder
+      color: #858585
+      font-size: rem(12)
+    &:-ms-input-placeholder
+      color: #858585
+      font-size: rem(12)
+    &:-moz-placeholder
+      color: #858585
+      font-size: rem(12)
+    &:focus
+      border-bottom: 1px solid #bebebe
+      box-shadow: none !important
+  .link-remember
+    font-size: rem(11)
+    text-transform: uppercase
+    float: right
+    margin-top: 3px
 
 textarea
   &.form-control, &.form__control
     height: 150px
     resize: none
+    font-family: $font-roboto
+    line-height: 24px
+    font-size: rem(14)
+    &:focus
+      box-shadow: none
+    &.autosize
+      height: 30px
+      overflow: hidden !important
+      padding-bottom: 5px !important
+      transition: inherit !important
 
 label
   display: inline-block
   max-width: 100%
   margin-bottom: 5px
-  font-weight: 700
+  font-weight: 400
 
 .has
   &-success .form-control
     border-color: #3c763d
-    box-shadow: inset 0 1px 1px rgba(#3c763d,.75)
+    box-shadow: none
 
   &-warning .form-control
     border-color: #8a6d3b
-    box-shadow: inset 0 1px 1px rgba(#8a6d3b,.75)
+    box-shadow: none
 
   &-error .form-control
-    border-color: #a94442
-    box-shadow: inset 0 1px 1px rgba(#a94442,.75)
+    border-bottom-color: $color-1
+    box-shadow: none
+    color: $color-1
+    &::-webkit-input-placeholder
+      color: $color-1
+    &::-moz-placeholder
+      color: $color-1
+    &:-ms-input-placeholder
+      color: $color-1
+    &:-moz-placeholder
+      color: $color-1
+    &:focus
+      border-bottom-color: $color-1
 
   &-success .control-label
     color: #3c763d

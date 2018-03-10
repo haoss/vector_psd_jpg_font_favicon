@@ -1,0 +1,87 @@
+doctype
+
+html(lang="ru")
+  
+  -var active = 'Список попапов' //активный пункт меню, список в header.jade
+  -var pageTitle = 'Список попапов' + ' - Vector' //title страницы для генерации верстки  
+
+  include ./_include/_head
+
+  body
+    
+    // Preloader
+    include ./_include/_preloader
+    
+    include ./_include/_header
+    
+    .content
+      .container
+        
+        ul.breadcrumbs
+          li
+            a(href="#!") Интернет-магазин VECTОR
+          li
+            span Название страницы 
+        
+        .row
+          .col-sm-4.col-sm-push-8
+            
+            .banner.hidden-xs
+              a(href="#!")
+                img(src="./img/banner-360-270.png", alt="")
+          
+          .col-sm-8.col-sm-pull-4
+            
+            .content__wrapper
+              h1 Список всех попапов
+              
+              ol
+                li
+                  a(href="#enter-popup").open-popup-link Войти на сайт
+                li
+                  a(href="#register-popup").open-popup-link Регистрация на сайте
+                li
+                  a(href="#enter-popup-sms").open-popup-link Войти на сайт - sms
+                li
+                  a(href="#recovery-popup").open-popup-link Восстановление пароля
+                  
+              ol(start="5")
+                li
+                  a(href="#inaccurate-description").open-popup-link Сообщить о неточном описании - без текста
+                li
+                  a(href="#inaccurate-description-text").open-popup-link Сообщить о неточном описании - с текстом
+              
+              ol(start="7")
+                li
+                  a(href="#popup-notification").open-popup-link Оповещения
+                li
+                  a(href="#popup-address").open-popup-link Адрес доставки
+                li
+                  a(href="#popup-product").open-popup-link NISSAN 11950-80W00
+                  
+              ol(start="10")
+                li
+                  a(href="#add-auto1").open-popup-link Добавление транспортного средства 1
+                li
+                  a(href="#add-auto2").open-popup-link Добавление транспортного средства 2
+                li
+                  a(href="#add-auto3").open-popup-link Добавление транспортного средства 3
+              
+              
+              
+            
+        
+    include ./_include/_footer
+    //- div(style="height: 1000px; background-color: #000")
+    
+    //[if gte IE 9]
+      <script src='./js/libs/html5shiv/es5-shim.min.js'>
+      <script src='./js/libs/html5shiv/html5shiv.min.js'>
+      <script src='./js/libs/html5shiv/html5shiv-printshiv.min.js'>
+      <script src='./js/libs/html5shiv/respond.min.js'><![endif]
+
+    // Load Scripts
+    script(src="./js/libs.js")
+    include ./_include/_footer-js
+    script(src="./js/common.js")
+    

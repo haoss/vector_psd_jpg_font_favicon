@@ -266,6 +266,19 @@
           fill: $color-white
       span
         display: block
+      b
+        position: absolute
+        width: 16px
+        height: 16px
+        line-height: 16px
+        color: $color-white
+        text-align: center
+        background: $color-2
+        border-radius: 50%
+        overflow: hidden
+        top: 14px
+        right: 26px
+        font-size: rem(8)
     &-popup
       // display: none
       position: absolute
@@ -447,3 +460,28 @@
       font-size: rem(10)
       font-family: $font-roboto-bold
       background: $color-red
+  &__phone
+    display: none
+    background: $color-2
+    text-align: center
+    color: $color-white
+    height: 40px
+    line-height: 37px
+    font-size: rem(20)
+    font-family: $font-roboto-light
+    a
+      color: $color-white
+      text-decoration: none
+      display: inline-block
+      line-height: 1
+      &:hover, &:focus
+        color: $color-white
+        text-decoration: none
+    svg, img
+      width: 20px
+      height: 20px
+      display: inline-block
+      margin-right: 10px
+      vertical-align: -3px
+    .path--color
+      fill: $color-white

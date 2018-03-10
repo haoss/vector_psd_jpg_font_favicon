@@ -69,7 +69,20 @@ $(document).on('ready', function(){
 
   $('.open-popup-link').magnificPopup({
     type: 'inline',
-    midClick: true // Allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source in href.
+    midClick: true,
+    showCloseBtn: false,
+    callbacks: {
+      open: function(){
+        var ta = document.querySelector('textarea.autosize');
+        autosize(ta);
+        var evt = document.createEvent('Event');
+        evt.initEvent('autosize:update', true, false);
+        ta.dispatchEvent(evt);
+      }
+    }
+  });
+  $('.popup__close').on('click', function(){
+    $.magnificPopup.close();
   });
 
   footerToggle();
@@ -86,7 +99,10 @@ $(document).on('ready', function(){
     autoplay: true,
     // autoplaySpeed: 4000,
     // speed: 1000
-  })
+  });
+
+  $('select.selectric').selectric();
+  autosize($('textarea.autosize'));
 
   // Chrome Smooth Scroll
   try {

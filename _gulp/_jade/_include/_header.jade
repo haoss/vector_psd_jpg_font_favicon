@@ -3,6 +3,10 @@ header.header
 
   .header__shadow
   
+  .header__phone 
+    +callTo
+    a(href="callto:#!") 0 800 900 80 70
+  
   .header__top
     .container
       
@@ -90,6 +94,7 @@ header.header
             li.header__links-li
               a(href="#!").header__links-a
                 +headerIcon3
+                b 99
                 span корзина
             li.header__links-li
               .header__links-popup.header__links-popup--cart

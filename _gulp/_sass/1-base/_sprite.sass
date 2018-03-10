@@ -1,0 +1,99 @@
+// SASS variables are information about icon's compiled state, stored under its original file name
+//
+// .icon-home
+//   width: $icon-home-width
+//
+// The large array-like variables contain all information about a single icon
+// $icon-home: x y offset_x offset_y width height total_width total_height image_path
+//
+// At the bottom of this section, we provide information about the spritesheet itself
+// $spritesheet: width height image $spritesheet-sprites
+$icon-social-facebook-name: 'icon-social-facebook'
+$icon-social-facebook-x: 0px
+$icon-social-facebook-y: 0px
+$icon-social-facebook-offset-x: 0px
+$icon-social-facebook-offset-y: 0px
+$icon-social-facebook-width: 30px
+$icon-social-facebook-height: 30px
+$icon-social-facebook-total-width: 30px
+$icon-social-facebook-total-height: 90px
+$icon-social-facebook-image: 'sprite.png'
+$icon-social-facebook: (0px, 0px, 0px, 0px, 30px, 30px, 30px, 90px, 'sprite.png', 'icon-social-facebook', )
+$icon-social-google-plus-name: 'icon-social-google-plus'
+$icon-social-google-plus-x: 0px
+$icon-social-google-plus-y: 30px
+$icon-social-google-plus-offset-x: 0px
+$icon-social-google-plus-offset-y: -30px
+$icon-social-google-plus-width: 30px
+$icon-social-google-plus-height: 30px
+$icon-social-google-plus-total-width: 30px
+$icon-social-google-plus-total-height: 90px
+$icon-social-google-plus-image: 'sprite.png'
+$icon-social-google-plus: (0px, 30px, 0px, -30px, 30px, 30px, 30px, 90px, 'sprite.png', 'icon-social-google-plus', )
+$icon-social-vk-name: 'icon-social-vk'
+$icon-social-vk-x: 0px
+$icon-social-vk-y: 60px
+$icon-social-vk-offset-x: 0px
+$icon-social-vk-offset-y: -60px
+$icon-social-vk-width: 30px
+$icon-social-vk-height: 30px
+$icon-social-vk-total-width: 30px
+$icon-social-vk-total-height: 90px
+$icon-social-vk-image: 'sprite.png'
+$icon-social-vk: (0px, 60px, 0px, -60px, 30px, 30px, 30px, 90px, 'sprite.png', 'icon-social-vk', )
+$spritesheet-width: 30px
+$spritesheet-height: 90px
+$spritesheet-image: 'sprite.png'
+$spritesheet-sprites: ($icon-social-facebook, $icon-social-google-plus, $icon-social-vk, )
+$spritesheet: (30px, 90px, 'sprite.png', $spritesheet-sprites, )
+
+// The provided mixins are intended to be used with the array-like variables
+//
+// .icon-home
+//   @include sprite-width($icon-home)
+//
+// .icon-email
+//   @include sprite($icon-email)
+//
+// Example usage in HTML:
+//   `display: block` sprite:
+//   <div class="icon-home"></div>
+//
+// To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
+//   // CSS
+//   .icon {
+//     display: inline-block;
+//   }
+//
+//   // HTML
+//   <i class="icon icon-home"></i>
+@mixin sprite-width($sprite)
+  width: nth($sprite, 5)
+
+@mixin sprite-height($sprite)
+  height: nth($sprite, 6)
+
+@mixin sprite-position($sprite)
+  $sprite-offset-x: nth($sprite, 3)
+  $sprite-offset-y: nth($sprite, 4)
+  background-position: $sprite-offset-x  $sprite-offset-y
+
+@mixin sprite-image($sprite)
+  $sprite-image: nth($sprite, 9)
+  background-image: url(../img/#{$sprite-image})
+
+@mixin sprite($sprite)
+  @include sprite-image($sprite)
+  @include sprite-position($sprite)
+  @include sprite-width($sprite)
+  @include sprite-height($sprite)
+
+// The `sprites` mixin generates identical output to the CSS template
+//   but can be overridden inside of SASS
+//
+// @include sprites($spritesheet-sprites)
+@mixin sprites($sprites)
+  @each $sprite in $sprites
+    $sprite-name: nth($sprite, 10)
+    .#{$sprite-name}
+      @include sprite($sprite)

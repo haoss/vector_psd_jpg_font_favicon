@@ -17,98 +17,78 @@ html(lang="ru")
     .content
       .container
         
-        .main-catalog.row
-          .col-sm-8
-            a(href="#!").main-catalog__block
-              +catalogImgV
-              img(src="./img/catalog-category-img-1-2x.png", alt="").main-catalog__block-img
-              span.main-catalog__block-title каталог 
-                br
-                | запчастей
-              span.main-catalog__block-list
-                span Оригинальные
-                span Универсальные
-          .col-sm-4
-            a(href="#!").main-catalog__block
-              +catalogImgV
-              img(src="./img/catalog-category-img-2.png", alt="").main-catalog__block-img
-              span.main-catalog__block-title запчасти 
-                br
-                | для то
-          .col-sm-4
-            a(href="#!").main-catalog__block
-              +catalogImgV
-              img(src="./img/catalog-category-img-3.png", alt="").main-catalog__block-img
-              span.main-catalog__block-title моторные 
-                br
-                | масла
-          .col-sm-4
-            a(href="#!").main-catalog__block
-              +catalogImgV
-              img(src="./img/catalog-category-img-4.png", alt="").main-catalog__block-img
-              span.main-catalog__block-title шины и 
-                br
-                | диски
-          .col-sm-4
-            a(href="#!").main-catalog__block
-              +catalogImgV
-              img(src="./img/catalog-category-img-5.png", alt="").main-catalog__block-img
-              span.main-catalog__block-title лампы
+        ul.breadcrumbs
+          li
+            a(href="#!") Интернет-магазин VECTОR
+          li
+            span Название страницы 
         
-        .main-slider
-          .main-slider__block
-            a(href="#!")
-              img(src="./img/main-banner-1.jpg", alt="").img-responsive
-          .main-slider__block
-            a(href="#!")
-              img(src="./img/main-banner-1.jpg", alt="").img-responsive
-          .main-slider__block
-            a(href="#!")
-              img(src="./img/main-banner-1.jpg", alt="").img-responsive
-          .main-slider__block
-            a(href="#!")
-              img(src="./img/main-banner-1.jpg", alt="").img-responsive
-
-        .main-tab
-          ul(role='tablist').main-tab__tab
-            li.active(role='presentation')
-              a(href='#tab1', aria-controls='tab1', role='tab', data-toggle='tab') НОВОСТИ
-            li(role='presentation')
-              a(href='#tab2', aria-controls='tab2', role='tab', data-toggle='tab') ПРЕСС-РЕЛИЗЫ 
-            li(role='presentation')
-              a(href='#tab3', aria-controls='tab3', role='tab', data-toggle='tab') АКЦИИ
-            li(role='presentation')
-              a(href='#tab4', aria-controls='tab4', role='tab', data-toggle='tab') СТАТЬИ
-            li(role='presentation')
-              a(href='#tab5', aria-controls='tab5', role='tab', data-toggle='tab') АНОНСЫ
-  
-          .tab-content
-            #tab1.tab-pane.active(role='tabpanel')
+        .row
+          .col-sm-4.col-sm-push-8
+            
+            .document__navigation
+              ul
+                li: a(href="#company-history") Краткая история группы компаний
+                li: a(href="#!") О проекте
+                li: a(href="#!") VECTOR.ru сегодня
+                li: a(href="#!") Наш склад
+                li: a(href="#!") Наш автопарк
+                li: a(href="#!") Наши партнёры
+            
+            .banner.hidden-xs
+              a(href="#!")
+                img(src="./img/banner-360-270.png", alt="")
+          
+          .col-sm-8.col-sm-pull-4
+            
+            .content__wrapper
+              h1 о компании
               
-              .row
-                .col-md-4.col-sm-6
-                  .main-tab__block
-                    .main-tab__block-date 29 декабря 2017
-                    p Ассортимент свечей накаливания DENSO пополнился 10 новыми наименованиями
-                .col-md-4.col-sm-6
-                  .main-tab__block
-                    .main-tab__block-date 03 января 2018
-                    p Каталог ТО пополнен моделями Porsche Cayenne II, Nissan X-Trail 2.2 dCi 4WD, Nissan X-Trail 2.2 dCi, Mercedes E седан II E 240, E 270, E 320, E 430 4-matic
-                .col-md-4.hidden-sm.hidden-xs
-                  .main-tab__block
-                    .main-tab__block-date 13 января 2018
-                    p Компания Delphi предлагает расширенную поддержку в области новейших технологий силовых агрегатов
+              .content__title Краткая история группы компаний
+              p Vector.ru - крупнейшая федеральная сеть по продаже автозапчастей, комплектующих и аксессуаров. Сегодня в Vector трудится свыше 2 500 человек: профессионалов высочайшего класса, обладающих уникальной квалификацией в подборе надёжных деталей для Вашего автомобиля. Проект стартовал в начале 2017 г. в режиме обслуживания оптовых покупателей (В2В), но уже в мае этого же года начал работу с розничными клиентами.
+              p На сегодняшний день функционал Vector.ru обеспечивается рядом юридических лиц. Многие из них - в частности, основная операционная структура группы, компания “APM” (ООО), - имеют более чем 20-летний опыт работы.
               
-              .text-center
-                a(href="#!").btn Все новости
+              .content__title Среди наиболее значимых этапов нашей деятельности стоит отметить:
+              table.content__table
+                tr
+                  td(valign="top")
+                    .content__date 2000
+                  td(valign="top") 
+                    p
+                      i.hidden-xxs Строительство собственного современного логистического центра отвечающего требованиям динамично развивающейся компании
+                      i.visible-xxs Строительство собственного центра 
+                tr
+                  td(valign="top")
+                    .content__date 2006
+                  td(valign="top") 
+                    p 
+                      i.hidden-xxs Переход на новое современное ПО (SAP ERP и EWM)
+                      i.visible-xxs Переход на новое ПО 
+                tr
+                  td(valign="top")
+                    .content__date 2010
+                  td(valign="top") 
+                    p 
+                      i.hidden-xxs Продажа 50% доли в IT-подразделении холдинга 
+                      i.visible-xxs Продажа 50% доли
+                tr
+                  td(valign="top")
+                    .content__date 2017
+                  td(valign="top") 
+                    p 
+                      i.hidden-xxs Май. Вывод на рынок нового инновационного портала Vector.ru
+                      i.visible-xxs Май. Вывод на рынок 
               
-            #tab2.tab-pane(role='tabpanel') 2
-            #tab3.tab-pane(role='tabpanel') 3
-            #tab4.tab-pane(role='tabpanel') 4
-            #tab5.tab-pane(role='tabpanel') 4
-
-    
-    
+              .content__title О проекте
+              p Проектная мощность сети Vector - свыше 300 розничных точек во всех регионах России, Белоруссии и Украины. Общее число розничных магазинов сети планируется довести до плановых показателей в течение года с момента запуска, начиная со 131 торговых точек (по состоянию на 1 мая 2017 г.), за счёт открытия собственных магазинов и привлечения партнёров-франчайзи.
+              
+              .content__title Vector.ru сегодня
+              p Мы компания, стремящаяся стать незаменимым помощником для всех автовладельцев, умеющих считать деньги и ценящих своё время. Профессионализм сотрудников, накопленный опыт и стремление к высоким стандартам обслуживания - принципы, которые определяют ежедневную работу всех сотрудников Vector.ru.
+              
+              .content__title Наш склад
+              p Инновационный складской терминал общей площадью 24 000 кв м. Современное оборудование позволяет хранить более 400 000 SKU (уникальных категорий товара) одновременно и обрабатывать на вход и выход до 18 000 единиц товара в час.
+            
+        
     include ./_include/_footer
     //- div(style="height: 1000px; background-color: #000")
     
