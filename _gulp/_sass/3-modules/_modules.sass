@@ -979,3 +979,33 @@
       color: #535353
       font-size: rem(13)
       margin-top: 5px
+
+.map
+  &__head
+    display: flex
+    float: left
+    margin-left: 270px
+    margin-top: -55px
+    &>div
+      &+div
+        margin-left: 25px
+  &__body
+    display: flex
+    &-map
+      width: 72.3%
+    &-list
+      margin-left: 30px
+      width: 33.2%
+    &-canvas
+      position: relative
+      width: 100%
+      padding-bottom: 600px
+      height: 0
+      overflow: hidden
+      border-radius: 4px
+      iframe
+        position: absolute
+        left: 0
+        top: 0
+        right: 0
+        bottom: 0

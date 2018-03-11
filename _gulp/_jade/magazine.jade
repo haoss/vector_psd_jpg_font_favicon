@@ -1,0 +1,104 @@
+doctype
+
+html(lang="ru")
+  
+  -var active = 'Адреса магазинов' //активный пункт меню, список в header.jade
+  -var pageTitle = 'Адреса магазинов' + ' - Vector' //title страницы для генерации верстки  
+
+  include ./_include/_head
+
+  body
+    
+    // Preloader
+    include ./_include/_preloader
+    
+    include ./_include/_header
+    
+    .content
+      .container
+        
+        ul.breadcrumbs
+          li
+            a(href="#!") Интернет-магазин VECTОR
+          li
+            span Название страницы 
+        
+        .row
+          .col-md-12
+            
+            .content__wrapper
+              h1 Адреса магазинов 
+            
+              .map
+                .map__head
+                  div
+                    select.selectric
+                      option(value="Россия") Россия
+                      option(value="Украина") Украина
+                      option(value="Белорусь") Белорусь
+                      option(value="Казахстан") Казахстан
+                  div
+                    select.selectric
+                      option(value="Москва") Москва
+                      option(value="Уренгой") Уренгой
+                      option(value="Минск") Минск
+                
+                .clear
+                
+                .map__body
+                  .map__body-map
+                    
+                    #map_canvas.map__body-canvas
+                      
+                    // Google Map
+                    script(src='https://maps.googleapis.com/maps/api/js?key=AIzaSyCPK3An2lqmwlN35h8OHKt11mFkU8msfZs&sensor=false')
+                    script.
+                      function initialize() {
+                      var myLatlng = new google.maps.LatLng(51.518641, -0.168163);
+                      var map_options = {
+                      zoom: 13,
+                      mapTypeId: google.maps.MapTypeId.ROADMAP,
+                      center: myLatlng,
+                      scrollwheel: false,
+                      disableDefaultUI: true
+                      }
+                      var map = new google.maps.Map(document.getElementById('map_canvas'), map_options)
+                      var myIcon = new google.maps.MarkerImage('./img/map-marker.png', null, null, null, new google.maps.Size(26,36));
+                      var marker = new google.maps.Marker({
+                      position: myLatlng,
+                      map: map,
+                      icon: myIcon
+                      });
+                      /* Remove if you dont want B/W Google Map */
+                      
+                      var styles = [
+                      {
+                      featureType: "all",
+                      stylers: [
+                      { saturation: -100 }
+                      ]
+                      }
+                      ];
+                      map.setOptions({styles: styles});
+                      
+                      }
+                      google.maps.event.addDomListener(window, 'load', initialize);
+                    // Google Map Ends!
+
+                    
+                  .map__body-list 2
+        
+    include ./_include/_footer
+    //- div(style="height: 1000px; background-color: #000")
+    
+    //[if gte IE 9]
+      <script src='./js/libs/html5shiv/es5-shim.min.js'>
+      <script src='./js/libs/html5shiv/html5shiv.min.js'>
+      <script src='./js/libs/html5shiv/html5shiv-printshiv.min.js'>
+      <script src='./js/libs/html5shiv/respond.min.js'><![endif]
+
+    // Load Scripts
+    script(src="./js/libs.js")
+    include ./_include/_footer-js
+    script(src="./js/common.js")
+    

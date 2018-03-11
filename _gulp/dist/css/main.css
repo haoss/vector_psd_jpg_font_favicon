@@ -3685,7 +3685,8 @@ body {
   letter-spacing: -1px;
   margin-bottom: 25px;
   font-family: "BaronNeue";
-  color: #be1e2d; }
+  color: #be1e2d;
+  text-transform: lowercase; }
 
 .h2, h2 {
   font-size: 1.5rem;
@@ -5764,6 +5765,39 @@ label {
     color: #535353;
     font-size: 0.8125rem;
     margin-top: 5px; }
+
+.map__head {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  float: left;
+  margin-left: 270px;
+  margin-top: -55px; }
+  .map__head > div + div {
+    margin-left: 25px; }
+
+.map__body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+  .map__body-map {
+    width: 72.3%; }
+  .map__body-list {
+    margin-left: 30px;
+    width: 33.2%; }
+  .map__body-canvas {
+    position: relative;
+    width: 100%;
+    padding-bottom: 600px;
+    height: 0;
+    overflow: hidden;
+    border-radius: 4px; }
+    .map__body-canvas iframe {
+      position: absolute;
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0; }
 
 /* clear */
 .clear, .clear1, .clear2, .clear3, .clear4, .clear5, .clear6, .clear7, .clear8, .clear9, .clear10, .clear11, .clear12, .clear13, .clear14, .clear15, .clear16, .clear17, .clear18, .clear19, .clear20, .clear21, .clear22, .clear23, .clear24, .clear25, .clear26, .clear27, .clear28, .clear29, .clear30, .clear31, .clear32, .clear33, .clear34, .clear35, .clear36, .clear37, .clear38, .clear39, .clear40, .clear41, .clear42, .clear43, .clear44, .clear45, .clear46, .clear47, .clear48, .clear49, .clear50, .clear51, .clear52, .clear53, .clear54, .clear55, .clear56, .clear57, .clear58, .clear59, .clear60, .clear61, .clear62, .clear63, .clear64, .clear65, .clear66, .clear67, .clear68, .clear69, .clear70, .clear71, .clear72, .clear73, .clear74, .clear75, .clear76, .clear77, .clear78, .clear79, .clear80, .clear81, .clear82, .clear83, .clear84, .clear85, .clear86, .clear87, .clear88, .clear89, .clear90, .clear91, .clear92, .clear93, .clear94, .clear95, .clear96, .clear97, .clear98, .clear99, .clear100, .clear-hr {
