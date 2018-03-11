@@ -1,0 +1,65 @@
+doctype
+
+html(lang="ru")
+  
+  -var active = 'Как стать партнером' //активный пункт меню, список в header.jade
+  -var pageTitle = 'Как стать партнером' + ' - Vector' //title страницы для генерации верстки  
+
+  include ./_include/_head
+
+  body
+    
+    // Preloader
+    include ./_include/_preloader
+    
+    include ./_include/_header
+    
+    .content
+      .container
+        
+        ul.breadcrumbs
+          li
+            a(href="#!") Интернет-магазин VECTОR
+          li
+            span Название страницы 
+        
+        .row
+          .col-sm-4.col-sm-push-8
+            
+            .banner.hidden-xs
+              a(href="#!")
+                img(src="./img/banner-360-270.png", alt="")
+          
+          .col-sm-8.col-sm-pull-4
+            
+            .content__wrapper
+              h1 Как стать партнером
+              p
+                strong В настоящее время компания – крупнейший интернет магазин по продаже запасных частей и аксессуаров, в соответствии со стратегией развития бизнеса расширяет свою сбытовую сеть и приглашает к сотрудничеству партнеров.
+              p На карте, представленной здесь, Вы можете найти список городов, где существуют партнерские пункты выдачи заказов. Во всех остальных городах, где нет партнера, планируется создание новых партнерских точек выдачи заказов.
+              p Обращаем Ваше внимание на то, что выбор партнера в каждом регионе проводится на конкурсной основе и, в соответствии, со списком приоритетных направлений развития. Заполненную анкету кандидата необходимо направить по электронной почте 
+                a(href="mailto: ") development@vector.ru
+              p(style="text-align: center")
+                a(href="#!")
+                  img(src="./img/img-partners.jpg", alt="").img-responsive
+              p После рассмотрения анкеты кандидата со стороны Вам будет отправлена более подробная информация по условиям сотрудничества. При положительном решении со стороны с кандидатом в партнеры подписывается «Лицензионный договор» по реализации проекта открытия партнера Exist.ru в регионе, с описанием условий и принципов работы.
+              p
+                strong Мы обязательно рассмотрим Ваше обращение к сотрудничеству.
+              p С наилучшими пожеланиями,
+                br
+                | Отдел развития бизнеса Vector.ru
+        
+    include ./_include/_footer
+    //- div(style="height: 1000px; background-color: #000")
+    
+    //[if gte IE 9]
+      <script src='./js/libs/html5shiv/es5-shim.min.js'>
+      <script src='./js/libs/html5shiv/html5shiv.min.js'>
+      <script src='./js/libs/html5shiv/html5shiv-printshiv.min.js'>
+      <script src='./js/libs/html5shiv/respond.min.js'><![endif]
+
+    // Load Scripts
+    script(src="./js/libs.js")
+    include ./_include/_footer-js
+    script(src="./js/common.js")
+    

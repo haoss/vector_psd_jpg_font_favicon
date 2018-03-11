@@ -1,0 +1,99 @@
+doctype
+
+html(lang="ru")
+  
+  -var active = 'Ценовые категории' //активный пункт меню, список в header.jade
+  -var pageTitle = 'Ценовые категории' + ' - Vector' //title страницы для генерации верстки  
+
+  include ./_include/_head
+
+  body
+    
+    // Preloader
+    include ./_include/_preloader
+    
+    include ./_include/_header
+    
+    .content
+      .container
+        
+        ul.breadcrumbs
+          li
+            a(href="#!") Интернет-магазин VECTОR
+          li
+            span Название страницы 
+        
+        .row
+          .col-sm-4.col-sm-push-8
+            
+            .banner.hidden-xs
+              a(href="#!")
+                img(src="./img/banner-360-270.png", alt="")
+          
+          .col-sm-8.col-sm-pull-4
+            
+            .content__wrapper
+              h1 Ценовые категории
+              p
+                strong Мы заинтересованы в работе с постоянными клиентами, магазинами и сервисами, имеем много партнеров и постоянно ищем новых. В зависимости от месячного объема приобретенных у нас товаров, предлагаем поставки по следующим ценовым категориям:
+                
+              table.table__prices
+                tbody
+                  tr
+                    td
+                      strong Розница
+                    td 
+                      span.hidden-xxs Оформление заказа в офисе
+                      span.visible-xxs Оформление в офисе
+                  tr
+                    td
+                      strong Интернет
+                    td
+                      span.hidden-xxs Оформление заказа на сайте
+                      span.visible-xxs Оформление на сайте
+                  tr
+                    td
+                      strong VIP
+                    td от 30 тыс. руб
+                  tr
+                    td
+                      strong Опт 1
+                    td от 60 тыс. руб
+                  tr
+                    td
+                      strong Опт 2
+                    td от 120 тыс. руб
+                  tr
+                    td
+                      strong Опт 3
+                    td от 215 тыс. руб
+                  tr
+                    td
+                      strong Опт 4
+                    td от 370 тыс. руб
+                  tr
+                    td
+                      strong Опт 6
+                    td от 600 тыс. руб
+              
+              p
+                strong Обратите внимание:
+              p Данная система скидок действительна и для физических лиц. Юридическим лицам просьба обращаться к своему менеджеру, координаты которого указаны в «настройках».
+              p
+                strong Будем рады видеть вас своими клиентами!
+                
+        
+    include ./_include/_footer
+    //- div(style="height: 1000px; background-color: #000")
+    
+    //[if gte IE 9]
+      <script src='./js/libs/html5shiv/es5-shim.min.js'>
+      <script src='./js/libs/html5shiv/html5shiv.min.js'>
+      <script src='./js/libs/html5shiv/html5shiv-printshiv.min.js'>
+      <script src='./js/libs/html5shiv/respond.min.js'><![endif]
+
+    // Load Scripts
+    script(src="./js/libs.js")
+    include ./_include/_footer-js
+    script(src="./js/common.js")
+    

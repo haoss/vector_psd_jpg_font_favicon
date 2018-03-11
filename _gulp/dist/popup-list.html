@@ -30,6 +30,7 @@
         <link rel="stylesheet" href="./js/libs/slick/slick.css">
         <link rel="stylesheet" href="./js/libs/slick/slick-theme.css">
         <link rel="stylesheet" href="./js/libs/selectric/selectric.css">
+        <link rel="stylesheet" href="./js/libs/datatables/datatables.min.css">
         <link rel="stylesheet" href="./css/main.css">
     </head>
     <body>
@@ -174,7 +175,7 @@
         </div>
         <div id="inaccurate-description" class="popup popup--big mfp-hide">
             <div class="popup__wrapper"><i class="ion-android-close popup__close"></i>
-                <div class="popup__title">сообщить о неточном описании<small class="small">NISSAN 11950-80W00</small></div>
+                <div class="popup__title">сообщить о неточном описании<small class="small text-uppercase">NISSAN 11950-80W00</small></div>
                 <form action="#" class="form">
                     <div class="form-group has-feedback">
                         <label class="hidden">Текст сообщения</label>
@@ -195,7 +196,7 @@
         </div>
         <div id="inaccurate-description-text" class="popup popup--big mfp-hide">
             <div class="popup__wrapper"><i class="ion-android-close popup__close"></i>
-                <div class="popup__title">сообщить о неточном описании<small class="small">NISSAN 11950-80W00</small></div>
+                <div class="popup__title">сообщить о неточном описании<small class="small text-uppercase">NISSAN 11950-80W00</small></div>
                 <form action="#" class="form">
                     <div class="form-group has-feedback">
                         <label class="hidden">Текст сообщения</label>
@@ -495,6 +496,50 @@
         <div id="popup-product" class="popup popup--big mfp-hide">
             <div class="popup__wrapper"><i class="ion-android-close popup__close"></i>
                 <div class="popup__title">NISSAN 11950-80W00<small class="small">Ремкомплект, опора стойки амортизатора</small></div>
+                <div class="popup__gallery"><img src="./img/popup-product-img.png" alt="" class="img-responsive"></div>
+                <div class="popup__bottom">
+                    <table class="popup__th no--m-bottom">
+                        <tbody>
+                            <tr>
+                                <th colspan="2">Параметры</th>
+                            </tr>
+                            <tr>
+                                <td class="first"><span><span class="bg--f3f4f7">Длина, мм</span></span></td>
+                                <td class="last">26 545</td>
+                            </tr>
+                            <tr class="separator">
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th colspan="2">Общие</th>
+                            </tr>
+                            <tr>
+                                <td class="first"><span><span class="bg--f3f4f7">Длина упаковки, мм</span></span></td>
+                                <td class="last">30 222</td>
+                            </tr>
+                            <tr>
+                                <td class="first"><span><span class="bg--f3f4f7">Толщина упаковки, мм</span></span></td>
+                                <td class="last">2 354</td>
+                            </tr>
+                            <tr>
+                                <td class="first"><span><span class="bg--f3f4f7">Ширина упаковки, мм</span></span></td>
+                                <td class="last">8 244</td>
+                            </tr>
+                            <tr>
+                                <td class="first"><span><span class="bg--f3f4f7">Вес, г</span></span></td>
+                                <td class="last">10 555</td>
+                            </tr>
+                            <tr>
+                                <td class="first"><span><span class="bg--f3f4f7">Артикул</span></span></td>
+                                <td class="last">11950-80W00</td>
+                            </tr>
+                            <tr>
+                                <td class="first"><span><span class="bg--f3f4f7">Бренд</span></span></td>
+                                <td class="last">Nissan</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </div>
         <div id="add-auto1" class="popup mfp-hide">
@@ -517,12 +562,50 @@
         <div id="add-auto2" class="popup mfp-hide">
             <div class="popup__wrapper"><i class="ion-android-close popup__close"></i>
                 <div class="popup__title">Добавление <br>транспортного средства</div>
-                <form action="#" class="form"><a href="#!" class="btn btn--border btn--block">уточнить параметры</a>
+                <form action="#" class="form">
+                    <div class="h6"><strong>Chrysler GRAND CARAVAN 3.3</strong></div>
+                    <div class="popup__img"><img src="./img/popup-auto-img.png" alt=""></div>
+                    <table class="popup__th">
+                        <tbody>
+                            <tr>
+                                <th colspan="2">Параметры</th>
+                            </tr>
+                            <tr>
+                                <td class="first"><span><span>Дата производства</span></span></td>
+                                <td class="last">1996-01-01</td>
+                            </tr>
+                            <tr>
+                                <td class="first"><span><span>Производитель</span></span></td>
+                                <td class="last">Chrysler</td>
+                            </tr>
+                            <tr>
+                                <td class="first"><span><span>Модель</span></span></td>
+                                <td class="last">GRAND CARAVAN</td>
+                            </tr>
+                            <tr>
+                                <td class="first"><span><span>Модификация</span></span></td>
+                                <td class="last">3.3</td>
+                            </tr>
+                            <tr>
+                                <td class="first"><span><span>Тип двигателя</span></span></td>
+                                <td class="last">Бензиновый</td>
+                            </tr>
+                            <tr>
+                                <td class="first"><span><span>Мощность, л.с.</span></span></td>
+                                <td class="last">158</td>
+                            </tr>
+                            <tr>
+                                <td class="first"><span><span>Привод</span></span></td>
+                                <td class="last">Передний</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="h6"><strong>Транспорт найден не верно?</strong></div><a href="#!" class="btn btn--border btn--block">уточнить параметры</a>
                     <div class="form-group has-feedback">
                         <label class="hidden">Название</label>
                         <input type="text" name="auto-name" placeholder="Название" class="form-control">
                     </div>
-                    <button type="submit" class="btn btn--block">добавить в гараж</button>
+                    <button type="submit" class="btn btn--block no--m">добавить в гараж</button>
                 </form>
             </div>
         </div>
@@ -832,6 +915,7 @@
         <script src="./js/libs/bootstrap/bootstrap.min.js"></script>
         <script src="./js/libs/selectric/jquery.selectric.js"></script>
         <script src="./js/libs/autosize/autosize.min.js"></script>
+        <script src="./js/libs/datatables/datatables.min.js"></script>
         <script src="./js/common.js"></script>
     </body>
 </html>

@@ -234,7 +234,7 @@
     border-radius: 4px
     overflow: hidden
     margin-bottom: 30px
-    padding: 6px 0
+    padding: 4px 0
     font-size: rem(14)
     font-family: $font-roboto
     ul
@@ -286,6 +286,7 @@
   border-radius: 4px
   // overflow: hidden
   box-shadow: 0 2px 20px rgba($color-2,.2)
+  color: #444444
   .btn
     margin-bottom: 18px
   &__close
@@ -312,7 +313,7 @@
       display: block
       color: #858585
       font-size: rem(12)
-      text-transform: uppercase
+      // text-transform: uppercase
       font-family: $font-roboto
       margin-top: 5px
   &__form-bottom
@@ -395,23 +396,67 @@
     background: #f3f4f7
     margin: 23px -20px -27px -20px
     padding: 20px
+    border-radius: 0 0 4px 4px
     p
       line-height: 20px
       &:last-child
         margin-bottom: 0
-
-/*======================================
- *  Selectric
- *======================================
-
-.selectric-wrapper
-  position: relative
-  cursor: pointer
-
-.selectric-responsive
-  width: 100%
+  &__gallery
+    position: relative
+    overflow: hidden
+    height: 240px
+    display: flex
+    justify-content: center
+    align-items: center
+    margin-top: -20px
+    margin-bottom: 0px
+  &__th
+    width: 100%
+    font-size: rem(12)
+    font-family: $font-roboto
+    margin-bottom: 10px
+    th
+      font-size: rem(15)
+      font-family: $font-roboto-medium
+      color: $color-1
+      font-weight: 400
+      padding-bottom: 10px
+    td
+      vertical-align: top
+      padding-bottom: 10px
+      &.last
+        width: 1px
+        white-space: nowrap
+        font-family: $font-roboto-bold
+        vertical-align: bottom
+      &.first
+        &>span
+          // border-bottom: 1px dotted #aeaeae
+          background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAABCAIAAABol6gpAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAABxJREFUeNpiWLdu3f///x88eABkPHz4EI0NEGAAhSwZnIG1SuIAAAAASUVORK5CYII=') repeat-x left calc(100% - 3px)
+          min-height: 14px
+          display: block
+          &>span
+            background: $color-white
+            // background: #f3f4f7
+            display: inline-block
+            max-width: 90%
+    tr.separator
+      td
+        padding-bottom: 5px
+  &__img
+    margin-bottom: 10px
+    img
+      margin: 0 auto
+      display: block
+      max-width: 100%
+      height: auto
 
 .selectric
+  &-wrapper
+    position: relative
+    cursor: pointer
+  &-responsive
+    width: 100%
   border: 0
   border-bottom: 1px solid #bebebe
   background: transparent
@@ -457,149 +502,135 @@
       border: 0
       color: #444444
       font-size: rem(14)
-
-.selectric-focus .selectric
-  border-color: #AAA
-
-.selectric-hover .selectric
-  border-color: #c4c4c4
-  .button
-    color: #c4c4c4
-    &:after
-      border-top-color: #c4c4c4
-
-.selectric-open
-  z-index: 9999
-  .selectric
-    // border-color: #c4c4c4
-    // background: #dfdfdf
-  .selectric-items
-    display: block
-
-.selectric-disabled
-  filter: alpha(opacity = 50)
-  opacity: 0.5
-  cursor: default
-  user-select: none
-
-.selectric-hide-select
-  position: relative
-  overflow: hidden
-  width: 0
-  height: 0
-  select
-    position: absolute
-    left: -100%
-  &.selectric-is-native
-    position: absolute
-    width: 100%
-    height: 100%
-    z-index: 10
-    select
-      position: absolute
-      top: 0
-      left: 0
-      right: 0
-      height: 100%
-      width: 100%
-      border: none
-      z-index: 1
-      box-sizing: border-box
-      opacity: 0
-
-.selectric-input
-  position: absolute !important
-  top: 0 !important
-  left: 0 !important
-  overflow: hidden !important
-  clip: rect(0, 0, 0, 0) !important
-  margin: 0 !important
-  padding: 0 !important
-  width: 1px !important
-  height: 1px !important
-  outline: none !important
-  border: none !important
-  *font: 0/0 a !important
-  background: none !important
-
-.selectric-temp-show
-  position: absolute !important
-  visibility: hidden !important
-  display: block !important
-
-/* Items box
-
-.selectric-items
-  display: none
-  position: absolute
-  top: 100%
-  left: 0
-  background: #F8F8F8
-  border: 1px solid #C4C4C4
-  z-index: -1
-  box-shadow: 0 0 10px -6px
-  .selectric-scroll
-    height: 100%
-    overflow: auto
-
-.selectric-above .selectric-items
-  top: auto
-  bottom: 100%
-
-.selectric-items
-  ul
-    list-style: none
-    padding: 0
-    margin: 0
-    font-size: 12px
-    line-height: 20px
-    min-height: 20px
-  li
-    list-style: none
-    padding: 0
-    margin: 0
-    font-size: 12px
-    line-height: 20px
-    min-height: 20px
-    display: block
-    padding: 8px
-    border-top: 1px solid #FFF
-    border-bottom: 1px solid #EEE
-    color: #666
-    cursor: pointer
-    &.selected
-      background: #EFEFEF
-      color: #444
-    &.highlighted
-      background: #D0D0D0
-      color: #444
-    &:hover
-      background: #F0F0F0
-      color: #444
-  .disabled
+  &-focus .selectric
+    border-color: #AAA
+  &-hover .selectric
+    border-color: #c4c4c4
+    .button
+      color: #c4c4c4
+      &:after
+        border-top-color: #c4c4c4
+  &-open
+    z-index: 9999
+    .selectric
+    .selectric-items
+      display: block
+  &-disabled
     filter: alpha(opacity = 50)
     opacity: 0.5
-    cursor: default !important
-    background: none !important
-    color: #666 !important
+    cursor: default
     user-select: none
+  &-hide-select
+    position: relative
+    overflow: hidden
+    width: 0
+    height: 0
+    select
+      position: absolute
+      left: -100%
+    &.selectric-is-native
+      position: absolute
+      width: 100%
+      height: 100%
+      z-index: 10
+      select
+        position: absolute
+        top: 0
+        left: 0
+        right: 0
+        height: 100%
+        width: 100%
+        border: none
+        z-index: 1
+        box-sizing: border-box
+        opacity: 0
+  &-input
+    position: absolute !important
+    top: 0 !important
+    left: 0 !important
+    overflow: hidden !important
+    clip: rect(0, 0, 0, 0) !important
+    margin: 0 !important
+    padding: 0 !important
+    width: 1px !important
+    height: 1px !important
+    outline: none !important
+    border: none !important
+    *font: 0/0 a !important
+    background: none !important
+  &-temp-show
+    position: absolute !important
+    visibility: hidden !important
+    display: block !important
+  &-items
     display: none
-  .selectric-group
-    .selectric-group-label
-      font-weight: bold
-      padding-left: 10px
-      cursor: default
-      -webkit-user-select: none
-      -moz-user-select: none
-      -ms-user-select: none
-      user-select: none
-      background: none
-      color: #444
-    &.disabled li
-      filter: alpha(opacity = 100)
-      opacity: 1
+    position: absolute
+    top: 100%
+    left: 0
+    background: #F8F8F8
+    border: 1px solid #C4C4C4
+    z-index: -1
+    box-shadow: 0 0 10px -6px
+    .selectric-scroll
+      height: 100%
+      overflow: auto
+  &-above .selectric-items
+    top: auto
+    bottom: 100%
+  &-items
+    ul
+      list-style: none
+      padding: 0
+      margin: 0
+      font-size: 12px
+      line-height: 20px
+      min-height: 20px
     li
-      padding-left: 25px
+      list-style: none
+      padding: 0
+      margin: 0
+      font-size: 12px
+      line-height: 20px
+      min-height: 20px
+      display: block
+      padding: 8px
+      border-top: 1px solid #FFF
+      border-bottom: 1px solid #EEE
+      color: #666
+      cursor: pointer
+      &.selected
+        background: #EFEFEF
+        color: #444
+      &.highlighted
+        background: #D0D0D0
+        color: #444
+      &:hover
+        background: #F0F0F0
+        color: #444
+    .disabled
+      filter: alpha(opacity = 50)
+      opacity: 0.5
+      cursor: default !important
+      background: none !important
+      color: #666 !important
+      user-select: none
+      display: none
+    .selectric-group
+      .selectric-group-label
+        font-weight: bold
+        padding-left: 10px
+        cursor: default
+        -webkit-user-select: none
+        -moz-user-select: none
+        -ms-user-select: none
+        user-select: none
+        background: none
+        color: #444
+      &.disabled li
+        filter: alpha(opacity = 100)
+        opacity: 1
+      li
+        padding-left: 25px
 
 .table-notification
   width: 100%
@@ -632,3 +663,319 @@
       bottom: 17px
       width: 31px
       text-align: left
+
+.text-uppercase
+  text-transform: uppercase !important
+
+.news
+  &__row
+    font-size: rem(13)
+    color: $color-2
+    transition: color 0.35s
+    border-bottom: 1px solid #e5e5e5
+    margin-bottom: 20px
+    padding-bottom: 20px
+    &:hover
+      color: #878787
+    &-title
+      a
+        font-size: rem(15)
+        font-family: $font-roboto-bold
+        color: $color-2
+        text-decoration: none
+        display: inline-block
+        line-height: 24px
+        margin-bottom: 5px
+        &:hover
+          color: $color-1
+          text-decoration: none
+    &-date
+      background: $color-1
+      color: $color-white
+      font-size: rem(10)
+      white-space: nowrap
+      height: 18px
+      line-height: 18px
+      padding: 0 10px
+      margin-bottom: 10px
+      display: inline-block
+    p
+      line-height: 22px
+      &:last-child
+        margin-bottom: 0
+
+.faq
+  &__row
+    margin-bottom: 10px
+    &:last-child
+      margin-bottom: 0
+  &__title
+    font-size: rem(15)
+    line-height: 1.14
+    margin-bottom: 10px
+    font-family: $font-roboto-bold
+  &__block
+    margin-bottom: 2px
+    border: 1px solid #f3f4f7
+    background: #f3f4f7
+    font-size: rem(13)
+    transition: background 0.35s
+    &.is-active
+      background: $color-white
+      .faq__block-title
+        color: $color-1
+        font-family: $font-roboto-bold
+        i
+          transform: rotate(-180deg)
+    p
+      line-height: 22px
+      margin-bottom: 10px
+      &:last-child
+        margin-bottom: 0
+    &.is-active
+      margin-bottom: 10px
+    &-answer
+      padding: 5px 40px 10px 20px
+      display: none
+    &-title
+      padding: 8px 40px 7px 20px
+      cursor: pointer
+      position: relative
+      min-height: 35px
+      i
+        color: $primary-color
+        font-size: rem(14)
+        transform: rotate(0)
+        transition: transform 0.35s
+        display: inline-block
+        position: absolute
+        right: 15px
+        top: 12px
+        color: $color-1
+        line-height: 1
+        transform-origin: 50%
+
+.table__prices
+  width: 100%
+  font-size: rem(14)
+  margin-bottom: 20px
+  &>tbody
+    &>tr
+      &>td
+        padding: 8px
+        line-height: 1.42857143
+        vertical-align: top
+        border-bottom: 2px solid $color-white
+        background: #f3f4f7
+        &:first-child
+          padding-left: 25px
+
+.search
+  margin-bottom: 30px
+  &__form
+    position: relative
+    +clearfix
+  &__input
+    width: 100%
+    border: 0
+    height: 30px
+    padding: 0 30px 0 0
+    border-bottom: 1px solid $color-1
+    background: none
+    color: $color-1
+    font-family: $font-roboto-bold
+    font-size: rem(15)
+  &__btn
+    background: none
+    float: right
+    border: 0
+    height: 30px
+    width: 30px
+    position: relative
+    color: #bcbcbc
+    font-size: rem(20)
+    margin-top: -31px
+    // background: pink
+    i
+      position: absolute
+      left: 50%
+      top: 50%
+      transform: translate(-50%,-50%)
+      line-height: 1
+  &__info
+    font-size: rem(13)
+    border: 2px solid $color-1
+    border-radius: 4px
+    background: $color-white
+    color: #444444
+    margin-bottom: 30px
+    padding: 20px 24px 24px 24px
+    p
+      line-height: 18px
+      margin-bottom: 16px
+      &:last-child
+        margin-bottom: 0
+
+.product-table
+  &__row
+    margin-bottom: 15px
+  &__title
+    font-size: rem(15)
+    font-family: $font-roboto-bold
+    text-transform: uppercase
+    color: $color-1
+    line-height: 24px
+    margin-bottom: 0px
+  &__table
+    [role*="grid"], .product-table__datatables
+      width: 100% !important
+    .table
+      border-collapse: inherit
+      font-size: rem(12)
+      &--product-name, &--product-info
+        display: none
+      .table
+        margin-bottom: 0
+      &>thead
+        &>tr
+          &>th
+            font-weight: 400
+            text-align: left
+            color: #8c8c8c
+            font-family: $font-roboto
+            text-transform: uppercase
+            padding: 13px 10px 13px 10px
+            border-bottom: 1px solid #dcdcdc
+            font-size: rem(11)
+            width: auto !important
+            &.no-sort
+              background: none
+              cursor: default
+      &>tbody
+        &>tr
+          &>td
+            border-top: 1px solid $color-white
+            border-bottom: 1px solid #dcdcdc
+            background: $color-white
+            transition: all 0.35s
+            height: 36px
+            vertical-align: top
+            padding: 9px 10px
+            box-sizing: border-box
+          &:hover
+            &>td
+              background: #f3f4f7
+              border-bottom-color: #f3f4f7
+              border-top-color: #fff
+      &>tfoot
+        &>tr
+          &>td
+            padding: 9px 10px
+            border-top: 0
+  &__td
+    &-1
+      font-size: rem(12)
+      text-align: right
+      color: #24b91c
+      padding-left: 20px !important
+      padding-right: 0 !important
+      width: 1px !important
+    &-2
+      padding-left: 9px
+      font-family: $font-roboto-medium
+      i
+        font-family: $font-roboto-light
+        font-style: italic
+        color: #6f6f6f
+        display: inline-block
+    &-3
+      font-family: $font-roboto-medium
+      a
+        color: $color-2
+        &:hover, &:focus
+          color: $color-1
+          text-decoration: none
+    &-4
+      color: #b7b7b7
+      font-size: rem(12)
+      white-space: nowrap
+      i
+        display: inline-block
+        &+i
+          margin-left: 8px
+    &-5
+      font-family: $font-roboto-medium
+      white-space: nowrap
+      i
+        color: #24b91c
+        font-size: rem(10)
+        margin-right: 10px
+    &-6
+      font-family: $font-roboto-medium
+      white-space: nowrap
+    &-7
+      font-family: $font-roboto-medium
+      white-space: nowrap
+      i
+        color: #4d4d4d
+        font-size: rem(11)
+        vertical-align: 1px
+    &-8
+      width: 1px !important
+      padding-right: 25px !important
+  &__to-cart
+    position: relative
+    display: inline-block
+    height: 18px
+    top: 5px
+    margin-top: -5px
+    svg
+      width: 20px
+      height: 18px
+      display: block
+    .path--color
+      fill: $color-2
+    i
+      display: none
+      position: absolute
+      top: -4px
+      right: -4px
+      line-height: 1
+      font-size: rem(12)
+      color: $color-2
+    &.is-active
+      i
+        display: block
+      .path--color
+        fill: $color-1
+
+.search-result
+  &__head
+    display: flex
+    float: right
+    align-items: center
+    margin-top: -55px
+    &>div
+      &+div
+        padding-left: 70px
+  &__info
+    font-size: rem(13)
+    color: #535353
+    white-space: nowrap
+    i
+      font-size: rem(14)
+      color: #b7b7b7
+      margin-left: 10px
+      display: inline-block
+      line-height: 1
+      vertical-align: -1px
+  &__sort
+    position: relative
+    padding-left: 85px
+    label
+      position: absolute
+      left: 0
+      margin: 0
+      color: #535353
+      font-size: rem(13)
+      margin-top: 5px

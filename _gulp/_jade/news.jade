@@ -1,0 +1,71 @@
+doctype
+
+html(lang="ru")
+  
+  -var active = 'Список попапов' //активный пункт меню, список в header.jade
+  -var pageTitle = 'Список попапов' + ' - Vector' //title страницы для генерации верстки  
+
+  include ./_include/_head
+
+  body
+    
+    // Preloader
+    include ./_include/_preloader
+    
+    include ./_include/_header
+    
+    .content
+      .container
+        
+        ul.breadcrumbs
+          li
+            a(href="#!") Интернет-магазин VECTОR
+          li
+            span Название страницы 
+        
+        .row
+          .col-sm-4.col-sm-push-8
+            
+            .document__navigation
+              ul
+                li: a(href="#!") Новости
+                li: a(href="#!") Пресс релизы
+                li: a(href="#!") Акции
+                li: a(href="#!") Анонсы
+                li.active: a(href="#!") Статьи
+            
+            .banner.hidden-xs
+              a(href="#!")
+                img(src="./img/banner-360-270.png", alt="")
+          
+          .col-sm-8.col-sm-pull-4
+            
+            .content__wrapper
+              h1 статьи
+              
+              .news
+                - for (var i=1; i<6; i++) {
+                .news__row
+                  .news__row-title
+                    a(href="#!") Компания Delphi продемонстрировала новинки продукции для систем торможения и рулевого управления на выставке Equip Auto 2017
+                  .news__row-date 20 января 2018
+                  p Увеличенный ассортимент продукции Delphi для систем торможения и рулевого управления предоставляет новые бизнес-возможности для дистрибьюторов и автомастерских. Компания Delphi представила свои новейшие продукты ...	
+                - }
+              
+              .text-center
+                a(href="#!").btn.btn--border загрузить еще
+        
+    include ./_include/_footer
+    //- div(style="height: 1000px; background-color: #000")
+    
+    //[if gte IE 9]
+      <script src='./js/libs/html5shiv/es5-shim.min.js'>
+      <script src='./js/libs/html5shiv/html5shiv.min.js'>
+      <script src='./js/libs/html5shiv/html5shiv-printshiv.min.js'>
+      <script src='./js/libs/html5shiv/respond.min.js'><![endif]
+
+    // Load Scripts
+    script(src="./js/libs.js")
+    include ./_include/_footer-js
+    script(src="./js/common.js")
+    

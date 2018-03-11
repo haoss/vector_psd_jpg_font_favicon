@@ -34,6 +34,10 @@
       &-img
         &[src*='-2x']
           right: -90px
+  .faq
+    &__block
+      &-answer
+        padding-right: 20px
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 991px)
@@ -99,7 +103,48 @@
         &>a
           height: 40px
           line-height: 40px
-
+  .h1, h1
+    font-size: rem(20)
+  .product-table
+    &__table
+      .table
+        .table
+          &--product-name, &--product-info
+            display: table
+          &--product-name
+            &>tbody
+              &>tr
+                background: none
+                &>td
+                  padding-left: 0
+                  padding-right: 0
+                  border: 0
+                  background: transparent
+                  padding-top: 15px
+                  padding-bottom: 5px
+                  height: auto
+                &:hover
+                  &>td
+                    background: none
+          &--product-info
+            max-width: 375px
+            &>tbody
+              &>tr
+                background: none
+                &>td
+                  background: transparent
+                  border: 0
+                  padding-bottom: 5px
+                  height: auto
+                  width: 33.3%
+                  &.product-table__td-5
+                    padding-left: 0
+                  &.product-table__td-8
+                    padding-right: 0
+                    width: 1px !important
+                &:hover
+                  &>td
+                    background: none
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 767px)
@@ -234,6 +279,14 @@
       margin-right: auto
   .breadcrumbs
     margin-top: -15px
+  .search-result
+    &__head
+      float: none
+      margin-top: 0
+      margin-bottom: 30px
+      &>div
+        &+div
+          padding-left: 25px
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 479px)
@@ -295,6 +348,35 @@
     display: block !important
   .col-xxs-12
     width: 100% !important
+  .faq
+    &__block
+      &-title
+        padding-left: 12px
+      &-answer
+        padding-left: 12px
+  .table__prices
+    &>tbody
+      &>tr
+        &>td
+          &:first-child
+            padding-left: 10px
+  .product-table
+    &__table
+      margin-left: -5px
+      margin-right: -5px
+      .table
+        &>thead
+          &>tr
+            &>th
+              &:first-child
+                padding-left: 0
+        &>tbody
+          &>tr
+            &>td
+              padding-left: 5px !important
+              padding-right: 5px !important
+              &.product-table__td-1
+                padding-left: 0 !important
 
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 319px)

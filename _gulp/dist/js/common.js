@@ -101,8 +101,21 @@ $(document).on('ready', function(){
     // speed: 1000
   });
 
-  $('select.selectric').selectric();
+  $('select.selectric').selectric({
+    inheritOriginalWidth: false
+  });
   autosize($('textarea.autosize'));
+  faq();
+  productToCartTable();
+
+  $('.product-table__datatables').each(function(){
+    $(this).DataTable({
+      "info": false,
+      "paging": false,
+      "searching": false,
+      "order": [[ 0, "desc" ]]
+    });
+  });
 
   // Chrome Smooth Scroll
   try {
@@ -265,5 +278,42 @@ function headerLinks(){
 
   popup.on('click', function(e){
     e.stopPropagation();
+  });
+}
+
+function faq(){
+  var faqBlock = '.faq__block',
+      faqBlockAnswer = $('.faq__block-answer'),
+      faqBlockTitle = $('.faq__block-title');
+
+  $(faqBlock).each(function(){
+    var _this = $(this);
+    if (_this.hasClass('is-active')) {
+      _this.find('.faq__block-answer').show();
+    }
+  });
+
+  faqBlockTitle.on('click', function(e){
+    e.preventDefault();
+    var _this = $(this);
+
+    if (!_this.parents(faqBlock).hasClass('is-active')) {
+      _this.parents(faqBlock).addClass('is-active');
+      _this.next(faqBlockAnswer).slideDown();
+    } else {
+      _this.parents(faqBlock).removeClass('is-active');
+      _this.next(faqBlockAnswer).slideUp();
+    }
+  });
+}
+
+function productToCartTable(){
+  var a = $('.product-table__to-cart');
+  a.each(function(){
+    var _this = $(this);
+    _this.on('click', function(e){
+      e.preventDefault();
+      _this.toggleClass('is-active');
+    });
   });
 }

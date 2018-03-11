@@ -1,0 +1,79 @@
+doctype
+
+html(lang="ru")
+  
+  -var active = 'Нет результата поиска' //активный пункт меню, список в header.jade
+  -var pageTitle = 'Нет результата поиска' + ' - Vector' //title страницы для генерации верстки  
+
+  include ./_include/_head
+
+  body
+    
+    // Preloader
+    include ./_include/_preloader
+    
+    include ./_include/_header
+    
+    .content
+      .container
+        
+        ul.breadcrumbs
+          li
+            a(href="#!") Интернет-магазин VECTОR
+          li
+            span Название страницы 
+        
+        .row
+          .col-md-4.col-md-push-8
+            
+            .search__info
+              .h6.color--red.text-uppercase Внимание!
+              p
+                strong Просьба внести номер заново. 
+              p Важно помнить: все буквы в артикуле должны быть на английском языке.
+              p Если у Вас появляются сложности с подбором нужного артикула, то Вы можете написать обращение через форму обратной связи, позвонить менеджеру или прийти в офис. Наши сотрудники помогут оперативно подобрать нужную деталь, предоставят бесплатную профессиональную консультацию и, при необходимости, помогут в диалоге с механиком автосервиса.
+              p
+                strong С уважением, команда Vector.ru
+          
+          .col-md-8.col-md-pull-4
+            
+            .content__wrapper
+              p
+                strong К сожалению, по Вашему запросу нет подходящих предложений.
+              
+              .search
+                form(action="#").search__form
+                  input(type="text" value="6856435465-65435").search__input
+                  button(type="submit").search__btn
+                    i.ion-android-search
+              
+              .h6
+                strong ПРАВИЛА ИСПОЛЬЗОВАНИЯ ПОИСКА ПО АРТИКУЛУ
+              p Каталоги указанных ниже фирм могут содержать в номере дополнительные символы:
+                br
+                | Номера по каталогам:
+                br
+                | FEBI — имеют длину 5 цифр
+                br
+                | BOSCH — 10 цифр
+                br
+                | OCAP — 7 цифр
+              p Для поиска номеров указанных фирм добавляйте нули перед номером до необходимой длины.
+              p Для номеров Citroen и Peugeot не вводятся «0000» в начале номера детали.
+                br
+                | Номера MERCEDES должны начинаться с буквы "A" в начале номера детали. Номера MERCEDES должны начинаться с буквы в начале номера детали, зачастую тут часто бывает пропущена буква A или N
+        
+    include ./_include/_footer
+    //- div(style="height: 1000px; background-color: #000")
+    
+    //[if gte IE 9]
+      <script src='./js/libs/html5shiv/es5-shim.min.js'>
+      <script src='./js/libs/html5shiv/html5shiv.min.js'>
+      <script src='./js/libs/html5shiv/html5shiv-printshiv.min.js'>
+      <script src='./js/libs/html5shiv/respond.min.js'><![endif]
+
+    // Load Scripts
+    script(src="./js/libs.js")
+    include ./_include/_footer-js
+    script(src="./js/common.js")
+    

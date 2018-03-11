@@ -154,7 +154,7 @@
   .popup__wrapper
     i.ion-android-close.popup__close
     .popup__title сообщить о неточном описании
-      small.small NISSAN 11950-80W00
+      small.small.text-uppercase NISSAN 11950-80W00
     form(action="#").form
       .form-group.has-feedback
         label.hidden Текст сообщения
@@ -171,7 +171,7 @@
   .popup__wrapper
     i.ion-android-close.popup__close
     .popup__title сообщить о неточном описании
-      small.small NISSAN 11950-80W00
+      small.small.text-uppercase NISSAN 11950-80W00
     form(action="#").form
       .form-group.has-feedback
         label.hidden Текст сообщения
@@ -452,6 +452,52 @@
     i.ion-android-close.popup__close
     .popup__title NISSAN 11950-80W00
       small.small Ремкомплект, опора стойки амортизатора
+    .popup__gallery
+      img(src="./img/popup-product-img.png", alt="").img-responsive
+    .popup__bottom
+      table.popup__th.no--m-bottom
+        tbody
+          tr
+            th(colspan="2") Параметры
+          tr
+            td.first
+              span
+                span.bg--f3f4f7 Длина, мм
+            td.last 26 545
+          tr.separator
+            td
+          tr
+            th(colspan="2") Общие
+          tr
+            td.first
+              span
+                span.bg--f3f4f7 Длина упаковки, мм
+            td.last 30 222
+          tr
+            td.first
+              span
+                span.bg--f3f4f7 Толщина упаковки, мм
+            td.last 2 354
+          tr
+            td.first
+              span
+                span.bg--f3f4f7 Ширина упаковки, мм
+            td.last 8 244
+          tr
+            td.first
+              span
+                span.bg--f3f4f7 Вес, г
+            td.last 10 555
+          tr
+            td.first
+              span
+                span.bg--f3f4f7 Артикул
+            td.last 11950-80W00
+          tr
+            td.first
+              span
+                span.bg--f3f4f7 Бренд
+            td.last Nissan
       
 #add-auto1.popup.mfp-hide
   .popup__wrapper
@@ -478,12 +524,58 @@
       br
       | транспортного средства
     form(action="#").form
+      .h6
+        strong Chrysler GRAND CARAVAN 3.3
+      .popup__img
+        img(src="./img/popup-auto-img.png", alt="")
+      table.popup__th
+        tbody
+          tr
+            th(colspan="2") Параметры
+          tr
+            td.first
+              span
+                span Дата производства
+            td.last 1996-01-01
+          tr
+            td.first
+              span
+                span Производитель
+            td.last Chrysler
+          tr
+            td.first
+              span
+                span Модель
+            td.last GRAND CARAVAN
+          tr
+            td.first
+              span
+                span Модификация
+            td.last 3.3
+          tr
+            td.first
+              span
+                span Тип двигателя
+            td.last Бензиновый
+          tr
+            td.first
+              span
+                span Мощность, л.с.
+            td.last 158
+          tr
+            td.first
+              span
+                span Привод
+            td.last Передний
+      
+      .h6
+        strong Транспорт найден не верно?
+      
       a(href="#!").btn.btn--border.btn--block уточнить параметры
       .form-group.has-feedback
         label.hidden Название
         input.form-control(type='text', name='auto-name', placeholder='Название')
-      button(type="submit").btn.btn--block добавить в гараж
-    
+      button(type="submit").btn.btn--block.no--m добавить в гараж
     
 #add-auto3.popup.mfp-hide
   .popup__wrapper
