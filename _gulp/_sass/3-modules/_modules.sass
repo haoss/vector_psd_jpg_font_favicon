@@ -834,8 +834,9 @@
     line-height: 24px
     margin-bottom: 0px
   &__table
-    [role*="grid"], .product-table__datatables
+    [role*="grid"], .product-table__datatables, .table--width100
       width: 100% !important
+      border-bottom: 0 !important
     .table
       border-collapse: inherit
       font-size: rem(12)
@@ -1099,3 +1100,36 @@
         margin-bottom: 0
     .small
       font-size: rem(12)
+
+.cart
+  &__count
+    width: 60px
+    position: relative
+    padding: 0 11px
+    // background: pink
+    input
+      font-size: rem(12)
+      color: $primary-color
+      background: none
+      border: 0
+      text-align: center
+      font-family: $font-roboto-medium
+      background: transparent
+      width: 100%
+    &__div
+      position: absolute
+      top: 2px
+      left: 0
+      cursor: pointer
+      line-height: 1
+      color: $color-1
+      &::after
+        content: "\f48a"
+        font-family: $font-ionicons
+        font-size: rem(12)
+      &--down
+        left: inherit
+        right: 0
+        &::after
+          content: "\f463"
+          bottom: inherit

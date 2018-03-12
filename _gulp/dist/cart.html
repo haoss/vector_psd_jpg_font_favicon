@@ -1,0 +1,1003 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8">
+        <title>Ваша корзина - Vector</title>
+        <meta name="description" content="">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <link rel="apple-touch-icon" sizes="57x57" href="./favicon/apple-touch-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="./favicon/apple-touch-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="./favicon/apple-touch-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="./favicon/apple-touch-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="./favicon/apple-touch-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="./favicon/apple-touch-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="./favicon/apple-touch-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="./favicon/apple-touch-icon-152x152.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-touch-icon-180x180.png">
+        <link rel="icon" type="image/png" href="./favicon/favicon-32x32.png" sizes="32x32">
+        <link rel="icon" type="image/png" href="./favicon/android-chrome-192x192.png" sizes="192x192">
+        <link rel="icon" type="image/png" href="./favicon/favicon-16x16.png" sizes="16x16">
+        <link rel="manifest" href="./favicon/site.webmanifest">
+        <link rel="mask-icon" href="./favicon/safari-pinned-tab.svg" color="#5bbad5">
+        <link rel="shortcut icon" href="./favicon/favicon.ico">
+        <meta name="msapplication-TileColor" content="#da532c">
+        <meta name="msapplication-TileImage" content="./favicon/mstile-144x144.png">
+        <meta name="msapplication-config" content="./favicon/browserconfig.xml">
+        <meta name="theme-color" content="#ffffff">
+        <link rel="stylesheet" href="./js/libs/magnific-popup/magnific-popup.css">
+        <link rel="stylesheet" href="./font/fontello/css/fontello.css">
+        <link rel="stylesheet" href="./js/libs/slick/slick.css">
+        <link rel="stylesheet" href="./js/libs/slick/slick-theme.css">
+        <link rel="stylesheet" href="./js/libs/selectric/selectric.css">
+        <link rel="stylesheet" href="./js/libs/datatables/datatables.min.css">
+        <link rel="stylesheet" href="./css/main.css">
+    </head>
+    <body>
+        <!-- Preloader-->
+        <div class="loader">
+            <div class="loader__block"></div>
+        </div>
+        <div id="enter-popup" class="popup mfp-hide">
+            <div class="popup__wrapper"><i class="ion-android-close popup__close"></i>
+                <div class="popup__title">войти на сайт</div>
+                <form action="#" class="form">
+                    <div class="form-group has-feedback">
+                        <label class="hidden">Телефон</label>
+                        <input type="text" name="phone" placeholder="Телефон" class="form-control"><i class="ion-alert-circled"></i>
+                    </div>
+                    <div class="form-group has-feedback has-error">
+                        <label class="hidden">Пароль</label>
+                        <input type="text" name="password" placeholder="Пароль" class="form-control"><i class="ion-alert-circled"></i>
+                    </div>
+                    <div class="form-group form-group--checkbox form-group--fl">
+                        <label class="hidden">Запомнить меня</label>
+                        <input id="input1" type="checkbox" name="remember"><i class="ion-android-checkbox-outline-blank"></i><i class="ion-android-checkbox"></i>
+                        <label for="input1" class="label">Запомнить</label>
+                    </div><a href="#recovery-popup" class="link-remember open-popup-link">Забыли пароль?</a>
+                    <div class="clear"></div>
+                    <button type="submit" class="btn btn--block">войти на сайт</button>
+                </form>
+                <div class="popup__social">
+                    <div class="popup__social-head"><span>Или войти через социальные сети</span></div>
+                    <div class="popup__social-body"><a href="#!"><i class="icon icon--vk"></i></a><a href="#!"><i class="icon icon--facebook"></i></a><a href="#!"><i class="icon icon--google-plus"></i></a></div>
+                </div>
+                <div class="popup__form-bottom"><strong>Еще не зарегистрированы? </strong><a href="#register-popup" class="link open-popup-link">Регистрация</a></div>
+            </div>
+        </div>
+        <div id="register-popup" class="popup mfp-hide">
+            <div class="popup__wrapper"><i class="ion-android-close popup__close"></i>
+                <div class="popup__title">регистрация на сайте</div>
+                <form action="#" class="form">
+                    <div class="form-group form-group--radio form-group--radio-medium">
+                        <input id="radio1" type="radio" name="radio1" checked=""><i class="ion-android-radio-button-off"></i><i class="ion-android-radio-button-on"></i>
+                        <label for="radio1" class="label">Частное лицо</label>
+                    </div>
+                    <div class="form-group form-group--radio form-group--radio-medium">
+                        <input id="radio2" type="radio" name="radio1"><i class="ion-android-radio-button-off"></i><i class="ion-android-radio-button-on"></i>
+                        <label for="radio2" class="label">Юридическое лицо</label>
+                    </div>
+                    <div class="clear12"></div>
+                    <div class="form-group">
+                        <select class="selectric">
+                            <option value="" disabled selected>Тип регистрации</option>
+                            <option value="Регистрация 1">Регистрация 1</option>
+                            <option value="Регистрация 2">Регистрация 2</option>
+                            <option value="Регистрация 3">Регистрация 3</option>
+                            <option value="Регистрация 4">Регистрация 4</option>
+                        </select>
+                    </div>
+                    <div class="form-group has-feedback">
+                        <label class="hidden">Фамилия</label>
+                        <input type="text" name="last-name" placeholder="Фамилия" class="form-control"><i class="ion-alert-circled"></i>
+                    </div>
+                    <div class="form-group has-feedback">
+                        <label class="hidden">Имя</label>
+                        <input type="text" name="first-name" placeholder="Имя" class="form-control"><i class="ion-alert-circled"></i>
+                    </div>
+                    <div class="form-group has-feedback">
+                        <label class="hidden">Отчество</label>
+                        <input type="text" name="middle-name" placeholder="Отчество" class="form-control"><i class="ion-alert-circled"></i>
+                    </div>
+                    <div class="form-group has-feedback">
+                        <label class="hidden">Ваш email</label>
+                        <input type="email" name="email" placeholder="Ваш email" value="ivanov_ivan@mail.ru" class="form-control"><i class="ion-alert-circled"></i>
+                    </div>
+                    <div class="form-group has-feedback has-error">
+                        <label class="hidden">Телефон</label>
+                        <input type="text" name="phone2" placeholder="Телефон" value="+7 495 987 65 43 21" class="form-control"><i class="ion-alert-circled"></i>
+                    </div>
+                    <div class="form-group has-feedback">
+                        <label class="hidden">Пароль</label>
+                        <input type="text" name="password2" placeholder="Придумайте пароль" class="form-control"><i class="ion-alert-circled"></i>
+                    </div>
+                    <div class="form-group form-group--captcha">
+                        <div><img src="./img/form-captcha.png" alt="" class="img-responsive"></div>
+                    </div>
+                    <div class="form-group form-group--terms-info"><small>Нажав кнопку “Регистрация”, вы подтверждаете, что соглашаетесь с <a href="#!">пользовательским соглашением</a>&nbsp;и принимаете его условия.</small></div>
+                    <button type="submit" class="btn btn--block">регистрация</button>
+                    <div class="popup__form-bottom"><strong>Уже зарегистрированы? </strong><a href="#enter-popup" class="link open-popup-link">войти на сайт</a></div>
+                </form>
+            </div>
+        </div>
+        <div id="enter-popup-sms" class="popup mfp-hide">
+            <div class="popup__wrapper"><i class="ion-android-close popup__close"></i>
+                <div class="popup__title">войти на сайт</div>
+                <form action="#" class="form">
+                    <div class="form-group has-feedback">
+                        <label class="hidden">Телефон</label>
+                        <input type="text" name="phone" placeholder="Телефон" class="form-control"><i class="ion-alert-circled"></i>
+                    </div>
+                    <div class="form-group has-feedback">
+                        <label class="hidden">Пароль</label>
+                        <input type="text" name="password" placeholder="Пароль" class="form-control"><i class="ion-alert-circled"></i>
+                    </div>
+                    <div class="form-group has-feedback">
+                        <label class="hidden">Пароль с смс</label>
+                        <input type="text" name="password-sms" placeholder="Пароль с смс" class="form-control"><i class="ion-alert-circled"></i>
+                    </div>
+                    <div class="form-group form-group--checkbox">
+                        <label class="hidden">Запомнить меня</label>
+                        <input id="input1" type="checkbox" name="remember"><i class="ion-android-checkbox-outline-blank"></i><i class="ion-android-checkbox"></i>
+                        <label for="input1" class="label">Запомнить</label>
+                    </div>
+                    <div class="clear"></div>
+                    <button type="submit" class="btn btn--block">войти на сайт</button>
+                </form>
+                <div class="popup__info">
+                    <p>Ожидайте sms с паролем для входа. </p>
+                    <p>Проверьте, пожалуйста, Ваш почтовый ящик. Указанный email необходимо активировать.</p>
+                    <p>В случае, если вы не воспользуетесь этой регистрацией, она будет удалена.</p>
+                </div>
+                <div class="popup__form-bottom"><strong>Еще не зарегистрированы? </strong><a href="#register-popup" class="link open-popup-link">Регистрация</a></div>
+            </div>
+        </div>
+        <div id="recovery-popup" class="popup mfp-hide">
+            <div class="popup__wrapper"><i class="ion-android-close popup__close"></i>
+                <div class="popup__title popup__title--f16">восстановление пароля</div>
+                <form action="#" class="form">
+                    <div class="form-group has-feedback">
+                        <label class="hidden">Ваш email</label>
+                        <input type="email" name="email3" placeholder="Ваш email" class="form-control"><i class="ion-alert-circled"></i>
+                    </div>
+                    <div class="form-group has-feedback">
+                        <label class="hidden">Телефон</label>
+                        <input type="text" name="phone3" placeholder="Телефон" class="form-control"><i class="ion-alert-circled"></i>
+                    </div>
+                    <div class="popup__info">
+                        <p>В течении 5 минут, на вашу почту или телефон прийдет письмо с инструкцией. Следуйте написанным в инструкции пунктам, и вы восстановите доступ к своему аккаунту.</p>
+                    </div>
+                    <div class="clear10"></div>
+                    <button type="submit" class="btn btn--block">выслать пароль</button>
+                    <div class="popup__form-bottom"><strong>Вспомнили пароль? </strong><a href="#enter-popup" class="link open-popup-link">войти на сайт</a></div>
+                </form>
+            </div>
+        </div>
+        <div id="inaccurate-description" class="popup popup--big mfp-hide">
+            <div class="popup__wrapper"><i class="ion-android-close popup__close"></i>
+                <div class="popup__title">сообщить о неточном описании<small class="small text-uppercase">NISSAN 11950-80W00</small></div>
+                <form action="#" class="form">
+                    <div class="form-group has-feedback">
+                        <label class="hidden">Текст сообщения</label>
+                        <textarea placeholder="Текст сообщения" class="form-control autosize"></textarea>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-6 col-xxs-12"><a href="#!" class="btn btn--border btn--block no--m">Отменить</a>
+                            <div class="visible-xxs">
+                                <div class="clear20"></div>
+                            </div>
+                        </div>
+                        <div class="col-xs-6 col-xxs-12">
+                            <button type="submit" class="btn btn--block no--m">Отправить</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div id="inaccurate-description-text" class="popup popup--big mfp-hide">
+            <div class="popup__wrapper"><i class="ion-android-close popup__close"></i>
+                <div class="popup__title">сообщить о неточном описании<small class="small text-uppercase">NISSAN 11950-80W00</small></div>
+                <form action="#" class="form">
+                    <div class="form-group has-feedback">
+                        <label class="hidden">Текст сообщения</label>
+                        <textarea placeholder="Текст сообщения" class="form-control autosize">Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Вдали от всех живут они в буквенных домах на берегу Семантика большого языкового океана. Маленький ручеек Даль журчит по всей стране и обеспечивает ее всеми необходимыми правилами. Эта парадигматическая страна, в которой жаренные предложения залетают прямо в рот. Даже всемогущая пунктуация не имеет власти над рыбными текстами, ведущими безорфографичный образ жизни. Однажды одна маленькая строчка рыбного текста по имени Lorem ipsum</textarea>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-6 col-xxs-12"><a href="#!" class="btn btn--border btn--block no--m">Отменить</a>
+                            <div class="visible-xxs">
+                                <div class="clear20"></div>
+                            </div>
+                        </div>
+                        <div class="col-xs-6 col-xxs-12">
+                            <button type="submit" class="btn btn--block no--m">Отправить</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div id="popup-notification" class="popup mfp-hide">
+            <div class="popup__wrapper"><i class="ion-android-close popup__close"></i>
+                <div class="popup__title">оповещения</div>
+                <div class="clear10"></div>
+                <form action="#" class="form">
+                    <table class="table-notification">
+                        <thead>
+                            <tr>
+                                <th>&nbsp;</th>
+                                <th width="15"><span>смс</span></th>
+                                <th width="15"><span>email</span></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td> <span class="span">Заказ оформлен</span></td>
+                                <td width="15">
+                                    <label for="checkbox111" class="form-group form-group--checkbox form-group--notification">
+                                        <input id="checkbox111" type="checkbox" name="checkbox111" checked=""><i class="ion-android-checkbox-outline-blank"></i><i class="ion-android-checkbox"></i>
+                                    </label>
+                                </td>
+                                <td width="15">
+                                    <label for="checkbox211" class="form-group form-group--checkbox form-group--notification">
+                                        <input id="checkbox211" type="checkbox" name="checkbox211"><i class="ion-android-checkbox-outline-blank"></i><i class="ion-android-checkbox"></i>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><span class="span">О зачислении средств</span></td>
+                                <td width="15">
+                                    <label for="checkbox122" class="form-group form-group--checkbox form-group--notification">
+                                        <input id="checkbox122" type="checkbox" name="checkbox122" checked=""><i class="ion-android-checkbox-outline-blank"></i><i class="ion-android-checkbox"></i>
+                                    </label>
+                                </td>
+                                <td width="15">
+                                    <label for="checkbox222" class="form-group form-group--checkbox form-group--notification">
+                                        <input id="checkbox222" type="checkbox" name="checkbox222"><i class="ion-android-checkbox-outline-blank"></i><i class="ion-android-checkbox"></i>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><span class="span">Информационные рассылки</span></td>
+                                <td width="15">
+                                    <label for="checkbox133" class="form-group form-group--checkbox form-group--notification">
+                                        <input id="checkbox133" type="checkbox" name="checkbox133" checked=""><i class="ion-android-checkbox-outline-blank"></i><i class="ion-android-checkbox"></i>
+                                    </label>
+                                </td>
+                                <td width="15">
+                                    <label for="checkbox233" class="form-group form-group--checkbox form-group--notification">
+                                        <input id="checkbox233" type="checkbox" name="checkbox233"><i class="ion-android-checkbox-outline-blank"></i><i class="ion-android-checkbox"></i>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><span class="span">Выдано (Отправлено)</span></td>
+                                <td width="15">
+                                    <label for="checkbox144" class="form-group form-group--checkbox form-group--notification">
+                                        <input id="checkbox144" type="checkbox" name="checkbox144" checked=""><i class="ion-android-checkbox-outline-blank"></i><i class="ion-android-checkbox"></i>
+                                    </label>
+                                </td>
+                                <td width="15">
+                                    <label for="checkbox244" class="form-group form-group--checkbox form-group--notification">
+                                        <input id="checkbox244" type="checkbox" name="checkbox244"><i class="ion-android-checkbox-outline-blank"></i><i class="ion-android-checkbox"></i>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><span class="span">Выкуплено</span></td>
+                                <td width="15">
+                                    <label for="checkbox155" class="form-group form-group--checkbox form-group--notification">
+                                        <input id="checkbox155" type="checkbox" name="checkbox155" checked=""><i class="ion-android-checkbox-outline-blank"></i><i class="ion-android-checkbox"></i>
+                                    </label>
+                                </td>
+                                <td width="15">
+                                    <label for="checkbox255" class="form-group form-group--checkbox form-group--notification">
+                                        <input id="checkbox255" type="checkbox" name="checkbox255"><i class="ion-android-checkbox-outline-blank"></i><i class="ion-android-checkbox"></i>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><span class="span">Оприходован офисом</span></td>
+                                <td width="15">
+                                    <label for="checkbox166" class="form-group form-group--checkbox form-group--notification">
+                                        <input id="checkbox166" type="checkbox" name="checkbox166" checked=""><i class="ion-android-checkbox-outline-blank"></i><i class="ion-android-checkbox"></i>
+                                    </label>
+                                </td>
+                                <td width="15">
+                                    <label for="checkbox266" class="form-group form-group--checkbox form-group--notification">
+                                        <input id="checkbox266" type="checkbox" name="checkbox266"><i class="ion-android-checkbox-outline-blank"></i><i class="ion-android-checkbox"></i>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><span class="span">Получено в заказ</span></td>
+                                <td width="15">
+                                    <label for="checkbox177" class="form-group form-group--checkbox form-group--notification">
+                                        <input id="checkbox177" type="checkbox" name="checkbox177" checked=""><i class="ion-android-checkbox-outline-blank"></i><i class="ion-android-checkbox"></i>
+                                    </label>
+                                </td>
+                                <td width="15">
+                                    <label for="checkbox277" class="form-group form-group--checkbox form-group--notification">
+                                        <input id="checkbox277" type="checkbox" name="checkbox277"><i class="ion-android-checkbox-outline-blank"></i><i class="ion-android-checkbox"></i>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><span class="span">Приостановлено</span></td>
+                                <td width="15">
+                                    <label for="checkbox188" class="form-group form-group--checkbox form-group--notification">
+                                        <input id="checkbox188" type="checkbox" name="checkbox188" checked=""><i class="ion-android-checkbox-outline-blank"></i><i class="ion-android-checkbox"></i>
+                                    </label>
+                                </td>
+                                <td width="15">
+                                    <label for="checkbox288" class="form-group form-group--checkbox form-group--notification">
+                                        <input id="checkbox288" type="checkbox" name="checkbox288"><i class="ion-android-checkbox-outline-blank"></i><i class="ion-android-checkbox"></i>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><span class="span">Пришло на склад</span></td>
+                                <td width="15">
+                                    <label for="checkbox199" class="form-group form-group--checkbox form-group--notification">
+                                        <input id="checkbox199" type="checkbox" name="checkbox199" checked=""><i class="ion-android-checkbox-outline-blank"></i><i class="ion-android-checkbox"></i>
+                                    </label>
+                                </td>
+                                <td width="15">
+                                    <label for="checkbox299" class="form-group form-group--checkbox form-group--notification">
+                                        <input id="checkbox299" type="checkbox" name="checkbox299"><i class="ion-android-checkbox-outline-blank"></i><i class="ion-android-checkbox"></i>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><span class="span">Снято</span></td>
+                                <td width="15">
+                                    <label for="checkbox1111" class="form-group form-group--checkbox form-group--notification">
+                                        <input id="checkbox1111" type="checkbox" name="checkbox1111" checked=""><i class="ion-android-checkbox-outline-blank"></i><i class="ion-android-checkbox"></i>
+                                    </label>
+                                </td>
+                                <td width="15">
+                                    <label for="checkbox2111" class="form-group form-group--checkbox form-group--notification">
+                                        <input id="checkbox2111" type="checkbox" name="checkbox2111"><i class="ion-android-checkbox-outline-blank"></i><i class="ion-android-checkbox"></i>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><span class="span">Согласовать срок поставки</span></td>
+                                <td width="15">
+                                    <label for="checkbox1222" class="form-group form-group--checkbox form-group--notification">
+                                        <input id="checkbox1222" type="checkbox" name="checkbox1222" checked=""><i class="ion-android-checkbox-outline-blank"></i><i class="ion-android-checkbox"></i>
+                                    </label>
+                                </td>
+                                <td width="15">
+                                    <label for="checkbox2222" class="form-group form-group--checkbox form-group--notification">
+                                        <input id="checkbox2222" type="checkbox" name="checkbox2222"><i class="ion-android-checkbox-outline-blank"></i><i class="ion-android-checkbox"></i>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><span class="span">Срок поставки не подтвержден</span></td>
+                                <td width="15">
+                                    <label for="checkbox1333" class="form-group form-group--checkbox form-group--notification">
+                                        <input id="checkbox1333" type="checkbox" name="checkbox1333" checked=""><i class="ion-android-checkbox-outline-blank"></i><i class="ion-android-checkbox"></i>
+                                    </label>
+                                </td>
+                                <td width="15">
+                                    <label for="checkbox2333" class="form-group form-group--checkbox form-group--notification">
+                                        <input id="checkbox2333" type="checkbox" name="checkbox2333"><i class="ion-android-checkbox-outline-blank"></i><i class="ion-android-checkbox"></i>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><span class="span">Срок поставки подтвержден</span></td>
+                                <td width="15">
+                                    <label for="checkbox1444" class="form-group form-group--checkbox form-group--notification">
+                                        <input id="checkbox1444" type="checkbox" name="checkbox1444" checked=""><i class="ion-android-checkbox-outline-blank"></i><i class="ion-android-checkbox"></i>
+                                    </label>
+                                </td>
+                                <td width="15">
+                                    <label for="checkbox2444" class="form-group form-group--checkbox form-group--notification">
+                                        <input id="checkbox2444" type="checkbox" name="checkbox2444"><i class="ion-android-checkbox-outline-blank"></i><i class="ion-android-checkbox"></i>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><span class="span">Утилизировано</span></td>
+                                <td width="15">
+                                    <label for="checkbox1555" class="form-group form-group--checkbox form-group--notification">
+                                        <input id="checkbox1555" type="checkbox" name="checkbox1555" checked=""><i class="ion-android-checkbox-outline-blank"></i><i class="ion-android-checkbox"></i>
+                                    </label>
+                                </td>
+                                <td width="15">
+                                    <label for="checkbox2555" class="form-group form-group--checkbox form-group--notification">
+                                        <input id="checkbox2555" type="checkbox" name="checkbox2555"><i class="ion-android-checkbox-outline-blank"></i><i class="ion-android-checkbox"></i>
+                                    </label>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="form-group form-group--terms-info"><small>Нажимая на кнопку «Сохранить», я даю <a href="#!">согласие на обработку персональных данных</a></small></div>
+                    <button type="submit" class="btn btn--block no--m">сохранить</button>
+                </form>
+            </div>
+        </div>
+        <div id="popup-address" class="popup mfp-hide">
+            <div class="popup__wrapper"><i class="ion-android-close popup__close"></i>
+                <div class="popup__title">адрес доставки</div>
+                <form action="#" class="form">
+                    <div class="form-group has-feedback">
+                        <label class="hidden">Название адреса доставки</label>
+                        <input type="text" name="address" placeholder="Название адреса доставки" class="form-control">
+                    </div>
+                    <div class="form-group has-feedback">
+                        <label class="hidden">Индекс</label>
+                        <input type="text" name="index" placeholder="Индекс" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <select class="selectric">
+                            <option value="" disabled selected>страна</option>
+                            <option value="Россия">Россия</option>
+                            <option value="Украины">Украины</option>
+                            <option value="Белорусь">Белорусь</option>
+                            <option value="Казахстан">Казахстан</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <select class="selectric">
+                            <option value="" disabled selected>Регион</option>
+                            <option value="Регион 1">Регион 1</option>
+                            <option value="Регион 2">Регион 2</option>
+                            <option value="Регион 3">Регион 3</option>
+                            <option value="Регион 4">Регион 4</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <select class="selectric">
+                            <option value="" disabled selected>город</option>
+                            <option value="Москва">Москва</option>
+                            <option value="Уренгой">Уренгой</option>
+                            <option value="Бухарест">Бухарест</option>
+                            <option value="Караганда">Караганда</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <select class="selectric">
+                            <option value="" disabled selected>улица</option>
+                            <option value="Улица 1">Улица 1</option>
+                            <option value="Улица 2">Улица 2</option>
+                            <option value="Улица 3">Улица 3</option>
+                            <option value="Улица 4">Улица 4</option>
+                        </select>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-6">
+                            <div class="form-group has-feedback">
+                                <label class="hidden">Номер</label>
+                                <input type="text" name="address-number" placeholder="Номер" class="form-control">
+                            </div>
+                        </div>
+                        <div class="col-xs-6">
+                            <div class="form-group has-feedback">
+                                <label class="hidden">Квартира</label>
+                                <input type="text" name="address-room" placeholder="Квартира" class="form-control">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group has-feedback has-error">
+                        <label class="hidden">Телефон</label>
+                        <input type="text" name="phone2" placeholder="Телефон" value="+7 495 987 65 43 21" class="form-control"><i class="ion-alert-circled"></i>
+                    </div>
+                    <div class="form-group has-feedback">
+                        <label class="hidden">Комментарий</label>
+                        <textarea placeholder="Комментарий" class="form-control autosize"></textarea>
+                    </div>
+                    <div class="form-group form-group--terms-info"><small>При изменении персональных данных, я даю <a href="#!">согласие на их обработку</a></small></div>
+                    <button type="submit" class="btn btn--block no--m">добавить</button>
+                </form>
+            </div>
+        </div>
+        <div id="popup-product" class="popup popup--big mfp-hide">
+            <div class="popup__wrapper"><i class="ion-android-close popup__close"></i>
+                <div class="popup__title">NISSAN 11950-80W00<small class="small">Ремкомплект, опора стойки амортизатора</small></div>
+                <div class="popup__gallery"><img src="./img/popup-product-img.png" alt="" class="img-responsive"></div>
+                <div class="popup__bottom">
+                    <table class="popup__th no--m-bottom">
+                        <tbody>
+                            <tr>
+                                <th colspan="2">Параметры</th>
+                            </tr>
+                            <tr>
+                                <td class="first"><span><span class="bg--f3f4f7">Длина, мм</span></span></td>
+                                <td class="last">26 545</td>
+                            </tr>
+                            <tr class="separator">
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th colspan="2">Общие</th>
+                            </tr>
+                            <tr>
+                                <td class="first"><span><span class="bg--f3f4f7">Длина упаковки, мм</span></span></td>
+                                <td class="last">30 222</td>
+                            </tr>
+                            <tr>
+                                <td class="first"><span><span class="bg--f3f4f7">Толщина упаковки, мм</span></span></td>
+                                <td class="last">2 354</td>
+                            </tr>
+                            <tr>
+                                <td class="first"><span><span class="bg--f3f4f7">Ширина упаковки, мм</span></span></td>
+                                <td class="last">8 244</td>
+                            </tr>
+                            <tr>
+                                <td class="first"><span><span class="bg--f3f4f7">Вес, г</span></span></td>
+                                <td class="last">10 555</td>
+                            </tr>
+                            <tr>
+                                <td class="first"><span><span class="bg--f3f4f7">Артикул</span></span></td>
+                                <td class="last">11950-80W00</td>
+                            </tr>
+                            <tr>
+                                <td class="first"><span><span class="bg--f3f4f7">Бренд</span></span></td>
+                                <td class="last">Nissan</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div id="add-auto1" class="popup mfp-hide">
+            <div class="popup__wrapper"><i class="ion-android-close popup__close"></i>
+                <div class="popup__title">Добавление <br>транспортного средства</div>
+                <form action="#" class="form">
+                    <div class="form-group has-feedback">
+                        <label class="hidden">Введите VIN или номер кузова</label>
+                        <input type="text" name="vin" placeholder="Введите VIN или номер кузова" class="form-control">
+                    </div>
+                    <button type="submit" class="btn btn--block">искать</button>
+                </form>
+                <div class="popup__bottom">
+                    <p>VIN, (идентификационный номер автомобиля) можно найти в ПТС, в свидетельстве о регистрации ТС, а также на табличке под капотом автомобиля.</p>
+                    <p>По VIN можно идентифицировать автомобиль по каталогу производителя и правильно подобрать автозапчасти. В некоторых случаях могут понадобиться дополнительные данные, поэтому мы можем попросить вас сообщить дополнительные сведения о вашем автомобиле.</p>
+                    <p> <strong class="color--red">Важно! </strong>VIN автомобиля или кузов необходимо указать корректно, изменение даже единственного символа может привести к неверному подбору детали. </p>
+                </div>
+            </div>
+        </div>
+        <div id="add-auto2" class="popup mfp-hide">
+            <div class="popup__wrapper"><i class="ion-android-close popup__close"></i>
+                <div class="popup__title">Добавление <br>транспортного средства</div>
+                <form action="#" class="form">
+                    <div class="h6"><strong>Chrysler GRAND CARAVAN 3.3</strong></div>
+                    <div class="popup__img"><img src="./img/popup-auto-img.png" alt=""></div>
+                    <table class="popup__th">
+                        <tbody>
+                            <tr>
+                                <th colspan="2">Параметры</th>
+                            </tr>
+                            <tr>
+                                <td class="first"><span><span>Дата производства</span></span></td>
+                                <td class="last">1996-01-01</td>
+                            </tr>
+                            <tr>
+                                <td class="first"><span><span>Производитель</span></span></td>
+                                <td class="last">Chrysler</td>
+                            </tr>
+                            <tr>
+                                <td class="first"><span><span>Модель</span></span></td>
+                                <td class="last">GRAND CARAVAN</td>
+                            </tr>
+                            <tr>
+                                <td class="first"><span><span>Модификация</span></span></td>
+                                <td class="last">3.3</td>
+                            </tr>
+                            <tr>
+                                <td class="first"><span><span>Тип двигателя</span></span></td>
+                                <td class="last">Бензиновый</td>
+                            </tr>
+                            <tr>
+                                <td class="first"><span><span>Мощность, л.с.</span></span></td>
+                                <td class="last">158</td>
+                            </tr>
+                            <tr>
+                                <td class="first"><span><span>Привод</span></span></td>
+                                <td class="last">Передний</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="h6"><strong>Транспорт найден не верно?</strong></div><a href="#!" class="btn btn--border btn--block">уточнить параметры</a>
+                    <div class="form-group has-feedback">
+                        <label class="hidden">Название</label>
+                        <input type="text" name="auto-name" placeholder="Название" class="form-control">
+                    </div>
+                    <button type="submit" class="btn btn--block no--m">добавить в гараж</button>
+                </form>
+            </div>
+        </div>
+        <div id="add-auto3" class="popup mfp-hide">
+            <div class="popup__wrapper"><i class="ion-android-close popup__close"></i>
+                <div class="popup__title">Добавление <br>транспортного средства</div>
+                <form action="#" class="form">
+                    <div class="form-group">
+                        <select class="selectric">
+                            <option value="" disabled selected>марка</option>
+                            <option value="марка 1">марка 1</option>
+                            <option value="марка 2">марка 2</option>
+                            <option value="марка 3">марка 3</option>
+                            <option value="марка 4">марка 4</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <select class="selectric">
+                            <option value="" disabled selected>модель</option>
+                            <option value="модель 1">модель 1</option>
+                            <option value="модель 2">модель 2</option>
+                            <option value="модель 3">модель 3</option>
+                            <option value="модель 4">модель 4</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <select class="selectric">
+                            <option value="" disabled selected>модификация</option>
+                            <option value="модификация 1">модификация 1</option>
+                            <option value="модификация 2">модификация 2</option>
+                            <option value="модификация 3">модификация 3</option>
+                            <option value="модификация 4">модификация 4</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn btn--block no--m">уточнить</button>
+                </form>
+            </div>
+        </div>
+        <!-- Header-->
+        <header class="header">
+            <div class="header__shadow"></div>
+            <div class="header__phone"> 
+                    <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 20.000001 20.000001">
+                        <g transform="scale(.05144)" class="path--color">
+                            <path d="M262.719 223.441c-1.199-1.281-3.117-2.8-5.199-2.8-2.239 0-4.239 1.597-5.598 2.961l-17.203 17.199c-2.797 2.879-6.078 4.32-9.598 4.32-2.082 0-4.16-.48-6.242-1.519-.32-.161-.641-.321-.879-.481-1.359-.883-2.961-1.68-4.719-2.562-2.082-1.039-4.242-2.161-6.402-3.52-16.399-10.398-31.199-23.84-45.277-41.199l-.082-.078c-7.84-9.922-12.961-18.242-16.641-27.121-.078-.243-.16-.403-.238-.641-.641-2.078-2.719-8.32 3.281-14.32.156-.16.238-.321.398-.399 4.321-3.84 8.239-7.922 12.481-12.16l4.32-4.32c4.238-4.242 4.238-7.36 0-11.602l-13.68-13.679c-1.601-1.598-3.203-3.282-4.8-4.879-3.039-3.121-5.922-6.082-8.961-8.879l-.239-.242c-1.203-1.282-3.121-2.719-5.363-2.719-2.238 0-4.316 1.519-5.68 2.801l-17.199 17.117c-3.758 3.679-5.679 7.922-6.16 13.121-.641 8.801 1.039 18.082 5.52 30.238 7.519 20.16 18.8 38.961 35.679 59.281 20.481 24.481 45.121 43.762 73.203 57.36 10.161 4.883 23.758 10.562 38.161 11.519.718.082 1.437.082 2.16.082 7.117 0 12.238-2.16 16.797-7.039 3.203-3.761 6.562-7.043 9.761-10.16 2.16-2.082 4.16-4 6-6l.078-.082c4.082-4.238 4.082-7.84.161-11.758l-27.84-27.84z"></path>
+                            <path d="M194.398 388.801c30.161 0 57.68-5.602 79.524-16.082 20.719-10 35.758-24.321 42.398-40.239 7.918-19.121 3.442-39.039-12.242-54.718l-.558-.563c.242-.32.558-.558.8-.801 11.2-11.757 11.2-27.199-.16-38.558l-27.68-27.68c-5.441-5.601-12-8.64-18.96-8.64-6.961 0-13.598 2.96-19.2 8.558l-14.398 14.402a25.54 25.54 0 0 0-2.082-1.039c-1.762-.882-3.36-1.679-4.719-2.562-14.641-9.277-27.922-21.438-40.641-37.039-5.601-7.039-9.441-13.039-12.32-18.961 3.602-3.359 6.961-6.801 10.238-10.16 1.364-1.438 2.801-2.797 4.243-4.239 11.757-11.761 11.757-26.96 0-38.718l-13.68-13.684c-1.602-1.598-3.121-3.117-4.641-4.719-3.039-3.121-6.16-6.32-9.519-9.437-5.442-5.363-11.922-8.16-18.801-8.16-6.879 0-13.441 2.797-19.039 8.16l-.16.156-17.199 17.203c-6.883 6.879-10.883 15.36-11.68 25.117-1.203 15.204 3.199 29.282 6.637 38.481 8.242 22.242 20.562 42.883 38.882 64.961 22.239 26.558 49.039 47.601 79.68 62.398 11.758 5.602 27.52 12.16 45.277 13.364 1.122.078 2.243.078 3.364.078 12.398 0 22.879-4.481 31.039-13.36l.32-.32c.238-.32.559-.641.879-.961l.48.481c10.239 10.242 13.04 21.921 8.079 33.839-9.2 21.84-44.957 44.243-104.161 44.243-96.636 0-175.199-78.563-175.199-175.204 0-96.636 78.563-175.199 175.199-175.199 96.641 0 175.204 78.563 175.204 175.199 0 15.922-2.161 31.602-6.321 46.723-1.441 5.117 1.598 10.399 6.719 11.84 5.121 1.437 10.398-1.602 11.84-6.723a194.797 194.797 0 0 0 6.96-47.193v-9.841c-1.374-49.972-21.468-96.751-56.96-132.243C295.121 20.238 246.32 0 194.398 0 142.48 0 93.68 20.238 56.961 56.961 20.238 93.68 0 142.48 0 194.398 0 246.32 20.238 295.121 56.961 331.84c36.719 36.719 85.519 56.961 137.437 56.961zm96-125.762l-.078.082c-1.84 2-3.84 3.918-6 6-3.199 3.117-6.558 6.399-9.761 10.16-4.559 4.879-9.68 7.039-16.797 7.039-.723 0-1.442 0-2.16-.082-14.403-.957-28-6.636-38.161-11.519-28.082-13.598-52.722-32.879-73.203-57.36-16.879-20.32-28.16-39.121-35.679-59.281-4.481-12.156-6.161-21.437-5.52-30.238.481-5.199 2.402-9.442 6.16-13.121l17.199-17.117c1.364-1.282 3.442-2.801 5.68-2.801 2.242 0 4.16 1.437 5.363 2.719l.239.242c3.039 2.797 5.922 5.758 8.961 8.879 1.597 1.597 3.199 3.281 4.8 4.879l13.68 13.679c4.238 4.242 4.238 7.36 0 11.602l-4.32 4.32c-4.242 4.238-8.16 8.32-12.481 12.16-.16.078-.242.239-.398.399-6 6-3.922 12.242-3.281 14.32.078.238.16.398.238.641 3.68 8.879 8.801 17.199 16.641 27.121l.082.078c14.078 17.359 28.878 30.801 45.277 41.199 2.16 1.359 4.32 2.481 6.402 3.52 1.758.882 3.36 1.679 4.719 2.562.238.16.559.32.879.481 2.082 1.039 4.16 1.519 6.242 1.519 3.52 0 6.801-1.441 9.598-4.32l17.203-17.199c1.359-1.364 3.359-2.961 5.598-2.961 2.082 0 4 1.519 5.199 2.8l27.84 27.84c3.921 3.918 3.921 7.52-.161 11.758z"></path>
+                        </g>
+                    </svg><a href="callto:#!">0 800 900 80 70</a>
+            </div>
+            <div class="header__top">
+                <div class="container">
+                    <ul class="header__top-left">
+                        <li><a href="#!">Оптовый портал</a></li>
+                        <li><a href="#!">Адреса магазинов</a></li>
+                    </ul>
+                    <ul class="header__top-right">
+                        <li><a href="#!">склады</a></li>
+                        <li><a href="#!">Офисы</a></li>
+                        <li><a href="#!">Запрос по vin</a></li>
+                        <li><a href="#!">помощь    </a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="header__bottom">
+                <div class="container">
+                    <div class="header__bottom-wrapper">
+                        <div>
+                            <div class="header__logo"><a href="#!"><img src="./img/sp.gif" alt=""></a></div>
+                        </div>
+                        <div>
+                            <div class="header__catalog">
+                                <div class="header__catalog-popup">
+                                    <div class="header__catalog-popup-wrapper"><img src="./img/header-catalog-popup-img.png" alt="" class="header__catalog-img">
+                                        <div class="header__catalog-info">в разделе <strong>10 995 325 </strong><span>единиц товара</span></div>
+                                        <div class="header__catalog-body">
+                                            <ul>
+                                                <li><a href="#!">каталог запчастей</a></li>
+                                                <li><a href="#!">запчасти для то</a></li>
+                                                <li><a href="#!">моторные масла</a></li>
+                                                <li><a href="#!">шины и диски</a></li>
+                                                <li><a href="#!">лампы</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button type="button" class="header__catalog-btn"><span></span>Каталог</button>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="header__search">
+                                <form action="#">
+                                    <input type="text" placeholder="Поиск" class="header__search-input">
+                                    <button type="button" class="header__search-btn"><i class="ion-android-search"></i></button>
+                                </form>
+                            </div>
+                        </div>
+                        <div>
+                            <ul class="header__links">
+                                <li class="header__links-li">
+                                    <div class="header__links-popup header__links-popup--user">
+                                        <div class="header__links-popup-wrapper">
+                                            <div class="header__profile">
+                                                <div class="header__profile-title">Иванов И.</div>
+                                                <div class="header__profile-body">
+                                                    <ul>
+                                                        <li><span class="header__profile-counter">1</span><a href="#!">
+                                                                    <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 30 27.403">
+                                                                        <path fill="none" d="M1.856 1.884h26.287v2.968H1.856zM23.88 22.793v-5.295l-1.049-1.741v-.226l-1.236-4.586H8.962l-1.32 4.897-1.228 1.649v5.301h.944v2.727h3.089v-2.727h9.398v2.727h3.089v-2.727h.946zm-2.381-.618h-2.27a1.725 1.725 0 0 1-1.724-1.724v-.02l-.304.03h-4.41a1.726 1.726 0 0 1-1.724 1.689h-2.27a1.727 1.727 0 0 1-1.725-1.725v-1.836c0-.95.773-1.724 1.725-1.724h2.27c.874 0 1.597.652 1.709 1.495h4.744a1.726 1.726 0 0 1 1.709-1.495h2.27c.951 0 1.725.773 1.725 1.724v1.86a1.728 1.728 0 0 1-1.725 1.726z"></path>
+                                                                        <path fill="none" d="M9.071 18.867h1.719v1.284H9.071zM19.504 18.867h1.719v1.308h-1.719z"></path>
+                                                                        <path d="M24.936 25.718V24.58c.562-.305.944-.902.944-1.589v-5.58a1.768 1.768 0 0 0-.275-.924l-.806-1.34-1.315-4.876a1.792 1.792 0 0 0-1.721-1.326H8.797c-.803 0-1.512.545-1.725 1.327L5.81 14.954l-1.043 1.402a1.824 1.824 0 0 0-.352 1.074v5.561c0 .687.383 1.284.944 1.589v1.138a1.8 1.8 0 0 0 1.174 1.686h4.74a1.798 1.798 0 0 0 1.174-1.686v-.925h5.398v.925a1.8 1.8 0 0 0 1.174 1.686h4.741a1.799 1.799 0 0 0 1.176-1.686zm-5.089-.199v-2.727h-9.398v2.727h-3.09v-2.727h-.944v-5.301l1.228-1.649 1.32-4.897h12.632l1.236 4.586v.226l1.049 1.741v5.295h-.944v2.727h-3.089z" class="path--color"></path>
+                                                                        <path d="M23.223 18.591c0-.95-.773-1.724-1.725-1.724h-2.27c-.873 0-1.597.652-1.709 1.495h-4.744a1.726 1.726 0 0 0-1.709-1.495h-2.27c-.951 0-1.725.773-1.725 1.724v1.836c0 .951.773 1.725 1.725 1.725h2.27c.939 0 1.706-.755 1.724-1.689h4.41l.304-.03v.02c0 .95.773 1.724 1.724 1.724h2.27c.951 0 1.725-.773 1.725-1.724v-1.862zm-12.432 1.56h-1.72v-1.284h1.719v1.284zm10.432.024h-1.719v-1.308h1.719v1.308z" class="path--color"></path>
+                                                                        <path d="M30 26.685V1.013A1.874 1.874 0 0 0 28.888 0H1.112A1.873 1.873 0 0 0 0 1.014v25.672h1.857V6.851h26.287v19.834H30zM1.856 4.851V1.884h26.287v2.968H1.856z" class="path--color"></path>
+                                                                    </svg>Гараж</a></li>
+                                                        <li><a href="#!">
+                                                                    <svg xmlns="http://www.w3.org/2000/svg" viewbox="192 381.999 30 30.002">
+                                                                        <path d="M221.227 391.441a2.64 2.64 0 0 0-3.729 0l-2.644 2.647v-6.966c0-.704-.274-1.367-.772-1.865l-2.486-2.486a2.62 2.62 0 0 0-1.865-.772h-15.093a2.64 2.64 0 0 0-2.637 2.637v24.728a2.64 2.64 0 0 0 2.637 2.637h17.579a2.64 2.64 0 0 0 2.637-2.637v-7.815l6.374-6.379a2.636 2.636 0 0 0-.001-3.729zm-8.86 10.109l-.475.475-1.865.621.621-1.865.475-.475 1.244 1.244zm1.243-1.244l-1.243-1.243 4.225-4.229 1.243 1.243-4.225 4.229zm-3.258-16.292l2.486 2.486c.279.279.257.585.257.772h-3.516v-3.516c.166.001.486-.028.773.258zm1.864 26.229h-17.579a.88.88 0 0 1-.879-.879v-24.728a.88.88 0 0 1 .879-.879h13.185v4.395a.88.88 0 0 0 .879.879h4.395v6.816l-2.593 2.595-1.242 1.242a.876.876 0 0 0-.212.344l-1.243 3.729a.881.881 0 0 0 .212.9.876.876 0 0 0 .899.212l3.729-1.243a.89.89 0 0 0 .344-.212l.107-.107v6.057a.883.883 0 0 1-.881.879zm7.768-16.316l-.906.907-1.243-1.243.906-.907a.88.88 0 0 1 1.243 1.243z" class="path--color"></path>
+                                                                        <path d="M196.395 392.547H208.7a.88.88 0 0 0 0-1.758h-12.306a.88.88 0 0 0 .001 1.758zM196.395 396.062h8.79a.88.88 0 0 0 0-1.758h-8.79a.88.88 0 0 0 0 1.758zM196.395 399.578h8.79a.88.88 0 0 0 0-1.758h-8.79a.88.88 0 0 0 0 1.758zM206.063 402.215a.88.88 0 0 0-.879-.879h-8.79a.88.88 0 0 0 0 1.758h8.79a.878.878 0 0 0 .879-.879zM208.7 406.727h-5.274a.88.88 0 0 0 0 1.758h5.274a.88.88 0 0 0 0-1.758z" class="path--color"></path>
+                                                                    </svg>Заказы</a></li>
+                                                        <li><a href="#!">
+                                                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewbox="0 0 29.999998 30.000001">
+                                                                        <g transform="scale(.112)" class="path--color">
+                                                                            <defs>
+                                                                                <path id="a" d="M0 0h265.92v268.8H0z"></path>
+                                                                            </defs>
+                                                                            <clippath id="b">
+                                                                                <use xlink:href="#a" overflow="visible" width="100%" height="100%"></use>
+                                                                            </clippath>
+                                                                            <path clip-path="url(#b)" d="M265.211 124.74h-12.852V65.611c0-14.176-11.531-25.707-25.707-25.707h-17.41L191.426 7.873a15.424 15.424 0 0 0-20.977-5.992l-68.371 38.023H25.707C11.531 39.904 0 51.435 0 65.611v176.523c0 14.172 11.531 25.708 25.707 25.708h200.945c14.176 0 25.707-11.536 25.707-25.708v-51.843h12.852V124.74zm-38.559-74.555c7.918 0 14.383 6.016 15.254 13.715h-19.32l-7.621-13.715h11.687zm-51.199-39.316c2.41-1.352 5.656-.406 6.985 1.996l28.382 51.027H80.094l95.359-53.023zm66.621 231.265c0 8.504-6.918 15.422-15.422 15.422H25.707c-8.504 0-15.426-6.918-15.426-15.422V65.611c0-8.504 6.922-15.426 15.426-15.426H83.59L58.93 63.9H28.922a5.141 5.141 0 1 0 0 10.281h213.152v50.563h-37.597c-17.461 0-31.672 14.211-31.672 31.672v2.211c0 17.461 14.211 31.672 31.672 31.672h37.597v51.835zm12.856-62.125h-50.453c-11.797 0-21.391-9.593-21.391-21.39v-2.211c0-11.793 9.594-21.387 21.391-21.387h50.453v44.988zm-34.707-22.074a11.346 11.346 0 0 1-11.352 11.352c-6.273 0-11.351-5.078-11.351-11.352 0-6.269 5.082-11.351 11.351-11.351 6.274 0 11.352 5.086 11.352 11.351zm0 0"></path>
+                                                                        </g>
+                                                                    </svg>Баланс</a></li>
+                                                        <li><a href="#!">
+                                                                    <svg xmlns="http://www.w3.org/2000/svg" viewbox="-49 141 30 30">
+                                                                        <g transform="translate(0 -464.253)" class="path--color">
+                                                                            <path d="M-33.616 616.162c-.994 0-1.892-.368-2.464-1.01a2.374 2.374 0 0 1-.599-1.871c.177-1.499 1.77-2.717 3.555-2.717.998 0 1.904.375 2.485 1.028a2.35 2.35 0 0 1 .6 1.855c-.176 1.522-1.747 2.715-3.577 2.715zm.492-4.158c-1.041 0-2.034.674-2.124 1.443-.032.278.05.53.243.748.294.33.814.527 1.389.527 1.073 0 2.056-.66 2.146-1.442a.925.925 0 0 0-.245-.73c-.303-.342-.83-.546-1.41-.546zM-34.39 630.049c-.064 0-1.671.061-2.727-1.221-.656-.797-.87-1.9-.654-3.162l.002-.008c.072-.396.621-3.188.658-3.367.394-1.958-.02-2.252-.198-2.377a1.146 1.146 0 0 1-.38-.393c-.087-.16-.197-.49.034-.896.499-.915 2.129-1.844 3.686-1.72 1.054.084 1.943.54 2.505 1.282.623.823.82 1.922.57 3.178v.008c-.245 1.162-.47 2.205-.59 2.765-.053.245-.088.403-.096.446-.34 1.962.08 2.244.26 2.365.118.079.278.186.39.383.092.158.211.485-.009.896-.456.89-1.953 1.82-3.452 1.82zm-1.962-4.136c-.144.844-.02 1.54.36 2.016.326.408.841.642 1.49.677.445.023.973-.104 1.45-.35.243-.125.439-.263.582-.391-.524-.514-.894-1.434-.528-3.536l.001-.008.104-.488c.12-.558.345-1.596.588-2.752.166-.84.06-1.54-.307-2.025-.315-.417-.824-.664-1.471-.715-.444-.036-.977.078-1.46.311a2.83 2.83 0 0 0-.592.376c.51.528.856 1.457.436 3.548l-.002.007c-.023.11-.573 2.903-.651 3.33z"></path>
+                                                                            <path d="M-21.38 634.198a.72.72 0 0 1-.252-.046l-5.227-1.957A16.13 16.13 0 0 1-34 633.846c-3.994 0-7.752-1.419-10.582-3.996-2.85-2.594-4.418-6.048-4.418-9.726 0-3.678 1.569-7.133 4.418-9.727 2.83-2.577 6.588-3.996 10.582-3.996 3.994 0 7.752 1.42 10.582 3.996 2.849 2.594 4.418 6.048 4.418 9.727 0 3-1.087 5.94-3.07 8.318l1.383 4.838a.72.72 0 0 1-.692.918zM-34 607.841c-7.477 0-13.56 5.51-13.56 12.283 0 6.772 6.083 12.282 13.56 12.282 2.377 0 4.716-.565 6.763-1.635a.72.72 0 0 1 .586-.036l4.187 1.568-1.097-3.838a.72.72 0 0 1 .153-.675c1.942-2.197 2.968-4.848 2.968-7.666 0-6.773-6.083-12.283-13.56-12.283z"></path>
+                                                                        </g>
+                                                                    </svg>Запросы</a></li>
+                                                        <li><a href="#!">
+                                                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30.000452 30">
+                                                                        <path d="M28.842 12.03h-2.556c-.26-.98-.649-1.922-1.162-2.808l1.838-1.837a1.16 1.16 0 0 0 0-1.637l-2.564-2.563a1.186 1.186 0 0 0-1.637 0L20.936 5.01c-.901-.528-1.86-.928-2.863-1.194V1.157C18.073.52 17.554 0 16.916 0H13.29c-.638 0-1.158.52-1.158 1.157v2.66a11.47 11.47 0 0 0-2.902 1.215l-1.92-1.92a1.185 1.185 0 0 0-1.636 0L3.112 5.675a1.16 1.16 0 0 0 0 1.637l1.95 1.95A11.465 11.465 0 0 0 3.92 12.03H1.157C.52 12.03 0 12.549 0 13.188v3.624c0 .639.52 1.158 1.157 1.158H3.92a11.452 11.452 0 0 0 1.194 2.862L3.185 22.76a1.15 1.15 0 0 0-.339.82c0 .309.12.6.339.817l2.564 2.564c.437.438 1.199.438 1.636 0l1.942-1.941a11.43 11.43 0 0 0 2.807 1.162v2.66c0 .639.52 1.158 1.158 1.158h3.625a1.16 1.16 0 0 0 1.157-1.158v-2.66a11.434 11.434 0 0 0 2.769-1.14l1.846 1.846a1.185 1.185 0 0 0 1.637 0l2.562-2.564a1.158 1.158 0 0 0 0-1.636l-1.816-1.817c.539-.91.945-1.884 1.216-2.902h2.555c.639 0 1.157-.52 1.157-1.158v-3.624a1.16 1.16 0 0 0-1.158-1.156zm0 4.782h-3.475l-.1.453a10.312 10.312 0 0 1-1.414 3.378l-.254.393 2.47 2.47-2.563 2.564-2.491-2.492-.392.245a10.297 10.297 0 0 1-3.254 1.34l-.453.1v3.58h-3.625v-3.58l-.453-.1a10.298 10.298 0 0 1-3.291-1.362l-.392-.248-2.589 2.59-2.563-2.564 2.58-2.58-.251-.392a10.335 10.335 0 0 1-1.393-3.342l-.1-.453H1.156v-3.624H4.84l.1-.453a10.315 10.315 0 0 1 1.34-3.256l.246-.39L3.93 6.493 6.494 3.93l2.574 2.575.393-.253a10.319 10.319 0 0 1 3.377-1.415l.453-.1v-3.58h3.625v3.58l.453.1a10.32 10.32 0 0 1 3.34 1.392l.393.252 2.478-2.478 2.563 2.564-2.486 2.485.248.392a10.33 10.33 0 0 1 1.362 3.29l.101.454h3.475v3.624zM15.103 9.043A5.964 5.964 0 0 0 9.146 15a5.963 5.963 0 0 0 5.957 5.957A5.963 5.963 0 0 0 21.06 15a5.964 5.964 0 0 0-5.957-5.957zm0 10.756a4.805 4.805 0 0 1-4.8-4.799c0-2.647 2.154-4.8 4.8-4.8s4.8 2.153 4.8 4.8a4.804 4.804 0 0 1-4.8 4.799zm0 0" class="path--color"></path>
+                                                                    </svg>настройки</a></li>
+                                                    </ul>
+                                                </div>
+                                                <div class="header__profile-bottom"><a href="#!">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 30.000001 29.999998">
+                                                                <path d="M28.172 0v30H13.047a.632.632 0 1 1 0-1.266h13.86V1.265H12.995a.632.632 0 1 1 0-1.265h15.177zm-18.17 15.633v4.744c0 .283-.066.524-.196.717a.895.895 0 0 1-.755.407c-.182 0-.463-.054-.776-.315l-6.121-5.127a1.39 1.39 0 0 1-.51-1.06c0-.403.185-.79.51-1.06l6.121-5.125c.31-.26.594-.316.776-.316.458 0 .951.352.951 1.122v4.747h10.712a.631.631 0 1 1 0 1.266H10.002zm-1.265-5.549l-5.77 4.826c-.037.029-.057.062-.057.09 0 .026.02.06.057.09l5.766 4.828.004-9.834zm0 0" class="path--color"></path>
+                                                            </svg>Выход</a></div>
+                                            </div>
+                                        </div>
+                                    </div><a href="#!" class="header__links-a header__links-a--has-popup">
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewbox="-49 141 512 512">
+                                                <path d="M376.63 446.585c-.208-.07-.418-.135-.63-.195l-56.049-15.982-39.785-37.952v-10.202c19.039-19.017 31.034-45.285 31.034-74.256v-62C311.2 188.258 264.436 141 206.4 141c-57.897 0-104.999 47.103-104.999 104.999v62c0 28.971 11.995 55.239 31.034 74.256v10.202l-39.531 37.899-54.997 16.062c-.181.053-.36.109-.538.168-24.143 8.047-38.275 33.594-32.331 58.293l26.518 135.989C32.952 648.03 39.23 653 46.262 653c.417 0 .837-.025 1.258-.061.379.03.757.059 1.143.059h317.62a15 15 0 0 0 14.693-11.98L408.94 504.96c5.997-24.725-8.14-50.318-32.31-58.375zM206.4 460.868l-35.978-54.221c11.228 4.108 23.346 6.351 35.978 6.351s24.75-2.243 35.978-6.351L206.4 460.868zm61.715-38.748l23.853 22.984-42.899 64.35-23.386-23.386 42.432-63.948zM206.4 171c24.494 0 46.28 11.805 59.976 30.021C252.305 219.7 230.062 231 206.4 231h-73.491c6.969-34.192 37.272-60 73.491-60zm-75.2 136.999v-47h75.2c27.739 0 54.083-11.091 73.482-30.047a75.076 75.076 0 0 1 1.518 15.047v62c0 41.355-33.645 75-75 75s-75.2-33.645-75.2-75zm13.485 114.121l42.433 63.948-23.386 23.386-42.899-64.35 23.852-22.984zm-98.058 53.003l48.684-14.218 53.609 80.414c5.24 7.863 16.387 8.988 23.087 2.286l19.394-19.394v98.786H58.636c-.112-.572-24.248-124.413-24.392-124.978-2.408-9.637 3.023-19.645 12.383-22.896zm332.985 23.514l-25.559 124.36H221.199v-98.786l19.594 19.394c6.693 6.696 17.842 5.583 23.087-2.286l53.611-80.417 49.92 14.235c8.197 2.867 14.736 11.288 12.201 23.5z" class="path--color"></path>
+                                                <path d="M326.399 562.998h-30c-8.284 0-15 6.716-15 15s6.716 15 15 15h30c8.284 0 15-6.716 15-15s-6.715-15-15-15z" class="path--color"></path>
+                                            </svg><span>войти</span></a>
+                                </li>
+                                <li class="header__links-li"><a href="#!" class="header__links-a">
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewbox="192 381.999 30 30.002">
+                                                <path d="M221.227 391.441a2.64 2.64 0 0 0-3.729 0l-2.644 2.647v-6.966c0-.704-.274-1.367-.772-1.865l-2.486-2.486a2.62 2.62 0 0 0-1.865-.772h-15.093a2.64 2.64 0 0 0-2.637 2.637v24.728a2.64 2.64 0 0 0 2.637 2.637h17.579a2.64 2.64 0 0 0 2.637-2.637v-7.815l6.374-6.379a2.636 2.636 0 0 0-.001-3.729zm-8.86 10.109l-.475.475-1.865.621.621-1.865.475-.475 1.244 1.244zm1.243-1.244l-1.243-1.243 4.225-4.229 1.243 1.243-4.225 4.229zm-3.258-16.292l2.486 2.486c.279.279.257.585.257.772h-3.516v-3.516c.166.001.486-.028.773.258zm1.864 26.229h-17.579a.88.88 0 0 1-.879-.879v-24.728a.88.88 0 0 1 .879-.879h13.185v4.395a.88.88 0 0 0 .879.879h4.395v6.816l-2.593 2.595-1.242 1.242a.876.876 0 0 0-.212.344l-1.243 3.729a.881.881 0 0 0 .212.9.876.876 0 0 0 .899.212l3.729-1.243a.89.89 0 0 0 .344-.212l.107-.107v6.057a.883.883 0 0 1-.881.879zm7.768-16.316l-.906.907-1.243-1.243.906-.907a.88.88 0 0 1 1.243 1.243z" class="path--color"></path>
+                                                <path d="M196.395 392.547H208.7a.88.88 0 0 0 0-1.758h-12.306a.88.88 0 0 0 .001 1.758zM196.395 396.062h8.79a.88.88 0 0 0 0-1.758h-8.79a.88.88 0 0 0 0 1.758zM196.395 399.578h8.79a.88.88 0 0 0 0-1.758h-8.79a.88.88 0 0 0 0 1.758zM206.063 402.215a.88.88 0 0 0-.879-.879h-8.79a.88.88 0 0 0 0 1.758h8.79a.878.878 0 0 0 .879-.879zM208.7 406.727h-5.274a.88.88 0 0 0 0 1.758h5.274a.88.88 0 0 0 0-1.758z" class="path--color"></path>
+                                            </svg><span>заказы</span></a></li>
+                                <li class="header__links-li"><a href="#!" class="header__links-a">
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30">
+                                                <path d="M8.835 28.549a2.515 2.515 0 0 0 2.513-2.513 2.516 2.516 0 0 0-2.513-2.514 2.517 2.517 0 0 0-2.514 2.514 2.516 2.516 0 0 0 2.514 2.513zm0 0M24.544 28.549h.185a2.507 2.507 0 0 0 1.719-.869c.444-.499.647-1.146.61-1.83a2.52 2.52 0 0 0-2.68-2.329c-1.386.092-2.421 1.312-2.329 2.68.093 1.313 1.183 2.348 2.495 2.348zm0 0M1.109 3.561h3.179l4.528 16.375c.129.481.573.813 1.072.813h13.917c.444 0 .832-.259 1.017-.665L29.886 8.44a1.122 1.122 0 0 0-.092-1.053 1.103 1.103 0 0 0-.924-.499H13.492c-.61 0-1.109.499-1.109 1.109s.499 1.109 1.109 1.109h13.677l-4.103 9.426H10.72L6.192 2.156a1.11 1.11 0 0 0-1.072-.813H1.109C.499 1.343 0 1.842 0 2.452s.499 1.109 1.109 1.109z" class="path--color"></path>
+                                            </svg><b>99</b><span>корзина</span></a></li>
+                                <li class="header__links-li">
+                                    <div class="header__links-popup header__links-popup--cart">
+                                        <div class="header__links-popup-wrapper">
+                                            <div class="header__cart">
+                                                <div class="header__cart-title">Ваш транспорт</div>
+                                                <div class="header__cart-row"><a href="#!" class="header__cart-row-close"><i class="ion-ios-close"></i></a><img src="./img/header-cart-auto.png" alt="" class="header__cart-row-img"><a href="#!" class="header__cart-row-title">AUDI A4 (8W2, B9) 2.0 TDI</a>
+                                                    <div class="header__cart-row-year">2015</div>
+                                                </div>
+                                                <div class="header__cart-bottom"><a href="#!" class="btn">Добавить в гараж</a></div>
+                                            </div>
+                                        </div>
+                                    </div><a href="#!" class="header__links-a header__links-a--has-popup">
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 30 27.403">
+                                                <path fill="none" d="M1.856 1.884h26.287v2.968H1.856zM23.88 22.793v-5.295l-1.049-1.741v-.226l-1.236-4.586H8.962l-1.32 4.897-1.228 1.649v5.301h.944v2.727h3.089v-2.727h9.398v2.727h3.089v-2.727h.946zm-2.381-.618h-2.27a1.725 1.725 0 0 1-1.724-1.724v-.02l-.304.03h-4.41a1.726 1.726 0 0 1-1.724 1.689h-2.27a1.727 1.727 0 0 1-1.725-1.725v-1.836c0-.95.773-1.724 1.725-1.724h2.27c.874 0 1.597.652 1.709 1.495h4.744a1.726 1.726 0 0 1 1.709-1.495h2.27c.951 0 1.725.773 1.725 1.724v1.86a1.728 1.728 0 0 1-1.725 1.726z"></path>
+                                                <path fill="none" d="M9.071 18.867h1.719v1.284H9.071zM19.504 18.867h1.719v1.308h-1.719z"></path>
+                                                <path d="M24.936 25.718V24.58c.562-.305.944-.902.944-1.589v-5.58a1.768 1.768 0 0 0-.275-.924l-.806-1.34-1.315-4.876a1.792 1.792 0 0 0-1.721-1.326H8.797c-.803 0-1.512.545-1.725 1.327L5.81 14.954l-1.043 1.402a1.824 1.824 0 0 0-.352 1.074v5.561c0 .687.383 1.284.944 1.589v1.138a1.8 1.8 0 0 0 1.174 1.686h4.74a1.798 1.798 0 0 0 1.174-1.686v-.925h5.398v.925a1.8 1.8 0 0 0 1.174 1.686h4.741a1.799 1.799 0 0 0 1.176-1.686zm-5.089-.199v-2.727h-9.398v2.727h-3.09v-2.727h-.944v-5.301l1.228-1.649 1.32-4.897h12.632l1.236 4.586v.226l1.049 1.741v5.295h-.944v2.727h-3.089z" class="path--color"></path>
+                                                <path d="M23.223 18.591c0-.95-.773-1.724-1.725-1.724h-2.27c-.873 0-1.597.652-1.709 1.495h-4.744a1.726 1.726 0 0 0-1.709-1.495h-2.27c-.951 0-1.725.773-1.725 1.724v1.836c0 .951.773 1.725 1.725 1.725h2.27c.939 0 1.706-.755 1.724-1.689h4.41l.304-.03v.02c0 .95.773 1.724 1.724 1.724h2.27c.951 0 1.725-.773 1.725-1.724v-1.862zm-12.432 1.56h-1.72v-1.284h1.719v1.284zm10.432.024h-1.719v-1.308h1.719v1.308z" class="path--color"></path>
+                                                <path d="M30 26.685V1.013A1.874 1.874 0 0 0 28.888 0H1.112A1.873 1.873 0 0 0 0 1.014v25.672h1.857V6.851h26.287v19.834H30zM1.856 4.851V1.884h26.287v2.968H1.856z" class="path--color"></path>
+                                            </svg><span>гараж</span></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div class="header-separator"></div>
+        <div class="content">
+            <div class="container">
+                <ul class="breadcrumbs">
+                    <li><a href="#!">Интернет-магазин VECTОR</a></li>
+                    <li><span>Название страницы </span></li>
+                </ul>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="content__wrapper">
+                            <h1>ваша корзина</h1>
+                            <div class="search-result__head">
+                                <div class="hidden-xxs">
+                                    <div class="search-result__info">Уровень цен<i class="ion-ios-information"></i></div>
+                                </div>
+                            </div>
+                            <div class="clear"></div>
+                            <div class="product-table">
+                                <div class="product-table__row">
+                                    <div class="product-table__table">
+                                        <table class="table table--width100">
+                                            <thead>
+                                                <tr>
+                                                    <th data-orderable="false" class="no-sort"></th>
+                                                    <th data-orderable="false">бренды</th>
+                                                    <th data-orderable="false" class="hidden-sm hidden-xs">наименование</th>
+                                                    <th data-orderable="false" class="hidden-sm hidden-xs">СРОК</th>
+                                                    <th data-orderable="false" class="hidden-sm hidden-xs">Количество</th>
+                                                    <th data-orderable="false" class="hidden-sm hidden-xs">ЦЕНА</th>
+                                                    <th data-orderable="false" class="hidden-sm hidden-xs">Итого</th>
+                                                    <th data-orderable="false" class="hidden-sm hidden-xs"></th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td class="product-table__td-1"><i class="ion-android-bookmark"></i></td>
+                                                    <td class="product-table__td-2">AC <i>(3545645-56654-654)</i></td>
+                                                    <td class="product-table__td-3 hidden-sm hidden-xs"><a href="#!">Ремкомплект тормозного цилиндра</a></td>
+                                                    <td class="product-table__td-5 hidden-sm hidden-xs"><i class="ion-record"></i>23 дн.</td>
+                                                    <td class="product-table__td-9 hidden-sm hidden-xs">
+                                                        <div class="cart__count">
+                                                            <div class="cart__count__div cart__count__div--up"></div>
+                                                            <div class="cart__count__div cart__count__div--down"></div>
+                                                            <input type="text" value="8">
+                                                        </div>
+                                                    </td>
+                                                    <td class="product-table__td-6 hidden-sm hidden-xs">546 шт</td>
+                                                    <td class="product-table__td-7 hidden-sm hidden-xs">2 555<i class="fa-rouble"></i></td>
+                                                    <td class="product-table__td-8 hidden-sm hidden-xs"><a href="#!" class="product-table__to-cart is-active">
+                                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30">
+                                                                    <path d="M8.835 28.549a2.515 2.515 0 0 0 2.513-2.513 2.516 2.516 0 0 0-2.513-2.514 2.517 2.517 0 0 0-2.514 2.514 2.516 2.516 0 0 0 2.514 2.513zm0 0M24.544 28.549h.185a2.507 2.507 0 0 0 1.719-.869c.444-.499.647-1.146.61-1.83a2.52 2.52 0 0 0-2.68-2.329c-1.386.092-2.421 1.312-2.329 2.68.093 1.313 1.183 2.348 2.495 2.348zm0 0M1.109 3.561h3.179l4.528 16.375c.129.481.573.813 1.072.813h13.917c.444 0 .832-.259 1.017-.665L29.886 8.44a1.122 1.122 0 0 0-.092-1.053 1.103 1.103 0 0 0-.924-.499H13.492c-.61 0-1.109.499-1.109 1.109s.499 1.109 1.109 1.109h13.677l-4.103 9.426H10.72L6.192 2.156a1.11 1.11 0 0 0-1.072-.813H1.109C.499 1.343 0 1.842 0 2.452s.499 1.109 1.109 1.109z" class="path--color"></path>
+                                                                </svg><i class="ion-ios-checkmark"> </i></a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="product-table__td-1"><i class="ion-android-bookmark color--blue"></i></td>
+                                                    <td class="product-table__td-2">Acura <i>(3545645-56654-654)</i></td>
+                                                    <td class="product-table__td-3 hidden-sm hidden-xs"><a href="#!">Стойка амортизационная масляная, передняя</a></td>
+                                                    <td class="product-table__td-5 hidden-sm hidden-xs"><i class="ion-record"></i>5 дн.</td>
+                                                    <td class="product-table__td-9 hidden-sm hidden-xs">
+                                                        <div class="cart__count">
+                                                            <div class="cart__count__div cart__count__div--up"></div>
+                                                            <div class="cart__count__div cart__count__div--down"></div>
+                                                            <input type="text" value="23">
+                                                        </div>
+                                                    </td>
+                                                    <td class="product-table__td-6 hidden-sm hidden-xs">21 шт</td>
+                                                    <td class="product-table__td-7 hidden-sm hidden-xs">1 654<i class="fa-rouble"></i></td>
+                                                    <td class="product-table__td-8 hidden-sm hidden-xs"><a href="#!" class="product-table__to-cart">
+                                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30">
+                                                                    <path d="M8.835 28.549a2.515 2.515 0 0 0 2.513-2.513 2.516 2.516 0 0 0-2.513-2.514 2.517 2.517 0 0 0-2.514 2.514 2.516 2.516 0 0 0 2.514 2.513zm0 0M24.544 28.549h.185a2.507 2.507 0 0 0 1.719-.869c.444-.499.647-1.146.61-1.83a2.52 2.52 0 0 0-2.68-2.329c-1.386.092-2.421 1.312-2.329 2.68.093 1.313 1.183 2.348 2.495 2.348zm0 0M1.109 3.561h3.179l4.528 16.375c.129.481.573.813 1.072.813h13.917c.444 0 .832-.259 1.017-.665L29.886 8.44a1.122 1.122 0 0 0-.092-1.053 1.103 1.103 0 0 0-.924-.499H13.492c-.61 0-1.109.499-1.109 1.109s.499 1.109 1.109 1.109h13.677l-4.103 9.426H10.72L6.192 2.156a1.11 1.11 0 0 0-1.072-.813H1.109C.499 1.343 0 1.842 0 2.452s.499 1.109 1.109 1.109z" class="path--color"></path>
+                                                                </svg><i class="ion-ios-checkmark"> </i></a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="product-table__td-1"><i class="ion-android-bookmark"></i></td>
+                                                    <td class="product-table__td-2">Alfa Romeo <i>(3545645-56654-654)</i></td>
+                                                    <td class="product-table__td-3 hidden-sm hidden-xs"><a href="#!">Ремень клиновой avx13 x 1180</a></td>
+                                                    <td class="product-table__td-5 hidden-sm hidden-xs"><i class="ion-record"></i>90 дн.</td>
+                                                    <td class="product-table__td-9 hidden-sm hidden-xs">
+                                                        <div class="cart__count">
+                                                            <div class="cart__count__div cart__count__div--up"></div>
+                                                            <div class="cart__count__div cart__count__div--down"></div>
+                                                            <input type="text" value="50">
+                                                        </div>
+                                                    </td>
+                                                    <td class="product-table__td-6 hidden-sm hidden-xs">513 шт</td>
+                                                    <td class="product-table__td-7 hidden-sm hidden-xs">9 999<i class="fa-rouble"></i></td>
+                                                    <td class="product-table__td-8 hidden-sm hidden-xs"><a href="#!" class="product-table__to-cart">
+                                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30">
+                                                                    <path d="M8.835 28.549a2.515 2.515 0 0 0 2.513-2.513 2.516 2.516 0 0 0-2.513-2.514 2.517 2.517 0 0 0-2.514 2.514 2.516 2.516 0 0 0 2.514 2.513zm0 0M24.544 28.549h.185a2.507 2.507 0 0 0 1.719-.869c.444-.499.647-1.146.61-1.83a2.52 2.52 0 0 0-2.68-2.329c-1.386.092-2.421 1.312-2.329 2.68.093 1.313 1.183 2.348 2.495 2.348zm0 0M1.109 3.561h3.179l4.528 16.375c.129.481.573.813 1.072.813h13.917c.444 0 .832-.259 1.017-.665L29.886 8.44a1.122 1.122 0 0 0-.092-1.053 1.103 1.103 0 0 0-.924-.499H13.492c-.61 0-1.109.499-1.109 1.109s.499 1.109 1.109 1.109h13.677l-4.103 9.426H10.72L6.192 2.156a1.11 1.11 0 0 0-1.072-.813H1.109C.499 1.343 0 1.842 0 2.452s.499 1.109 1.109 1.109z" class="path--color"></path>
+                                                                </svg><i class="ion-ios-checkmark"> </i></a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="product-table__td-1"><i class="ion-android-bookmark color--blue"></i></td>
+                                                    <td class="product-table__td-2">Alpina <i>(3545645-56654-654)</i></td>
+                                                    <td class="product-table__td-3 hidden-sm hidden-xs"><a href="#!">Колодки тормозные</a></td>
+                                                    <td class="product-table__td-5 hidden-sm hidden-xs"><i class="ion-record"></i>1 дн.</td>
+                                                    <td class="product-table__td-9 hidden-sm hidden-xs">
+                                                        <div class="cart__count">
+                                                            <div class="cart__count__div cart__count__div--up"></div>
+                                                            <div class="cart__count__div cart__count__div--down"></div>
+                                                            <input type="text" value="9">
+                                                        </div>
+                                                    </td>
+                                                    <td class="product-table__td-6 hidden-sm hidden-xs">44 шт</td>
+                                                    <td class="product-table__td-7 hidden-sm hidden-xs">523<i class="fa-rouble"></i></td>
+                                                    <td class="product-table__td-8 hidden-sm hidden-xs"><a href="#!" class="product-table__to-cart">
+                                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30">
+                                                                    <path d="M8.835 28.549a2.515 2.515 0 0 0 2.513-2.513 2.516 2.516 0 0 0-2.513-2.514 2.517 2.517 0 0 0-2.514 2.514 2.516 2.516 0 0 0 2.514 2.513zm0 0M24.544 28.549h.185a2.507 2.507 0 0 0 1.719-.869c.444-.499.647-1.146.61-1.83a2.52 2.52 0 0 0-2.68-2.329c-1.386.092-2.421 1.312-2.329 2.68.093 1.313 1.183 2.348 2.495 2.348zm0 0M1.109 3.561h3.179l4.528 16.375c.129.481.573.813 1.072.813h13.917c.444 0 .832-.259 1.017-.665L29.886 8.44a1.122 1.122 0 0 0-.092-1.053 1.103 1.103 0 0 0-.924-.499H13.492c-.61 0-1.109.499-1.109 1.109s.499 1.109 1.109 1.109h13.677l-4.103 9.426H10.72L6.192 2.156a1.11 1.11 0 0 0-1.072-.813H1.109C.499 1.343 0 1.842 0 2.452s.499 1.109 1.109 1.109z" class="path--color"></path>
+                                                                </svg><i class="ion-ios-checkmark"> </i></a></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                <p><strong>Стоимость заказа в корзине указана на условиях самовывоза из офиса. Для выполнения заказа может потребоваться предоплата.</strong></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer-->
+        <footer class="footer">
+            <div class="container">
+                <div class="footer__navigation">
+                    <div class="footer__navigation-block">
+                        <div class="footer__navigation-title">ПАРТНЕРСТВО</div>
+                        <nav class="footer__navigation-list">
+                            <ul>
+                                <li><a href="#!">Как стать партнером</a></li>
+                                <li><a href="#!">Таблица скидок</a></li>
+                                <li><a href="#!">Регионам</a></li>
+                                <li><a href="#!">Поставщикам</a></li>
+                                <li><a href="#!">Оптовикам</a></li>
+                                <li><a href="#!">Производителям</a></li>
+                                <li><a href="#!">Наши склады</a></li>
+                                <li><a href="#!">Партнерские программы</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="footer__navigation-block">
+                        <div class="footer__navigation-title">интернет магазин</div>
+                        <nav class="footer__navigation-list">
+                            <ul>
+                                <li><a href="#!">Доставка заказа</a></li>
+                                <li><a href="#!">Как оплатить заказ</a></li>
+                                <li><a href="#!">Условия возврата и гарантии</a></li>
+                                <li><a href="#!">Стать клиентом</a></li>
+                                <li><a href="#!">Восстановить пароль</a></li>
+                                <li><a href="#!">Помощь</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="footer__navigation-block">
+                        <div class="footer__navigation-title">каталог товаров</div>
+                        <nav class="footer__navigation-list">
+                            <ul>
+                                <li><a href="#!">Каталоги автозапчастей</a></li>
+                                <li><a href="#!">Все для автосервиса</a></li>
+                                <li><a href="#!">Шины, диски</a></li>
+                                <li><a href="#!">Масла и ГСМ</a></li>
+                                <li><a href="#!">Аккумуляторы</a></li>
+                                <li><a href="#!">Аксессуары</a></li>
+                                <li><a href="#!">Мотокаталоги</a></li>
+                                <li><a href="#!">Автолитература</a></li>
+                                <li><a href="#!">Автоэлектроника</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="footer__navigation-block">
+                        <div class="footer__navigation-title">о компании</div>
+                        <nav class="footer__navigation-list">
+                            <ul>
+                                <li><a href="#!">О компании</a></li>
+                                <li><a href="#!">Правовая информация</a></li>
+                                <li><a href="#!">Адреса офисов</a></li>
+                                <li><a href="#!">Мобильное приложение</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+                <div class="footer__bottom">
+                    <div class="footer__card"><img src="./img/footer-card.png" alt=""></div>
+                    <div class="footer__copyright">© Vector 1998—2018</div>
+                </div>
+            </div>
+        </footer>
+        <!--[if gte IE 9]
+        <script src='./js/libs/html5shiv/es5-shim.min.js'>
+        <script src='./js/libs/html5shiv/html5shiv.min.js'>
+        <script src='./js/libs/html5shiv/html5shiv-printshiv.min.js'>
+        <script src='./js/libs/html5shiv/respond.min.js'><![endif]
+        
+        -->
+        <!-- Load Scripts-->
+        <script src="./js/libs.js"></script>
+        <!-- Footer js-->
+        <script src="./js/libs/slick/slick.min.js"></script>
+        <script src="./js/libs/bootstrap/bootstrap.min.js"></script>
+        <script src="./js/libs/selectric/jquery.selectric.js"></script>
+        <script src="./js/libs/autosize/autosize.min.js"></script>
+        <script src="./js/libs/datatables/datatables.min.js"></script>
+        <script src="./js/common.js"></script>
+    </body>
+</html>

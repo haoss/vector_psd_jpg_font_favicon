@@ -139,6 +139,7 @@ $(document).on('ready', function(){
     ]
   });
   mapCarousel();
+  cartCount();
 
   // Chrome Smooth Scroll
   try {
@@ -353,4 +354,26 @@ function mapCarousel() {
       _this.addClass('is-active');
     })
   })
+}
+
+function cartCount(){
+  var counts = $('.cart__count');
+
+  counts.each(function(index, value){
+    var _this = $(this);
+    var countUp = _this.find('.cart__count__div--up');
+    var countDown = _this.find('.cart__count__div--down');
+
+    var input = _this.find('input');
+    var val = parseInt(input.val());
+
+    countUp.on('click', function(){
+      input.val(++val)
+    });
+    countDown.on('click', function(){
+      input.val(--val)
+    });
+  });
+
+  // console.log(counts);
 }

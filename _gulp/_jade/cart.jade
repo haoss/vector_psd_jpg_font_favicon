@@ -1,0 +1,163 @@
+doctype
+
+html(lang="ru")
+  
+  -var active = 'Ваша корзина' //активный пункт меню, список в header.jade
+  -var pageTitle = 'Ваша корзина' + ' - Vector' //title страницы для генерации верстки  
+
+  include ./_include/_head
+
+  body
+    
+    // Preloader
+    include ./_include/_preloader
+    
+    include ./_include/_header
+    
+    .content
+      .container
+        
+        ul.breadcrumbs
+          li
+            a(href="#!") Интернет-магазин VECTОR
+          li
+            span Название страницы 
+        
+        .row
+          .col-md-12
+            
+            .content__wrapper
+              h1 ваша корзина
+              
+              .search-result__head
+                div.hidden-xxs
+                  .search-result__info Уровень цен
+                    i.ion-ios-information
+              
+              .clear
+              
+              .product-table
+                .product-table__row
+                  .product-table__table
+                    table.table.table--width100
+                      thead
+                        tr
+                          th(data-orderable="false").no-sort
+                          th(data-orderable="false") бренды
+                          th.hidden-sm.hidden-xs(data-orderable="false") наименование
+                          th.hidden-sm.hidden-xs(data-orderable="false") СРОК
+                          th.hidden-sm.hidden-xs(data-orderable="false") Количество
+                          th.hidden-sm.hidden-xs(data-orderable="false") ЦЕНА
+                          th.hidden-sm.hidden-xs(data-orderable="false") Итого
+                          th.hidden-sm.hidden-xs(data-orderable="false")
+                      tbody
+                        tr
+                          td.product-table__td-1
+                            i.ion-android-bookmark
+                          td.product-table__td-2 AC 
+                            i (3545645-56654-654)
+                            
+                            
+                          td.product-table__td-3.hidden-sm.hidden-xs
+                            a(href="#!") Ремкомплект тормозного цилиндра
+                          td.product-table__td-5.hidden-sm.hidden-xs
+                            i.ion-record
+                            | 23 дн.
+                          td.product-table__td-9.hidden-sm.hidden-xs
+                            .cart__count
+                              .cart__count__div.cart__count__div--up
+                              .cart__count__div.cart__count__div--down
+                              input(type='text', value='8')
+                          td.product-table__td-6.hidden-sm.hidden-xs 546 шт
+                          td.product-table__td-7.hidden-sm.hidden-xs 2 555
+                            i.fa-rouble
+                          td.product-table__td-8.hidden-sm.hidden-xs
+                            a(href="#!").product-table__to-cart.is-active
+                              +headerIcon3
+                              i.ion-ios-checkmark 
+                        tr
+                          td.product-table__td-1
+                            i.ion-android-bookmark.color--blue
+                          td.product-table__td-2 Acura 
+                            i (3545645-56654-654)
+                            
+                          td.product-table__td-3.hidden-sm.hidden-xs
+                            a(href="#!") Стойка амортизационная масляная, передняя
+                          td.product-table__td-5.hidden-sm.hidden-xs
+                            i.ion-record
+                            | 5 дн.
+                          td.product-table__td-9.hidden-sm.hidden-xs
+                            .cart__count
+                              .cart__count__div.cart__count__div--up
+                              .cart__count__div.cart__count__div--down
+                              input(type='text', value='23')
+                          td.product-table__td-6.hidden-sm.hidden-xs 21 шт
+                          td.product-table__td-7.hidden-sm.hidden-xs 1 654
+                            i.fa-rouble
+                          td.product-table__td-8.hidden-sm.hidden-xs
+                            a(href="#!").product-table__to-cart
+                              +headerIcon3
+                              i.ion-ios-checkmark 
+                        tr
+                          td.product-table__td-1
+                            i.ion-android-bookmark
+                          td.product-table__td-2 Alfa Romeo 
+                            i (3545645-56654-654)
+                            
+                          td.product-table__td-3.hidden-sm.hidden-xs
+                            a(href="#!") Ремень клиновой avx13 x 1180
+                          td.product-table__td-5.hidden-sm.hidden-xs
+                            i.ion-record
+                            | 90 дн.
+                          td.product-table__td-9.hidden-sm.hidden-xs
+                            .cart__count
+                              .cart__count__div.cart__count__div--up
+                              .cart__count__div.cart__count__div--down
+                              input(type='text', value='50')
+                          td.product-table__td-6.hidden-sm.hidden-xs 513 шт
+                          td.product-table__td-7.hidden-sm.hidden-xs 9 999
+                            i.fa-rouble
+                          td.product-table__td-8.hidden-sm.hidden-xs
+                            a(href="#!").product-table__to-cart
+                              +headerIcon3
+                              i.ion-ios-checkmark 
+                        tr
+                          td.product-table__td-1
+                            i.ion-android-bookmark.color--blue
+                          td.product-table__td-2 Alpina 
+                            i (3545645-56654-654)
+                            
+                          td.product-table__td-3.hidden-sm.hidden-xs
+                            a(href="#!") Колодки тормозные
+                          td.product-table__td-5.hidden-sm.hidden-xs
+                            i.ion-record
+                            | 1 дн.
+                          td.product-table__td-9.hidden-sm.hidden-xs
+                            .cart__count
+                              .cart__count__div.cart__count__div--up
+                              .cart__count__div.cart__count__div--down
+                              input(type='text', value='9')
+                          td.product-table__td-6.hidden-sm.hidden-xs 44 шт
+                          td.product-table__td-7.hidden-sm.hidden-xs 523
+                            i.fa-rouble
+                          td.product-table__td-8.hidden-sm.hidden-xs
+                            a(href="#!").product-table__to-cart
+                              +headerIcon3
+                              i.ion-ios-checkmark 
+                
+                p
+                  strong Стоимость заказа в корзине указана на условиях самовывоза из офиса. Для выполнения заказа может потребоваться предоплата.
+        
+    include ./_include/_footer
+    //- div(style="height: 1000px; background-color: #000")
+    
+    //[if gte IE 9]
+      <script src='./js/libs/html5shiv/es5-shim.min.js'>
+      <script src='./js/libs/html5shiv/html5shiv.min.js'>
+      <script src='./js/libs/html5shiv/html5shiv-printshiv.min.js'>
+      <script src='./js/libs/html5shiv/respond.min.js'><![endif]
+
+    // Load Scripts
+    script(src="./js/libs.js")
+    include ./_include/_footer-js
+    script(src="./js/common.js")
