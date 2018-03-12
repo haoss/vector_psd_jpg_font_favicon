@@ -38,6 +38,26 @@
     &__block
       &-answer
         padding-right: 20px
+  .map
+    &__body
+      &-map
+        width: 66.59%
+      &-list
+        width: 30.02%
+      &-canvas
+        padding-bottom: 585px
+    &__carousel
+      height: 548px
+      &-block
+        height: 55px !important
+        &>div
+          height: 54px !important
+          white-space: normal
+          line-height: 20px
+          padding-top: 7px
+          padding-bottom: 7px
+          display: flex
+          align-items: center
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 991px)
@@ -145,6 +165,26 @@
                 &:hover
                   &>td
                     background: none
+  .map
+    &__head
+      margin-top: -52px
+    &__body
+      display: block
+      &-map
+        width: 100%
+        margin-bottom: 34px
+      &-list
+        width: 100%
+        max-width: 470px
+        margin: 0 auto
+    &__carousel
+      height: 377px
+      &-block
+        height: 36px !important
+        &>div
+          height: 35px !important
+          white-space: nowrap
+
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 767px)
@@ -287,6 +327,12 @@
       &>div
         &+div
           padding-left: 25px
+  .map
+    &__head
+      margin-top: 0
+      float: none
+      margin-bottom: 20px
+      margin-left: 0
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 479px)
@@ -377,6 +423,22 @@
               padding-right: 5px !important
               &.product-table__td-1
                 padding-left: 0 !important
+  .map
+    &__popup
+      left: 0
+    &__head
+      display: block
+      &>div
+        &+div
+          margin-left: 0
+          margin-top: 25px
+    &__carousel
+      height: 548px
+      &-block
+        height: 55px !important
+        &>div
+          height: 54px !important
+          white-space: normal
 
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 319px)

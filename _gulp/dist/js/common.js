@@ -117,6 +117,29 @@ $(document).on('ready', function(){
     });
   });
 
+  $('.map__carousel-wrapper').slick({
+    vertical: true,
+    verticalSwiping: true,
+    slidesToShow: 14,
+    slidesToScroll: 1,
+    dots: false,
+    arrows: true,
+    infinite: false,
+    draggable: false,
+    arrows: true,
+    prevArrow: ".map__carousel-prev",
+    nextArrow: ".map__carousel-next",
+    responsive: [
+      {
+        breakpoint: 1199,
+        settings: {
+          slidesToShow: 9
+        }
+      }
+    ]
+  });
+  mapCarousel();
+
   // Chrome Smooth Scroll
   try {
     $.browserSelector();
@@ -316,4 +339,18 @@ function productToCartTable(){
       _this.toggleClass('is-active');
     });
   });
+}
+
+function mapCarousel() {
+  var carousel = $('.map__carousel');
+  var block = carousel.find('.map__carousel-block');
+
+  block.first().addClass('is-active');
+  block.each(function(){
+    var _this = $(this);
+    _this.on('click', function(){
+      block.removeClass('is-active');
+      _this.addClass('is-active');
+    })
+  })
 }

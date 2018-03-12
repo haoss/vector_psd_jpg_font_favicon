@@ -32,13 +32,13 @@ html(lang="ru")
               .map
                 .map__head
                   div
-                    select.selectric
+                    select.selectric.selectric--map
                       option(value="Россия") Россия
                       option(value="Украина") Украина
                       option(value="Белорусь") Белорусь
                       option(value="Казахстан") Казахстан
                   div
-                    select.selectric
+                    select.selectric.selectric--map
                       option(value="Москва") Москва
                       option(value="Уренгой") Уренгой
                       option(value="Минск") Минск
@@ -48,45 +48,92 @@ html(lang="ru")
                 .map__body
                   .map__body-map
                     
+                    .map__popup
+                      .map__popup-close
+                      .map__popup__body
+                        p 
+                          span.text-uppercase Город Москва
+                          br
+                          | СДЭК "NEW WAY", ул.Вербицкого, 1
+                          br
+                          small.small
+                            strong Номера проезжающих маршрутных такси №: 
+                          br
+                          | 177, 178, 213, 445, 459, 513, 526, 542. 
+                        p 
+                          small.small 
+                            strong Трамваи №: 
+                          br
+                          | 8, 25 Название остановки: ул. Архитектора Вербицкого 
+                        p 
+                          small.small
+                            strong Автобусы №: 
+                          br
+                          | 108
+                        p Работает с 10:00 до 22:00
+                      
                     #map_canvas.map__body-canvas
                       
                     // Google Map
                     script(src='https://maps.googleapis.com/maps/api/js?key=AIzaSyCPK3An2lqmwlN35h8OHKt11mFkU8msfZs&sensor=false')
                     script.
                       function initialize() {
-                      var myLatlng = new google.maps.LatLng(51.518641, -0.168163);
-                      var map_options = {
-                      zoom: 13,
-                      mapTypeId: google.maps.MapTypeId.ROADMAP,
-                      center: myLatlng,
-                      scrollwheel: false,
-                      disableDefaultUI: true
-                      }
-                      var map = new google.maps.Map(document.getElementById('map_canvas'), map_options)
-                      var myIcon = new google.maps.MarkerImage('./img/map-marker.png', null, null, null, new google.maps.Size(26,36));
-                      var marker = new google.maps.Marker({
-                      position: myLatlng,
-                      map: map,
-                      icon: myIcon
-                      });
-                      /* Remove if you dont want B/W Google Map */
-                      
-                      var styles = [
-                      {
-                      featureType: "all",
-                      stylers: [
-                      { saturation: -100 }
-                      ]
-                      }
-                      ];
-                      map.setOptions({styles: styles});
-                      
+                        var myLatlng = new google.maps.LatLng(55.7177713,37.6420844);
+                        var map_options = {
+                        zoom: 11,
+                        mapTypeId: google.maps.MapTypeId.ROADMAP,
+                        center: myLatlng,
+                        scrollwheel: false,
+                        disableDefaultUI: true
+                        }
+                        var map = new google.maps.Map(document.getElementById('map_canvas'), map_options)
+                        var myIcon = new google.maps.MarkerImage('./img/map-marker.png', null, null, null, new google.maps.Size(26,36));
+                        var marker = new google.maps.Marker({
+                        position: myLatlng,
+                        map: map,
+                        icon: myIcon
+                        });
+                        /* Remove if you dont want B/W Google Map */
+                        
+                        var styles = [
+                        {
+                        featureType: "all",
+                        stylers: [
+                        { saturation: -100 }
+                        ]
+                        }
+                        ];
+                        map.setOptions({styles: styles});
+                        
                       }
                       google.maps.event.addDomListener(window, 'load', initialize);
                     // Google Map Ends!
 
                     
-                  .map__body-list 2
+                  .map__body-list
+                    
+                    .map__carousel
+                      button.map__carousel-prev(type='button') Previous
+                      .map__carousel-wrapper
+                        - for (var i=0; i<2; i++) {
+                        .map__carousel-block
+                          div СДЭК "Космополит", ул. В. Гетьмана, 6
+                        .map__carousel-block
+                          div СДЭК "Аркадия", ул. Днепровская наб., 33 
+                        .map__carousel-block
+                          div СДЭК "Дарынок", ул. Магнитогорская, 1А 
+                        .map__carousel-block
+                          div СДЭК "Район", ул. Николая Лаврухина, 4 
+                        .map__carousel-block
+                          div СДЭК "Аркадия", ул. Борщаговская, 154А 
+                        .map__carousel-block
+                          div СДЭК "NEW WAY", ул.Вербицкого, 1 
+                        .map__carousel-block
+                          div СДЭК "LAVINA", ул. Берковецкая, 6Д 
+                        .map__carousel-block
+                          div СДЭК "Городок", пр. Степана Бандери, 23
+                        - }
+                      button.map__carousel-next(type='button') Previous
         
     include ./_include/_footer
     //- div(style="height: 1000px; background-color: #000")

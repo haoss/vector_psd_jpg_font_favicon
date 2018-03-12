@@ -631,6 +631,13 @@
         opacity: 1
       li
         padding-left: 25px
+  &-selectric
+    &--map
+      max-width: 200px
+      .label
+        font-size: rem(26)
+        font-family: $font-baron
+        text-transform: lowercase
 
 .table-notification
   width: 100%
@@ -985,21 +992,22 @@
     display: flex
     float: left
     margin-left: 270px
-    margin-top: -55px
+    margin-top: -57px
     &>div
       &+div
         margin-left: 25px
   &__body
     display: flex
     &-map
-      width: 72.3%
+      width: 66.23%
+      position: relative
     &-list
       margin-left: 30px
-      width: 33.2%
+      width: 30.59%
     &-canvas
       position: relative
       width: 100%
-      padding-bottom: 600px
+      padding-bottom: 604px
       height: 0
       overflow: hidden
       border-radius: 4px
@@ -1009,3 +1017,85 @@
         top: 0
         right: 0
         bottom: 0
+  &__carousel
+    // background: pink
+    height: 567px
+    padding: 37px 0
+    position: relative
+    margin-bottom: 37px
+    &-prev, &-next
+      width: 100%
+      top: 0
+      left: 0
+      transform: translate(0)
+      height: 35px
+      background: #f3f4f7
+      opacity: 1
+      border: 0
+      font-size: 0
+      position: absolute
+      &.slick-disabled
+        opacity: 0.5
+      &::before
+        content: "\f126"
+        color: $color-1
+        font-size: rem(18)
+        font-family: $font-ionicons
+        position: absolute
+        left: 50%
+        transform: translateX(-50%)
+        opacity: 1
+        top: 7px
+    &-next
+      top: inherit
+      bottom: -37px
+      &::before
+        content: "\f123"
+        top: 5px
+    &-block
+      height: 36px !important
+      background: #f3f4f7
+      margin-bottom: 2px
+      cursor: pointer
+      font-size: rem(14)
+      padding: 0 23px
+      float: none
+      &>div
+        line-height: 36px
+        white-space: nowrap
+        overflow: hidden
+        text-overflow: ellipsis
+      &:focus
+        outline: none
+      &.is-active
+        background: $color-1
+        color: $color-white
+  &__popup
+    position: absolute
+    left: 22px
+    top: 22px
+    z-index: 100
+    border-radius: 4px
+    background: rgba($color-1,.85)
+    color: $color-white
+    max-width: 313px
+    font-size: rem(14)
+    padding: 17px 20px 20px 20px
+    &-close
+      position: absolute
+      top: 15px
+      right: 15px
+      color: #971723
+      z-index: 10
+      cursor: pointer
+      &::before
+        content: "\f12a"
+        font-family: $font-ionicons
+        display: block
+        line-height: 1
+    p
+      margin-bottom: 15px
+      &:last-child
+        margin-bottom: 0
+    .small
+      font-size: rem(12)

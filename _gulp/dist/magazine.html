@@ -810,7 +810,7 @@
                             <div class="map">
                                 <div class="map__head">
                                     <div>
-                                        <select class="selectric">
+                                        <select class="selectric selectric--map">
                                             <option value="Россия">Россия</option>
                                             <option value="Украина">Украина</option>
                                             <option value="Белорусь">Белорусь</option>
@@ -818,7 +818,7 @@
                                         </select>
                                     </div>
                                     <div>
-                                        <select class="selectric">
+                                        <select class="selectric selectric--map">
                                             <option value="Москва">Москва</option>
                                             <option value="Уренгой">Уренгой</option>
                                             <option value="Минск">Минск</option>
@@ -828,45 +828,109 @@
                                 <div class="clear"></div>
                                 <div class="map__body">
                                     <div class="map__body-map">
+                                        <div class="map__popup">
+                                            <div class="map__popup-close"></div>
+                                            <div class="map__popup__body">
+                                                <p> <span class="text-uppercase">Город Москва</span><br>СДЭК "NEW WAY", ул.Вербицкого, 1<br><small class="small"><strong>Номера проезжающих маршрутных такси №: </strong></small><br>177, 178, 213, 445, 459, 513, 526, 542. </p>
+                                                <p> <small class="small"> <strong>Трамваи №: </strong></small><br>8, 25 Название остановки: ул. Архитектора Вербицкого </p>
+                                                <p> <small class="small"><strong>Автобусы №: </strong></small><br>108</p>
+                                                <p>Работает с 10:00 до 22:00</p>
+                                            </div>
+                                        </div>
                                         <div id="map_canvas" class="map__body-canvas"></div>
                                         <!-- Google Map-->
                                         <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCPK3An2lqmwlN35h8OHKt11mFkU8msfZs&amp;sensor=false"></script>
                                         <script>
                                             function initialize() {
-                                            var myLatlng = new google.maps.LatLng(51.518641, -0.168163);
-                                            var map_options = {
-                                            zoom: 13,
-                                            mapTypeId: google.maps.MapTypeId.ROADMAP,
-                                            center: myLatlng,
-                                            scrollwheel: false,
-                                            disableDefaultUI: true
-                                            }
-                                            var map = new google.maps.Map(document.getElementById('map_canvas'), map_options)
-                                            var myIcon = new google.maps.MarkerImage('./img/map-marker.png', null, null, null, new google.maps.Size(26,36));
-                                            var marker = new google.maps.Marker({
-                                            position: myLatlng,
-                                            map: map,
-                                            icon: myIcon
-                                            });
-                                            /* Remove if you dont want B/W Google Map */
-                                            
-                                            var styles = [
-                                            {
-                                            featureType: "all",
-                                            stylers: [
-                                            { saturation: -100 }
-                                            ]
-                                            }
-                                            ];
-                                            map.setOptions({styles: styles});
-                                            
+                                              var myLatlng = new google.maps.LatLng(55.7177713,37.6420844);
+                                              var map_options = {
+                                              zoom: 11,
+                                              mapTypeId: google.maps.MapTypeId.ROADMAP,
+                                              center: myLatlng,
+                                              scrollwheel: false,
+                                              disableDefaultUI: true
+                                              }
+                                              var map = new google.maps.Map(document.getElementById('map_canvas'), map_options)
+                                              var myIcon = new google.maps.MarkerImage('./img/map-marker.png', null, null, null, new google.maps.Size(26,36));
+                                              var marker = new google.maps.Marker({
+                                              position: myLatlng,
+                                              map: map,
+                                              icon: myIcon
+                                              });
+                                              /* Remove if you dont want B/W Google Map */
+                                              
+                                              var styles = [
+                                              {
+                                              featureType: "all",
+                                              stylers: [
+                                              { saturation: -100 }
+                                              ]
+                                              }
+                                              ];
+                                              map.setOptions({styles: styles});
+                                              
                                             }
                                             google.maps.event.addDomListener(window, 'load', initialize);
                                         </script>
                                         <!-- Google Map Ends!-->
                                         
                                     </div>
-                                    <div class="map__body-list">2</div>
+                                    <div class="map__body-list">
+                                        <div class="map__carousel">
+                                            <button type="button" class="map__carousel-prev">Previous</button>
+                                            <div class="map__carousel-wrapper">
+                                                <div class="map__carousel-block">
+                                                    <div>СДЭК "Космополит", ул. В. Гетьмана, 6</div>
+                                                </div>
+                                                <div class="map__carousel-block">
+                                                    <div>СДЭК "Аркадия", ул. Днепровская наб., 33 </div>
+                                                </div>
+                                                <div class="map__carousel-block">
+                                                    <div>СДЭК "Дарынок", ул. Магнитогорская, 1А </div>
+                                                </div>
+                                                <div class="map__carousel-block">
+                                                    <div>СДЭК "Район", ул. Николая Лаврухина, 4 </div>
+                                                </div>
+                                                <div class="map__carousel-block">
+                                                    <div>СДЭК "Аркадия", ул. Борщаговская, 154А </div>
+                                                </div>
+                                                <div class="map__carousel-block">
+                                                    <div>СДЭК "NEW WAY", ул.Вербицкого, 1 </div>
+                                                </div>
+                                                <div class="map__carousel-block">
+                                                    <div>СДЭК "LAVINA", ул. Берковецкая, 6Д </div>
+                                                </div>
+                                                <div class="map__carousel-block">
+                                                    <div>СДЭК "Городок", пр. Степана Бандери, 23</div>
+                                                </div>
+                                                <div class="map__carousel-block">
+                                                    <div>СДЭК "Космополит", ул. В. Гетьмана, 6</div>
+                                                </div>
+                                                <div class="map__carousel-block">
+                                                    <div>СДЭК "Аркадия", ул. Днепровская наб., 33 </div>
+                                                </div>
+                                                <div class="map__carousel-block">
+                                                    <div>СДЭК "Дарынок", ул. Магнитогорская, 1А </div>
+                                                </div>
+                                                <div class="map__carousel-block">
+                                                    <div>СДЭК "Район", ул. Николая Лаврухина, 4 </div>
+                                                </div>
+                                                <div class="map__carousel-block">
+                                                    <div>СДЭК "Аркадия", ул. Борщаговская, 154А </div>
+                                                </div>
+                                                <div class="map__carousel-block">
+                                                    <div>СДЭК "NEW WAY", ул.Вербицкого, 1 </div>
+                                                </div>
+                                                <div class="map__carousel-block">
+                                                    <div>СДЭК "LAVINA", ул. Берковецкая, 6Д </div>
+                                                </div>
+                                                <div class="map__carousel-block">
+                                                    <div>СДЭК "Городок", пр. Степана Бандери, 23</div>
+                                                </div>
+                                            </div>
+                                            <button type="button" class="map__carousel-next">Previous</button>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
