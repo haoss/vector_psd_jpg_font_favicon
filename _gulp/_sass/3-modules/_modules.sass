@@ -10,6 +10,7 @@
     border-radius: 4px
     padding: 24px 28px 28px 28px
     min-height: 500px
+    +clearfix
   &__title
     font-size: rem(15)
     font-family: $font-roboto-bold
@@ -467,7 +468,7 @@
     white-space: nowrap
     overflow: hidden
     text-overflow: ellipsis
-    margin: 0 28px 0 0
+    margin: 0 20px 0 0
     font-size: rem(12)
     line-height: 28px
     color: #444
@@ -931,6 +932,8 @@
     &-8
       width: 1px !important
       padding-right: 25px !important
+    &-11
+      width: 32px !important
   &__to-cart
     position: relative
     display: inline-block
@@ -956,6 +959,39 @@
         display: block
       .path--color
         fill: $color-1
+  &__total
+    background: #f3f4f7
+    font-size: rem(14)
+    padding: 14px 20px
+    min-height: 50px
+    margin-bottom: 20px
+    +clearfix
+    &-left
+      float: left
+      strong
+        display: inline-block
+    &-right
+      float: right
+      strong
+        font-size: rem(20)
+        display: inline-block
+        margin-top: -4px
+        margin-bottom: -2px
+  &__link-delete
+    font-size: rem(13)
+    i
+      color: $color-1
+  &__link-message
+    font-size: rem(15)
+    color: $color-2
+    i
+      color: $color-2
+    &:hover, &:focus
+      color: $color-1
+      i
+        color: $color-1
+  &__cart-p
+    padding-top: 5px
 
 .search-result
   &__head
@@ -966,6 +1002,8 @@
     &>div
       &+div
         padding-left: 70px
+    &--cart
+      margin-top: -50px
   &__info
     font-size: rem(13)
     color: #535353
@@ -1133,3 +1171,355 @@
         &::after
           content: "\f463"
           bottom: inherit
+
+.catalog
+  margin-bottom: 20px
+  &__row
+    border-top: 1px solid #e5e5e5
+    padding: 20px 0
+    &:last-child
+      border-bottom: 1px solid #e5e5e5
+    &-wrapper
+      display: flex
+    &-img
+      flex-shrink: 0
+      width: 135px
+      img
+        margin: 0 auto
+    &-content
+      width: calc(100% - 135px)
+      padding-left: 30px
+    &-title
+      font-size: rem(14)
+      margin-bottom: 15px
+      a
+        font-family: $font-roboto-bold
+        color: $color-2
+        &:hover, &:focus
+          color: $color-1
+          text-decoration: none
+      small
+        font-size: rem(12)
+        display: block
+        margin-top: 3px
+    &-table
+      // margin-bottom: 20px
+      font-family: $font-roboto-bold
+      font-size: rem(12)
+      tbody
+        &>tr
+          &>td
+            vertical-align: top
+            padding-bottom: 2px
+            &:first-child
+              font-family: $font-roboto
+              width: 75px
+              padding-right: 10px
+              white-space: nowrap
+          &:last-child
+            &>td
+              padding-bottom: 0
+
+    &-btn
+      float: right
+      width: 240px
+      min-width: inherit
+      margin-top: -30px
+  &__sort
+    position: relative
+    display: flex
+    float: right
+    label
+      left: 0
+      margin: 0
+      color: #535353
+      font-size: rem(13)
+      margin-top: 5px
+      margin-right: 15px
+    .selectric
+      &-wrapper
+        display: inline-block
+      .label
+        width: 25px
+    &--right
+      float: right
+  &__mobile-btn
+    display: none
+    position: absolute
+    left: -32px
+    top: -5px
+    background: $color-1
+    color: $color-white
+    width: 35px
+    height: 35px
+    border-radius: 4px
+    overflow: hidden
+    border: 0
+    padding: 0
+    i
+      font-size: rem(20)
+      position: absolute
+      display: block
+      line-height: 1
+      left: 10px
+      top: 7px
+    &--filter
+      left: inherit
+      right: -32px
+      top: 20px
+      width: 32px
+      border-radius: 0 4px 4px 0
+      i
+        left: 9px
+        font-size: rem(20)
+  &__head
+    position: relative
+
+.pagination
+  font-size: rem(12)
+  // margin-bottom: 20px
+  +clearfix
+  ul
+    margin: 0
+    padding: 0
+    vertical-align: middle
+    &>li
+      list-style: none
+      margin: 0
+      float: left
+      &>span, &>a
+        display: inline-block
+        height: 30px
+        line-height: 30px
+        width: 30px
+        text-align: center
+        border-radius: 50%
+        background: transparent
+        color: $color-2
+      &>a
+        &:hover, &:focus
+          background: $color-1
+          color: $color-white
+          text-decoration: none
+      &.active
+        &>span, &>a
+          background: $color-1
+          color: $color-white
+  &--catalog
+    float: left
+
+.filter
+  font-family: $font-roboto
+  font-size: rem(13)
+  color: $primary-color
+  position: relative
+  z-index: 20
+  background: $color-white
+  padding: 20px 0
+  transform: translateX(0)
+  // overflow: hidden
+  border-radius: 4px
+  margin-bottom: 30px
+  &__block
+    margin-bottom: 25px
+    border-bottom: 1px solid #e5e5e5
+    padding: 0 25px 20px 25px
+    &:last-child
+      margin-bottom: 0
+      border-bottom: 0
+      padding-bottom: 0
+    &.has-hide
+      margin-bottom: 0
+      border-bottom: 0
+      padding-bottom: 0
+  &__head
+    color: #444444
+    margin-bottom: 10px
+    font-size: rem(15)
+    font-family: $font-roboto-bold
+    text-transform: uppercase
+    position: relative
+    padding-right: 8px
+    &::after
+      position: absolute
+      right: -3px
+      top: 2px
+      color: $color-1
+      content: "\f35d"
+      font-size: rem(14)
+      font-family: $font-ionicons
+    &--no-after
+      &::after
+        display: none
+  &__row
+    input[type=checkbox]
+      display: none
+      &:checked
+        &~.checkbox
+          &::after
+            color: $color-1
+            content: "\f373"
+        &~.label
+          color: #444444
+          // font-family: $font-roboto-bold
+      &:disabled
+        &~.checkbox
+          &::after
+            content: "\f372"
+        &~.label
+          color: $color-808080
+          text-decoration: line-through
+    font-weight: 400
+    display: block
+    cursor: pointer
+    padding: 0 50px 0 22px
+    position: relative
+    margin: 0 0 8px 0
+    line-height: 1.2
+    .checkbox
+      height: 10px
+      width: 10px
+      position: absolute
+      display: block
+      margin: 0
+      left: 1px
+      top: 3px
+      &::after
+        font-family: $font-ionicons
+        content: "\f372"
+        position: absolute
+        font-size: rem(14)
+        left: 50%
+        top: 50%
+        transform: translate(-50%,-50%)
+        color: #858585
+        font-weight: 400
+    &:hover
+      .label
+        color: #444444
+    &.unactive
+      cursor: default
+    .number
+      position: absolute
+      right: 0
+      top: 1px
+      font-size: rem(13)
+      color: #bebebe
+      line-height: 1
+  &__more
+    // position: absolute
+    width: 100%
+    text-align: left
+    text-transform: none
+    font-weight: 400
+    font-size: rem(13)
+    padding: 0 25px 20px 25px
+    border-bottom: 1px solid #dedede
+    margin-bottom: 25px
+  &__text
+    color: #767676
+  &__table
+    display: table
+    margin-bottom: 10px
+    &>div
+      display: table-cell
+      vertical-align: middle
+      &+div
+        padding-left: 10px
+  &__slider
+    padding-bottom: 28px
+    padding-top: 8px
+  &__cost
+    font-size: rem(12)
+    font-weight: 400
+    color: #858585
+    font-family: $font-roboto
+    width: 100%
+    .div-cell
+      vertical-align: middle
+      border-bottom: 1px solid #bebebe
+      &+.div-cell
+        padding-left: 20px
+    &-btn
+      width: 58px
+      min-width: inherit
+      padding: 0
+
+  input
+    width: 100%
+    background: none
+    text-align: center
+    font-weight: 600
+    color: $primary-color
+    padding: 0
+    font-family: $font-roboto-bold
+    font-size: rem(12)
+    height: 30px
+    line-height: 28px
+    border: 0
+    &:focus
+      border: 0
+      box-shadow: none
+  .icon-rouble
+    font-size: rem(18)
+    position: relative
+    top: 2px
+    &::before
+      margin: 0
+      width: auto
+
+.ui-widget.ui-widget-content
+  border: 0
+  height: 2px
+  border-radius: 0
+  background: #e6e6e6
+.ui-slider-horizontal .ui-slider-range
+  background: $color-1
+  height: 2px
+  margin-top: 0px
+.ui-slider .ui-slider-handle
+  height: 18px
+  width: 18px
+  border-radius: 50%
+  background: $color-1
+  border: 2px solid $color-1
+  top: -8px
+  cursor: pointer
+  z-index: 10
+  &:focus
+    outline: none
+
+.price-range-min, .price-range-max
+  font-size: rem(10)
+  color: $color-1
+  position: absolute
+  left: 50%
+  transform: translateX(-50%)
+  top: -21px
+  font-family: $font-roboto-bold
+  // width: 30px
+  z-index: 10
+  background-color: $color-white
+  display: block
+
+.price-range-max
+  text-align: right
+
+.range__zero-min, .range__zero-max
+  font-size: rem(10)
+  color: #a9a9a9
+  position: absolute
+  margin-top: 8px
+  z-index: 5
+  font-family: $font-roboto-bold
+.range__zero-max
+  right: 0
+
+.div
+  &-table
+    display: table
+  &-cell
+    display: table-cell
+    vertical-align: top
+    &--w1
+      width: 1px !important

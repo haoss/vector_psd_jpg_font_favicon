@@ -140,6 +140,10 @@ $(document).on('ready', function(){
   });
   mapCarousel();
   cartCount();
+  filterHasHide();
+  catalogFilter();
+  catalogFilterChange();
+  mobileFilter();
 
   // Chrome Smooth Scroll
   try {
@@ -160,7 +164,9 @@ $(window).on('load', function() {
   $(".loader").delay(400).fadeOut("slow");
 });
 
-$(window).on('scroll', function() { });
+$(window).on('scroll', function() {
+
+});
 $(window).on('resize', function() {
   var width = $(window).width();
   if (width > 767) {
@@ -168,6 +174,8 @@ $(window).on('resize', function() {
   } else {
     $('.footer__navigation-block:nth-child(2)').addClass('is-active');
   }
+
+  filterHasHide();
 });
 
 /*
@@ -376,4 +384,93 @@ function cartCount(){
   });
 
   // console.log(counts);
+}
+
+function filterHasHide(){
+  $('.has-hide').readmore({
+    speed: 500,
+    collapsedHeight: 100,
+    moreLink: '<div class="filter__more"><a href="#!">Показать все</a></div>',
+    lessLink: '<div class="filter__more"><a href="#!">Скрыть лишнее</a></div>'
+  });
+}
+
+function catalogFilter(){
+
+  if ($("#filter__range").length <= 0) return;
+
+  // Jquery UI slider
+  $("#filter__range").slider({
+  	min: 0,
+  	max: 12000,
+  	values: [1500,8700],
+  	range: true,
+  	stop: function(event, ui) {
+      $("input#priceMin").val($("#filter__range").slider("values",0));
+      $("input#priceMax").val($("#filter__range").slider("values",1));
+
+      $('.price-range-min.value').html($("#filter__range").slider("values",0));
+      $('.price-range-max.value').html($("#filter__range").slider("values",1));
+    },
+    slide: function(event, ui){
+      $("input#priceMin").val($("#filter__range").slider("values",0));
+      $("input#priceMax").val($("#filter__range").slider("values",1));
+
+      $('.price-range-min.value').html($("#filter__range").slider("values",0));
+      $('.price-range-max.value').html($("#filter__range").slider("values",1));
+    }
+  });
+}
+
+function catalogFilterChange(){
+  if ($("#filter__range").length <= 0) return;
+
+  $("input#priceMin").on('change', function(){
+  	var value1=$("input#priceMin").val();
+  	var value2=$("input#priceMax").val();
+    if(parseInt(value1) > parseInt(value2)){
+  		value1 = value2;
+  		$("input#priceMin").val(value1);
+      $('.price-range-min.value').html(value1);
+  	}
+  	$("#filter__range").slider("values", 0, value1);
+    $('.price-range-min.value').html(value1);
+  });
+
+  $("input#priceMax").on('change', function(){
+  	var value1=$("input#priceMin").val();
+  	var value2=$("input#priceMax").val();
+  	if (value2 > 12000) { value2 = 12000; $("input#priceMax").val(8700)}
+  	if(parseInt(value1) > parseInt(value2)){
+  		value2 = value1;
+  		$("input#priceMax").val(value2);
+      $('.price-range-max.value').html(value2);
+  	}
+  	$("#filter__range").slider("values",1,value2);
+    $('.price-range-max.value').html(value2);
+  });
+
+  // фильтрация ввода в поля
+  $('.filter__block input').on('keypress', function(event){
+    var key, keyChar;
+    if(!event) var event = window.event;
+    if (event.keyCode) key = event.keyCode;
+    else if(event.which) key = event.which;
+    if(key==null || key==0 || key==8 || key==13 || key==9 || key==46 || key==37 || key==39 ) return true;
+    keyChar=String.fromCharCode(key);
+    if(!/\d/.test(keyChar))	return false;
+  });
+}
+
+function mobileFilter(){
+  var btn = $('.catalog__mobile-btn');
+  var filter = $('#filters');
+  btn.on('click', function(e){
+    e.stopPropagation();
+    if (filter.hasClass('is-active')) {
+      filter.removeClass('is-active');
+    } else {
+      filter.addClass('is-active');
+    }
+  });
 }

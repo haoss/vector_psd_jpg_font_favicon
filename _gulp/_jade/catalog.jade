@@ -1,0 +1,123 @@
+doctype
+
+html(lang="ru")
+  
+  -var active = 'Каталог' //активный пункт меню, список в header.jade
+  -var pageTitle = 'Каталог' + ' - Vector' //title страницы для генерации верстки  
+
+  include ./_include/_head
+
+  body
+    
+    // Preloader
+    include ./_include/_preloader
+    
+    include ./_include/_header
+    
+    .content
+      .container
+        
+        ul.breadcrumbs
+          li
+            a(href="#!") Интернет-магазин VECTОR
+          li
+            span Название страницы 
+        
+        .row
+          .col-md-4
+                  
+            #mobileColContent.mobile__col-content
+              div
+                include ./_include/_fillter
+                
+            .banner.hidden-xs.hidden-sm
+              a(href="#!")
+                img(src="./img/banner-360-270.png", alt="")
+            
+          .col-md-8
+            
+            .content__wrapper
+              
+              .catalog__head
+                button(type="button").catalog__mobile-btn
+                  i.ion-gear-a
+                h1 моторные масла
+              
+              .search-result__head
+                div
+                  .search-result__sort
+                    label Сортировка
+                    select.selectric
+                      option(value="по популярности") по популярности
+                      option(value="по названию") по названию
+              
+              .catalog
+                - for (var i=0; i<6; i++) {
+                .catalog__row
+                  .catalog__row-wrapper
+                    .catalog__row-title.visible-xs
+                      a(href="#!") Масло моторное синтетическое "Motorbike 4T Street 15W-50", 1л
+                      small Liqui Moly
+                      
+                    .catalog__row-img
+                      a(href="#!")
+                        img(src="./img/catalog-row-img.png", alt="").img-responsive
+                    .catalog__row-content
+                      .catalog__row-title.hidden-xs
+                        a(href="#!") Масло моторное синтетическое "Motorbike 4T Street 15W-50", 1л
+                        small Liqui Moly
+                      
+                      table.catalog__row-table
+                        tbody
+                          tr
+                            td Тип:
+                            td Масло трансмиссионное
+                          tr
+                            td Вязкость:
+                            td 85W-140
+                          tr
+                            td Объем:
+                            td 20
+                          tr
+                            td Состав:
+                            td Минеральное
+                          tr
+                            td Тара:
+                            td Канистра
+                       
+                      .clear
+                      a(href="#!").btn.catalog__row-btn Подробнее
+                - }
+                
+              .pagination.pagination--catalog
+                ul
+                  li: a(href="#!") 1
+                  li: a(href="#!") 2
+                  li.active: a(href="#!") 3
+                  li: a(href="#!") 4
+                  li: span ...
+                  li: a(href="#!") 99
+                  
+              
+              .catalog__sort
+                label Выводить по
+                select.selectric
+                  option(value="18") 18
+                  option(value="24") 24
+                  option(value="32") 32
+                  option(value="48") 48
+        
+    include ./_include/_footer
+    //- div(style="height: 1000px; background-color: #000")
+    
+    //[if gte IE 9]
+      <script src='./js/libs/html5shiv/es5-shim.min.js'>
+      <script src='./js/libs/html5shiv/html5shiv.min.js'>
+      <script src='./js/libs/html5shiv/html5shiv-printshiv.min.js'>
+      <script src='./js/libs/html5shiv/respond.min.js'><![endif]
+
+    // Load Scripts
+    //script(src="./js/libs.js")
+    include ./_include/_footer-js
+    script(src="./js/common.js")
+    

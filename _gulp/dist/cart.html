@@ -31,6 +31,7 @@
         <link rel="stylesheet" href="./js/libs/slick/slick-theme.css">
         <link rel="stylesheet" href="./js/libs/selectric/selectric.css">
         <link rel="stylesheet" href="./js/libs/datatables/datatables.min.css">
+        <link rel="stylesheet" href="./js/libs/jqueryui/jquery-ui.min.css">
         <link rel="stylesheet" href="./css/main.css">
     </head>
     <body>
@@ -807,8 +808,8 @@
                     <div class="col-md-12">
                         <div class="content__wrapper">
                             <h1>ваша корзина</h1>
-                            <div class="search-result__head">
-                                <div class="hidden-xxs">
+                            <div class="search-result__head search-result__head--cart hidden-xxs">
+                                <div>
                                     <div class="search-result__info">Уровень цен<i class="ion-ios-information"></i></div>
                                 </div>
                             </div>
@@ -826,13 +827,32 @@
                                                     <th data-orderable="false" class="hidden-sm hidden-xs">Количество</th>
                                                     <th data-orderable="false" class="hidden-sm hidden-xs">ЦЕНА</th>
                                                     <th data-orderable="false" class="hidden-sm hidden-xs">Итого</th>
+                                                    <th data-orderable="false" class="hidden-sm hidden-xs"> </th>
                                                     <th data-orderable="false" class="hidden-sm hidden-xs"></th>
                                                 </tr>
                                             </thead>
                                             <tbody>
                                                 <tr>
                                                     <td class="product-table__td-1"><i class="ion-android-bookmark"></i></td>
-                                                    <td class="product-table__td-2">AC <i>(3545645-56654-654)</i></td>
+                                                    <td class="product-table__td-2">AC <i>(3545645-56654-654)</i>
+                                                        <table class="table table--product-name table--cart">
+                                                            <td class="product-table__td-3"><a href="#!">Ремкомплект тормозного цилиндра</a></td>
+                                                        </table>
+                                                        <table class="table table--product-info table--cart">
+                                                            <td class="product-table__td-5"><i class="ion-record"></i>23 дн.</td>
+                                                            <td class="product-table__td-9">
+                                                                <div class="cart__count">
+                                                                    <div class="cart__count__div cart__count__div--up"></div>
+                                                                    <div class="cart__count__div cart__count__div--down"></div>
+                                                                    <input type="text" value="8">
+                                                                </div>
+                                                            </td>
+                                                            <td class="product-table__td-6 text-center">546 шт</td>
+                                                            <td class="product-table__td-7 text-center">2 555<i class="fa-rouble"></i></td>
+                                                            <td class="product-table__td-11 hidden-xxs"><a href="#!" class="product-table__link-message"><i class="ion-android-textsms"> </i></a></td>
+                                                            <td class="product-table__td-8"><a href="#!" class="product-table__link-delete"><i class="ion-close"> </i></a></td>
+                                                        </table>
+                                                    </td>
                                                     <td class="product-table__td-3 hidden-sm hidden-xs"><a href="#!">Ремкомплект тормозного цилиндра</a></td>
                                                     <td class="product-table__td-5 hidden-sm hidden-xs"><i class="ion-record"></i>23 дн.</td>
                                                     <td class="product-table__td-9 hidden-sm hidden-xs">
@@ -844,14 +864,30 @@
                                                     </td>
                                                     <td class="product-table__td-6 hidden-sm hidden-xs">546 шт</td>
                                                     <td class="product-table__td-7 hidden-sm hidden-xs">2 555<i class="fa-rouble"></i></td>
-                                                    <td class="product-table__td-8 hidden-sm hidden-xs"><a href="#!" class="product-table__to-cart is-active">
-                                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30">
-                                                                    <path d="M8.835 28.549a2.515 2.515 0 0 0 2.513-2.513 2.516 2.516 0 0 0-2.513-2.514 2.517 2.517 0 0 0-2.514 2.514 2.516 2.516 0 0 0 2.514 2.513zm0 0M24.544 28.549h.185a2.507 2.507 0 0 0 1.719-.869c.444-.499.647-1.146.61-1.83a2.52 2.52 0 0 0-2.68-2.329c-1.386.092-2.421 1.312-2.329 2.68.093 1.313 1.183 2.348 2.495 2.348zm0 0M1.109 3.561h3.179l4.528 16.375c.129.481.573.813 1.072.813h13.917c.444 0 .832-.259 1.017-.665L29.886 8.44a1.122 1.122 0 0 0-.092-1.053 1.103 1.103 0 0 0-.924-.499H13.492c-.61 0-1.109.499-1.109 1.109s.499 1.109 1.109 1.109h13.677l-4.103 9.426H10.72L6.192 2.156a1.11 1.11 0 0 0-1.072-.813H1.109C.499 1.343 0 1.842 0 2.452s.499 1.109 1.109 1.109z" class="path--color"></path>
-                                                                </svg><i class="ion-ios-checkmark"> </i></a></td>
+                                                    <td class="product-table__td-11 hidden-sm hidden-xs"><a href="#!" class="product-table__link-message"><i class="ion-android-textsms"> </i></a></td>
+                                                    <td class="product-table__td-8 hidden-sm hidden-xs"><a href="#!" class="product-table__link-delete"><i class="ion-close"> </i></a></td>
                                                 </tr>
                                                 <tr>
                                                     <td class="product-table__td-1"><i class="ion-android-bookmark color--blue"></i></td>
-                                                    <td class="product-table__td-2">Acura <i>(3545645-56654-654)</i></td>
+                                                    <td class="product-table__td-2">Acura <i>(3545645-56654-654)</i>
+                                                        <table class="table table--product-name table--cart">
+                                                            <td class="product-table__td-3"><a href="#!">Стойка амортизационная масляная, передняя</a></td>
+                                                        </table>
+                                                        <table class="table table--product-info table--cart">
+                                                            <td class="product-table__td-5"><i class="ion-record"></i>5 дн.</td>
+                                                            <td class="product-table__td-9">
+                                                                <div class="cart__count">
+                                                                    <div class="cart__count__div cart__count__div--up"></div>
+                                                                    <div class="cart__count__div cart__count__div--down"></div>
+                                                                    <input type="text" value="23">
+                                                                </div>
+                                                            </td>
+                                                            <td class="product-table__td-6 text-center">21 шт</td>
+                                                            <td class="product-table__td-7 text-center">1 654<i class="fa-rouble"></i></td>
+                                                            <td class="product-table__td-11 hidden-xxs"><a href="#!" class="product-table__link-message"><i class="ion-android-textsms"> </i></a></td>
+                                                            <td class="product-table__td-8"><a href="#!" class="product-table__link-delete"><i class="ion-close"></i></a></td>
+                                                        </table>
+                                                    </td>
                                                     <td class="product-table__td-3 hidden-sm hidden-xs"><a href="#!">Стойка амортизационная масляная, передняя</a></td>
                                                     <td class="product-table__td-5 hidden-sm hidden-xs"><i class="ion-record"></i>5 дн.</td>
                                                     <td class="product-table__td-9 hidden-sm hidden-xs">
@@ -863,14 +899,30 @@
                                                     </td>
                                                     <td class="product-table__td-6 hidden-sm hidden-xs">21 шт</td>
                                                     <td class="product-table__td-7 hidden-sm hidden-xs">1 654<i class="fa-rouble"></i></td>
-                                                    <td class="product-table__td-8 hidden-sm hidden-xs"><a href="#!" class="product-table__to-cart">
-                                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30">
-                                                                    <path d="M8.835 28.549a2.515 2.515 0 0 0 2.513-2.513 2.516 2.516 0 0 0-2.513-2.514 2.517 2.517 0 0 0-2.514 2.514 2.516 2.516 0 0 0 2.514 2.513zm0 0M24.544 28.549h.185a2.507 2.507 0 0 0 1.719-.869c.444-.499.647-1.146.61-1.83a2.52 2.52 0 0 0-2.68-2.329c-1.386.092-2.421 1.312-2.329 2.68.093 1.313 1.183 2.348 2.495 2.348zm0 0M1.109 3.561h3.179l4.528 16.375c.129.481.573.813 1.072.813h13.917c.444 0 .832-.259 1.017-.665L29.886 8.44a1.122 1.122 0 0 0-.092-1.053 1.103 1.103 0 0 0-.924-.499H13.492c-.61 0-1.109.499-1.109 1.109s.499 1.109 1.109 1.109h13.677l-4.103 9.426H10.72L6.192 2.156a1.11 1.11 0 0 0-1.072-.813H1.109C.499 1.343 0 1.842 0 2.452s.499 1.109 1.109 1.109z" class="path--color"></path>
-                                                                </svg><i class="ion-ios-checkmark"> </i></a></td>
+                                                    <td class="product-table__td-11 hidden-sm hidden-xs"><a href="#!" class="product-table__link-message"><i class="ion-android-textsms"> </i></a></td>
+                                                    <td class="product-table__td-8 hidden-sm hidden-xs"><a href="#!" class="product-table__link-delete"><i class="ion-close"> </i></a></td>
                                                 </tr>
                                                 <tr>
                                                     <td class="product-table__td-1"><i class="ion-android-bookmark"></i></td>
-                                                    <td class="product-table__td-2">Alfa Romeo <i>(3545645-56654-654)</i></td>
+                                                    <td class="product-table__td-2">Alfa Romeo <i>(3545645-56654-654)</i>
+                                                        <table class="table table--product-name table--cart">
+                                                            <td class="product-table__td-3"><a href="#!">Ремень клиновой avx13 x 1180</a></td>
+                                                        </table>
+                                                        <table class="table table--product-info table--cart">
+                                                            <td class="product-table__td-5"><i class="ion-record"></i>90 дн.</td>
+                                                            <td class="product-table__td-9">
+                                                                <div class="cart__count">
+                                                                    <div class="cart__count__div cart__count__div--up"></div>
+                                                                    <div class="cart__count__div cart__count__div--down"></div>
+                                                                    <input type="text" value="50">
+                                                                </div>
+                                                            </td>
+                                                            <td class="product-table__td-6 text-center">513 шт</td>
+                                                            <td class="product-table__td-7 text-center">9 999<i class="fa-rouble"></i></td>
+                                                            <td class="product-table__td-11 hidden-xxs"><a href="#!" class="product-table__link-message"><i class="ion-android-textsms"> </i></a></td>
+                                                            <td class="product-table__td-8"><a href="#!" class="product-table__link-delete"><i class="ion-close"> </i></a></td>
+                                                        </table>
+                                                    </td>
                                                     <td class="product-table__td-3 hidden-sm hidden-xs"><a href="#!">Ремень клиновой avx13 x 1180</a></td>
                                                     <td class="product-table__td-5 hidden-sm hidden-xs"><i class="ion-record"></i>90 дн.</td>
                                                     <td class="product-table__td-9 hidden-sm hidden-xs">
@@ -882,14 +934,30 @@
                                                     </td>
                                                     <td class="product-table__td-6 hidden-sm hidden-xs">513 шт</td>
                                                     <td class="product-table__td-7 hidden-sm hidden-xs">9 999<i class="fa-rouble"></i></td>
-                                                    <td class="product-table__td-8 hidden-sm hidden-xs"><a href="#!" class="product-table__to-cart">
-                                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30">
-                                                                    <path d="M8.835 28.549a2.515 2.515 0 0 0 2.513-2.513 2.516 2.516 0 0 0-2.513-2.514 2.517 2.517 0 0 0-2.514 2.514 2.516 2.516 0 0 0 2.514 2.513zm0 0M24.544 28.549h.185a2.507 2.507 0 0 0 1.719-.869c.444-.499.647-1.146.61-1.83a2.52 2.52 0 0 0-2.68-2.329c-1.386.092-2.421 1.312-2.329 2.68.093 1.313 1.183 2.348 2.495 2.348zm0 0M1.109 3.561h3.179l4.528 16.375c.129.481.573.813 1.072.813h13.917c.444 0 .832-.259 1.017-.665L29.886 8.44a1.122 1.122 0 0 0-.092-1.053 1.103 1.103 0 0 0-.924-.499H13.492c-.61 0-1.109.499-1.109 1.109s.499 1.109 1.109 1.109h13.677l-4.103 9.426H10.72L6.192 2.156a1.11 1.11 0 0 0-1.072-.813H1.109C.499 1.343 0 1.842 0 2.452s.499 1.109 1.109 1.109z" class="path--color"></path>
-                                                                </svg><i class="ion-ios-checkmark"> </i></a></td>
+                                                    <td class="product-table__td-11 hidden-sm hidden-xs"><a href="#!" class="product-table__link-message"><i class="ion-android-textsms"> </i></a></td>
+                                                    <td class="product-table__td-8 hidden-sm hidden-xs"><a href="#!" class="product-table__link-delete"><i class="ion-close"> </i></a></td>
                                                 </tr>
                                                 <tr>
                                                     <td class="product-table__td-1"><i class="ion-android-bookmark color--blue"></i></td>
-                                                    <td class="product-table__td-2">Alpina <i>(3545645-56654-654)</i></td>
+                                                    <td class="product-table__td-2">Alpina <i>(3545645-56654-654)</i>
+                                                        <table class="table table--product-name table--cart">
+                                                            <td class="product-table__td-3"><a href="#!">Колодки тормозные</a></td>
+                                                        </table>
+                                                        <table class="table table--product-info table--cart">
+                                                            <td class="product-table__td-5"><i class="ion-record"></i>1 дн.</td>
+                                                            <td class="product-table__td-9">
+                                                                <div class="cart__count">
+                                                                    <div class="cart__count__div cart__count__div--up"></div>
+                                                                    <div class="cart__count__div cart__count__div--down"></div>
+                                                                    <input type="text" value="9">
+                                                                </div>
+                                                            </td>
+                                                            <td class="product-table__td-6 text-center">44 шт</td>
+                                                            <td class="product-table__td-7 text-center">523<i class="fa-rouble"></i></td>
+                                                            <td class="product-table__td-11 hidden-xxs"><a href="#!" class="product-table__link-message"><i class="ion-android-textsms"> </i></a></td>
+                                                            <td class="product-table__td-8"><a href="#!" class="product-table__link-delete"><i class="ion-close"></i></a></td>
+                                                        </table>
+                                                    </td>
                                                     <td class="product-table__td-3 hidden-sm hidden-xs"><a href="#!">Колодки тормозные</a></td>
                                                     <td class="product-table__td-5 hidden-sm hidden-xs"><i class="ion-record"></i>1 дн.</td>
                                                     <td class="product-table__td-9 hidden-sm hidden-xs">
@@ -901,16 +969,19 @@
                                                     </td>
                                                     <td class="product-table__td-6 hidden-sm hidden-xs">44 шт</td>
                                                     <td class="product-table__td-7 hidden-sm hidden-xs">523<i class="fa-rouble"></i></td>
-                                                    <td class="product-table__td-8 hidden-sm hidden-xs"><a href="#!" class="product-table__to-cart">
-                                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30">
-                                                                    <path d="M8.835 28.549a2.515 2.515 0 0 0 2.513-2.513 2.516 2.516 0 0 0-2.513-2.514 2.517 2.517 0 0 0-2.514 2.514 2.516 2.516 0 0 0 2.514 2.513zm0 0M24.544 28.549h.185a2.507 2.507 0 0 0 1.719-.869c.444-.499.647-1.146.61-1.83a2.52 2.52 0 0 0-2.68-2.329c-1.386.092-2.421 1.312-2.329 2.68.093 1.313 1.183 2.348 2.495 2.348zm0 0M1.109 3.561h3.179l4.528 16.375c.129.481.573.813 1.072.813h13.917c.444 0 .832-.259 1.017-.665L29.886 8.44a1.122 1.122 0 0 0-.092-1.053 1.103 1.103 0 0 0-.924-.499H13.492c-.61 0-1.109.499-1.109 1.109s.499 1.109 1.109 1.109h13.677l-4.103 9.426H10.72L6.192 2.156a1.11 1.11 0 0 0-1.072-.813H1.109C.499 1.343 0 1.842 0 2.452s.499 1.109 1.109 1.109z" class="path--color"></path>
-                                                                </svg><i class="ion-ios-checkmark"> </i></a></td>
+                                                    <td class="product-table__td-11 hidden-sm hidden-xs"><a href="#!" class="product-table__link-message"><i class="ion-android-textsms"> </i></a></td>
+                                                    <td class="product-table__td-8 hidden-sm hidden-xs"><a href="#!" class="product-table__link-delete"><i class="ion-close"> </i></a></td>
                                                 </tr>
                                             </tbody>
                                         </table>
                                     </div>
                                 </div>
-                                <p><strong>Стоимость заказа в корзине указана на условиях самовывоза из офиса. Для выполнения заказа может потребоваться предоплата.</strong></p>
+                                <p class="product-table__cart-p"><strong>Стоимость заказа в корзине указана на условиях самовывоза из офиса. Для выполнения заказа может потребоваться предоплата.</strong></p>
+                                <div class="product-table__total">
+                                    <div class="product-table__total-left">Оформить заказ по этим ценам можно до: <strong>Завтра 11:50</strong></div>
+                                    <div class="product-table__total-right">Итого: <strong>13 666<i class="fa-rouble"></i></strong></div>
+                                </div>
+                                <div class="text-center"><a href="#!" class="btn btn--w240">продолжить</a></div>
                             </div>
                         </div>
                     </div>
@@ -993,11 +1064,17 @@
         <!-- Load Scripts-->
         <script src="./js/libs.js"></script>
         <!-- Footer js-->
+        <script src="./js/libs/jquery/jquery-2.2.4.min.js"></script>
+        <script src="./js/libs/jquery/jquery-migrate-1.4.1.min.js"></script>
+        <script src="./js/libs/magnific-popup/jquery.magnific-popup.min.js"></script>
         <script src="./js/libs/slick/slick.min.js"></script>
         <script src="./js/libs/bootstrap/bootstrap.min.js"></script>
         <script src="./js/libs/selectric/jquery.selectric.js"></script>
         <script src="./js/libs/autosize/autosize.min.js"></script>
         <script src="./js/libs/datatables/datatables.min.js"></script>
+        <script src="./js/libs/readmore/readmore.min.js"></script>
+        <script src="./js/libs/jqueryui/jquery-ui.min.js"></script>
+        <script src="./js/libs/jqueryui/jquery.ui.touch-punch.min.js"></script>
         <script src="./js/common.js"></script>
     </body>
 </html>

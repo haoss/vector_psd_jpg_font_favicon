@@ -29,8 +29,8 @@ html(lang="ru")
             .content__wrapper
               h1 ваша корзина
               
-              .search-result__head
-                div.hidden-xxs
+              .search-result__head.search-result__head--cart.hidden-xxs
+                div
                   .search-result__info Уровень цен
                     i.ion-ios-information
               
@@ -49,6 +49,7 @@ html(lang="ru")
                           th.hidden-sm.hidden-xs(data-orderable="false") Количество
                           th.hidden-sm.hidden-xs(data-orderable="false") ЦЕНА
                           th.hidden-sm.hidden-xs(data-orderable="false") Итого
+                          th.hidden-sm.hidden-xs(data-orderable="false") 
                           th.hidden-sm.hidden-xs(data-orderable="false")
                       tbody
                         tr
@@ -57,6 +58,28 @@ html(lang="ru")
                           td.product-table__td-2 AC 
                             i (3545645-56654-654)
                             
+                            table.table.table--product-name.table--cart
+                              td.product-table__td-3
+                                a(href="#!") Ремкомплект тормозного цилиндра
+                            
+                            table.table.table--product-info.table--cart
+                              td.product-table__td-5
+                                i.ion-record
+                                | 23 дн.
+                              td.product-table__td-9
+                                .cart__count
+                                  .cart__count__div.cart__count__div--up
+                                  .cart__count__div.cart__count__div--down
+                                  input(type='text', value='8')
+                              td.product-table__td-6.text-center 546 шт
+                              td.product-table__td-7.text-center 2 555
+                                i.fa-rouble
+                              td.product-table__td-11.hidden-xxs
+                                a(href="#!").product-table__link-message
+                                  i.ion-android-textsms 
+                              td.product-table__td-8
+                                a(href="#!").product-table__link-delete
+                                  i.ion-close 
                             
                           td.product-table__td-3.hidden-sm.hidden-xs
                             a(href="#!") Ремкомплект тормозного цилиндра
@@ -71,15 +94,39 @@ html(lang="ru")
                           td.product-table__td-6.hidden-sm.hidden-xs 546 шт
                           td.product-table__td-7.hidden-sm.hidden-xs 2 555
                             i.fa-rouble
+                          td.product-table__td-11.hidden-sm.hidden-xs
+                            a(href="#!").product-table__link-message
+                              i.ion-android-textsms 
                           td.product-table__td-8.hidden-sm.hidden-xs
-                            a(href="#!").product-table__to-cart.is-active
-                              +headerIcon3
-                              i.ion-ios-checkmark 
+                            a(href="#!").product-table__link-delete
+                              i.ion-close 
                         tr
                           td.product-table__td-1
                             i.ion-android-bookmark.color--blue
                           td.product-table__td-2 Acura 
                             i (3545645-56654-654)
+                            
+                            table.table.table--product-name.table--cart
+                              td.product-table__td-3
+                                a(href="#!") Стойка амортизационная масляная, передняя
+                            table.table.table--product-info.table--cart
+                              td.product-table__td-5
+                                i.ion-record
+                                | 5 дн.
+                              td.product-table__td-9
+                                .cart__count
+                                  .cart__count__div.cart__count__div--up
+                                  .cart__count__div.cart__count__div--down
+                                  input(type='text', value='23')
+                              td.product-table__td-6.text-center 21 шт
+                              td.product-table__td-7.text-center 1 654
+                                i.fa-rouble
+                              td.product-table__td-11.hidden-xxs
+                                a(href="#!").product-table__link-message
+                                  i.ion-android-textsms 
+                              td.product-table__td-8
+                                a(href="#!").product-table__link-delete
+                                  i.ion-close
                             
                           td.product-table__td-3.hidden-sm.hidden-xs
                             a(href="#!") Стойка амортизационная масляная, передняя
@@ -94,15 +141,39 @@ html(lang="ru")
                           td.product-table__td-6.hidden-sm.hidden-xs 21 шт
                           td.product-table__td-7.hidden-sm.hidden-xs 1 654
                             i.fa-rouble
+                          td.product-table__td-11.hidden-sm.hidden-xs
+                            a(href="#!").product-table__link-message
+                              i.ion-android-textsms 
                           td.product-table__td-8.hidden-sm.hidden-xs
-                            a(href="#!").product-table__to-cart
-                              +headerIcon3
-                              i.ion-ios-checkmark 
+                            a(href="#!").product-table__link-delete
+                              i.ion-close 
                         tr
                           td.product-table__td-1
                             i.ion-android-bookmark
                           td.product-table__td-2 Alfa Romeo 
                             i (3545645-56654-654)
+                            
+                            table.table.table--product-name.table--cart
+                              td.product-table__td-3
+                                a(href="#!") Ремень клиновой avx13 x 1180
+                            table.table.table--product-info.table--cart
+                              td.product-table__td-5
+                                i.ion-record
+                                | 90 дн.
+                              td.product-table__td-9
+                                .cart__count
+                                  .cart__count__div.cart__count__div--up
+                                  .cart__count__div.cart__count__div--down
+                                  input(type='text', value='50')
+                              td.product-table__td-6.text-center 513 шт
+                              td.product-table__td-7.text-center 9 999
+                                i.fa-rouble
+                              td.product-table__td-11.hidden-xxs
+                                a(href="#!").product-table__link-message
+                                  i.ion-android-textsms 
+                              td.product-table__td-8
+                                a(href="#!").product-table__link-delete
+                                  i.ion-close 
                             
                           td.product-table__td-3.hidden-sm.hidden-xs
                             a(href="#!") Ремень клиновой avx13 x 1180
@@ -117,15 +188,39 @@ html(lang="ru")
                           td.product-table__td-6.hidden-sm.hidden-xs 513 шт
                           td.product-table__td-7.hidden-sm.hidden-xs 9 999
                             i.fa-rouble
+                          td.product-table__td-11.hidden-sm.hidden-xs
+                            a(href="#!").product-table__link-message
+                              i.ion-android-textsms 
                           td.product-table__td-8.hidden-sm.hidden-xs
-                            a(href="#!").product-table__to-cart
-                              +headerIcon3
-                              i.ion-ios-checkmark 
+                            a(href="#!").product-table__link-delete
+                              i.ion-close 
                         tr
                           td.product-table__td-1
                             i.ion-android-bookmark.color--blue
                           td.product-table__td-2 Alpina 
                             i (3545645-56654-654)
+                            
+                            table.table.table--product-name.table--cart
+                              td.product-table__td-3
+                                a(href="#!") Колодки тормозные
+                            table.table.table--product-info.table--cart
+                              td.product-table__td-5
+                                i.ion-record
+                                | 1 дн.
+                              td.product-table__td-9
+                                .cart__count
+                                  .cart__count__div.cart__count__div--up
+                                  .cart__count__div.cart__count__div--down
+                                  input(type='text', value='9')
+                              td.product-table__td-6.text-center 44 шт
+                              td.product-table__td-7.text-center 523
+                                i.fa-rouble
+                              td.product-table__td-11.hidden-xxs
+                                a(href="#!").product-table__link-message
+                                  i.ion-android-textsms 
+                              td.product-table__td-8
+                                a(href="#!").product-table__link-delete
+                                  i.ion-close
                             
                           td.product-table__td-3.hidden-sm.hidden-xs
                             a(href="#!") Колодки тормозные
@@ -140,13 +235,25 @@ html(lang="ru")
                           td.product-table__td-6.hidden-sm.hidden-xs 44 шт
                           td.product-table__td-7.hidden-sm.hidden-xs 523
                             i.fa-rouble
+                          td.product-table__td-11.hidden-sm.hidden-xs
+                            a(href="#!").product-table__link-message
+                              i.ion-android-textsms 
                           td.product-table__td-8.hidden-sm.hidden-xs
-                            a(href="#!").product-table__to-cart
-                              +headerIcon3
-                              i.ion-ios-checkmark 
+                            a(href="#!").product-table__link-delete
+                              i.ion-close 
                 
-                p
+                p.product-table__cart-p
                   strong Стоимость заказа в корзине указана на условиях самовывоза из офиса. Для выполнения заказа может потребоваться предоплата.
+                  
+                .product-table__total
+                  .product-table__total-left Оформить заказ по этим ценам можно до: 
+                    strong Завтра 11:50
+                  .product-table__total-right Итого: 
+                    strong 13 666
+                      i.fa-rouble
+                
+                .text-center
+                  a(href="#!").btn.btn--w240 продолжить
         
     include ./_include/_footer
     //- div(style="height: 1000px; background-color: #000")
