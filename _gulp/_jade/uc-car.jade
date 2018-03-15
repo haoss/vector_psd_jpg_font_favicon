@@ -1,0 +1,119 @@
+doctype
+
+html(lang="ru")
+  
+  -var active = 'Личный кабинет - мой гараж' //активный пункт меню, список в header.jade
+  -var pageTitle = 'Личный кабинет - мой гараж' + ' - Vector' //title страницы для генерации верстки  
+
+  include ./_include/_head
+
+  body
+    
+    // Preloader
+    include ./_include/_preloader
+    
+    include ./_include/_header
+    
+    .content
+      .container
+        
+        ul.breadcrumbs
+          li
+            a(href="#!") Интернет-магазин VECTОR
+          li
+            span Название страницы 
+        
+        .content__wrapper
+          
+          .content__head
+            h1 мой гараж
+        
+          .uc__garage
+            
+            .uc__garage-top
+              .uc__garage-top-left
+              .uc__garage-top-right
+                form(action="#").form
+                  fieldset
+                    legend Управление транспортом
+                    a(href="#!").btn.btn--block Добавить транспорт
+            
+            .clear15
+            
+            .uc__line.no--m
+              .uc__line-div
+            
+            .clear25
+            
+            .uc__garage-bottom
+              .uc__garage-bottom-left
+                div
+                  .uc__vin-auto
+                    .uc__vin-auto-title Chrysler GRAND CARAVAN
+                    .uc__vin-auto-untitle VIN: 355 2C4GJ453XYR693697
+                    .uc__vin-auto-img
+                      img(src="./img/uc-vin-auto.png", alt="")
+                    a(href="#!").btn.btn--border.btn--block запрос по vin
+                div
+                  table.uc__garage-th
+                    tbody
+                      tr
+                        td.first
+                          span
+                            span Модель
+                        td.last GRAND CARAVAN
+                      tr
+                        td.first
+                          span
+                            span Модификация
+                        td.last 3.3
+                      tr
+                        td.first
+                          span
+                            span Тип двигателя
+                        td.last Бензиновый
+                      tr
+                        td.first
+                          span
+                            span Мощность, л.с.
+                        td.last EGM (158 лс)
+                      tr
+                        td.first
+                          span
+                            span Объем двиг. куб. см
+                        td.last 3301
+                      tr
+                        td.first
+                          span
+                            span Привод
+                        td.last Передний
+                  
+              .uc__garage-bottom-right
+                form(action="#").form
+                  fieldset
+                    legend Управление транспортом
+                    .form-group
+                      select.selectric
+                        option(value="" selected) Chrysler GRAND CARAVAN
+                        option(value="") Chrysler GRAND CARAVAN 2
+                        option(value="") Chrysler GRAND CARAVAN 3
+                        option(value="") Chrysler GRAND CARAVAN 4
+                    button(type="submit").btn.btn--block Добавить транспорт
+                    .clear15
+                    a(href="#!").btn.btn--border.btn--block удалить транспорт
+              
+        
+    include ./_include/_footer
+    //- div(style="height: 1000px; background-color: #000")
+    
+    //[if gte IE 9]
+      <script src='./js/libs/html5shiv/es5-shim.min.js'>
+      <script src='./js/libs/html5shiv/html5shiv.min.js'>
+      <script src='./js/libs/html5shiv/html5shiv-printshiv.min.js'>
+      <script src='./js/libs/html5shiv/respond.min.js'><![endif]
+
+    // Load Scripts
+    script(src="./js/libs.js")
+    include ./_include/_footer-js
+    script(src="./js/common.js")
+    

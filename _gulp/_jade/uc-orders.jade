@@ -1,0 +1,337 @@
+doctype
+
+html(lang="ru")
+  
+  -var active = 'Личный кабинет - заказы' //активный пункт меню, список в header.jade
+  -var pageTitle = 'Личный кабинет - заказы' + ' - Vector' //title страницы для генерации верстки  
+
+  include ./_include/_head
+
+  body
+    
+    // Preloader
+    include ./_include/_preloader
+    
+    include ./_include/_header
+    
+    .content
+      .container
+        
+        ul.breadcrumbs
+          li
+            a(href="#!") Интернет-магазин VECTОR
+          li
+            span Название страницы 
+        
+        .content__wrapper
+          
+          .content__head
+            h1 Заказы
+        
+          .uc__orders
+            
+            .uc__orders-none
+              strong.color--red Внимание! 
+              | На данный момент у Вас нет заказов.
+              
+            
+            .uc__line.no--m
+              .uc__line-div
+            
+            ul(role='tablist').uc__orders-tab
+              li.active(role='presentation')
+                a(href='#tab1', aria-controls='tab1', role='tab', data-toggle='tab') Текущие
+              li(role='presentation')
+                a(href='#tab2', aria-controls='tab2', role='tab', data-toggle='tab') Архивные
+              li(role='presentation')
+                a(href='#tab3', aria-controls='tab3', role='tab', data-toggle='tab') Счета
+    
+            .tab-content
+              #tab1.tab-pane.active(role='tabpanel')
+                
+                .product-table.product-table--orders
+                  .product-table__row
+                    .product-table__title.product-table__title--orders
+                      strong Заказ № 6783543546-354
+                      a(href="#!").product-table__roll-up Свернуть
+                    .product-table__table
+                      table.table
+                        thead
+                          tr
+                            th(data-orderable="false").no-sort
+                            th(data-orderable="false") бренды
+                            th.hidden-sm.hidden-xs(data-orderable="false") наименование
+                            th.hidden-sm.hidden-xs(data-orderable="false") СРОК
+                            th.hidden-sm.hidden-xs(data-orderable="false").text-center количество
+                            th.hidden-sm.hidden-xs(data-orderable="false") ЦЕНА
+                            th.hidden-sm.hidden-xs(data-orderable="false") итого
+                        tbody
+                          tr
+                            td.product-table__td-1
+                              i.ion-android-bookmark
+                            td.product-table__td-2 AC 
+                              i (3545645-56654-654)
+                              
+                              table.table.table--product-name
+                                td.product-table__td-3
+                                  a(href="#!") Ремкомплект тормозного цилиндра
+                              table.table.table--product-info
+                                td.product-table__td-5
+                                  i.ion-record
+                                  | 23 дн.
+                                td.product-table__td-6 8 шт
+                                td.product-table__td-7 546
+                                  i.fa-rouble
+                                td.product-table__td-12 2 555
+                                  i.fa-rouble
+                              
+                            td.product-table__td-3.hidden-sm.hidden-xs
+                              a(href="#!") Ремкомплект тормозного цилиндра
+                            td.product-table__td-5.hidden-sm.hidden-xs
+                              i.ion-record
+                              | 23 дн.
+                            td.product-table__td-6.text-center.hidden-sm.hidden-xs 8 шт
+                            td.product-table__td-7.hidden-sm.hidden-xs 546
+                              i.fa-rouble
+                            td.product-table__td-12.hidden-sm.hidden-xs 2 555
+                              i.fa-rouble
+                          tr
+                            td.product-table__td-1
+                              i.ion-android-bookmark.color--blue
+                            td.product-table__td-2 Acura 
+                              i (3545645-56654-654)
+                              
+                              table.table.table--product-name
+                                td.product-table__td-3
+                                  a(href="#!") Стойка амортизационная масляная, передняя
+                              table.table.table--product-info
+                                td.product-table__td-5
+                                  i.ion-record
+                                  | 5 дн.
+                                td.product-table__td-6 23 шт
+                                td.product-table__td-7 201
+                                  i.fa-rouble
+                                td.product-table__td-12 1 654
+                                  i.fa-rouble
+                              
+                            td.product-table__td-3.hidden-sm.hidden-xs
+                              a(href="#!") Стойка амортизационная масляная, передняя
+                            td.product-table__td-5.hidden-sm.hidden-xs
+                              i.ion-record
+                              | 5 дн.
+                            td.product-table__td-6.text-center.hidden-sm.hidden-xs 23 шт
+                            td.product-table__td-7.hidden-sm.hidden-xs 201
+                              i.fa-rouble
+                            td.product-table__td-12.hidden-sm.hidden-xs 1 654
+                              i.fa-rouble 
+                          tr
+                            td.product-table__td-1
+                              i.ion-android-bookmark
+                            td.product-table__td-2 Alfa Romeo 
+                              i (3545645-56654-654)
+                              
+                              table.table.table--product-name
+                                td.product-table__td-3
+                                  a(href="#!") Ремень клиновой avx13 x 1180
+                              table.table.table--product-info
+                                td.product-table__td-5
+                                  i.ion-record
+                                  | 90 дн.
+                                td.product-table__td-6 50 шт
+                                td.product-table__td-7 513
+                                  i.fa-rouble
+                                td.product-table__td-12 9 999
+                                  i.fa-rouble 
+                              
+                            td.product-table__td-3.hidden-sm.hidden-xs
+                              a(href="#!") Ремень клиновой avx13 x 1180
+                            td.product-table__td-5.hidden-sm.hidden-xs
+                              i.ion-record
+                              | 90 дн.
+                            td.product-table__td-6.text-center.hidden-sm.hidden-xs 50 шт
+                            td.product-table__td-7.hidden-sm.hidden-xs 513
+                              i.fa-rouble
+                            td.product-table__td-12.hidden-sm.hidden-xs 9 999
+                              i.fa-rouble 
+                          tr
+                            td.product-table__td-1
+                              i.ion-android-bookmark.color--blue
+                            td.product-table__td-2 Alpina 
+                              i (3545645-56654-654)
+                              
+                              table.table.table--product-name
+                                td.product-table__td-3
+                                  a(href="#!") Колодки тормозные
+                              table.table.table--product-info
+                                td.product-table__td-5
+                                  i.ion-record
+                                  | 1 дн.
+                                td.product-table__td-6 9 шт
+                                td.product-table__td-7 440
+                                  i.fa-rouble
+                                td.product-table__td-12 523
+                                  i.fa-rouble
+                              
+                            td.product-table__td-3.hidden-sm.hidden-xs
+                              a(href="#!") Колодки тормозные
+                            td.product-table__td-5.hidden-sm.hidden-xs
+                              i.ion-record
+                              | 1 дн.
+                            td.product-table__td-6.text-center.hidden-sm.hidden-xs 9 шт
+                            td.product-table__td-7.hidden-sm.hidden-xs 440
+                              i.fa-rouble
+                            td.product-table__td-12.hidden-sm.hidden-xs 523
+                              i.fa-rouble 
+                    
+                  .product-table__row.is-toggle
+                    .product-table__title.product-table__title--orders
+                      strong Заказ № 6783543546-354
+                      a(href="#!").product-table__roll-down Развернуть
+                    .product-table__table
+                      table.table
+                        thead
+                          tr
+                            th(data-orderable="false").no-sort
+                            th(data-orderable="false") бренды
+                            th.hidden-sm.hidden-xs(data-orderable="false") наименование
+                            th.hidden-sm.hidden-xs(data-orderable="false") СРОК
+                            th.hidden-sm.hidden-xs(data-orderable="false").text-center количество
+                            th.hidden-sm.hidden-xs(data-orderable="false") ЦЕНА
+                            th.hidden-sm.hidden-xs(data-orderable="false") итого
+                        tbody
+                          tr
+                            td.product-table__td-1
+                              i.ion-android-bookmark
+                            td.product-table__td-2 AC 
+                              i (3545645-56654-654)
+                              
+                              table.table.table--product-name
+                                td.product-table__td-3
+                                  a(href="#!") Ремкомплект тормозного цилиндра
+                              table.table.table--product-info
+                                td.product-table__td-5
+                                  i.ion-record
+                                  | 23 дн.
+                                td.product-table__td-6 8 шт
+                                td.product-table__td-7 546
+                                  i.fa-rouble
+                                td.product-table__td-12 2 555
+                                  i.fa-rouble
+                              
+                            td.product-table__td-3.hidden-sm.hidden-xs
+                              a(href="#!") Ремкомплект тормозного цилиндра
+                            td.product-table__td-5.hidden-sm.hidden-xs
+                              i.ion-record
+                              | 23 дн.
+                            td.product-table__td-6.text-center.hidden-sm.hidden-xs 8 шт
+                            td.product-table__td-7.hidden-sm.hidden-xs 546
+                              i.fa-rouble
+                            td.product-table__td-12.hidden-sm.hidden-xs 2 555
+                              i.fa-rouble
+                          tr
+                            td.product-table__td-1
+                              i.ion-android-bookmark.color--blue
+                            td.product-table__td-2 Acura 
+                              i (3545645-56654-654)
+                              
+                              table.table.table--product-name
+                                td.product-table__td-3
+                                  a(href="#!") Стойка амортизационная масляная, передняя
+                              table.table.table--product-info
+                                td.product-table__td-5
+                                  i.ion-record
+                                  | 5 дн.
+                                td.product-table__td-6 23 шт
+                                td.product-table__td-7 201
+                                  i.fa-rouble
+                                td.product-table__td-12 1 654
+                                  i.fa-rouble
+                              
+                            td.product-table__td-3.hidden-sm.hidden-xs
+                              a(href="#!") Стойка амортизационная масляная, передняя
+                            td.product-table__td-5.hidden-sm.hidden-xs
+                              i.ion-record
+                              | 5 дн.
+                            td.product-table__td-6.text-center.hidden-sm.hidden-xs 23 шт
+                            td.product-table__td-7.hidden-sm.hidden-xs 201
+                              i.fa-rouble
+                            td.product-table__td-12.hidden-sm.hidden-xs 1 654
+                              i.fa-rouble 
+                          tr
+                            td.product-table__td-1
+                              i.ion-android-bookmark
+                            td.product-table__td-2 Alfa Romeo 
+                              i (3545645-56654-654)
+                              
+                              table.table.table--product-name
+                                td.product-table__td-3
+                                  a(href="#!") Ремень клиновой avx13 x 1180
+                              table.table.table--product-info
+                                td.product-table__td-5
+                                  i.ion-record
+                                  | 90 дн.
+                                td.product-table__td-6 50 шт
+                                td.product-table__td-7 513
+                                  i.fa-rouble
+                                td.product-table__td-12 9 999
+                                  i.fa-rouble 
+                              
+                            td.product-table__td-3.hidden-sm.hidden-xs
+                              a(href="#!") Ремень клиновой avx13 x 1180
+                            td.product-table__td-5.hidden-sm.hidden-xs
+                              i.ion-record
+                              | 90 дн.
+                            td.product-table__td-6.text-center.hidden-sm.hidden-xs 50 шт
+                            td.product-table__td-7.hidden-sm.hidden-xs 513
+                              i.fa-rouble
+                            td.product-table__td-12.hidden-sm.hidden-xs 9 999
+                              i.fa-rouble 
+                          tr
+                            td.product-table__td-1
+                              i.ion-android-bookmark.color--blue
+                            td.product-table__td-2 Alpina 
+                              i (3545645-56654-654)
+                              
+                              table.table.table--product-name
+                                td.product-table__td-3
+                                  a(href="#!") Колодки тормозные
+                              table.table.table--product-info
+                                td.product-table__td-5
+                                  i.ion-record
+                                  | 1 дн.
+                                td.product-table__td-6 9 шт
+                                td.product-table__td-7 440
+                                  i.fa-rouble
+                                td.product-table__td-12 523
+                                  i.fa-rouble
+                              
+                            td.product-table__td-3.hidden-sm.hidden-xs
+                              a(href="#!") Колодки тормозные
+                            td.product-table__td-5.hidden-sm.hidden-xs
+                              i.ion-record
+                              | 1 дн.
+                            td.product-table__td-6.text-center.hidden-sm.hidden-xs 9 шт
+                            td.product-table__td-7.hidden-sm.hidden-xs 440
+                              i.fa-rouble
+                            td.product-table__td-12.hidden-sm.hidden-xs 523
+                              i.fa-rouble 
+                    
+                
+              #tab2.tab-pane(role='tabpanel') 2
+              #tab3.tab-pane(role='tabpanel') 3
+              
+        
+    include ./_include/_footer
+    //- div(style="height: 1000px; background-color: #000")
+    
+    //[if gte IE 9]
+      <script src='./js/libs/html5shiv/es5-shim.min.js'>
+      <script src='./js/libs/html5shiv/html5shiv.min.js'>
+      <script src='./js/libs/html5shiv/html5shiv-printshiv.min.js'>
+      <script src='./js/libs/html5shiv/respond.min.js'><![endif]
+
+    // Load Scripts
+    script(src="./js/libs.js")
+    include ./_include/_footer-js
+    script(src="./js/common.js")
+    

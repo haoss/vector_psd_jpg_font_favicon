@@ -1,0 +1,128 @@
+doctype
+
+html(lang="ru")
+  
+  -var active = 'Личный кабинет - баланс и оплата' //активный пункт меню, список в header.jade
+  -var pageTitle = 'Личный кабинет - баланс и оплата' + ' - Vector' //title страницы для генерации верстки  
+
+  include ./_include/_head
+
+  body
+    
+    // Preloader
+    include ./_include/_preloader
+    
+    include ./_include/_header
+    
+    .content
+      .container
+        
+        ul.breadcrumbs
+          li
+            a(href="#!") Интернет-магазин VECTОR
+          li
+            span Название страницы 
+        
+        .content__wrapper
+          
+          .content__head
+            h1 Баланс и оплата
+        
+          .uc__balance
+            .uc__balance-content
+              p
+                span.h6.text-uppercase.no--m Офис: «Алексеевский»
+                br
+                | Номер договора: 
+                strong 80048219811000
+                br
+                | Баланс: 
+                strong 0,00 
+              
+              p
+                strong.text-uppercase ПОПОЛНИТЬ (ОФИС «АЛЕКСЕЕВСКИЙ»)
+                br
+                small Доступные для вас способы пополнения счета. За дополнительной информацией обращайтесь, пожалуйста, к вашему менеджеру.
+                
+              .uc__balance-info.visible-sm.visible-xs
+                .uc__balance-info-title ИНФОРМАЦИЯ
+                p При оплате обязательно используйте Ваш  «номер договора»  - указывайте его в назначении платежа.
+                p Номер договора отображается в зависимости от выбранного офиса регистрации. Перед оплатой необходимо убедиться в том, что для оплаты выбран именно тот офис продаж, в котором оформлен заказ.
+                p После пополнения счета ваш менеджер отправит заказы в работу используя переведенные вами средства.
+              
+              .hidden-sm.hidden-xs
+                .clear10
+              
+              .uc__balance-payment
+                ul.uc__balance-tab(role='tablist')
+                  li.active(role='presentation')
+                    a(href='#uc__balance-form1', aria-controls='uc__balance-form1', role='tab', data-toggle='tab')
+                      span
+                        img(src="./img/payment-img-1.png", alt="")
+                  li(role='presentation')
+                    a(href='#uc__balance-form2', aria-controls='uc__balance-form2', role='tab', data-toggle='tab')
+                      span
+                        img(src="./img/payment-img-2.png", alt="")
+                  li(role='presentation')
+                    a(href='#uc__balance-form3', aria-controls='uc__balance-form3', role='tab', data-toggle='tab')
+                      span
+                        img(src="./img/payment-img-3.png", alt="")
+                  li(role='presentation')
+                    a(href='#uc__balance-form4', aria-controls='uc__balance-form4', role='tab', data-toggle='tab')
+                      span
+                        img(src="./img/payment-img-4.png", alt="")
+                  li(role='presentation')
+                    a(href='#uc__balance-form5', aria-controls='uc__balance-form5', role='tab', data-toggle='tab')
+                      span
+                        img(src="./img/payment-img-5.png", alt="")
+                  li(role='presentation')
+                    a(href='#uc__balance-form6', aria-controls='uc__balance-form6', role='tab', data-toggle='tab')
+                      span
+                        img(src="./img/payment-img-6.png", alt="")
+                  li(role='presentation')
+                    a(href='#uc__balance-form7', aria-controls='uc__balance-form7', role='tab', data-toggle='tab')
+                      span
+                        img(src="./img/payment-img-7.png", alt="")
+                  li(role='presentation')
+                    a(href='#uc__balance-form8', aria-controls='uc__balance-form8', role='tab', data-toggle='tab')
+                      span
+                        img(src="./img/payment-img-8.png", alt="")
+
+                .uc__balance-form.tab-content
+                  #uc__balance-form1.tab-pane.active(role='tabpanel')
+                    
+                    form(action="").form.form--balance
+                      label.uc__balance-label Пополнить счет картой On-Line
+                      input(type="text" placeholder="Сумма пополнения:").form-control
+                      button(type="submit").btn.btn--block Пополнить
+                    
+                  #uc__balance-form2.tab-pane(role='tabpanel') 2
+                  #uc__balance-form3.tab-pane(role='tabpanel') 3
+                  #uc__balance-form4.tab-pane(role='tabpanel') 4
+                  #uc__balance-form5.tab-pane(role='tabpanel') 5
+                  #uc__balance-form6.tab-pane(role='tabpanel') 6
+                  #uc__balance-form7.tab-pane(role='tabpanel') 7
+                  #uc__balance-form8.tab-pane(role='tabpanel') 8
+
+              
+            .uc__balance-right.hidden-sm.hidden-xs
+              .uc__balance-info
+                .uc__balance-info-title ИНФОРМАЦИЯ
+                p При оплате обязательно используйте Ваш  «номер договора»  - указывайте его в назначении платежа.
+                p Номер договора отображается в зависимости от выбранного офиса регистрации. Перед оплатой необходимо убедиться в том, что для оплаты выбран именно тот офис продаж, в котором оформлен заказ.
+                p После пополнения счета ваш менеджер отправит заказы в работу используя переведенные вами средства.
+        
+    include ./_include/_footer
+    //- div(style="height: 1000px; background-color: #000")
+    
+    //[if gte IE 9]
+      <script src='./js/libs/html5shiv/es5-shim.min.js'>
+      <script src='./js/libs/html5shiv/html5shiv.min.js'>
+      <script src='./js/libs/html5shiv/html5shiv-printshiv.min.js'>
+      <script src='./js/libs/html5shiv/respond.min.js'><![endif]
+
+    // Load Scripts
+    script(src="./js/libs.js")
+    include ./_include/_footer-js
+    script(src="./js/common.js")
+    

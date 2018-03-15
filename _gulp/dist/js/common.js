@@ -144,6 +144,7 @@ $(document).on('ready', function(){
   catalogFilter();
   catalogFilterChange();
   mobileFilter();
+  tableOrders();
 
   // Chrome Smooth Scroll
   try {
@@ -473,4 +474,23 @@ function mobileFilter(){
       filter.addClass('is-active');
     }
   });
+}
+
+function tableOrders(){
+  var links = $('.product-table__title a');
+
+  links.each(function(){
+    var _this = $(this);
+    _this.on('click', function(e){
+      e.preventDefault();
+
+      if (_this.parents('.product-table__row').hasClass('is-toggle')) {
+        _this.parents('.product-table__row').removeClass('is-toggle');
+        _this.removeClass('product-table__roll-down').addClass('product-table__roll-up').text('Свернуть')
+      } else {
+        _this.parents('.product-table__row').addClass('is-toggle');
+        _this.removeClass('product-table__roll-up').addClass('product-table__roll-down').text('Развернуть')
+      }
+    })
+  })
 }

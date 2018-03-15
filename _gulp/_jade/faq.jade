@@ -2,8 +2,8 @@ doctype
 
 html(lang="ru")
   
-  -var active = 'Список попапов' //активный пункт меню, список в header.jade
-  -var pageTitle = 'Список попапов' + ' - Vector' //title страницы для генерации верстки  
+  -var active = 'Часто задаваемые вопросы' //активный пункт меню, список в header.jade
+  -var pageTitle = 'Часто задаваемые вопросы' + ' - Vector' //title страницы для генерации верстки  
 
   include ./_include/_head
 
@@ -41,7 +41,9 @@ html(lang="ru")
           .col-sm-8.col-sm-pull-4
             
             .content__wrapper
-              h1 Часто задаваемые вопросы
+              
+              .content__head
+                h1 Часто задаваемые вопросы
               
               .faq
                 .faq__row
