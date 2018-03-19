@@ -85,6 +85,27 @@ $(document).on('ready', function(){
     $.magnificPopup.close();
   });
 
+  $('.popup__image__show').on('click', function(e){
+    e.preventDefault();
+    $.magnificPopup.close();
+    var _this = $(this);
+    setTimeout(function(){
+      $.magnificPopup.open({
+        items: {
+          titleSrc: _this.attr('title'),
+          src: _this.attr('href'),
+          type: 'image'
+        },
+        closeOnContentClick: true,
+        mainClass: 'mfp-img-gallery',
+        image: {
+          verticalFit: true
+        }
+      })
+    }, 500)
+
+  });
+
   footerToggle();
   headerCatalog();
   headerLinks();
@@ -145,6 +166,9 @@ $(document).on('ready', function(){
   catalogFilterChange();
   mobileFilter();
   tableOrders();
+  catalogMenuNumber();
+  uploadImageProfile();
+  tableSearch();
 
   // Chrome Smooth Scroll
   try {
@@ -493,4 +517,59 @@ function tableOrders(){
       }
     })
   })
+}
+
+function catalogMenuNumber(){
+  var catalog = $('.header__catalog-popup-wrapper');
+  var block = catalog.find('.header__catalog-info strong');
+  var a = catalog.find('.header__catalog-body a');
+
+  block.text(a.eq(0).data('number'));
+
+  a.each(function(){
+    var _this = $(this);
+    _this.on('hover', function(){
+      block.text(_this.data('number'));
+    });
+  });
+}
+
+function uploadImageProfile() {
+  var readURL = function(input) {
+    if (input.files && input.files[0]) {
+      var reader = new FileReader();
+
+      reader.onload = function (e) {
+        $('.settings__picture').attr('src', e.target.result);
+      }
+
+      reader.readAsDataURL(input.files[0]);
+    }
+  }
+
+  $(".settings__file-upload").on('change', function(){
+    readURL(this);
+  });
+  $(".settings__image-div").on('click', function() {
+     $(".settings__file-upload").click();
+  });
+  $(".settings__file-link").on('click', function() {
+     $(".settings__file-upload").click();
+  });
+}
+
+function tableSearch(){
+  var row = $('.product-table--search .product-table__row');
+
+  row.each(function(){
+    var _this = $(this);
+    var footer = _this.find('tfoot');
+    var btn = footer.find('a');
+
+    btn.on('click', function(e){
+      e.preventDefault();
+      _this.toggleClass('is-toggle');
+      footer.hide();
+    });
+  });
 }

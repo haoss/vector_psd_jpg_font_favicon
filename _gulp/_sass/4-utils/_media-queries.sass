@@ -62,11 +62,36 @@
     &__row
       &-btn
         width: 150px
-  .uc__balance
-    &-content
-      width: calc(100% - 377px)
-    &-right
+  .uc
+    &__balance
+      &-content
+        width: calc(100% - 377px)
+      &-right
       width: calc(100% - 539px)
+    &__garage
+      &-top
+        &-right
+          width: 262px
+          padding-left: 26px
+          padding-right: 26px
+        &-left
+          width: calc(100% - 262px)
+      &-bottom
+        &-right
+          width: 262px
+          padding-left: 26px
+          padding-right: 26px
+        &-left
+          width: calc(100% - 262px)
+          margin-right: 0
+    &__settings
+      &-top
+        &-left
+          width: 15.23%
+        &-center
+          width: 38.6%
+        &-right
+          width: 39.16%
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 991px)
@@ -232,6 +257,36 @@
         max-width: 380px
       &-bottom-left
         max-width: 380px
+    &__garage
+      &-top
+        padding-bottom: 25px
+        &-left
+          width: 100%
+          float: none
+          margin-bottom: 25px
+        &-right
+          width: 100%
+          max-width: 266px
+          float: none
+          margin: 0 auto
+      &-bottom
+        &-left
+          display: block
+          &>div
+            &+div
+              padding-left: 0
+      &-th
+        width: inherit
+    &__settings
+      &-top
+        flex-wrap: wrap
+        &-left
+          width: 19.08%
+        &-center
+          width: 76.33%
+        &-right
+          width: 76.33%
+          margin-left: calc(19.08% + 30px) !important
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 767px)
@@ -449,6 +504,54 @@
           margin: 0 auto 40px
     &__line
       margin-bottom: 40px
+    &__garage
+      &-top
+        &-right
+          max-width: inherit
+          .form
+            max-width: 210px
+      &-capabilities
+        &-wrapper
+          display: block
+          max-width: 335px
+          margin: 0 auto
+          &>div
+            width: 100%
+            &+div
+              margin-left: 0
+              margin-top: 25px
+            &:first-child
+              max-width: 255px
+        &-text
+          margin-top: 0
+      &-bottom
+        &-left
+          float: none
+          width: 100%
+          max-width: 286px
+          margin: 0 auto 30px
+          .uc__vin-auto
+            margin-left: 20px
+        &-right
+          float: none
+          width: 100%
+    &__settings
+      &-top
+        flex-wrap: wrap
+        max-width: 350px
+        margin: 0 auto
+        &-left
+          width: 100%
+        &-center
+          width: 100%
+        &-right
+          width: 100%
+        &>div
+          margin: 0 !important
+      &-bottom
+        p
+          padding: 5px 0 10px 0
+          line-height: 22px
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 479px)
@@ -579,20 +682,55 @@
       &--filter
         left: inherit
         right: -32px
-  .uc__balance
-    &-tab
-      width: 67px
-      li > a > span img
-        max-height: 17px
-    &-form
-      padding-right: 15px
-      width: calc(100% - 52px)
-  .uc__orders-tab
-    font-size: rem(13)
-    &>li
-      margin-right: 35px
-      &:last-child
-        margin-right: 0
+  .uc
+    &__balance
+      &-tab
+        width: 67px
+        li > a > span img
+          max-height: 17px
+      &-form
+        padding-right: 15px
+        width: calc(100% - 52px)
+    &__orders-tab
+      font-size: rem(13)
+      &>li
+        margin-right: 35px
+        &:last-child
+          margin-right: 0
+    &__garage
+      &-top
+        &-right
+          width: 242px
+          padding-left: 20px
+          padding-right: 20px
+      &-capabilities
+        &-wrapper
+          &>div
+            padding-left: 55px
+          .icon
+            left: 0
+      &-bottom
+        &-right
+          padding-left: 20px
+          padding-right: 20px
+        &-left
+          .uc__vin-auto
+            margin-left: 0
+    &__settings
+      &-th
+        td, tr
+          display: block
+        td
+          &.first
+            padding-bottom: 0
+            &>span
+              background: none
+              &>span
+                display: block
+      &-top
+        &-right
+          p
+            line-height: 22px
 
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 319px)

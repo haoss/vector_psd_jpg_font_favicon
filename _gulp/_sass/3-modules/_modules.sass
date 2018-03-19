@@ -277,6 +277,9 @@
 .mfp-bg
   opacity: 1
   background: rgba($color-2,.3)
+.mfp-img-gallery
+  background: rgba($color-2,.7)
+  opacity: 1
 .popup
   position: relative
   background: $color-white
@@ -403,14 +406,23 @@
       &:last-child
         margin-bottom: 0
   &__gallery
-    position: relative
-    overflow: hidden
-    height: 240px
-    display: flex
-    justify-content: center
-    align-items: center
-    margin-top: -20px
-    margin-bottom: 0px
+    &>a
+      position: relative
+      overflow: hidden
+      height: 240px
+      display: flex
+      justify-content: center
+      align-items: center
+      margin-top: -20px
+      margin-bottom: 0px
+      &::after
+        content: ''
+        position: absolute
+        right: 0px
+        bottom: 0px
+        width: 25px
+        height: 26px
+        background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 26.000001" width="25" height="26"><path d="M10.295 19.636c5.134 0 9.313-4.185 9.313-9.326 0-5.144-4.179-9.327-9.313-9.327C5.158.983.982 5.166.982 10.31c0 5.141 4.176 9.326 9.313 9.326zM6.862 9.818h2.942V6.872a.491.491 0 0 1 .982 0v2.946h2.938a.492.492 0 0 1 0 .983h-2.938v2.944a.492.492 0 0 1-.982 0V10.8H6.862a.492.492 0 0 1 0-.983z" fill="none"/><path d="M6.862 10.801h2.942v2.944a.491.491 0 0 0 .982 0V10.8h2.938a.492.492 0 0 0 0-.983h-2.938V6.872a.492.492 0 0 0-.982 0v2.946H6.862a.492.492 0 0 0 0 .983z" fill="#c2c2c2"/><path d="M10.295 20.62c2.491 0 4.777-.895 6.56-2.374l7.3 7.606a.494.494 0 0 0 .694.012.492.492 0 0 0 .015-.693l-7.284-7.587a10.287 10.287 0 0 0 3.01-7.274C20.59 4.624 15.97 0 10.295 0 4.617 0 0 4.624 0 10.31c0 5.683 4.617 10.31 10.295 10.31zm0-19.637c5.134 0 9.313 4.183 9.313 9.327 0 5.141-4.179 9.326-9.313 9.326-5.137 0-9.313-4.185-9.313-9.326 0-5.144 4.176-9.327 9.313-9.327z" fill="#c2c2c2"/></svg>')
   &__th
     width: 100%
     font-size: rem(12)
@@ -1046,6 +1058,18 @@
     &-down
       &::before
         content: "\f35d"
+  &--search
+    .product-table__row
+      tbody
+        &>tr.tr
+          display: none
+          &:nth-child(n+5)
+            display: table-row
+
+      &.is-toggle
+        tbody
+          &>tr.tr
+            display: table-row !important
 
 .search-result
   &__head
@@ -1796,6 +1820,11 @@
         .form
           max-width: 288px
           margin: 0 auto
+          legend
+            white-space: nowrap
+      &-left
+        float: left
+        width: calc(100% - 460px)
     &-bottom
       +clearfix
       &-right
@@ -1808,6 +1837,8 @@
         .form
           max-width: 288px
           margin: 0 auto
+          legend
+            white-space: nowrap
       &-left
         float: left
         width: calc(100% - 460px)
@@ -1831,8 +1862,8 @@
         vertical-align: top
         padding-bottom: 10px
         &.last
-          width: 1px
-          white-space: nowrap
+          min-width: 115px
+          // white-space: nowrap
           font-family: $font-roboto-bold
           vertical-align: bottom
           font-size: rem(14)
@@ -1852,3 +1883,152 @@
       tr.separator
         td
           padding-bottom: 5px
+    &-capabilities
+      &-title
+        font-size: rem(15)
+        font-family: $font-roboto-bold
+        text-transform: uppercase
+        margin-bottom: 25px
+      &-wrapper
+        display: flex
+        font-size: rem(12)
+        &>div
+          width: 50%
+          position: relative
+          padding-left: 70px
+          flex-shrink: 0
+          &:first-child
+            max-width: 240px
+          &+div
+            margin-left: 40px
+        .icon
+          position: absolute
+          left: 17px
+          top: 0
+        p
+          margin-bottom: 0
+          line-height: 18px
+      &-text
+        color: $color-2
+        text-decoration: none
+        display: block
+        margin-bottom: 5px
+        font-size: rem(15)
+        font-family: $font-roboto-medium
+        margin-top: -6px
+        &:hover
+          text-decoration: none
+  &__settings
+    &-top
+      display: flex
+      padding-bottom: 25px
+      legend
+        margin-bottom: 15px
+      &>div
+        &+div
+          margin-left: 30px
+      &-left
+        width: 12.71%
+        flex-shrink: 0
+      &-center
+        width: 33.17%
+      &-right
+        font-size: rem(14)
+        width: 48.57%
+        p
+          color: $color-1
+          padding-left: 20px
+    &-bottom
+      font-size: rem(14)
+      background: #f3f4f7
+      border-radius: 4px
+      padding: 10px 10px 23px 10px
+      p
+        line-height: 36px
+        text-align: center
+        margin-bottom: 5px
+        a
+          display: inline-block
+      +clearfix
+      .btn
+        max-width: 288px
+        margin: 0 auto
+    legend
+      text-align: left
+    &-add-address
+      font-size: rem(16)
+      display: inline-block
+      margin-left: 10px
+      vertical-align: 0px
+    &-th
+      font-size: rem(12)
+      font-family: $font-roboto
+      margin-bottom: 10px
+      color: #444
+      td
+        vertical-align: top
+        padding-bottom: 10px
+        &.last
+          font-family: $font-roboto-bold
+          vertical-align: bottom
+          font-size: rem(14)
+          a
+            font-size: rem(14)
+            display: inline-block
+            margin-left: 5px
+        &.first
+          width: 165px
+          &>span
+            // border-bottom: 1px dotted #aeaeae
+            background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAABCAIAAABol6gpAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAABxJREFUeNpiWLdu3f///x88eABkPHz4EI0NEGAAhSwZnIG1SuIAAAAASUVORK5CYII=') repeat-x left calc(100% - 3px)
+            min-height: 14px
+            display: block
+            &>span
+              background: $color-white
+              // background: #f3f4f7
+              display: inline-block
+              max-width: 90%
+              white-space: nowrap
+      tr.separator
+        td
+          padding-bottom: 5px
+
+.settings
+  &__image
+    position: relative
+    width: 128px
+    margin: 0 auto 30px
+    &-div
+      width: 128px
+      height: 128px
+      border-radius: 50%
+      background: #f3f4f7
+      position: relative
+      overflow: hidden
+      display: flex
+      justify-content: center
+      align-items: center
+      cursor: pointer
+      margin: 0 auto
+      img
+        display: block
+        // object-fit: cover
+    strong
+      display: block
+      line-height: 1
+      margin-bottom: 5px
+      font-size: rem(14)
+      font-family: $font-roboto-medium
+    p
+      line-height: 13px
+      font-size: rem(11)
+      color: $color-808080
+      margin: 0
+  &__file
+    &-upload
+      display: none !important
+    &-link
+      cursor: pointer
+      position: absolute
+      right: 0
+      bottom: 0

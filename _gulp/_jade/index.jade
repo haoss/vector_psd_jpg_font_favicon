@@ -84,28 +84,29 @@ html(lang="ru")
   
           .tab-content
             #tab1.tab-pane.active(role='tabpanel')
-              
-              .row
-                .col-md-4.col-sm-6
-                  .main-tab__block
-                    .main-tab__block-date 29 декабря 2017
-                    p Ассортимент свечей накаливания DENSO пополнился 10 новыми наименованиями
-                .col-md-4.col-sm-6
-                  .main-tab__block
-                    .main-tab__block-date 03 января 2018
-                    p Каталог ТО пополнен моделями Porsche Cayenne II, Nissan X-Trail 2.2 dCi 4WD, Nissan X-Trail 2.2 dCi, Mercedes E седан II E 240, E 270, E 320, E 430 4-matic
-                .col-md-4.hidden-sm.hidden-xs
-                  .main-tab__block
-                    .main-tab__block-date 13 января 2018
-                    p Компания Delphi предлагает расширенную поддержку в области новейших технологий силовых агрегатов
-              
+              +newsTab
               .text-center
                 a(href="#!").btn Все новости
               
-            #tab2.tab-pane(role='tabpanel') 2
-            #tab3.tab-pane(role='tabpanel') 3
-            #tab4.tab-pane(role='tabpanel') 4
-            #tab5.tab-pane(role='tabpanel') 4
+            #tab2.tab-pane(role='tabpanel')
+              +newsTab
+              .text-center
+                a(href="#!").btn Все пресс-релизы
+                
+            #tab3.tab-pane(role='tabpanel')
+              +newsTab
+              .text-center
+                a(href="#!").btn Все акции
+                
+            #tab4.tab-pane(role='tabpanel')
+              +newsTab
+              .text-center
+                a(href="#!").btn Все статьи
+                
+            #tab5.tab-pane(role='tabpanel')
+              +newsTab
+              .text-center
+                a(href="#!").btn Все анонсы
 
     
     

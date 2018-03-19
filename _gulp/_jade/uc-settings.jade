@@ -1,9 +1,120 @@
-<!DOCTYPE html>
-html(lang="en")
-head
-  meta(charset="UTF-8")
-  meta(name="viewport", content="width=device-width, initial-scale=1.0")
-  meta(http-equiv="X-UA-Compatible", content="ie=edge")
-  title Document
-body
+doctype
+
+html(lang="ru")
   
+  -var active = 'Личный кабинет - настройки' //активный пункт меню, список в header.jade
+  -var pageTitle = 'Личный кабинет - настройки' + ' - Vector' //title страницы для генерации верстки  
+
+  include ./_include/_head
+
+  body
+    
+    // Preloader
+    include ./_include/_preloader
+    
+    include ./_include/_header
+    
+    .content
+      .container
+        
+        ul.breadcrumbs
+          li
+            a(href="#!") Интернет-магазин VECTОR
+          li
+            span Название страницы 
+        
+        .content__wrapper
+          
+          .content__head
+            h1 настройки
+        
+          .uc__settings
+            form(action="#").form
+              .uc__settings-top
+                .uc__settings-top-left
+                  .settings__image
+                    input.settings__file-upload(type="file" accept="image/*")
+                    .settings__image-div
+                      img(src="./img/file-upload-image.png", alt="").settings__picture
+                    a(href="#!").settings__file-link
+                      i.ion-compose
+                .uc__settings-top-center
+                  fieldset
+                    legend Персональные данные
+                    
+                    table.uc__settings-th
+                      tbody
+                        tr
+                          td.first
+                            span
+                              span Контактное лицо, Ф.И.О.
+                          td.last Иванов Иван Иванович
+                            a(href="#!")
+                              i.ion-compose
+                        tr
+                          td.first
+                            span
+                              span Логин
+                          td.last 791519876543
+                            a(href="#!")
+                              i.ion-compose
+                        tr
+                          td.first
+                            span
+                              span Пароль
+                          td.last *************
+                            a(href="#!")
+                              i.ion-compose
+                        tr
+                          td.first
+                            span
+                              span Номер договора
+                          td.last 80048219811000
+                            a(href="#!")
+                              i.ion-compose
+                        tr
+                          td.first
+                            span
+                              span E-mail
+                          td.last ivan@mail.ru
+                            a(href="#!")
+                              i.ion-compose
+                        tr
+                          td.first
+                            span
+                              span Мобильный телефон
+                          td.last +791519876543
+                            a(href="#!")
+                              i.ion-compose
+                .uc__settings-top-right
+                  fieldset
+                    legend ОФИС "АЛЕКСЕЕВСКИЙ"
+                    p Москва, Проспект Мира д. 79 стр. 1 (м. Рижская, вход в офис со стороны ТТК)
+                  fieldset
+                    legend Адрес для доставки
+                      a(href="#!").uc__settings-add-address
+                        i.ion-ios-plus-outline
+                    p Москва, Проспект Труда. 97 стр. 10 (м. Рижская)
+                  fieldset
+                    legend ОПОВЕЩЕНИЯ
+                    p
+                      a(href="#!") Настроить оповещения движения заказа
+              .uc__settings-bottom
+                p При изменении персональных данных, я даю 
+                  a(href="#!") согласие на их обработку
+                button(type="submit").btn.btn--block сохранить изменения
+        
+    include ./_include/_footer
+    //- div(style="height: 1000px; background-color: #000")
+    
+    //[if gte IE 9]
+      <script src='./js/libs/html5shiv/es5-shim.min.js'>
+      <script src='./js/libs/html5shiv/html5shiv.min.js'>
+      <script src='./js/libs/html5shiv/html5shiv-printshiv.min.js'>
+      <script src='./js/libs/html5shiv/respond.min.js'><![endif]
+
+    // Load Scripts
+    script(src="./js/libs.js")
+    include ./_include/_footer-js
+    script(src="./js/common.js")
+    
