@@ -6878,7 +6878,8 @@ label {
     cursor: pointer;
     margin: 0 auto; }
     .settings__image-div img {
-      display: block; }
+      display: block;
+      max-height: 128px; }
   .settings__image strong {
     display: block;
     line-height: 1;
@@ -7274,10 +7275,10 @@ label {
                 align-items: center; }
   .catalog__row-btn {
     width: 150px; }
-  .uc__balance {
+  .uc__balance-content {
+    width: calc(100% - 377px); }
+  .uc__balance-right {
     width: calc(100% - 539px); }
-    .uc__balance-content {
-      width: calc(100% - 377px); }
   .uc__garage-top-right {
     width: 262px;
     padding-left: 26px;
