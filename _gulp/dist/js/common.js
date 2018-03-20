@@ -170,6 +170,10 @@ $(document).on('ready', function(){
   uploadImageProfile();
   tableSearch();
 
+  $('ol.list li').each(function(){
+    $(this).prepend('<span class="span">' + ($(this).index() + 1) + '</span>');
+  });
+
   // Chrome Smooth Scroll
   try {
     $.browserSelector();

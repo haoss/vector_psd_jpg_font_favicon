@@ -2,8 +2,8 @@ doctype
 
 html(lang="ru")
   
-  -var active = 'Список попапов' //активный пункт меню, список в header.jade
-  -var pageTitle = 'Список попапов' + ' - Vector' //title страницы для генерации верстки  
+  -var active = 'Примеры' //активный пункт меню, список в header.jade
+  -var pageTitle = 'Примеры' + ' - Vector' //title страницы для генерации верстки  
 
   include ./_include/_head
 
@@ -67,9 +67,20 @@ html(lang="ru")
                 li
                   a(href="#add-auto3").open-popup-link Добавление транспортного средства 3
               
+              .clear20
+                
+              h1 Список
               
-              
-            
+              ul.list
+                li Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                li Fuga voluptatum, quia beatae rerum.
+                li Amet praesentium, omnis provident quaerat.
+                li Eius aspernatur nemo quibusdam ad nisi.
+              ol.list
+                li Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                li Fuga voluptatum, quia beatae rerum.
+                li Amet praesentium, omnis provident quaerat.
+                li Eius aspernatur nemo quibusdam ad nisi.
         
     include ./_include/_footer
     //- div(style="height: 1000px; background-color: #000")

@@ -925,6 +925,14 @@
         font-style: italic
         color: #6f6f6f
         display: inline-block
+      &-info
+        display: none
+        margin-left: 10px
+        i, a
+          color: #b7b7b7
+          display: inline-block
+          &+i, &+a
+            margin-left: 8px
     &-3
       font-family: $font-roboto-medium
       a
@@ -936,10 +944,14 @@
       color: #b7b7b7
       font-size: rem(12)
       white-space: nowrap
-      i
+      i, a
+        color: #b7b7b7
         display: inline-block
-        &+i
+        &+i, &+a
           margin-left: 8px
+      a
+        &:hover
+          color: $color-1
     &-5
       font-family: $font-roboto-medium
       white-space: nowrap
