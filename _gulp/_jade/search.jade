@@ -44,29 +44,786 @@ html(lang="ru")
               
               .clear
               
-              .product-table.product-table--search
-                .product-table__row
-                  .product-table__title ЗАПРОШЕННЫЙ АРТИКУЛ
-                  .product-table__table
-                    table.product-table__datatables.table
-                      thead
-                        tr
-                          th(data-orderable="false").no-sort
-                          th бренды
-                          th.hidden-sm.hidden-xs(data-orderable="false") наименование
-                          th.hidden-sm.hidden-xs(data-orderable="false") ИНФО
-                          th.hidden-sm.hidden-xs(data-orderable="false") ОЖИД. СРОК
-                          th.hidden-sm.hidden-xs(data-orderable="false") В НАЛИЧИИ
-                          th.hidden-sm.hidden-xs(data-orderable="false") ЦЕНА
-                          th.hidden-sm.hidden-xs(data-orderable="false")
-                      tbody
-                        +searchTr
-                        +searchTr
-                      tfoot
-                        tr
-                          td(colspan="8" align="right")
-                            a(href="#!") Еще предложения (22)
+              .product-table-new
+                .product-table-new__title ЗАПРОШЕННЫЙ АРТИКУЛ
+                .product-table-new__row
+                  .product-table-new__head
+                    .product-table-new__div1
+                      div
+                        .product-table-new__div1-popup
+                          .product-table-new__div1-label бренды
+                            i.ion-android-arrow-dropdown
+                          ul.product-table-new__form
+                            li
+                              span.product-table-new__form-check
+                              span.product-table-new__form-text AC
+                            li
+                              span.product-table-new__form-check
+                              span.product-table-new__form-text Acura
+                            li
+                              span.product-table-new__form-check
+                              span.product-table-new__form-text Alfa Romeo
+                            li.is-active
+                              span.product-table-new__form-check
+                              span.product-table-new__form-text Alpina
+                            
+                    .product-table-new__div2 наименование
+                    .product-table-new__div3 ИНФО
+                    .product-table-new__div4
+                      .product-table-new__div4-row
+                        .product-table-new__div4-div1 ОЖИД. СРОК
+                        .product-table-new__div4-div2 В НАЛИЧИИ
+                        .product-table-new__div4-div3 ЦЕНА
+                        .product-table-new__div4-div4
+                  .product-table-new__container
+                    .product-table-new__rows
+                      .product-table-new__div1
+                        span
+                          i.ion-android-bookmark.ion-android-bookmark--green
+                          | AC 
+                          i.small (3545645-56654-654)
+                          .product-table-new__div1-info
+                            a(href="#!")
+                              i.ion-information-circled
+                            a(href="#!")
+                              i.ion-alert-circled
+                      .product-table-new__div2
+                        span
+                          a(href="#!") Ремкомплект тормозного цилиндра
+                      .product-table-new__div3
+                        span
+                          a(href="#!")
+                            i.ion-information-circled
+                          a(href="#!")
+                            i.ion-alert-circled
+                      .product-table-new__div4
+                        .product-table-new__div4-row
+                          .product-table-new__div4-div1
+                            span
+                              i.ion-record
+                              | 23 дн.
+                          .product-table-new__div4-div2
+                            span 546 шт
+                          .product-table-new__div4-div3
+                            span 2 555
+                              i.fa-rouble
+                          .product-table-new__div4-div4
+                            a(href="#!").product-table__to-cart.is-active
+                              +headerIcon3
+                              i.ion-ios-checkmark 
+                        .product-table-new__div4-collapse
+                          a(href="#!") Еще предложения (22)
+                    .product-table-new__rows
+                      .product-table-new__div1
+                        span
+                          i.ion-android-bookmark.ion-android-bookmark--blue
+                          | Acura 
+                          i.small (3545645-56654-654)
+                          .product-table-new__div1-info
+                            a(href="#!")
+                              i.ion-information-circled
+                            a(href="#!")
+                              i.ion-alert-circled
+                      .product-table-new__div2
+                        span
+                          a(href="#!") Стойка амортизационная масляная, передняя
+                      .product-table-new__div3
+                        span
+                          a(href="#!")
+                            i.ion-information-circled
+                          a(href="#!")
+                            i.ion-alert-circled
+                      .product-table-new__div4
+                        .product-table-new__div4-row
+                          .product-table-new__div4-div1
+                            span
+                              i.ion-record
+                              | 5 дн.
+                          .product-table-new__div4-div2
+                            span 21 шт
+                          .product-table-new__div4-div3
+                            span 1 654
+                              i.fa-rouble
+                          .product-table-new__div4-div4
+                            a(href="#!").product-table__to-cart
+                              +headerIcon3
+                              i.ion-ios-checkmark 
+                        .product-table-new__div4-row
+                          .product-table-new__div4-div1
+                            span
+                              i.ion-record
+                              | 5 дн.
+                          .product-table-new__div4-div2
+                            span 21 шт
+                          .product-table-new__div4-div3
+                            span 1 654
+                              i.fa-rouble
+                          .product-table-new__div4-div4
+                            a(href="#!").product-table__to-cart
+                              +headerIcon3
+                              i.ion-ios-checkmark 
+                        .product-table-new__div4-row
+                          .product-table-new__div4-div1
+                            span
+                              i.ion-record
+                              | 5 дн.
+                          .product-table-new__div4-div2
+                            span 21 шт
+                          .product-table-new__div4-div3
+                            span 1 654
+                              i.fa-rouble
+                          .product-table-new__div4-div4
+                            a(href="#!").product-table__to-cart
+                              +headerIcon3
+                              i.ion-ios-checkmark 
+                        .product-table-new__div4-row
+                          .product-table-new__div4-div1
+                            span
+                              i.ion-record
+                              | 5 дн.
+                          .product-table-new__div4-div2
+                            span 21 шт
+                          .product-table-new__div4-div3
+                            span 1 654
+                              i.fa-rouble
+                          .product-table-new__div4-div4
+                            a(href="#!").product-table__to-cart
+                              +headerIcon3
+                              i.ion-ios-checkmark 
+                        .product-table-new__div4-row
+                          .product-table-new__div4-div1
+                            span
+                              i.ion-record
+                              | 5 дн.
+                          .product-table-new__div4-div2
+                            span 21 шт
+                          .product-table-new__div4-div3
+                            span 1 654
+                              i.fa-rouble
+                          .product-table-new__div4-div4
+                            a(href="#!").product-table__to-cart
+                              +headerIcon3
+                              i.ion-ios-checkmark 
+                        .product-table-new__div4-row
+                          .product-table-new__div4-div1
+                            span
+                              i.ion-record
+                              | 5 дн.
+                          .product-table-new__div4-div2
+                            span 21 шт
+                          .product-table-new__div4-div3
+                            span 1 654
+                              i.fa-rouble
+                          .product-table-new__div4-div4
+                            a(href="#!").product-table__to-cart
+                              +headerIcon3
+                              i.ion-ios-checkmark 
+                        .product-table-new__div4-row
+                          .product-table-new__div4-div1
+                            span
+                              i.ion-record
+                              | 5 дн.
+                          .product-table-new__div4-div2
+                            span 21 шт
+                          .product-table-new__div4-div3
+                            span 1 654
+                              i.fa-rouble
+                          .product-table-new__div4-div4
+                            a(href="#!").product-table__to-cart
+                              +headerIcon3
+                              i.ion-ios-checkmark 
+                        .product-table-new__div4-row
+                          .product-table-new__div4-div1
+                            span
+                              i.ion-record
+                              | 5 дн.
+                          .product-table-new__div4-div2
+                            span 21 шт
+                          .product-table-new__div4-div3
+                            span 1 654
+                              i.fa-rouble
+                          .product-table-new__div4-div4
+                            a(href="#!").product-table__to-cart
+                              +headerIcon3
+                              i.ion-ios-checkmark 
+                    .product-table-new__rows
+                      .product-table-new__div1
+                        span
+                          i.ion-android-bookmark.ion-android-bookmark--green
+                          | Alfa Romeo 
+                          i.small (3545645-56654-654)
+                          .product-table-new__div1-info
+                            a(href="#!")
+                              i.ion-information-circled
+                            a(href="#!")
+                              i.ion-alert-circled
+                      .product-table-new__div2
+                        span
+                          a(href="#!") Ремень клиновой avx13 x 1180
+                      .product-table-new__div3
+                        span
+                          a(href="#!")
+                            i.ion-information-circled
+                          a(href="#!")
+                            i.ion-alert-circled
+                      .product-table-new__div4
+                        .product-table-new__div4-row
+                          .product-table-new__div4-div1
+                            span
+                              i.ion-record
+                              | 90 дн.
+                          .product-table-new__div4-div2
+                            span 513 шт
+                          .product-table-new__div4-div3
+                            span 9 999
+                              i.fa-rouble
+                          .product-table-new__div4-div4
+                            a(href="#!").product-table__to-cart
+                              +headerIcon3
+                              i.ion-ios-checkmark 
+                    .product-table-new__rows
+                      .product-table-new__div1
+                        span
+                          i.ion-android-bookmark.ion-android-bookmark--blue
+                          | Alpina
+                          i.small (3545645-56654-654)
+                          .product-table-new__div1-info
+                            a(href="#!")
+                              i.ion-information-circled
+                            a(href="#!")
+                              i.ion-alert-circled
+                      .product-table-new__div2
+                        span
+                          a(href="#!") Колодки тормозные
+                      .product-table-new__div3
+                        span
+                          a(href="#!")
+                            i.ion-information-circled
+                          a(href="#!")
+                            i.ion-alert-circled
+                      .product-table-new__div4
+                        .product-table-new__div4-row
+                          .product-table-new__div4-div1
+                            span
+                              i.ion-record
+                              | 1 дн.
+                          .product-table-new__div4-div2
+                            span 44 шт
+                          .product-table-new__div4-div3
+                            span 523
+                              i.fa-rouble
+                          .product-table-new__div4-div4
+                            a(href="#!").product-table__to-cart
+                              +headerIcon3
+                              i.ion-ios-checkmark 
+                    .product-table-new__rows
+                      .product-table-new__div1
+                        span
+                          i.ion-android-bookmark.ion-android-bookmark--green
+                          | AC 
+                          i.small (3545645-56654-654)
+                          .product-table-new__div1-info
+                            a(href="#!")
+                              i.ion-information-circled
+                            a(href="#!")
+                              i.ion-alert-circled
+                      .product-table-new__div2
+                        a(href="#!") Ремкомплект тормозного цилиндра
+                      .product-table-new__div3
+                        a(href="#!")
+                          i.ion-information-circled
+                        a(href="#!")
+                          i.ion-alert-circled
+                      .product-table-new__div4
+                        .product-table-new__div4-row
+                          .product-table-new__div4-div1
+                            span
+                              i.ion-record
+                              | 23 дн.
+                          .product-table-new__div4-div2
+                            span 546 шт
+                          .product-table-new__div4-div3
+                            span 2 555
+                              i.fa-rouble
+                          .product-table-new__div4-div4
+                            a(href="#!").product-table__to-cart
+                              +headerIcon3
+                              i.ion-ios-checkmark 
+                    .product-table-new__rows
+                      .product-table-new__div1
+                        span
+                          i.ion-android-bookmark.ion-android-bookmark--blue
+                          | AC 
+                          i.small (3545645-56654-654)
+                          .product-table-new__div1-info
+                            a(href="#!")
+                              i.ion-information-circled
+                            a(href="#!")
+                              i.ion-alert-circled
+                      .product-table-new__div2
+                        a(href="#!") Ремкомплект тормозного цилиндра
+                      .product-table-new__div3
+                        a(href="#!")
+                          i.ion-information-circled
+                        a(href="#!")
+                          i.ion-alert-circled
+                      .product-table-new__div4
+                        .product-table-new__div4-row
+                          .product-table-new__div4-div1
+                            span
+                              i.ion-record
+                              | 23 дн.
+                          .product-table-new__div4-div2
+                            span 546 шт
+                          .product-table-new__div4-div3
+                            span 2 555
+                              i.fa-rouble
+                          .product-table-new__div4-div4
+                            a(href="#!").product-table__to-cart
+                              +headerIcon3
+                              i.ion-ios-checkmark 
+                        .product-table-new__div4-collapse
+                          a(href="#!") Еще предложения (22)
+                    .product-table-new__rows
+                      .product-table-new__div1
+                        span
+                          i.ion-android-bookmark.ion-android-bookmark--blue
+                          | AC 
+                          i.small (3545645-56654-654)
+                          .product-table-new__div1-info
+                            a(href="#!")
+                              i.ion-information-circled
+                            a(href="#!")
+                              i.ion-alert-circled
+                      .product-table-new__div2
+                        a(href="#!") Ремкомплект тормозного цилиндра
+                      .product-table-new__div3
+                        a(href="#!")
+                          i.ion-information-circled
+                        a(href="#!")
+                          i.ion-alert-circled
+                      .product-table-new__div4
+                        .product-table-new__div4-row
+                          .product-table-new__div4-div1
+                            span
+                              i.ion-record
+                              | 23 дн.
+                          .product-table-new__div4-div2
+                            span 546 шт
+                          .product-table-new__div4-div3
+                            span 2 555
+                              i.fa-rouble
+                          .product-table-new__div4-div4
+                            a(href="#!").product-table__to-cart
+                              +headerIcon3
+                              i.ion-ios-checkmark 
+                        .product-table-new__div4-collapse
+                          a(href="#!") Еще предложения (22)
+                    .product-table-new__rows
+                      .product-table-new__div1
+                        span
+                          i.ion-android-bookmark.ion-android-bookmark--blue
+                          | AC 
+                          i.small (3545645-56654-654)
+                          .product-table-new__div1-info
+                            a(href="#!")
+                              i.ion-information-circled
+                            a(href="#!")
+                              i.ion-alert-circled
+                      .product-table-new__div2
+                        a(href="#!") Ремкомплект тормозного цилиндра
+                      .product-table-new__div3
+                        a(href="#!")
+                          i.ion-information-circled
+                        a(href="#!")
+                          i.ion-alert-circled
+                      .product-table-new__div4
+                        .product-table-new__div4-row
+                          .product-table-new__div4-div1
+                            span
+                              i.ion-record
+                              | 23 дн.
+                          .product-table-new__div4-div2
+                            span 546 шт
+                          .product-table-new__div4-div3
+                            span 2 555
+                              i.fa-rouble
+                          .product-table-new__div4-div4
+                            a(href="#!").product-table__to-cart
+                              +headerIcon3
+                              i.ion-ios-checkmark 
+                              
+              .product-table-new
+                .product-table-new__title ПРЕДЛОЖЕНИЯ ПО ОРИГИНАЛЬНЫМ ПРОИЗВОДИТЕЛЯМ
+                .product-table-new__row
+                  .product-table-new__head
+                    .product-table-new__div1
+                      div
+                        .product-table-new__div1-popup
+                          .product-table-new__div1-label бренды
+                            i.ion-android-arrow-dropdown
+                          ul.product-table-new__form
+                            li
+                              span.product-table-new__form-check
+                              span.product-table-new__form-text AC
+                            li
+                              span.product-table-new__form-check
+                              span.product-table-new__form-text Acura
+                            li
+                              span.product-table-new__form-check
+                              span.product-table-new__form-text Alfa Romeo
+                            li.is-active
+                              span.product-table-new__form-check
+                              span.product-table-new__form-text Alpina
+                    .product-table-new__div2 наименование
+                    .product-table-new__div3 ИНФО
+                    .product-table-new__div4
+                      .product-table-new__div4-row
+                        .product-table-new__div4-div1 ОЖИД. СРОК
+                        .product-table-new__div4-div2 В НАЛИЧИИ
+                        .product-table-new__div4-div3 ЦЕНА
+                        .product-table-new__div4-div4
+                  .product-table-new__container
+                    .product-table-new__rows
+                      .product-table-new__div1
+                        span
+                          i.ion-android-bookmark.ion-android-bookmark--green
+                          | AC 
+                          i.small (3545645-56654-654)
+                          .product-table-new__div1-info
+                            a(href="#!")
+                              i.ion-information-circled
+                            a(href="#!")
+                              i.ion-alert-circled
+                      .product-table-new__div2
+                        span
+                          a(href="#!") Ремкомплект тормозного цилиндра
+                      .product-table-new__div3
+                        span
+                          a(href="#!")
+                            i.ion-information-circled
+                          a(href="#!")
+                            i.ion-alert-circled
+                      .product-table-new__div4
+                        .product-table-new__div4-row
+                          .product-table-new__div4-div1
+                            span
+                              i.ion-record
+                              | 23 дн.
+                          .product-table-new__div4-div2
+                            span 546 шт
+                          .product-table-new__div4-div3
+                            span 2 555
+                              i.fa-rouble
+                          .product-table-new__div4-div4
+                            a(href="#!").product-table__to-cart.is-active
+                              +headerIcon3
+                              i.ion-ios-checkmark 
+                        .product-table-new__div4-collapse
+                          a(href="#!") Еще предложения (22)
+                    .product-table-new__rows
+                      .product-table-new__div1
+                        span
+                          i.ion-android-bookmark.ion-android-bookmark--green
+                          | AC 
+                          i.small (3545645-56654-654)
+                          .product-table-new__div1-info
+                            a(href="#!")
+                              i.ion-information-circled
+                            a(href="#!")
+                              i.ion-alert-circled
+                      .product-table-new__div2
+                        a(href="#!") Ремкомплект тормозного цилиндра
+                      .product-table-new__div3
+                        a(href="#!")
+                          i.ion-information-circled
+                        a(href="#!")
+                          i.ion-alert-circled
+                      .product-table-new__div4
+                        .product-table-new__div4-row
+                          .product-table-new__div4-div1
+                            span
+                              i.ion-record
+                              | 23 дн.
+                          .product-table-new__div4-div2
+                            span 546 шт
+                          .product-table-new__div4-div3
+                            span 2 555
+                              i.fa-rouble
+                          .product-table-new__div4-div4
+                            a(href="#!").product-table__to-cart
+                              +headerIcon3
+                              i.ion-ios-checkmark 
+                    .product-table-new__rows
+                      .product-table-new__div1
+                        span
+                          i.ion-android-bookmark.ion-android-bookmark--blue
+                          | AC 
+                          i.small (3545645-56654-654)
+                          .product-table-new__div1-info
+                            a(href="#!")
+                              i.ion-information-circled
+                            a(href="#!")
+                              i.ion-alert-circled
+                      .product-table-new__div2
+                        a(href="#!") Ремкомплект тормозного цилиндра
+                      .product-table-new__div3
+                        a(href="#!")
+                          i.ion-information-circled
+                        a(href="#!")
+                          i.ion-alert-circled
+                      .product-table-new__div4
+                        .product-table-new__div4-row
+                          .product-table-new__div4-div1
+                            span
+                              i.ion-record
+                              | 23 дн.
+                          .product-table-new__div4-div2
+                            span 546 шт
+                          .product-table-new__div4-div3
+                            span 2 555
+                              i.fa-rouble
+                          .product-table-new__div4-div4
+                            a(href="#!").product-table__to-cart
+                              +headerIcon3
+                              i.ion-ios-checkmark 
+                        .product-table-new__div4-collapse
+                          a(href="#!") Еще предложения (22)
+                    .product-table-new__rows
+                      .product-table-new__div1
+                        span
+                          i.ion-android-bookmark.ion-android-bookmark--blue
+                          | AC 
+                          i.small (3545645-56654-654)
+                          .product-table-new__div1-info
+                            a(href="#!")
+                              i.ion-information-circled
+                            a(href="#!")
+                              i.ion-alert-circled
+                      .product-table-new__div2
+                        a(href="#!") Ремкомплект тормозного цилиндра
+                      .product-table-new__div3
+                        a(href="#!")
+                          i.ion-information-circled
+                        a(href="#!")
+                          i.ion-alert-circled
+                      .product-table-new__div4
+                        .product-table-new__div4-row
+                          .product-table-new__div4-div1
+                            span
+                              i.ion-record
+                              | 23 дн.
+                          .product-table-new__div4-div2
+                            span 546 шт
+                          .product-table-new__div4-div3
+                            span 2 555
+                              i.fa-rouble
+                          .product-table-new__div4-div4
+                            a(href="#!").product-table__to-cart
+                              +headerIcon3
+                              i.ion-ios-checkmark 
+                        .product-table-new__div4-collapse
+                          a(href="#!") Еще предложения (22)
+  
+              .product-table-new
+                .product-table-new__title ПРЕДЛОЖЕНИЯ ПО НЕ ОРИГИНАЛЬНЫМ ПРОИЗВОДИТЕЛЯМ
+                .product-table-new__row
+                  .product-table-new__head
+                    .product-table-new__div1
+                      div
+                        .product-table-new__div1-popup
+                          .product-table-new__div1-label бренды
+                            i.ion-android-arrow-dropdown
+                          ul.product-table-new__form
+                            li
+                              span.product-table-new__form-check
+                              span.product-table-new__form-text AC
+                            li
+                              span.product-table-new__form-check
+                              span.product-table-new__form-text Acura
+                            li
+                              span.product-table-new__form-check
+                              span.product-table-new__form-text Alfa Romeo
+                            li.is-active
+                              span.product-table-new__form-check
+                              span.product-table-new__form-text Alpina
+                    .product-table-new__div2 наименование
+                    .product-table-new__div3 ИНФО
+                    .product-table-new__div4
+                      .product-table-new__div4-row
+                        .product-table-new__div4-div1 ОЖИД. СРОК
+                        .product-table-new__div4-div2 В НАЛИЧИИ
+                        .product-table-new__div4-div3 ЦЕНА
+                        .product-table-new__div4-div4
+                  .product-table-new__container
+                    .product-table-new__rows
+                      .product-table-new__div1
+                        span
+                          i.ion-android-bookmark.ion-android-bookmark--green
+                          | AC 
+                          i.small (3545645-56654-654)
+                          .product-table-new__div1-info
+                            a(href="#!")
+                              i.ion-information-circled
+                            a(href="#!")
+                              i.ion-alert-circled
+                      .product-table-new__div2
+                        span
+                          a(href="#!") Ремкомплект тормозного цилиндра
+                      .product-table-new__div3
+                        span
+                          a(href="#!")
+                            i.ion-information-circled
+                          a(href="#!")
+                            i.ion-alert-circled
+                      .product-table-new__div4
+                        .product-table-new__div4-row
+                          .product-table-new__div4-div1
+                            span
+                              i.ion-record
+                              | 23 дн.
+                          .product-table-new__div4-div2
+                            span 546 шт
+                          .product-table-new__div4-div3
+                            span 2 555
+                              i.fa-rouble
+                          .product-table-new__div4-div4
+                            a(href="#!").product-table__to-cart.is-active
+                              +headerIcon3
+                              i.ion-ios-checkmark 
+                        .product-table-new__div4-collapse
+                          a(href="#!") Еще предложения (22)
+                    .product-table-new__rows
+                      .product-table-new__div1
+                        span
+                          i.ion-android-bookmark.ion-android-bookmark--green
+                          | AC 
+                          i.small (3545645-56654-654)
+                          .product-table-new__div1-info
+                            a(href="#!")
+                              i.ion-information-circled
+                            a(href="#!")
+                              i.ion-alert-circled
+                      .product-table-new__div2
+                        a(href="#!") Ремкомплект тормозного цилиндра
+                      .product-table-new__div3
+                        a(href="#!")
+                          i.ion-information-circled
+                        a(href="#!")
+                          i.ion-alert-circled
+                      .product-table-new__div4
+                        .product-table-new__div4-row
+                          .product-table-new__div4-div1
+                            span
+                              i.ion-record
+                              | 23 дн.
+                          .product-table-new__div4-div2
+                            span 546 шт
+                          .product-table-new__div4-div3
+                            span 2 555
+                              i.fa-rouble
+                          .product-table-new__div4-div4
+                            a(href="#!").product-table__to-cart
+                              +headerIcon3
+                              i.ion-ios-checkmark 
+                    .product-table-new__rows
+                      .product-table-new__div1
+                        span
+                          i.ion-android-bookmark.ion-android-bookmark--blue
+                          | AC 
+                          i.small (3545645-56654-654)
+                          .product-table-new__div1-info
+                            a(href="#!")
+                              i.ion-information-circled
+                            a(href="#!")
+                              i.ion-alert-circled
+                      .product-table-new__div2
+                        a(href="#!") Ремкомплект тормозного цилиндра
+                      .product-table-new__div3
+                        a(href="#!")
+                          i.ion-information-circled
+                        a(href="#!")
+                          i.ion-alert-circled
+                      .product-table-new__div4
+                        .product-table-new__div4-row
+                          .product-table-new__div4-div1
+                            span
+                              i.ion-record
+                              | 23 дн.
+                          .product-table-new__div4-div2
+                            span 546 шт
+                          .product-table-new__div4-div3
+                            span 2 555
+                              i.fa-rouble
+                          .product-table-new__div4-div4
+                            a(href="#!").product-table__to-cart
+                              +headerIcon3
+                              i.ion-ios-checkmark 
+                        .product-table-new__div4-collapse
+                          a(href="#!") Еще предложения (22)
+                    .product-table-new__rows
+                      .product-table-new__div1
+                        span
+                          i.ion-android-bookmark.ion-android-bookmark--blue
+                          | AC 
+                          i.small (3545645-56654-654)
+                          .product-table-new__div1-info
+                            a(href="#!")
+                              i.ion-information-circled
+                            a(href="#!")
+                              i.ion-alert-circled
+                      .product-table-new__div2
+                        a(href="#!") Ремкомплект тормозного цилиндра
+                      .product-table-new__div3
+                        a(href="#!")
+                          i.ion-information-circled
+                        a(href="#!")
+                          i.ion-alert-circled
+                      .product-table-new__div4
+                        .product-table-new__div4-row
+                          .product-table-new__div4-div1
+                            span
+                              i.ion-record
+                              | 23 дн.
+                          .product-table-new__div4-div2
+                            span 546 шт
+                          .product-table-new__div4-div3
+                            span 2 555
+                              i.fa-rouble
+                          .product-table-new__div4-div4
+                            a(href="#!").product-table__to-cart
+                              +headerIcon3
+                              i.ion-ios-checkmark 
+                        .product-table-new__div4-collapse
+                          a(href="#!") Еще предложения (22)
+  
+              //- .clear50
+              
+              //-  
+                .product-table.product-table--search
+                  .product-table__row
+                    .product-table__title ЗАПРОШЕННЫЙ АРТИКУЛ
+                    .product-table__table
+                      table.product-table__datatables.table
+                        thead
+                          tr
+                            th(data-orderable="false").no-sort
+                            th бренды
+                            th.hidden-sm.hidden-xs(data-orderable="false") наименование
+                            th.hidden-sm.hidden-xs(data-orderable="false") ИНФО
+                            th.hidden-sm.hidden-xs(data-orderable="false") ОЖИД. СРОК
+                            th.hidden-sm.hidden-xs(data-orderable="false") В НАЛИЧИИ
+                            th.hidden-sm.hidden-xs(data-orderable="false") ЦЕНА
+                            th.hidden-sm.hidden-xs(data-orderable="false")
+                        tbody
+                          +searchTr
+                          +searchTr
+                        tfoot
+                          tr
+                            td(colspan="8" align="right")
+                              a(href="#!") Еще предложения (22)
         
+              
                 .product-table__row
                   .product-table__title ПРЕДЛОЖЕНИЯ ПО ОРИГИНАЛЬНЫМ ПРОИЗВОДИТЕЛЯМ
                   .product-table__table

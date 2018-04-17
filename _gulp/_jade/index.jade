@@ -19,15 +19,17 @@ html(lang="ru")
         
         .main-catalog.row
           .col-sm-8
-            a(href="#!").main-catalog__block
+            .main-catalog__block
               +catalogImgV
               img(src="./img/catalog-category-img-1-2x.png", alt="").main-catalog__block-img
               span.main-catalog__block-title каталог 
                 br
                 | запчастей
               span.main-catalog__block-list
-                span Оригинальные
-                span Универсальные
+                span
+                  a(href="#!") Оригинальные
+                span
+                  a(href="#!") Универсальные
           .col-sm-4
             a(href="#!").main-catalog__block
               +catalogImgV

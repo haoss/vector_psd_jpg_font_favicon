@@ -1,17 +1,21 @@
 /* header */
 .header
-  position: absolute
+  position: fixed
   z-index: 1000
   left: 0
   top: 0
   right: 0
+  &.is-fixed
+    .header__top, .header__phone
+      height: 0
   &__top
     background-color: $color-2
     color: $color-white
     font-family: $font-baron
     font-size: rem(11)
     height: 40px
-    // text-transform: uppercase
+    overflow: hidden
+    transition: height 0.35s
     +clearfix
     ul
       margin: 0
@@ -469,6 +473,8 @@
     line-height: 37px
     font-size: rem(20)
     font-family: $font-roboto-light
+    overflow: hidden
+    transition: height 0.35s
     a
       color: $color-white
       text-decoration: none

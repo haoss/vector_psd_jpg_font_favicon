@@ -174,6 +174,11 @@ $(document).on('ready', function(){
     $(this).prepend('<span class="span">' + ($(this).index() + 1) + '</span>');
   });
 
+  filterBlockHide();
+  headerFixed();
+  tableSearchBrandPopup();
+  tableSearchBrandCheckTest();
+
   // Chrome Smooth Scroll
   try {
     $.browserSelector();
@@ -194,7 +199,7 @@ $(window).on('load', function() {
 });
 
 $(window).on('scroll', function() {
-
+  headerFixed();
 });
 $(window).on('resize', function() {
   var width = $(window).width();
@@ -416,9 +421,9 @@ function cartCount(){
 }
 
 function filterHasHide(){
-  $('.has-hide').readmore({
+  $('.filter__block .has-hide').readmore({
     speed: 500,
-    collapsedHeight: 100,
+    collapsedHeight: 90,
     moreLink: '<div class="filter__more"><a href="#!">Показать все</a></div>',
     lessLink: '<div class="filter__more"><a href="#!">Скрыть лишнее</a></div>'
   });
@@ -576,4 +581,66 @@ function tableSearch(){
       footer.hide();
     });
   });
+}
+
+function filterBlockHide(){
+  var body = $('#filters');
+  var block = body.find('.filter__block');
+
+  block.each(function(){
+    var _this = $(this);
+    var head = _this.find('.filter__head');
+
+    head.on('click', function(){
+      _this.toggleClass('is-active')
+    });
+  });
+}
+
+function headerFixed() {
+  var header = $('.header');
+  var body = $('body');
+
+  if (!header) return;
+
+  if ($(window).scrollTop() > header.height()) {
+    header.addClass('is-fixed');
+    body.addClass('is-scroll');
+  } if ($(window).scrollTop() < header.height()) {
+    header.removeClass('is-fixed');
+    body.removeClass('is-scroll');
+  }
+}
+
+function tableSearchBrandPopup() {
+  var label = $('.product-table-new__div1-label');
+  var form = $('.product-table-new__form');
+
+  label.each(function(){
+    var _this = $(this);
+    _this.on('click', function(e){
+      e.stopPropagation();
+      _this.parent().toggleClass('is-active')
+    });
+  });
+
+  form.on('click', function(e){
+    e.stopPropagation();
+  })
+
+  $(document).on('click', function(){
+    if (label.parent().hasClass('is-active')) {
+      label.parent().removeClass('is-active')
+    }
+  });
+}
+
+function tableSearchBrandCheckTest() {
+  var checkbox = $('.product-table-new__form-check');
+  checkbox.each(function(){
+    var _this = $(this);
+    _this.parent().on('click', function(){
+      _this.parent().toggleClass('is-active');
+    });
+  })
 }

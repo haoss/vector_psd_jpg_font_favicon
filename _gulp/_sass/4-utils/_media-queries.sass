@@ -204,6 +204,31 @@
       &-2
         &-info
           display: inline-block
+    &-new
+      &__rows
+        display: block
+      &__div1, &__div2, &__div3, &__div4
+        width: 100%
+        padding-left: 16px
+      &__div1
+        &-info
+          display: inline-block
+      &__div2, &__div4
+        padding-top: 15px
+      &__div3
+        display: none
+      &__div4
+        &-row
+          &>div
+            text-align: left
+        &-div4
+          text-align: right !important
+      &__head
+        .product-table-new
+          &__div1
+            width: 100%
+          &__div2, &__div3, &__div4
+            display: none
   .map
     &__head
       margin-top: -52px
@@ -296,6 +321,7 @@
           width: 76.33%
           margin-left: calc(19.08% + 30px) !important
 
+
 /* Small Devices, Tablets */
 @media only screen and (max-width : 767px)
 
@@ -325,6 +351,7 @@
       float: none
   .header
     &__top
+      height: 40px !important
       &-left, &-right
         display: none
     &__logo
@@ -456,6 +483,7 @@
         text-align: center
         float: none
         padding-top: 10px
+
   .catalog
     &__row
       &-wrapper
@@ -654,6 +682,17 @@
           table-layout: auto
     &__roll-up, &__roll-down
       font-size: 0
+    &-new
+      &__div2, &__div4
+        padding-left: 0
+      &__rows
+        padding-left: 0
+        padding-right: 0
+      &__head
+        padding-left: 0
+        padding-right: 0
+        .product-table-new__div1
+          padding-left: 0
   .table--cart
     margin-left: -22px
     width: calc(100% + 22px)
