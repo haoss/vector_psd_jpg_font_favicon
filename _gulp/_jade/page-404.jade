@@ -1,0 +1,64 @@
+doctype
+
+html(lang="ru")
+  
+  -var active = 'страница 404' //активный пункт меню, список в header.jade
+  -var pageTitle = 'страница 404' + ' - Vector' //title страницы для генерации верстки  
+
+  include ./_include/_head
+
+  body
+    
+    // Preloader
+    include ./_include/_preloader
+    
+    include ./_include/_header
+    
+    .content
+      .container
+        
+        ul.breadcrumbs
+          li
+            a(href="#!") Интернет-магазин VECTОR
+          li
+            span Название страницы 
+        
+        .row
+          .col-md-12
+            
+            .content__wrapper.content__wrapper--404
+              
+
+              .page404
+
+                .content__head
+                  h1 страница не найдена...
+                  p Мы не смогли найти то, что вы ищете на 
+                    a(href="#!") Vector.ru
+
+                p.text-center
+                  img(src="./img/page404.jpg").img-responsive
+                .clear15
+                p Пожалуйста, используйте в браузере кнопку 
+                  img(src="./img/img-back.jpg") 
+                  | 
+                  | и убедитесь, что вы ввели правильный вид страницы.
+                p Если Вам нужна срочная помощь, пожалуйста, напишите нам 
+                  a(href="#!") письмо
+                  |.
+                p
+                  strong В любом случае не расстраивайтесь, у нас много полезной и актуальной информации
+
+    include ./_include/_footer
+    //- div(style="height: 1000px; background-color: #000")
+    
+    //[if gte IE 9]
+      <script src='./js/libs/html5shiv/es5-shim.min.js'>
+      <script src='./js/libs/html5shiv/html5shiv.min.js'>
+      <script src='./js/libs/html5shiv/html5shiv-printshiv.min.js'>
+      <script src='./js/libs/html5shiv/respond.min.js'><![endif]
+
+    // Load Scripts
+    script(src="./js/libs.js")
+    include ./_include/_footer-js
+    script(src="./js/common.js")

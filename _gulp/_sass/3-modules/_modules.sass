@@ -11,8 +11,23 @@
     padding: 24px 28px 28px 28px
     min-height: 500px
     +clearfix
+    &--404
+      min-height: inherit
+      .content__head
+        text-align: center
+        padding-bottom: 15px
+        h1
+          margin-bottom: 10px
+          color: $primary-color
+          font-size: 42px
+        p
+          font-size: 18px
+      a
+        text-decoration: underline
+        &:hover, &:focus
+          text-decoration: none
   &__title
-    font-size: rem(15)
+    font-size: 15px
     font-family: $font-roboto-bold
     border-bottom: 1px solid #e5e5e5
     margin-bottom: 17px
@@ -24,7 +39,7 @@
     height: 18px
     line-height: 18px
     width: 56px
-    font-size: rem(11)
+    font-size: 11px
     font-family: $font-roboto-light
     margin-top: 3px
   &__table
@@ -108,7 +123,7 @@
       position: absolute
       left: 35px
       top: 34px
-      font-size: rem(26)
+      font-size: 26px
       line-height: 30px
       &::before
         position: absolute
@@ -119,13 +134,13 @@
         color: $color-white
         content: "\f3d1"
         font-family: $font-ionicons
-        font-size: rem(9)
+        font-size: 9px
         text-align: center
         line-height: 20px
         left: -35px
     &-list
       position: absolute
-      font-size: rem(15)
+      font-size: 15px
       left: 33px
       top: 137px
       &>span
@@ -144,7 +159,7 @@
           top: 2px
           line-height: 1
           color: $color-1
-          font-size: rem(10)
+          font-size: 10px
         a
           color: $primary-color
           &:hover, &:focus
@@ -165,7 +180,7 @@
     border-bottom: 1px solid #dddddd
     font-family: $font-roboto-bold
     text-transform: uppercase
-    font-size: rem(20)
+    font-size: 20px
     +clearfix
     &>li
       list-style: none
@@ -197,12 +212,12 @@
           &::after
             background: $color-1
   &__block
-    font-size: rem(14)
+    font-size: 14px
     margin-bottom: 30px
     &-date
       color: $color-1
       text-transform: uppercase
-      font-size: rem(10)
+      font-size: 10px
       font-family: $font-roboto-bold
       margin-bottom: 3px
     p
@@ -212,7 +227,7 @@
 .breadcrumbs
   margin: -30px 0 10px 0
   padding: 0
-  font-size: rem(11)
+  font-size: 11px
   font-family: $font-roboto
   color: $color-2
   +clearfix
@@ -225,7 +240,7 @@
         content: "\f125"
         display: inline-block
         font-family: $font-ionicons
-        font-size: rem(10)
+        font-size: 10px
         color: #b1b1b1
         margin-left: 5px
         margin-right: 7px
@@ -241,7 +256,7 @@
     overflow: hidden
     margin-bottom: 30px
     padding: 4px 0
-    font-size: rem(14)
+    font-size: 14px
     font-family: $font-roboto
     ul
       margin: 0
@@ -304,7 +319,7 @@
     right: 10px
     top: 10px
     color: #bebebe
-    font-size: rem(18)
+    font-size: 18px
     line-height: 1
     padding: 5px
     transition: all 0.35s
@@ -312,29 +327,29 @@
       color: $color-2
   &__title
     color: $color-1
-    font-size: rem(18)
+    font-size: 18px
     font-family: $font-baron
     line-height: 20px
     margin-bottom: 25px
     &--f16
-      font-size: rem(16)
+      font-size: 16px
     .small
       display: block
       color: #858585
-      font-size: rem(12)
+      font-size: 12px
       // text-transform: uppercase
       font-family: $font-roboto
       margin-top: 5px
   &__form-bottom
     background: #f3f4f7
     text-align: center
-    font-size: rem(13)
+    font-size: 13px
     height: 70px
     margin: 23px -20px -27px -20px
     border-radius: 0 0 4px 4px
     padding-top: 18px
     strong
-      font-size: rem(13)
+      font-size: 13px
       // font-family: $font-roboto
       display: block
       line-height: 1
@@ -350,7 +365,7 @@
       display: table
       width: 100%
       margin-bottom: 10px
-      font-size: rem(12)
+      font-size: 12px
       &>*
         display: table-cell
         vertical-align: middle
@@ -369,7 +384,7 @@
     &-body
       text-align: center
       p
-        font-size: rem(12)
+        font-size: 12px
         margin-bottom: 12px
       a
         display: inline-block
@@ -394,14 +409,14 @@
         &:hover
           opacity: 0.7
   &__info
-    font-size: rem(12)
+    font-size: 12px
     p
       line-height: 15px
       margin-bottom: 10px
   &--big
     max-width: 415px
   &__bottom
-    font-size: rem(13)
+    font-size: 13px
     background: #f3f4f7
     margin: 23px -20px -27px -20px
     padding: 20px
@@ -430,11 +445,11 @@
         background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 26.000001" width="25" height="26"><path d="M10.295 19.636c5.134 0 9.313-4.185 9.313-9.326 0-5.144-4.179-9.327-9.313-9.327C5.158.983.982 5.166.982 10.31c0 5.141 4.176 9.326 9.313 9.326zM6.862 9.818h2.942V6.872a.491.491 0 0 1 .982 0v2.946h2.938a.492.492 0 0 1 0 .983h-2.938v2.944a.492.492 0 0 1-.982 0V10.8H6.862a.492.492 0 0 1 0-.983z" fill="none"/><path d="M6.862 10.801h2.942v2.944a.491.491 0 0 0 .982 0V10.8h2.938a.492.492 0 0 0 0-.983h-2.938V6.872a.492.492 0 0 0-.982 0v2.946H6.862a.492.492 0 0 0 0 .983z" fill="#c2c2c2"/><path d="M10.295 20.62c2.491 0 4.777-.895 6.56-2.374l7.3 7.606a.494.494 0 0 0 .694.012.492.492 0 0 0 .015-.693l-7.284-7.587a10.287 10.287 0 0 0 3.01-7.274C20.59 4.624 15.97 0 10.295 0 4.617 0 0 4.624 0 10.31c0 5.683 4.617 10.31 10.295 10.31zm0-19.637c5.134 0 9.313 4.183 9.313 9.327 0 5.141-4.179 9.326-9.313 9.326-5.137 0-9.313-4.185-9.313-9.326 0-5.144 4.176-9.327 9.313-9.327z" fill="#c2c2c2"/></svg>')
   &__th
     width: 100%
-    font-size: rem(12)
+    font-size: 12px
     font-family: $font-roboto
     margin-bottom: 10px
     th
-      font-size: rem(15)
+      font-size: 15px
       font-family: $font-roboto-medium
       color: $color-1
       font-weight: 400
@@ -486,7 +501,7 @@
     overflow: hidden
     text-overflow: ellipsis
     margin: 0 20px 0 0
-    font-size: rem(12)
+    font-size: 12px
     line-height: 28px
     color: #444
     height: 28px
@@ -519,7 +534,7 @@
       height: 0
       border: 0
       color: #444444
-      font-size: rem(14)
+      font-size: 14px
   &-focus .selectric
     border-color: #AAA
   &-hover .selectric
@@ -653,13 +668,13 @@
     &--map
       max-width: 200px
       .label
-        font-size: rem(26)
+        font-size: 26px
         font-family: $font-baron
         text-transform: lowercase
 
 .table-notification
   width: 100%
-  font-size: rem(12)
+  font-size: 12px
   margin-bottom: 10px
   td
     vertical-align: top
@@ -674,7 +689,7 @@
       padding-top: 0
   th
     font-weight: 400
-    font-size: rem(10)
+    font-size: 10px
     position: relative
     span
       display: block
@@ -694,7 +709,7 @@
 
 .news
   &__row
-    font-size: rem(13)
+    font-size: 13px
     color: $color-2
     transition: color 0.35s
     border-bottom: 1px solid #e5e5e5
@@ -704,7 +719,7 @@
       color: #878787
     &-title
       a
-        font-size: rem(15)
+        font-size: 15px
         font-family: $font-roboto-bold
         color: $color-2
         text-decoration: none
@@ -717,7 +732,7 @@
     &-date
       background: $color-1
       color: $color-white
-      font-size: rem(10)
+      font-size: 10px
       white-space: nowrap
       height: 18px
       line-height: 18px
@@ -735,7 +750,7 @@
     &:last-child
       margin-bottom: 0
   &__title
-    font-size: rem(15)
+    font-size: 15px
     line-height: 1.14
     margin-bottom: 10px
     font-family: $font-roboto-bold
@@ -743,7 +758,7 @@
     margin-bottom: 2px
     border: 1px solid #f3f4f7
     background: #f3f4f7
-    font-size: rem(13)
+    font-size: 13px
     transition: background 0.35s
     &.is-active
       background: $color-white
@@ -769,7 +784,7 @@
       min-height: 35px
       i
         color: $primary-color
-        font-size: rem(14)
+        font-size: 14px
         transform: rotate(0)
         transition: transform 0.35s
         display: inline-block
@@ -782,7 +797,7 @@
 
 .table__prices
   width: 100%
-  font-size: rem(14)
+  font-size: 14px
   margin-bottom: 20px
   &>tbody
     &>tr
@@ -809,7 +824,7 @@
     background: none
     color: $color-1
     font-family: $font-roboto-bold
-    font-size: rem(15)
+    font-size: 15px
   &__btn
     background: none
     float: right
@@ -818,7 +833,7 @@
     width: 30px
     position: relative
     color: #bcbcbc
-    font-size: rem(20)
+    font-size: 20px
     margin-top: -31px
     // background: pink
     i
@@ -828,7 +843,7 @@
       transform: translate(-50%,-50%)
       line-height: 1
   &__info
-    font-size: rem(13)
+    font-size: 13px
     border: 2px solid $color-1
     border-radius: 4px
     background: $color-white
@@ -853,7 +868,7 @@
               &:first-child
                 display: table-row
   &__title
-    font-size: rem(15)
+    font-size: 15px
     font-family: $font-roboto-bold
     text-transform: uppercase
     color: $color-1
@@ -872,7 +887,7 @@
       border-bottom: 0 !important
     .table
       border-collapse: inherit
-      font-size: rem(12)
+      font-size: 12px
       width: 100%
       &--product-name, &--product-info
         display: none
@@ -888,7 +903,7 @@
             text-transform: uppercase
             padding: 13px 10px 13px 10px
             border-bottom: 1px solid #dcdcdc
-            font-size: rem(11)
+            font-size: 11px
             width: auto !important
             &.no-sort
               background: none
@@ -916,7 +931,7 @@
             border-top: 0
   &__td
     &-1
-      font-size: rem(12)
+      font-size: 12px
       text-align: right
       color: #24b91c
       padding-left: 20px !important
@@ -947,7 +962,7 @@
           text-decoration: none
     &-4
       color: #b7b7b7
-      font-size: rem(12)
+      font-size: 12px
       white-space: nowrap
       i, a
         color: #b7b7b7
@@ -962,7 +977,7 @@
       white-space: nowrap
       i
         color: #24b91c
-        font-size: rem(10)
+        font-size: 10px
         margin-right: 10px
     &-6
       font-family: $font-roboto-medium
@@ -972,7 +987,7 @@
       white-space: nowrap
       i
         color: #4d4d4d
-        font-size: rem(11)
+        font-size: 11px
         vertical-align: 1px
     &-8
       width: 1px !important
@@ -984,7 +999,7 @@
       font-family: $font-roboto-medium
       i
         color: #4d4d4d
-        font-size: rem(11)
+        font-size: 11px
         vertical-align: 1px
   &__to-cart
     position: relative
@@ -1004,7 +1019,7 @@
       top: -4px
       right: -4px
       line-height: 1
-      font-size: rem(12)
+      font-size: 12px
       color: $color-2
     &.is-active
       i
@@ -1013,7 +1028,7 @@
         fill: $color-1
   &__total
     background: #f3f4f7
-    font-size: rem(14)
+    font-size: 14px
     padding: 14px 20px
     min-height: 50px
     margin-bottom: 20px
@@ -1025,16 +1040,16 @@
     &-right
       float: right
       strong
-        font-size: rem(20)
+        font-size: 20px
         display: inline-block
         margin-top: -4px
         margin-bottom: -2px
   &__link-delete
-    font-size: rem(13)
+    font-size: 13px
     i
       color: $color-1
   &__link-message
-    font-size: rem(15)
+    font-size: 15px
     color: $color-2
     i
       color: $color-2
@@ -1056,7 +1071,7 @@
       text-transform: uppercase
       position: relative
       padding-left: 18px
-      font-size: rem(11)
+      font-size: 11px
       display: inline-block
       line-height: 1
       margin-top: 6px
@@ -1071,7 +1086,7 @@
         left: 0
         top: -1px
         font-family: $font-ionicons
-        font-size: rem(14)
+        font-size: 14px
     &-down
       &::before
         content: "\f35d"
@@ -1120,7 +1135,7 @@
           content: "\f122"
           font-family: $font-ionicons
           color: $color-red
-          font-size: rem(13)
+          font-size: 13px
           position: absolute
           left: 50%
           top: 50%
@@ -1139,9 +1154,9 @@
         transition: background-color .3s .03s
         cursor: pointer
         list-style: none
-        font-size: rem(12)
+        font-size: 12px
     &__title
-      font-size: rem(15)
+      font-size: 15px
       font-family: $font-roboto-bold
       text-transform: uppercase
       color: $color-1
@@ -1156,7 +1171,7 @@
       text-transform: uppercase
       padding: 13px 10px 13px 10px
       border-bottom: 1px solid #dcdcdc
-      font-size: rem(11)
+      font-size: 11px
       width: auto !important
       display: flex
     &__div1
@@ -1165,7 +1180,7 @@
       &-label
         cursor: pointer
         i
-          font-size: rem(11)
+          font-size: 11px
           color: $primary-color
           margin-left: 5px
       &-popup
@@ -1178,7 +1193,7 @@
         margin-left: 10px
         display: none
         color: #b7b7b7
-        font-size: rem(12)
+        font-size: 12px
         white-space: nowrap
         i, a
           color: #b7b7b7
@@ -1194,7 +1209,7 @@
       width: 6%
       text-align: center
       color: #b7b7b7
-      font-size: rem(12)
+      font-size: 12px
       white-space: nowrap
       i, a
         color: #b7b7b7
@@ -1261,7 +1276,7 @@
             white-space: nowrap
             i
               color: #24b91c
-              font-size: rem(10)
+              font-size: 10px
               margin-right: 10px
           &-div2
             font-family: $font-roboto-medium
@@ -1271,7 +1286,7 @@
             white-space: nowrap
             i
               color: #4d4d4d
-              font-size: rem(11)
+              font-size: 11px
               vertical-align: 1px
           &-collapse
             padding-top: 15px
@@ -1291,11 +1306,11 @@
     &--cart
       margin-top: -50px
   &__info
-    font-size: rem(13)
+    font-size: 13px
     color: #535353
     white-space: nowrap
     i
-      font-size: rem(14)
+      font-size: 14px
       color: #b7b7b7
       margin-left: 10px
       display: inline-block
@@ -1309,7 +1324,7 @@
       left: 0
       margin: 0
       color: #535353
-      font-size: rem(13)
+      font-size: 13px
       margin-top: 5px
 
 .map
@@ -1364,7 +1379,7 @@
       &::before
         content: "\f126"
         color: $color-1
-        font-size: rem(18)
+        font-size: 18px
         font-family: $font-ionicons
         position: absolute
         left: 50%
@@ -1382,7 +1397,7 @@
       background: #f3f4f7
       margin-bottom: 2px
       cursor: pointer
-      font-size: rem(14)
+      font-size: 14px
       padding: 0 23px
       float: none
       &>div
@@ -1404,7 +1419,7 @@
     background: rgba($color-1,.85)
     color: $color-white
     max-width: 313px
-    font-size: rem(14)
+    font-size: 14px
     padding: 17px 20px 20px 20px
     &-close
       position: absolute
@@ -1423,7 +1438,7 @@
       &:last-child
         margin-bottom: 0
     .small
-      font-size: rem(12)
+      font-size: 12px
 
 .cart
   &__count
@@ -1432,7 +1447,7 @@
     padding: 0 11px
     // background: pink
     input
-      font-size: rem(12)
+      font-size: 12px
       color: $primary-color
       background: none
       border: 0
@@ -1450,7 +1465,7 @@
       &::after
         content: "\f48a"
         font-family: $font-ionicons
-        font-size: rem(12)
+        font-size: 12px
       &--down
         left: inherit
         right: 0
@@ -1476,7 +1491,7 @@
       width: calc(100% - 135px)
       padding-left: 30px
     &-title
-      font-size: rem(14)
+      font-size: 14px
       margin-bottom: 15px
       a
         font-family: $font-roboto-bold
@@ -1485,13 +1500,13 @@
           color: $color-1
           text-decoration: none
       small
-        font-size: rem(12)
+        font-size: 12px
         display: block
         margin-top: 3px
     &-table
       // margin-bottom: 20px
       font-family: $font-roboto-bold
-      font-size: rem(12)
+      font-size: 12px
       tbody
         &>tr
           &>td
@@ -1519,7 +1534,7 @@
       left: 0
       margin: 0
       color: #535353
-      font-size: rem(13)
+      font-size: 13px
       margin-top: 5px
       margin-right: 15px
     .selectric
@@ -1543,7 +1558,7 @@
     border: 0
     padding: 0
     i
-      font-size: rem(20)
+      font-size: 20px
       position: absolute
       display: block
       line-height: 1
@@ -1557,12 +1572,12 @@
       border-radius: 0 4px 4px 0
       i
         left: 9px
-        font-size: rem(20)
+        font-size: 20px
   &__head
     position: relative
 
 .pagination
-  font-size: rem(12)
+  font-size: 12px
   // margin-bottom: 20px
   +clearfix
   ul
@@ -1596,7 +1611,7 @@
 
 .filter
   font-family: $font-roboto
-  font-size: rem(13)
+  font-size: 13px
   color: $primary-color
   position: relative
   z-index: 20
@@ -1634,7 +1649,7 @@
   &__head
     color: #444444
     margin: 0 -25px 10px -25px
-    font-size: rem(15)
+    font-size: 15px
     font-family: $font-roboto-bold
     text-transform: uppercase
     position: relative
@@ -1646,7 +1661,7 @@
       top: 0px
       color: $color-1
       content: "\f35d"
-      font-size: rem(14)
+      font-size: 14px
       font-family: $font-ionicons
       transform-origin: 50%
       transform: rotate(0)
@@ -1690,7 +1705,7 @@
         font-family: $font-ionicons
         content: "\f372"
         position: absolute
-        font-size: rem(14)
+        font-size: 14px
         left: 50%
         top: 50%
         transform: translate(-50%,-50%)
@@ -1705,7 +1720,7 @@
       position: absolute
       right: 0
       top: 1px
-      font-size: rem(13)
+      font-size: 13px
       color: #bebebe
       line-height: 1
   &__more
@@ -1714,7 +1729,7 @@
     text-align: left
     text-transform: none
     font-weight: 400
-    font-size: rem(13)
+    font-size: 13px
     padding: 0
   &__text
     color: #767676
@@ -1730,7 +1745,7 @@
     padding-bottom: 28px
     padding-top: 8px
   &__cost
-    font-size: rem(12)
+    font-size: 12px
     font-weight: 400
     color: #858585
     font-family: $font-roboto
@@ -1753,7 +1768,7 @@
     color: $primary-color
     padding: 0
     font-family: $font-roboto-bold
-    font-size: rem(12)
+    font-size: 12px
     height: 30px
     line-height: 28px
     border: 0
@@ -1761,7 +1776,7 @@
       border: 0
       box-shadow: none
   .icon-rouble
-    font-size: rem(18)
+    font-size: 18px
     position: relative
     top: 2px
     &::before
@@ -1790,7 +1805,7 @@
     outline: none
 
 .price-range-min, .price-range-max
-  font-size: rem(10)
+  font-size: 10px
   color: $color-1
   position: absolute
   left: 50%
@@ -1806,7 +1821,7 @@
   text-align: right
 
 .range__zero-min, .range__zero-max
-  font-size: rem(10)
+  font-size: 10px
   color: #a9a9a9
   position: absolute
   margin-top: 8px
@@ -1842,7 +1857,7 @@
       margin-bottom: 30px
       overflow: hidden
       padding: 24px
-      font-size: rem(13)
+      font-size: 13px
       p
         line-height: 18px
         margin-bottom: 15px
@@ -1851,7 +1866,7 @@
       &-title
         text-transform: uppercase
         color: $color-1
-        font-size: rem(15)
+        font-size: 15px
         font-family: $font-roboto-bold
         margin-bottom: 15px
     &-payment
@@ -1911,7 +1926,7 @@
       font-family: $font-roboto-bold
       display: block
       margin-bottom: 25px
-      font-size: rem(14)
+      font-size: 14px
     .form-control
       margin-bottom: 25px
   &__line
@@ -1952,13 +1967,13 @@
         color: $color-1
         font-family: $font-roboto-bold
         text-transform: uppercase
-        font-size: rem(15)
+        font-size: 15px
         margin-bottom: 5px
         line-height: 1.2
       &-untitle
         color: $color-2
         line-height: 1.2
-        font-size: rem(12)
+        font-size: 12px
         margin-bottom: 25px
         text-transform: uppercase
         font-family: $font-roboto-bold
@@ -1989,7 +2004,7 @@
       text-align: center
       border-radius: 4px
       background: #f3f4f7
-      font-size: rem(14)
+      font-size: 14px
       min-height: 60px
       padding: 20px 10px
     &-tab
@@ -1998,7 +2013,7 @@
       border-bottom: 1px solid #dddddd
       font-family: $font-roboto-bold
       text-transform: uppercase
-      font-size: rem(15)
+      font-size: 15px
       +clearfix
       &>li
         list-style: none
@@ -2072,10 +2087,10 @@
             padding-top: 22px
     &-th
       width: 100%
-      font-size: rem(12)
+      font-size: 12px
       font-family: $font-roboto
       th
-        font-size: rem(15)
+        font-size: 15px
         font-family: $font-roboto-medium
         color: $color-1
         font-weight: 400
@@ -2088,7 +2103,7 @@
           // white-space: nowrap
           font-family: $font-roboto-bold
           vertical-align: bottom
-          font-size: rem(14)
+          font-size: 14px
         &.first
           width: 165px
           &>span
@@ -2107,13 +2122,13 @@
           padding-bottom: 5px
     &-capabilities
       &-title
-        font-size: rem(15)
+        font-size: 15px
         font-family: $font-roboto-bold
         text-transform: uppercase
         margin-bottom: 25px
       &-wrapper
         display: flex
-        font-size: rem(12)
+        font-size: 12px
         &>div
           width: 50%
           position: relative
@@ -2135,7 +2150,7 @@
         text-decoration: none
         display: block
         margin-bottom: 5px
-        font-size: rem(15)
+        font-size: 15px
         font-family: $font-roboto-medium
         margin-top: -6px
         &:hover
@@ -2155,13 +2170,13 @@
       &-center
         width: 33.17%
       &-right
-        font-size: rem(14)
+        font-size: 14px
         width: 48.57%
         p
           color: $color-1
           padding-left: 20px
     &-bottom
-      font-size: rem(14)
+      font-size: 14px
       background: #f3f4f7
       border-radius: 4px
       padding: 10px 10px 23px 10px
@@ -2178,12 +2193,12 @@
     legend
       text-align: left
     &-add-address
-      font-size: rem(16)
+      font-size: 16px
       display: inline-block
       margin-left: 10px
       vertical-align: 0px
     &-th
-      font-size: rem(12)
+      font-size: 12px
       font-family: $font-roboto
       margin-bottom: 10px
       color: #444
@@ -2193,9 +2208,9 @@
         &.last
           font-family: $font-roboto-bold
           vertical-align: bottom
-          font-size: rem(14)
+          font-size: 14px
           a
-            font-size: rem(14)
+            font-size: 14px
             display: inline-block
             margin-left: 5px
         &.first
@@ -2240,11 +2255,11 @@
       display: block
       line-height: 1
       margin-bottom: 5px
-      font-size: rem(14)
+      font-size: 14px
       font-family: $font-roboto-medium
     p
       line-height: 13px
-      font-size: rem(11)
+      font-size: 11px
       color: $color-808080
       margin: 0
   &__file
@@ -2255,3 +2270,7 @@
       position: absolute
       right: 0
       bottom: 0
+
+.page404
+  max-width: 750px
+  margin: 0 auto
