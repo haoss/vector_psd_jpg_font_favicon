@@ -1,0 +1,223 @@
+.text-transform-none {
+  text-transform: none !important;
+}
+.fs12 {
+  font-size: 12px !important;
+}
+.fs14 {
+  font-size: 14px !important;
+}
+.mb0 {
+  margin-bottom: 0 !important;
+}
+
+.btn--mw330 {
+  min-width: 330px !important;
+}
+.btn--plus, .btn--trash {
+  min-width: auto;
+  border: 0;
+  color: #be1e2d;
+  padding: 0;
+  font-size: 28px;
+  min-height: auto;
+  background: none;
+}
+.btn--plus::before, .btn--trash::before {
+  content: "\f2c7";
+  font-family: "Ionicons";
+}
+.btn--trash::before {
+  content: '\f4c4';
+}
+.form-group--row-num {
+  display: flex;
+  align-items: center;
+}
+.form-group--row-num > div + div {
+  margin-left: 20px;
+}
+.form-group--row-num .div1 {
+  flex-shrink: 0;
+}
+.form-group--row-num .div2 {
+  flex-grow: 1;
+}
+.form-group--row-num .div3 {
+  flex-shrink: 0;
+  width: 100px;
+}
+.form-group--row-num .div4 {
+  flex-shrink: 0;
+}
+@media (max-width: 478px) {
+  .form-group--row-num .div3 {
+    width: 65px;
+  }
+  .form-group--row-num > div + div {
+    margin-left: 10px;
+  }
+}
+
+.content__wrapper-footer {
+  background: #be1e2d url('../img/call.png') 0 center no-repeat;
+  color: #fff;
+  margin: 30px -28px -28px -28px;
+  border-radius: 4px;
+}
+@media (max-width: 478px) {
+  .content__wrapper-footer {
+    margin-left: -22px;
+    margin-right: -22px;
+  }
+}
+.content-call {
+  min-height: 87px;
+  display: flex;
+  padding-left: 163px;
+  padding-right: 134px;
+  align-items: center;
+}
+@media (max-width: 1199px) {
+  .content-call {
+    padding-right: 25px;
+  }
+}
+@media (max-width: 991px) {
+  .content-call {
+    display: block;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    text-align: center;
+  }
+}
+@media (max-width: 599px) {
+  .content-call {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+}
+.content-call .h2, .content-call h2 {
+  margin-bottom: 5px;
+  color: #fff;
+  font-size: 26px;
+}
+@media (max-width: 478px) {
+  .content-call .h2, .content-call h2 {
+    font-size: 23px;
+    margin-bottom: 10px;
+  }
+}
+.content-call p {
+  margin-bottom: 0;
+}
+.content-call .btn {
+  font-size: 13px;
+  height: 40px;
+  line-height: 39px;
+  width: 330px;
+  font-weight: 600;
+}
+@media (max-width: 599px) {
+  .content-call .btn {
+    width: 250px;
+  }
+}
+.content-call .btn--border:hover {
+  border-color: #fff;
+}
+.content-call > div + div {
+  margin-left: 95px;
+}
+@media (max-width: 1199px) {
+  .content-call > div + div {
+    margin-left: 35px;
+  }
+}
+@media (max-width: 991px) {
+  .content-call > div + div {
+    margin-left: 0px;
+    margin-top: 15px;
+  }
+}
+@media (max-width: 599px) {
+  .btn--600-auto {
+    width: auto !important;
+    min-width: inherit !important;
+  }
+}
+
+.upload-form {
+  min-height: 134px;
+  border: 1px dashed rgba(0,0,0,.2);
+  margin-bottom: 20px;
+  
+  cursor: pointer;
+  background: url('../img/upload.png') 28px 41px no-repeat;
+  transition: border 0.35s;
+  font-size: 12px;
+  color: #232323;
+}
+.upload-form:hover {
+  border-color: rgba(0,0,0,.8);
+}
+.upload-form p {
+  margin-bottom: 0;
+  opacity: 0.5;
+  line-height: 1.4;
+}
+.upload-form .h2, .upload-form h2 {
+  color: #232323;
+  font-size: 14px;
+  margin-bottom: 10px;
+  font-weight: 400;
+  line-height: 1.3;
+}
+.upload-form__wrapper {
+  padding: 25px 90px 25px 90px;
+  pointer-events: none;
+}
+@media (max-width: 599px) {
+  .upload-form__wrapper {
+    padding-right: 40px;
+  }
+}
+@media (max-width: 478px) {
+  .upload-form {
+    background-position: 10px 10px;
+  }
+  .upload-form__wrapper {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+}
+
+.upload-file {
+  margin-bottom: 30px;
+}
+.upload-file::empty {
+  display: none;
+}
+.upload-file__row {
+  display: flex;
+  align-items: center;
+  font-size: 13px;
+}
+.upload-file__row span {
+  display: block;
+  line-height: 1.5;
+  margin-left: 10px;
+}
+.upload-file__remove {
+  min-width: auto;
+  border: 0;
+  color: #be1e2d;
+  padding: 0;
+  font-size: 23px;
+  min-height: auto;
+  background: none;
+}
+.upload-file__remove::before {
+  font-family: "Ionicons";
+  content: '\f4c4';
+}

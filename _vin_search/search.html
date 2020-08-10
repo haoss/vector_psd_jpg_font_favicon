@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8" />
+  <title></title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="csrf-param" content="_csrf-frontend" />
+  <meta name="csrf-token"
+    content="2T5O3wWUwnxIoWap0JLzn3eWStMBfmornECfu3q0rFSyCRaLV_z0SQnyF9zjobzZOsIauFAGWXrdDeiOF9fjHQ==" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <!-- <meta name="msapplication-TileColor" content="#da532c" />
+  <meta name="msapplication-TileImage" content="/themes/vector/favicon/mstile-144x144.png" />
+  <meta name="msapplication-config" content="/themes/vector/favicon/browserconfig.xml" />
+  <meta name="theme-color" content="#ffffff" />
+  <meta geo.placename="вулиця Марка Вовчка, 12-14, 12-14, Київ, Украина" geo.position="50.4974010;30.4736780"
+    geo.region="UA-" ICBM="50.4974010,30.4736780" />
+  <link href="/themes/vector/favicon/apple-touch-icon-57x57.png" rel="apple-touch-icon" sizes="57x57" />
+  <link href="/themes/vector/favicon/apple-touch-icon-60x60.png" rel="apple-touch-icon" sizes="60x60" />
+  <link href="/themes/vector/favicon/apple-touch-icon-72x72.png" rel="apple-touch-icon" sizes="72x72" />
+  <link href="/themes/vector/favicon/apple-touch-icon-76x76.png" rel="apple-touch-icon" sizes="76x76" />
+  <link href="/themes/vector/favicon/apple-touch-icon-114x114.png" rel="apple-touch-icon" sizes="114x114" />
+  <link href="/themes/vector/favicon/apple-touch-icon-114x114.png" rel="apple-touch-icon" sizes="114x114" />
+  <link href="/themes/vector/favicon/apple-touch-icon-120x120.png" rel="apple-touch-icon" sizes="120x120" />
+  <link href="/themes/vector/favicon/apple-touch-icon-144x144.png" rel="apple-touch-icon" sizes="144x144" />
+  <link href="/themes/vector/favicon/apple-touch-icon-152x152.png" rel="apple-touch-icon" sizes="152x152" />
+  <link href="/themes/vector/favicon/apple-touch-icon-180x180.png" rel="apple-touch-icon" sizes="180x180" />
+  <link type="image/png" href="/themes/vector/favicon/favicon-16x16.png" rel="icon" sizes="16x16" />
+  <link type="image/png" href="/themes/vector/favicon/favicon-32x32.png" rel="icon" sizes="32x32" />
+  <link type="image/png" href="/themes/vector/favicon/android-chrome-192x192.png" rel="icon" sizes="192x192" />
+  <link href="/themes/vector/favicon/site.webmanifest" rel="manifest" />
+  <link href="/themes/vector/favicon/safari-pinned-tab.svg" rel="mask-icon" color="#5bbad5" />
+  <link href="/themes/vector/favicon/favicon.ico" rel="shortcut icon" /> -->
+  <link href="./css/magnific-popup.css" rel="stylesheet" />
+  <link href="./css/slick.css" rel="stylesheet" />
+  <link href="./css/slick-theme.css" rel="stylesheet" />
+  <link href="./css/selectric.css" rel="stylesheet" />
+  <link href="./css/datatables.min.css" rel="stylesheet" />
+  <link href="./css/jquery-ui.min.css" rel="stylesheet" />
+  <link href="./css/fontello.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.7.2/min/basic.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.7.2/min/dropzone.min.css">
+  <link href="./css/main.css" rel="stylesheet" />
+  <link href="./css/add.css" rel="stylesheet" />
+  <style>
+    .ui-menu-item-wrapper {
+      background-color: white;
+      max-height: 100px;
+      verflow-y: auto;
+      overflow-x: hidden;
+    }
+  </style>
+  <style>
+    #input::-webkit-input-placeholder::before {
+      color: #666;
+      /*content:"Line 1\A Line 2\A Line 3\A*/
+      ";
+
+    }
+  </style>
+  <script>
+    var inputmask_1f64140a = {
+      clearIncomplete: true,
+      mask: "+(38)999-999-99-99",
+    };
+  </script>
+  <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "LocalBusiness",
+        "name": "Auto Parts Market - инновация в сфере продажи автозапчастей",
+        "image": "http://apm.store/frontend/web/img/auto-car-img.png",
+        "telephone": "+38 (044) 390 27 37",
+        "email": "info@apm.store",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "вулиця Марка Вовчка, 12-14",
+          "addressLocality": "Київ",
+          "addressRegion": "Украина"
+        }
+      }
+    </script>
+</head>
+
+<body>
+  <div class="loader">
+    <div class="loader__block"></div>
+  </div>
+
+  <div id="callback" class="popup mfp-hide">
+    <div class="popup__wrapper"><i class="ion-android-close popup__close"></i>
+        <div class="popup__title">заказать звонoк</div>
+        <form action="#" class="form">
+            <div class="form-group has-feedback">
+                <label class="hidden">Ваше имя*</label>
+                <input type="text" name="phone" placeholder="Ваше имя*" class="form-control">
+                <i class="ion-alert-circled"></i>
+            </div>
+            <div class="form-group has-feedback">
+                <label class="hidden">Телефон*</label>
+                <input type="text" name="password" placeholder="Пароль" class="form-control">
+                <i class="ion-alert-circled"></i>
+            </div>
+            <div class="form-group form-group--checkbox">
+                <input id="input2" type="checkbox" name="remember" checked>
+                <i class="ion-android-checkbox-outline-blank"></i>
+                <i class="ion-android-checkbox"></i>
+                <label for="input2" class="label text-transform-none fs12">Согласен на обработку персональных данных</label>
+            </div>
+            <div class="clear"></div>
+            <button type="submit" class="btn btn--block mb0">заказать звонок</button>
+        </form>
+    </div>
+  </div>
+
+  <header class="header">
+    <div class="header__shadow"></div>
+    <div class="header__phone">
+      <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 20.000001 20.000001">
+        <g transform="scale(.05144)" class="path--color">
+          <path
+            d="M262.719 223.441c-1.199-1.281-3.117-2.8-5.199-2.8-2.239 0-4.239 1.597-5.598 2.961l-17.203 17.199c-2.797 2.879-6.078 4.32-9.598 4.32-2.082 0-4.16-.48-6.242-1.519-.32-.161-.641-.321-.879-.481-1.359-.883-2.961-1.68-4.719-2.562-2.082-1.039-4.242-2.161-6.402-3.52-16.399-10.398-31.199-23.84-45.277-41.199l-.082-.078c-7.84-9.922-12.961-18.242-16.641-27.121-.078-.243-.16-.403-.238-.641-.641-2.078-2.719-8.32 3.281-14.32.156-.16.238-.321.398-.399 4.321-3.84 8.239-7.922 12.481-12.16l4.32-4.32c4.238-4.242 4.238-7.36 0-11.602l-13.68-13.679c-1.601-1.598-3.203-3.282-4.8-4.879-3.039-3.121-5.922-6.082-8.961-8.879l-.239-.242c-1.203-1.282-3.121-2.719-5.363-2.719-2.238 0-4.316 1.519-5.68 2.801l-17.199 17.117c-3.758 3.679-5.679 7.922-6.16 13.121-.641 8.801 1.039 18.082 5.52 30.238 7.519 20.16 18.8 38.961 35.679 59.281 20.481 24.481 45.121 43.762 73.203 57.36 10.161 4.883 23.758 10.562 38.161 11.519.718.082 1.437.082 2.16.082 7.117 0 12.238-2.16 16.797-7.039 3.203-3.761 6.562-7.043 9.761-10.16 2.16-2.082 4.16-4 6-6l.078-.082c4.082-4.238 4.082-7.84.161-11.758l-27.84-27.84z">
+          </path>
+          <path
+            d="M194.398 388.801c30.161 0 57.68-5.602 79.524-16.082 20.719-10 35.758-24.321 42.398-40.239 7.918-19.121 3.442-39.039-12.242-54.718l-.558-.563c.242-.32.558-.558.8-.801 11.2-11.757 11.2-27.199-.16-38.558l-27.68-27.68c-5.441-5.601-12-8.64-18.96-8.64-6.961 0-13.598 2.96-19.2 8.558l-14.398 14.402a25.54 25.54 0 0 0-2.082-1.039c-1.762-.882-3.36-1.679-4.719-2.562-14.641-9.277-27.922-21.438-40.641-37.039-5.601-7.039-9.441-13.039-12.32-18.961 3.602-3.359 6.961-6.801 10.238-10.16 1.364-1.438 2.801-2.797 4.243-4.239 11.757-11.761 11.757-26.96 0-38.718l-13.68-13.684c-1.602-1.598-3.121-3.117-4.641-4.719-3.039-3.121-6.16-6.32-9.519-9.437-5.442-5.363-11.922-8.16-18.801-8.16-6.879 0-13.441 2.797-19.039 8.16l-.16.156-17.199 17.203c-6.883 6.879-10.883 15.36-11.68 25.117-1.203 15.204 3.199 29.282 6.637 38.481 8.242 22.242 20.562 42.883 38.882 64.961 22.239 26.558 49.039 47.601 79.68 62.398 11.758 5.602 27.52 12.16 45.277 13.364 1.122.078 2.243.078 3.364.078 12.398 0 22.879-4.481 31.039-13.36l.32-.32c.238-.32.559-.641.879-.961l.48.481c10.239 10.242 13.04 21.921 8.079 33.839-9.2 21.84-44.957 44.243-104.161 44.243-96.636 0-175.199-78.563-175.199-175.204 0-96.636 78.563-175.199 175.199-175.199 96.641 0 175.204 78.563 175.204 175.199 0 15.922-2.161 31.602-6.321 46.723-1.441 5.117 1.598 10.399 6.719 11.84 5.121 1.437 10.398-1.602 11.84-6.723a194.797 194.797 0 0 0 6.96-47.193v-9.841c-1.374-49.972-21.468-96.751-56.96-132.243C295.121 20.238 246.32 0 194.398 0 142.48 0 93.68 20.238 56.961 56.961 20.238 93.68 0 142.48 0 194.398 0 246.32 20.238 295.121 56.961 331.84c36.719 36.719 85.519 56.961 137.437 56.961zm96-125.762l-.078.082c-1.84 2-3.84 3.918-6 6-3.199 3.117-6.558 6.399-9.761 10.16-4.559 4.879-9.68 7.039-16.797 7.039-.723 0-1.442 0-2.16-.082-14.403-.957-28-6.636-38.161-11.519-28.082-13.598-52.722-32.879-73.203-57.36-16.879-20.32-28.16-39.121-35.679-59.281-4.481-12.156-6.161-21.437-5.52-30.238.481-5.199 2.402-9.442 6.16-13.121l17.199-17.117c1.364-1.282 3.442-2.801 5.68-2.801 2.242 0 4.16 1.437 5.363 2.719l.239.242c3.039 2.797 5.922 5.758 8.961 8.879 1.597 1.597 3.199 3.281 4.8 4.879l13.68 13.679c4.238 4.242 4.238 7.36 0 11.602l-4.32 4.32c-4.242 4.238-8.16 8.32-12.481 12.16-.16.078-.242.239-.398.399-6 6-3.922 12.242-3.281 14.32.078.238.16.398.238.641 3.68 8.879 8.801 17.199 16.641 27.121l.082.078c14.078 17.359 28.878 30.801 45.277 41.199 2.16 1.359 4.32 2.481 6.402 3.52 1.758.882 3.36 1.679 4.719 2.562.238.16.559.32.879.481 2.082 1.039 4.16 1.519 6.242 1.519 3.52 0 6.801-1.441 9.598-4.32l17.203-17.199c1.359-1.364 3.359-2.961 5.598-2.961 2.082 0 4 1.519 5.199 2.8l27.84 27.84c3.921 3.918 3.921 7.52-.161 11.758z">
+          </path>
+        </g>
+      </svg>
+      <a href="tel:+380993545729">+38 099 354 57 29</a>
+    </div>
+    <div class="header__top">
+      <div class="container">
+        <ul class="header__top-left">
+          <li><a href="/contacts">Контакты</a></li>
+          <!--<li><a href="#!">Адреса магазинов</a></li>-->
+        </ul>
+        <ul class="header__lang">
+          <li class="active"><a href="/cart/list">ru</a></li>
+          <li class=""><a href="/uk/cart/list">uk</a></li>
+          <li class=""><a href="/en/cart/list">en</a></li>
+        </ul>
+        <ul class="header__top-right">
+          <!--<li><a href="#!"></a></li>
+                <li><a href="#!"></a></li>
+                <li><a href="#!">Запрос по VIN</a></li>
+                <li><a href="#!">Помощь</a></li>-->
+        </ul>
+      </div>
+    </div>
+    <div class="header__bottom">
+      <div class="container">
+        <div class="header__bottom-wrapper">
+          <div>
+            <div class="header__logo">
+              <a href="/"><img src="./img/sp.gif" alt="" /></a>
+            </div>
+          </div>
+          <div>
+            <div class="header__catalog">
+              <div class="header__catalog-popup">
+                <div class="header__catalog-popup-wrapper">
+                  <img src="./img/header-catalog-popup-img.png" alt="" class="header__catalog-img" />
+                  <div class="header__catalog-info">
+                    в разделе <strong> </strong><span>единиц товара</span>
+                  </div>
+                  <div class="header__catalog-body">
+                    <ul>
+                      <li>
+                        <a href="/catalog" data-number="10 995 324">Каталог запчастей</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <button type="button" class="header__catalog-btn">
+                <span></span>Каталог
+              </button>
+            </div>
+          </div>
+          <div>
+            <div class="header__search">
+              <form id="w2" class="nav_search" action="/profile/search" method="post">
+                <input type="hidden" name="_csrf-frontend"
+                  value="2T5O3wWUwnxIoWap0JLzn3eWStMBfmornECfu3q0rFSyCRaLV_z0SQnyF9zjobzZOsIauFAGWXrdDeiOF9fjHQ==" />
+                <input type="hidden" id="searchcodeform-delivery" name="SearchCodeForm[delivery]" />
+                <input type="hidden" id="searchcodeform-brand" name="SearchCodeForm[brand]" />
+                <input type="hidden" id="searchcodeform-quantity" name="SearchCodeForm[quantity]" />
+                <input type="hidden" id="searchcodeform-info" name="SearchCodeForm[info]" />
+                <input type="text" id="searchcodeform-code" class="header__search-input" name="SearchCodeForm[code]"
+                  value="" placeholder="поиск по коду детали или vin коду автомобиля" />
+                <button type="submit" class="header__search-btn">
+                  <i class="ion-android-search"></i>
+                </button>
+              </form>
+            </div>
+          </div>
+          <div>
+            <ul class="header__links">
+              <li class="header__links-li">
+                <div id="register-popup" class="popup mfp-hide">
+                  <div class="popup__wrapper">
+                    <i class="ion-android-close popup__close"></i>
+                    <div class="popup__title">Регистрация на сайте</div>
+
+                    <div id="p0" data-pjax-container="" data-pjax-timeout="1000">
+                      <form id="w4" class="form" action="/site/register" method="post" data-pjax="true">
+                        <input type="hidden" name="_csrf-frontend"
+                          value="2T5O3wWUwnxIoWap0JLzn3eWStMBfmornECfu3q0rFSyCRaLV_z0SQnyF9zjobzZOsIauFAGWXrdDeiOF9fjHQ==" />
+                        <div class="form-group has-feedback field-signupform-step required">
+                          <label class="hidden" for="signupform-step">Step</label>
+                          <input type="hidden" id="signupform-step" class="form-control" name="SignupForm[step]"
+                            value="1" />
+
+                          <div class="help-block"></div>
+                        </div>
+                        <div class="form-group has-feedback field-signupform-isorganization required">
+                          <label class="hidden">Is Organization</label>
+                          <input type="hidden" name="SignupForm[isOrganization]" value="" />
+                          <div id="signupform-isorganization"
+                            onchange='($(this).find(":checked").val()=="1" ? $("#signupform-organization_name").closest("div").show() : $("#signupform-organization_name").closest("div").hide());'
+                            aria-required="true">
+                            <div class="form-group form-group--radio form-group--radio-medium">
+                              <input id="radio0" type="radio" name="SignupForm[isOrganization]" checked value="0" /><i
+                                class="ion-android-radio-button-off"></i><i class="ion-android-radio-button-on"></i>
+                              <label for="radio0" class="label">Физическое лицо</label>
+                            </div>
+
+                            <div class="form-group form-group--radio form-group--radio-medium">
+                              <input id="radio1" type="radio" name="SignupForm[isOrganization]" value="1" /><i
+                                class="ion-android-radio-button-off"></i><i class="ion-android-radio-button-on"></i>
+                              <label for="radio1" class="label">Юридическое лицо</label>
+                            </div>
+                          </div>
+
+                          <div class="help-block"></div>
+                        </div>
+                        <div class="form-group has-feedback field-signupform-organization_name" style="display: none;">
+                          <label class="hidden" for="signupform-organization_name">Наименование организации</label>
+                          <input type="text" id="signupform-organization_name" class="form-control"
+                            name="SignupForm[organization_name]" placeholder="Наименование организации" />
+
+                          <div class="help-block"></div>
+                        </div>
+                        <div class="form-group has-feedback field-signupform-first_name required">
+                          <label class="hidden" for="signupform-first_name">Имя</label>
+                          <input type="text" id="signupform-first_name" class="form-control"
+                            name="SignupForm[first_name]" placeholder="Имя" aria-required="true" />
+
+                          <div class="help-block"></div>
+                        </div>
+                        <div class="form-group has-feedback field-signupform-last_name required">
+                          <label class="hidden" for="signupform-last_name">Фамилия</label>
+                          <input type="text" id="signupform-last_name" class="form-control" name="SignupForm[last_name]"
+                            placeholder="Фамилия" aria-required="true" />
+
+                          <div class="help-block"></div>
+                        </div>
+                        <div class="form-group has-feedback field-signupform-email required">
+                          <label class="hidden" for="signupform-email">Email</label>
+                          <input type="text" id="signupform-email" class="form-control" name="SignupForm[email]"
+                            placeholder="Email" aria-required="true" />
+
+                          <div class="help-block"></div>
+                        </div>
+                        <div class="form-group has-feedback field-signupform-phone required">
+                          <label class="hidden" for="signupform-phone">gg</label>
+                          <input type="text" id="signupform-phone" class="form-control" name="SignupForm[phone]"
+                            placeholder="Телефон" aria-required="true" data-plugin-inputmask="inputmask_1f64140a" />
+
+                          <div class="help-block"></div>
+                        </div>
+                        <div class="form-group has-feedback field-signupform-password required">
+                          <label class="hidden" for="signupform-password">Пароль</label>
+                          <input type="password" id="signupform-password" class="form-control"
+                            name="SignupForm[password]" placeholder="Пароль" aria-required="true" />
+
+                          <div class="help-block"></div>
+                        </div>
+                        <div class="form-group has-feedback field-signupform-recaptcha">
+                          <label class="hidden" for="signupform-recaptcha">Re Captcha</label>
+                          <input type="hidden" id="signupform-recaptcha" name="SignupForm[reCaptcha]" />
+                          <div id="signupform-recaptcha-recaptcha-w4" class="g-recaptcha"
+                            data-sitekey="6LdGd18UAAAAAE3FXnJC64S_GYRd0TVmgZjAWNVI" data-input-id="signupform-recaptcha"
+                            data-form-id="w4"></div>
+
+                          <div class="help-block"></div>
+                        </div>
+                        <div class="form-group form-group--terms-info">
+                          <small>Нажимая кнопку "регистрация", вы подтверждаете,
+                            что соглашаетесь с
+                            <a href="#!">пользовательским соглашением</a>&nbsp;и принимаете его условия.</small>
+                        </div>
+
+                        <button type="submit" class="btn btn--block">
+                          Регистрация
+                        </button>
+                      </form>
+                      <div class="popup__form-bottom">
+                        <strong>Уже зарегистрированы? </strong><a href="#login-popup" class="link open-ajax-link">войти
+                          на сайт</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div id="recovery-popup" class="popup mfp-hide">
+                  <div class="popup__wrapper">
+                    <i class="ion-android-close popup__close"></i>
+                    <div class="popup__title popup__title--f16">
+                      Восстановить пароль
+                    </div>
+
+                    <div id="p1" data-pjax-container="" data-pjax-timeout="1000">
+                      <form id="w6" class="form" action="/site/request-password-reset" method="post" data-pjax="true">
+                        <input type="hidden" name="_csrf-frontend"
+                          value="2T5O3wWUwnxIoWap0JLzn3eWStMBfmornECfu3q0rFSyCRaLV_z0SQnyF9zjobzZOsIauFAGWXrdDeiOF9fjHQ==" />
+                        <div class="form-group has-feedback field-passwordresetrequestform-email required">
+                          <label class="hidden" for="passwordresetrequestform-email">Email</label>
+                          <input type="text" id="passwordresetrequestform-email" class="form-control"
+                            name="PasswordResetRequestForm[email]" placeholder="Email" aria-required="true" />
+
+                          <i class="ion-alert-circled"></i>
+                        </div>
+                        <div class="popup__info">
+                          <p>
+                            Вы получите письмо с инструкциями по
+                            восстановлению доступа к вашему аккаунту
+                          </p>
+                        </div>
+                        <div class="clear10"></div>
+                        <button type="submit" class="btn btn--block">
+                          Выслать письмо
+                        </button>
+                      </form>
+                      <div class="popup__form-bottom">
+                        <strong>Вспомнили пароль? </strong><a href="#login-popup" class="link open-ajax-link">войти на
+                          сайт</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div id="login-popup" class="popup mfp-hide">
+                  <div class="popup__wrapper">
+                    <i class="ion-android-close popup__close"></i>
+                    <div class="popup__title">войти на сайт</div>
+
+                    <div id="p2" data-pjax-container="" data-pjax-timeout="1000">
+                      <form id="w8" class="form" action="/site/login" method="post" data-pjax="true">
+                        <input type="hidden" name="_csrf-frontend"
+                          value="2T5O3wWUwnxIoWap0JLzn3eWStMBfmornECfu3q0rFSyCRaLV_z0SQnyF9zjobzZOsIauFAGWXrdDeiOF9fjHQ==" />
+                        <h6 id="userExist" style="color: #be1e2d; display: none;">
+                          Пользователь с такими данными зарегистрирован.
+                          Авторизуйтесь
+                        </h6>
+                        <div class="form-group has-feedback field-loginform-username required">
+                          <label class="hidden" for="loginform-username">Номер телефона или email</label>
+                          <input type="text" id="loginform-username" class="form-control" name="LoginForm[username]"
+                            placeholder="Номер телефона или email" aria-required="true" />
+
+                          <i class="ion-alert-circled"></i>
+                        </div>
+                        <div class="form-group has-feedback field-loginform-password required">
+                          <label class="hidden" for="loginform-password">Пароль</label>
+                          <input type="password" id="loginform-password" class="form-control" name="LoginForm[password]"
+                            placeholder="Пароль" aria-required="true" />
+
+                          <i class="ion-alert-circled"></i>
+                        </div>
+                        <div class="form-group form-group--checkbox form-group--fl field-loginform-rememberme">
+                          <input type="hidden" name="LoginForm[rememberMe]" value="0" /><input type="checkbox"
+                            id="loginform-rememberme" name="LoginForm[rememberMe]" value="1" checked /><i
+                            class="ion-android-checkbox-outline-blank"></i><i class="ion-android-checkbox"></i><label
+                            class="label" for="loginform-rememberme">Запомнить меня</label>
+                        </div>
+                        <a href="#recovery-popup" class="link-remember open-ajax-link">Забыли пароль?</a>
+                        <div class="clear"></div>
+                        <input type="hidden" id="pathForm" name="path" value="" /><button type="submit"
+                          class="btn btn--block">
+                          войти на сайт
+                        </button>
+                      </form>
+                      <!--div class="popup__social">
+    <div class="popup__social-head"><span>Или войти через социальные сети</span></div>
+    <div class="popup__social-body"><a href="#!"><i class="icon icon--vk"></i></a><a href="#!"><i class="icon icon--facebook"></i></a><a href="#!"><i class="icon icon--google-plus"></i></a></div>
+</div-->
+
+                      <div class="popup__form-bottom">
+                        <strong>Еще не зарегистрированы? </strong><a href="#register-popup"
+                          class="link open-ajax-link">Регистрация</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <a href="#login-popup" class="header__links-a open-popup-link" id="login-button">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewbox="-49 141 512 512">
+                    <path
+                      d="M376.63 446.585c-.208-.07-.418-.135-.63-.195l-56.049-15.982-39.785-37.952v-10.202c19.039-19.017 31.034-45.285 31.034-74.256v-62C311.2 188.258 264.436 141 206.4 141c-57.897 0-104.999 47.103-104.999 104.999v62c0 28.971 11.995 55.239 31.034 74.256v10.202l-39.531 37.899-54.997 16.062c-.181.053-.36.109-.538.168-24.143 8.047-38.275 33.594-32.331 58.293l26.518 135.989C32.952 648.03 39.23 653 46.262 653c.417 0 .837-.025 1.258-.061.379.03.757.059 1.143.059h317.62a15 15 0 0 0 14.693-11.98L408.94 504.96c5.997-24.725-8.14-50.318-32.31-58.375zM206.4 460.868l-35.978-54.221c11.228 4.108 23.346 6.351 35.978 6.351s24.75-2.243 35.978-6.351L206.4 460.868zm61.715-38.748l23.853 22.984-42.899 64.35-23.386-23.386 42.432-63.948zM206.4 171c24.494 0 46.28 11.805 59.976 30.021C252.305 219.7 230.062 231 206.4 231h-73.491c6.969-34.192 37.272-60 73.491-60zm-75.2 136.999v-47h75.2c27.739 0 54.083-11.091 73.482-30.047a75.076 75.076 0 0 1 1.518 15.047v62c0 41.355-33.645 75-75 75s-75.2-33.645-75.2-75zm13.485 114.121l42.433 63.948-23.386 23.386-42.899-64.35 23.852-22.984zm-98.058 53.003l48.684-14.218 53.609 80.414c5.24 7.863 16.387 8.988 23.087 2.286l19.394-19.394v98.786H58.636c-.112-.572-24.248-124.413-24.392-124.978-2.408-9.637 3.023-19.645 12.383-22.896zm332.985 23.514l-25.559 124.36H221.199v-98.786l19.594 19.394c6.693 6.696 17.842 5.583 23.087-2.286l53.611-80.417 49.92 14.235c8.197 2.867 14.736 11.288 12.201 23.5z"
+                      class="path--color"></path>
+                    <path
+                      d="M326.399 562.998h-30c-8.284 0-15 6.716-15 15s6.716 15 15 15h30c8.284 0 15-6.716 15-15s-6.715-15-15-15z"
+                      class="path--color"></path>
+                  </svg>
+                  <span>войти</span></a>
+              </li>
+              <li class="header__links-li">
+                <a href="/profile/orders" class="header__links-a" onclick="$('#login-button').click();return false;">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewbox="192 381.999 30 30.002">
+                    <path
+                      d="M221.227 391.441a2.64 2.64 0 0 0-3.729 0l-2.644 2.647v-6.966c0-.704-.274-1.367-.772-1.865l-2.486-2.486a2.62 2.62 0 0 0-1.865-.772h-15.093a2.64 2.64 0 0 0-2.637 2.637v24.728a2.64 2.64 0 0 0 2.637 2.637h17.579a2.64 2.64 0 0 0 2.637-2.637v-7.815l6.374-6.379a2.636 2.636 0 0 0-.001-3.729zm-8.86 10.109l-.475.475-1.865.621.621-1.865.475-.475 1.244 1.244zm1.243-1.244l-1.243-1.243 4.225-4.229 1.243 1.243-4.225 4.229zm-3.258-16.292l2.486 2.486c.279.279.257.585.257.772h-3.516v-3.516c.166.001.486-.028.773.258zm1.864 26.229h-17.579a.88.88 0 0 1-.879-.879v-24.728a.88.88 0 0 1 .879-.879h13.185v4.395a.88.88 0 0 0 .879.879h4.395v6.816l-2.593 2.595-1.242 1.242a.876.876 0 0 0-.212.344l-1.243 3.729a.881.881 0 0 0 .212.9.876.876 0 0 0 .899.212l3.729-1.243a.89.89 0 0 0 .344-.212l.107-.107v6.057a.883.883 0 0 1-.881.879zm7.768-16.316l-.906.907-1.243-1.243.906-.907a.88.88 0 0 1 1.243 1.243z"
+                      class="path--color"></path>
+                    <path
+                      d="M196.395 392.547H208.7a.88.88 0 0 0 0-1.758h-12.306a.88.88 0 0 0 .001 1.758zM196.395 396.062h8.79a.88.88 0 0 0 0-1.758h-8.79a.88.88 0 0 0 0 1.758zM196.395 399.578h8.79a.88.88 0 0 0 0-1.758h-8.79a.88.88 0 0 0 0 1.758zM206.063 402.215a.88.88 0 0 0-.879-.879h-8.79a.88.88 0 0 0 0 1.758h8.79a.878.878 0 0 0 .879-.879zM208.7 406.727h-5.274a.88.88 0 0 0 0 1.758h5.274a.88.88 0 0 0 0-1.758z"
+                      class="path--color"></path>
+                  </svg>
+                  <span>заказы</span></a>
+              </li>
+              <li class="header__links-li cart-total">
+                <a href="/cart/list" class="header__links-a">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30">
+                    <path
+                      d="M8.835 28.549a2.515 2.515 0 0 0 2.513-2.513 2.516 2.516 0 0 0-2.513-2.514 2.517 2.517 0 0 0-2.514 2.514 2.516 2.516 0 0 0 2.514 2.513zm0 0M24.544 28.549h.185a2.507 2.507 0 0 0 1.719-.869c.444-.499.647-1.146.61-1.83a2.52 2.52 0 0 0-2.68-2.329c-1.386.092-2.421 1.312-2.329 2.68.093 1.313 1.183 2.348 2.495 2.348zm0 0M1.109 3.561h3.179l4.528 16.375c.129.481.573.813 1.072.813h13.917c.444 0 .832-.259 1.017-.665L29.886 8.44a1.122 1.122 0 0 0-.092-1.053 1.103 1.103 0 0 0-.924-.499H13.492c-.61 0-1.109.499-1.109 1.109s.499 1.109 1.109 1.109h13.677l-4.103 9.426H10.72L6.192 2.156a1.11 1.11 0 0 0-1.072-.813H1.109C.499 1.343 0 1.842 0 2.452s.499 1.109 1.109 1.109z"
+                      class="path--color"></path>
+                  </svg>
+                  <b class="products-count">0</b><span>корзина</span></a>
+              </li>
+              <li class="header__links-li">
+                <a href="#!" class="header__links-a">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30">
+                    <g>
+                      <path class="path--color" 
+                        d="M15.4 5h-3c-.4 0-.6.3-.6.6V25c0 .3.2.6.5.6h3c.4 0 .7-.3.7-.6V5.6c0-.3-.3-.6-.6-.6zm-.6 19.4H13V6.2h2zM10 5H7.6c-.3 0-.6.3-.6.6V25c0 .3.3.6.6.6H10c.4 0 .6-.3.6-.6V5.6c0-.3-.2-.6-.6-.6zm-.5 19.4H8.2V6.2h1.3zM3 5H.6c-.3 0-.6.3-.6.6V25c0 .3.3.6.6.6H3c.4 0 .6-.3.6-.6V5.6c0-.3-.2-.6-.6-.6zm-.5 19.4H1.2V6.2h1.3zM5.3 5c-.3 0-.6.3-.6.6V25a.6.6 0 001.2 0V5.6c0-.3-.3-.6-.6-.6z" />
+                      <path class="path--color" 
+                        d="M29.8 25l-3.2-3.2a5.8 5.8 0 00-.4-7.8 5.8 5.8 0 00-2.6-1.5V5.6a.6.6 0 00-1.1 0v6.7a6 6 0 00-1.2 0V5.6c0-.3-.2-.6-.6-.6h-3c-.3 0-.6.3-.6.6v9.5a5.8 5.8 0 000 6v4c0 .2.3.5.6.5h3c.4 0 .6-.3.6-.6v-1.2a5.9 5.9 0 001.2 0V25a.6.6 0 001.1 0v-1.3c.8-.2 1.5-.6 2.2-1.1l3.2 3.2a.6.6 0 00.8 0c.3-.2.3-.6 0-.8zM20.2 6.2v6.4c-.7.3-1.4.6-2 1.1V6.2zm0 18.2h-2v-2c.6.5 1.3 1 2 1.2zm-1.4-3a4.6 4.6 0 010-6.6 4.6 4.6 0 016.6 0 4.6 4.6 0 010 6.6 4.6 4.6 0 01-6.6 0z" />
+                      <path class="path--color" d="M24.1 16.5a.6.6 0 00-.8.1l-1.5 1.7-.5-.4a.6.6 0 10-.8.8l1 1a.6.6 0 00.8-.1l1.9-2.2c.2-.3.2-.7 0-.9z" />
+                    </g>
+                  </svg>
+                  <span>vin поиск</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <div class="header-separator"></div>
+
+  <div class="content">
+    <div class="container">
+      <ul class="breadcrumbs">
+        <li><a href="/">Интернет-магазин VECTОR</a></li>
+        <li><span>Поиск по VIN</span></li>
+      </ul>
+      <div class="row">
+        <div class="col-md-12">
+          <div class="content__wrapper">
+            <div class="content__head">
+              <h1>Поиск по VIN</h1>
+            </div>
+            <div class="clear"></div>
+            
+            <div class="row">
+              <div class="col-md-6">
+                <form action="" method="post" enctype="multipart/form-data">
+                  <fieldset>
+                    <div class="form-group">
+                      <input type="text" placeholder="Ваше имя*" class="form-control">
+                    </div>
+                    <div class="form-group">
+                      <input type="text" placeholder="Телефон*" class="form-control">
+                    </div>
+                    <div class="form-group">
+                      <input type="text" placeholder="Email" class="form-control">
+                    </div>
+                    <div class="form-group">
+                      <input type="text" placeholder="VIN номер*" class="form-control">
+                    </div>
+                    <div class="form-group">
+                      <input type="text" placeholder="Ваше имя*" class="form-control">
+                    </div>
+                    <p>Поля <span class="color--red">*</span> обязательны для заполнения</p>
+
+                    <p><strong>Опишите нужные запчасти, вводя каждую деталь отдельно в новой строке и указывая количество.</strong></p>
+                    <div class="form-group form-group--row-num">
+                      <div class="div1">
+                        <button class="btn btn--plus"></button>
+                      </div>
+                      <div class="div2"><input type="text" placeholder="Описание" class="form-control"></div>
+                      <div class="div3"><input type="text" placeholder="Кол-во" class="form-control"></div>
+                      <div class="div4">
+                        <button class="btn btn--trash"></button>
+                      </div>
+                    </div>
+
+                    <div class="clear10"></div>
+
+                    <div id="dropzone" class="upload-form">
+                      <div class="upload-form__wrapper">
+                        <div class="h2"><u>Выберите</u> или загрузите файл с VIN номером</div>
+                        <p>Это может быть скан техпаспорта, фотография номера или другая техническая выписка по вашему автомобилю с указанием VIN кода. Допустимы такие форматы: jpg, png, gif. Не более 1 Мб.</p>
+                      </div>
+                    </div>
+
+                    <div id="previews" class="upload-file">
+                      <div id="preview-template" class="hidden">
+                        <div class="upload-file__row">
+                          <button data-dz-remove type="button" class="upload-file__remove"></button>
+                          <span data-dz-name></span>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="form-group form-group--checkbox">
+                      <input id="input1" type="checkbox" name="remember" checked>
+                      <i class="ion-android-checkbox-outline-blank"></i>
+                      <i class="ion-android-checkbox"></i>
+                      <label for="input1" class="label text-transform-none fs14">Согласен на обработку персональных данных</label>
+                    </div>
+                    <button type="submit" class="btn btn--mw330 btn--600-auto">отправить запрос</button>
+                  </fieldset>
+                </form>
+
+                <div class="visible-xs-block visible-sm-block">
+                  <div class="clear25"></div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <h4>Подбор запчастей по VIN коду</h4>
+                <p>Поиск запчастей по вин коду самый точный способ подбора с применением оригинальных каталогов запчастей.</p>
+                <h4>Что такое VIN код?</h4>
+                <p>Указан в тех. паспорте автомобиля. VIN (Vehicle Identification Number) - номер шасси (кузова, рамы), состоит из 17 символов.</p>
+                <h4>Где можно найти VIN?</h4>
+                <p><img class="img-responsive" src="./img/search-vin.png" alt=""></p>
+              </div>
+            </div>
+
+            <div class="content__wrapper-footer">
+              <div class="content-call">
+                <div class="first">
+                  <div class="h2">Сложно и непонятно?</div>
+                  <p>Хотите все сделаем за Вас? Закажите обратный звонок!</p>
+                </div>
+                <div class="last">
+                  <a href="#callback" class="btn btn--border open-popup-link" tyle="button">Заказать звонок</a>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer class="footer" style="">
+    <div class="container">
+      <div class="footer__navigation">
+        <div class="footer__navigation-block">
+          <div class="footer__navigation-title">ПАРТНЕРСТВО</div>
+          <nav class="footer__navigation-list">
+            <ul>
+              <!--<li><a href="#!"></a></li>-->
+              <!--<li><a href="">Автоклубы</a></li>
+                        <li><a href="">Таблица скидок</a></li>
+                        <li><a href="#!"></a></li>-->
+              <li><a href="/suppliers">Поставщикам</a></li>
+              <li><a href="/wholesalers">Оптовикам</a></li>
+              <!--<li><a href="">Производителям</a></li>
+                        <li><a href="#!"></a></li>-->
+              <li><a href="#!">Партнерские программы</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="footer__navigation-block">
+          <div class="footer__navigation-title">ИНТЕРНЕТ МАГАЗИН</div>
+          <nav class="footer__navigation-list">
+            <ul>
+              <li><a href="/deliveryinfo">Доставка заказа</a></li>
+              <li><a href="/paymentinfo">Как оплатить заказ</a></li>
+              <li><a href="/return">Условия возврата и гарантии</a></li>
+              <li><a href="#!">Стать клиентом</a></li>
+              <li><a href="#!">Помощь</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="footer__navigation-block">
+          <div class="footer__navigation-title">КАТАЛОГ ТОВАРОВ</div>
+          <nav class="footer__navigation-list">
+            <ul>
+              <li><a href="/catalog">Каталоги автозапчастей</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="footer__navigation-block">
+          <div class="footer__navigation-title">О КОМПАНИИ</div>
+          <nav class="footer__navigation-list">
+            <ul>
+              <li><a href="/about">О компании</a></li>
+              <li><a href="/law">Правовая информация</a></li>
+              <li><a href="/address">Адреса офисов</a></li>
+              <!--<li><a href="#!"></a></li>-->
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <div class="footer__card">
+          <img src="./img/footer-card.png" alt="" />
+        </div>
+        <!--Social icons-->
+        <div class="social_common">
+          <!--VK-->
+          <a href="https://vk.com/vector.market" target="_blank">
+            <div id="vk"></div>
+          </a>
+          <!--FB-->
+          <a href="https://www.facebook.com/vectormarket1/" target="_blank">
+            <div id="fb"></div>
+          </a>
+          <!--YT-->
+          <a href="http://joxi.ru/Vm6KEJxc4zBxP2" target="_blank" style="display: none;">
+            <div id="yt"></div>
+          </a>
+          <!--INST-->
+          <a href="https://www.instagram.com/vector.market/" target="_blank">
+            <div id="inst"></div>
+          </a>
+        </div>
+        <div class="footer__copyright" id="copyright" style="width: 150px;">
+          © Vector 1998—2020
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="//www.google.com/recaptcha/api.js?hl=ru&amp;render=explicit&amp;onload=recaptchaOnloadCallback" async
+    defer></script>
+  <script src="./js/libs.js"></script>
+  <script src="./js/slick.min.js"></script>
+  <script src="./js/jquery.selectric.js"></script>
+  <script src="./js/autosize.min.js"></script>
+  <script src="./js/datatables.min.js"></script>
+  <script src="./js/readmore.min.js"></script>
+  <script src="./js/jquery-ui.min.js"></script>
+  <script src="./js/jquery.ui.touch-punch.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.7.2/min/dropzone.min.js"></script>
+  <script src="./js/common.js"></script>
+  <script>
+    $(document).ready(function(){
+      $("div#dropzone").dropzone({ 
+        url: "/file/post",
+        maxFilesize: 1,
+        acceptedFiles: "image/jpeg,image/png,image/gif",
+        previewsContainer: '#previews',
+        previewTemplate: document.getElementById('preview-template').innerHTML
+      });
+    })
+  </script>
+</body>
+
+</html>
